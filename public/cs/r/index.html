@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="cs" dir="ltr" data-static-locale="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Přijmout v TotalDrop</title>
+  <meta name="description" content="Někdo vám posílá soubory přes TotalDrop. Otevřete aplikaci a zadejte kód.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://totaldrop.app/cs/r/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=d075185718">
+</head>
+<body data-page="receive">
+  <a class="skip" href="#main" data-i18n="skip">Přeskočit na obsah</a>
+
+  <header class="top">
+    <a class="brand" href="/cs/" aria-label="Domovská stránka TotalDrop" data-i18n-label="nav.home">
+      <svg class="mark" viewBox="0 0 112 112" aria-hidden="true"><path class="mk" d="M55 15H97V57A42 42 0 1 1 55 15Z"/></svg>
+      <span>TotalDrop</span>
+    </a>
+    <nav class="top-nav" aria-label="Hlavní nabídka" data-i18n-label="nav.label">
+      <a href="/cs/#why" data-i18n="nav.why">Proč TotalDrop</a>
+      <a href="/cs/#how" data-i18n="nav.how">Jak to funguje</a>
+      <a href="/cs/#security" data-i18n="nav.security">Zabezpečení</a>
+      <a href="/cs/download/" data-i18n="nav.download">Stáhnout</a>
+      <select class="lang" id="lang-select" aria-label="Jazyk" data-i18n-label="lang.label" hidden></select>
+    </nav>
+  </header>
+
+  <main id="main">
+    <p class="lang-note" role="note">Tento překlad je koncept a prochází kontrolou.</p>
+    <section class="dl-hero" aria-labelledby="r-title">
+      <p class="eyebrow" data-i18n="r.eyebrow">Někdo vám posílá soubory</p>
+      <h1 id="r-title" data-i18n="r.title">Přijmout v TotalDrop</h1>
+      <div id="r-has-code" hidden>
+        <div class="code-card">
+          <p class="code-label" data-i18n="r.code">Kód přenosu</p>
+          <p class="code" id="r-code" lang="en" dir="ltr"></p>
+        </div>
+        <p class="lede" data-i18n="r.lede">Otevřete TotalDrop na tomto zařízení; kód se vyplní sám. Na jiném zařízení zvolte Přijmout a zadejte kód.</p>
+        <div class="actions">
+          <a class="btn btn-primary" id="r-open" href="#" data-i18n="r.open">Otevřít v TotalDrop</a>
+          <button class="btn btn-quiet copy" type="button" id="r-copy" data-i18n="r.copy">Kopírovat kód</button>
+        </div>
+      </div>
+      <p class="lede" id="r-no-code" hidden data-i18n="r.none">Tento odkaz neobsahuje kód TotalDrop. Požádejte odesílatele o kód, pak otevřete TotalDrop a zvolte Přijmout.</p>
+    </section>
+
+    <section class="block" aria-labelledby="r-get">
+      <h2 id="r-get" data-i18n="r.get.title">Ještě nemáte TotalDrop?</h2>
+      <p data-i18n="r.get.body">Je zdarma, nepotřebuje účet a instalace zabere minutu. Kód platí, dokud má odesílatel TotalDrop otevřený.</p>
+      <div class="actions"><a class="btn btn-quiet" href="/cs/download/" data-i18n="r.get.cta">Stáhnout TotalDrop</a></div>
+      <p class="note" data-i18n="r.private">Kód se čte jen na této stránce; na náš server se nikdy neposílá.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p data-i18n="foot.line">TotalDrop má otevřený zdrojový kód a vyvíjí se veřejně.</p>
+    <p class="foot-links">
+      <a href="https://github.com/totaldrop-app">GitHub</a>
+      <a href="https://x.com/totaldropapp" rel="me" aria-label="X: @totaldropapp">X</a>
+      <a href="https://www.instagram.com/totaldropapp/" rel="me" aria-label="Instagram: @totaldropapp">Instagram</a>
+      <a href="https://www.threads.com/@totaldropapp" rel="me" aria-label="Threads: @totaldropapp">Threads</a>
+      <a href="https://www.bestpractices.dev/projects/16332">OpenSSF Best Practices</a>
+      <a href="https://github.com/totaldrop-app/totaldrop/releases.atom" data-i18n="foot.rss">RSS</a>
+      <a href="https://totaldrop.app/roadmap/" data-i18n="foot.roadmap">Plán vývoje</a>
+      <a href="https://totaldrop.app/team/" data-i18n="foot.team">Tým</a>
+      <a href="https://totaldrop.app/donate/" data-i18n="foot.donate">Přispět</a>
+      <a href="https://totaldrop.app/brand/" data-i18n="foot.brand">Značka</a>
+      <a href="https://totaldrop.app/privacy/cs" hreflang="cs" data-i18n="foot.privacy">Soukromí</a>
+      <a href="mailto:hello@totaldrop.app">hello@totaldrop.app</a>
+    </p>
+  </footer>
+
+  <script src="/lang.js?v=496d43e3b9" defer></script>
+  <script src="/app.js?v=be457484b6" defer></script>
+</body>
+</html>

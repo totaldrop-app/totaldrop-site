@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="nb" dir="ltr" data-static-locale="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motta med TotalDrop</title>
+  <meta name="description" content="Noen sender deg filer med TotalDrop. Åpne appen og skriv inn koden.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://totaldrop.app/nb/r/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=d075185718">
+</head>
+<body data-page="receive">
+  <a class="skip" href="#main" data-i18n="skip">Gå til innholdet</a>
+
+  <header class="top">
+    <a class="brand" href="/nb/" aria-label="TotalDrop forside" data-i18n-label="nav.home">
+      <svg class="mark" viewBox="0 0 112 112" aria-hidden="true"><path class="mk" d="M55 15H97V57A42 42 0 1 1 55 15Z"/></svg>
+      <span>TotalDrop</span>
+    </a>
+    <nav class="top-nav" aria-label="Hovedmeny" data-i18n-label="nav.label">
+      <a href="/nb/#why" data-i18n="nav.why">Hvorfor TotalDrop</a>
+      <a href="/nb/#how" data-i18n="nav.how">Slik fungerer det</a>
+      <a href="/nb/#security" data-i18n="nav.security">Sikkerhet</a>
+      <a href="/nb/download/" data-i18n="nav.download">Last ned</a>
+      <select class="lang" id="lang-select" aria-label="Språk" data-i18n-label="lang.label" hidden></select>
+    </nav>
+  </header>
+
+  <main id="main">
+    <p class="lang-note" role="note">Denne oversettelsen er et utkast og blir gjennomgått.</p>
+    <section class="dl-hero" aria-labelledby="r-title">
+      <p class="eyebrow" data-i18n="r.eyebrow">Noen sender deg filer</p>
+      <h1 id="r-title" data-i18n="r.title">Motta med TotalDrop</h1>
+      <div id="r-has-code" hidden>
+        <div class="code-card">
+          <p class="code-label" data-i18n="r.code">Overføringskode</p>
+          <p class="code" id="r-code" lang="en" dir="ltr"></p>
+        </div>
+        <p class="lede" data-i18n="r.lede">Åpne TotalDrop på denne enheten; koden fylles inn for deg. På en annen enhet velger du Motta og skriver inn koden.</p>
+        <div class="actions">
+          <a class="btn btn-primary" id="r-open" href="#" data-i18n="r.open">Åpne i TotalDrop</a>
+          <button class="btn btn-quiet copy" type="button" id="r-copy" data-i18n="r.copy">Kopier koden</button>
+        </div>
+      </div>
+      <p class="lede" id="r-no-code" hidden data-i18n="r.none">Denne lenken har ingen TotalDrop-kode. Be avsenderen om koden, åpne deretter TotalDrop og velg Motta.</p>
+    </section>
+
+    <section class="block" aria-labelledby="r-get">
+      <h2 id="r-get" data-i18n="r.get.title">Har du ikke TotalDrop ennå?</h2>
+      <p data-i18n="r.get.body">Det er gratis, krever ingen konto og tar et minutt å installere. Koden gjelder så lenge avsenderen holder TotalDrop åpent.</p>
+      <div class="actions"><a class="btn btn-quiet" href="/nb/download/" data-i18n="r.get.cta">Last ned TotalDrop</a></div>
+      <p class="note" data-i18n="r.private">Koden leses bare på denne siden; den sendes aldri til serveren vår.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p data-i18n="foot.line">TotalDrop er åpen kildekode og utvikles åpent.</p>
+    <p class="foot-links">
+      <a href="https://github.com/totaldrop-app">GitHub</a>
+      <a href="https://x.com/totaldropapp" rel="me" aria-label="X: @totaldropapp">X</a>
+      <a href="https://www.instagram.com/totaldropapp/" rel="me" aria-label="Instagram: @totaldropapp">Instagram</a>
+      <a href="https://www.threads.com/@totaldropapp" rel="me" aria-label="Threads: @totaldropapp">Threads</a>
+      <a href="https://www.bestpractices.dev/projects/16332">OpenSSF Best Practices</a>
+      <a href="https://github.com/totaldrop-app/totaldrop/releases.atom" data-i18n="foot.rss">RSS</a>
+      <a href="https://totaldrop.app/roadmap/" data-i18n="foot.roadmap">Veikart</a>
+      <a href="https://totaldrop.app/team/" data-i18n="foot.team">Team</a>
+      <a href="https://totaldrop.app/donate/" data-i18n="foot.donate">Doner</a>
+      <a href="https://totaldrop.app/brand/" data-i18n="foot.brand">Merkevare</a>
+      <a href="https://totaldrop.app/privacy/nb" hreflang="nb" data-i18n="foot.privacy">Personvern</a>
+      <a href="mailto:hello@totaldrop.app">hello@totaldrop.app</a>
+    </p>
+  </footer>
+
+  <script src="/lang.js?v=496d43e3b9" defer></script>
+  <script src="/app.js?v=be457484b6" defer></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="hu" dir="ltr" data-static-locale="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fogadás a TotalDrop segítségével</title>
+  <meta name="description" content="Valaki fájlokat küld neked a TotalDrop segítségével. Nyisd meg az alkalmazást, és írd be a kódot.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://totaldrop.app/hu/r/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=d075185718">
+</head>
+<body data-page="receive">
+  <a class="skip" href="#main" data-i18n="skip">Ugrás a tartalomhoz</a>
+
+  <header class="top">
+    <a class="brand" href="/hu/" aria-label="A TotalDrop kezdőlapja" data-i18n-label="nav.home">
+      <svg class="mark" viewBox="0 0 112 112" aria-hidden="true"><path class="mk" d="M55 15H97V57A42 42 0 1 1 55 15Z"/></svg>
+      <span>TotalDrop</span>
+    </a>
+    <nav class="top-nav" aria-label="Főmenü" data-i18n-label="nav.label">
+      <a href="/hu/#why" data-i18n="nav.why">Miért a TotalDrop</a>
+      <a href="/hu/#how" data-i18n="nav.how">Hogyan működik</a>
+      <a href="/hu/#security" data-i18n="nav.security">Biztonság</a>
+      <a href="/hu/download/" data-i18n="nav.download">Letöltés</a>
+      <select class="lang" id="lang-select" aria-label="Nyelv" data-i18n-label="lang.label" hidden></select>
+    </nav>
+  </header>
+
+  <main id="main">
+    <p class="lang-note" role="note">Ez a fordítás vázlat, ellenőrzése folyamatban van.</p>
+    <section class="dl-hero" aria-labelledby="r-title">
+      <p class="eyebrow" data-i18n="r.eyebrow">Valaki fájlokat küld neked</p>
+      <h1 id="r-title" data-i18n="r.title">Fogadás a TotalDrop segítségével</h1>
+      <div id="r-has-code" hidden>
+        <div class="code-card">
+          <p class="code-label" data-i18n="r.code">Átviteli kód</p>
+          <p class="code" id="r-code" lang="en" dir="ltr"></p>
+        </div>
+        <p class="lede" data-i18n="r.lede">Nyisd meg a TotalDropot ezen az eszközön; a kód automatikusan kitöltődik. Másik eszközön válaszd a Fogadás lehetőséget, és írd be a kódot.</p>
+        <div class="actions">
+          <a class="btn btn-primary" id="r-open" href="#" data-i18n="r.open">Megnyitás a TotalDropban</a>
+          <button class="btn btn-quiet copy" type="button" id="r-copy" data-i18n="r.copy">Kód másolása</button>
+        </div>
+      </div>
+      <p class="lede" id="r-no-code" hidden data-i18n="r.none">Ebben a linkben nincs TotalDrop-kód. Kérd el a kódot a küldőtől, aztán nyisd meg a TotalDropot, és válaszd a Fogadás lehetőséget.</p>
+    </section>
+
+    <section class="block" aria-labelledby="r-get">
+      <h2 id="r-get" data-i18n="r.get.title">Még nincs TotalDropod?</h2>
+      <p data-i18n="r.get.body">Ingyenes, nem kell hozzá fiók, és egy perc alatt telepíthető. A kód addig érvényes, amíg a küldőnél nyitva van a TotalDrop.</p>
+      <div class="actions"><a class="btn btn-quiet" href="/hu/download/" data-i18n="r.get.cta">A TotalDrop letöltése</a></div>
+      <p class="note" data-i18n="r.private">A kódot csak ez az oldal olvassa be; soha nem kerül el a szerverünkre.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p data-i18n="foot.line">A TotalDrop nyílt forráskódú, és nyilvánosan fejlesztjük.</p>
+    <p class="foot-links">
+      <a href="https://github.com/totaldrop-app">GitHub</a>
+      <a href="https://x.com/totaldropapp" rel="me" aria-label="X: @totaldropapp">X</a>
+      <a href="https://www.instagram.com/totaldropapp/" rel="me" aria-label="Instagram: @totaldropapp">Instagram</a>
+      <a href="https://www.threads.com/@totaldropapp" rel="me" aria-label="Threads: @totaldropapp">Threads</a>
+      <a href="https://www.bestpractices.dev/projects/16332">OpenSSF Best Practices</a>
+      <a href="https://github.com/totaldrop-app/totaldrop/releases.atom" data-i18n="foot.rss">RSS</a>
+      <a href="https://totaldrop.app/roadmap/" data-i18n="foot.roadmap">Ütemterv</a>
+      <a href="https://totaldrop.app/team/" data-i18n="foot.team">Csapat</a>
+      <a href="https://totaldrop.app/donate/" data-i18n="foot.donate">Adományozás</a>
+      <a href="https://totaldrop.app/brand/" data-i18n="foot.brand">Arculat</a>
+      <a href="https://totaldrop.app/privacy/hu" hreflang="hu" data-i18n="foot.privacy">Adatvédelem</a>
+      <a href="mailto:hello@totaldrop.app">hello@totaldrop.app</a>
+    </p>
+  </footer>
+
+  <script src="/lang.js?v=496d43e3b9" defer></script>
+  <script src="/app.js?v=be457484b6" defer></script>
+</body>
+</html>

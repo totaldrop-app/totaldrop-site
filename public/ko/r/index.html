@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko" dir="ltr" data-static-locale="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TotalDrop으로 받기</title>
+  <meta name="description" content="누군가 TotalDrop으로 파일을 보내고 있습니다. 앱을 열고 코드를 입력하세요.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://totaldrop.app/ko/r/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=d075185718">
+</head>
+<body data-page="receive">
+  <a class="skip" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
+
+  <header class="top">
+    <a class="brand" href="/ko/" aria-label="TotalDrop 홈" data-i18n-label="nav.home">
+      <svg class="mark" viewBox="0 0 112 112" aria-hidden="true"><path class="mk" d="M55 15H97V57A42 42 0 1 1 55 15Z"/></svg>
+      <span>TotalDrop</span>
+    </a>
+    <nav class="top-nav" aria-label="주 메뉴" data-i18n-label="nav.label">
+      <a href="/ko/#why" data-i18n="nav.why">TotalDrop을 쓰는 이유</a>
+      <a href="/ko/#how" data-i18n="nav.how">작동 방식</a>
+      <a href="/ko/#security" data-i18n="nav.security">보안</a>
+      <a href="/ko/download/" data-i18n="nav.download">다운로드</a>
+      <select class="lang" id="lang-select" aria-label="언어" data-i18n-label="lang.label" hidden></select>
+    </nav>
+  </header>
+
+  <main id="main">
+    <p class="lang-note" role="note">이 번역은 초안이며 검토 중입니다.</p>
+    <section class="dl-hero" aria-labelledby="r-title">
+      <p class="eyebrow" data-i18n="r.eyebrow">누군가 파일을 보내고 있습니다</p>
+      <h1 id="r-title" data-i18n="r.title">TotalDrop으로 받기</h1>
+      <div id="r-has-code" hidden>
+        <div class="code-card">
+          <p class="code-label" data-i18n="r.code">전송 코드</p>
+          <p class="code" id="r-code" lang="en" dir="ltr"></p>
+        </div>
+        <p class="lede" data-i18n="r.lede">이 기기에서 TotalDrop을 열면 코드가 자동으로 입력됩니다. 다른 기기에서는 받기를 선택하고 코드를 입력하세요.</p>
+        <div class="actions">
+          <a class="btn btn-primary" id="r-open" href="#" data-i18n="r.open">TotalDrop에서 열기</a>
+          <button class="btn btn-quiet copy" type="button" id="r-copy" data-i18n="r.copy">코드 복사</button>
+        </div>
+      </div>
+      <p class="lede" id="r-no-code" hidden data-i18n="r.none">이 링크에는 TotalDrop 코드가 없습니다. 보내는 사람에게 코드를 요청한 다음 TotalDrop을 열고 받기를 선택하세요.</p>
+    </section>
+
+    <section class="block" aria-labelledby="r-get">
+      <h2 id="r-get" data-i18n="r.get.title">아직 TotalDrop이 없나요?</h2>
+      <p data-i18n="r.get.body">무료이고 계정이 필요 없으며 1분이면 설치됩니다. 보내는 사람이 TotalDrop을 열어 두는 동안 코드가 유효합니다.</p>
+      <div class="actions"><a class="btn btn-quiet" href="/ko/download/" data-i18n="r.get.cta">TotalDrop 다운로드</a></div>
+      <p class="note" data-i18n="r.private">코드는 이 페이지 안에서만 읽히며, 저희 서버로 전송되지 않습니다.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p data-i18n="foot.line">TotalDrop은 오픈 소스이며 공개적으로 개발됩니다.</p>
+    <p class="foot-links">
+      <a href="https://github.com/totaldrop-app">GitHub</a>
+      <a href="https://x.com/totaldropapp" rel="me" aria-label="X: @totaldropapp">X</a>
+      <a href="https://www.instagram.com/totaldropapp/" rel="me" aria-label="Instagram: @totaldropapp">Instagram</a>
+      <a href="https://www.threads.com/@totaldropapp" rel="me" aria-label="Threads: @totaldropapp">Threads</a>
+      <a href="https://www.bestpractices.dev/projects/16332">OpenSSF Best Practices</a>
+      <a href="https://github.com/totaldrop-app/totaldrop/releases.atom" data-i18n="foot.rss">RSS</a>
+      <a href="https://totaldrop.app/roadmap/" data-i18n="foot.roadmap">로드맵</a>
+      <a href="https://totaldrop.app/team/" data-i18n="foot.team">팀</a>
+      <a href="https://totaldrop.app/donate/" data-i18n="foot.donate">후원</a>
+      <a href="https://totaldrop.app/brand/" data-i18n="foot.brand">브랜드</a>
+      <a href="https://totaldrop.app/privacy/ko" hreflang="ko" data-i18n="foot.privacy">개인정보 보호</a>
+      <a href="mailto:hello@totaldrop.app">hello@totaldrop.app</a>
+    </p>
+  </footer>
+
+  <script src="/lang.js?v=496d43e3b9" defer></script>
+  <script src="/app.js?v=be457484b6" defer></script>
+</body>
+</html>

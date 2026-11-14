@@ -44,6 +44,8 @@ jobs:
         run: node tools/asset-versions.mjs --check
       - name: Check 35-language privacy policy pages
         run: node tools/privacy.mjs --check
+      - name: Check static 35-locale pre-rendered pages
+        run: node tools/static-locales.mjs --check
       - name: Check UI translations and ICU vectors
         run: node tools/check-i18n.mjs
       - name: Check site favicons and link tags
@@ -60,7 +62,7 @@ jobs:
         working-directory: public
         run: |
           status=0
-          for page in index.html download/index.html donate/index.html roadmap/index.html brand/index.html team/index.html r/index.html privacy.html privacy/*.html 404.html; do
+          for page in $(find . -name '*.html' | sed 's|^\./||' | sort); do
             for ref in $(grep -oE '(href|src)="/[^"#]*"' "$page" | sed -E 's/.*="\/([^"?]*)[^"]*"/\1/'); do
               [ -z "$ref" ] && continue
               [ -e "$ref" ] || [ -e "$ref/index.html" ] || [ -e "$ref.html" ] || { echo "$page -> /$ref missing"; status=1; }

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="he" dir="rtl" data-static-locale="he">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>קבלה עם TotalDrop</title>
+  <meta name="description" content="מישהו שולח לך קבצים עם TotalDrop. יש לפתוח את האפליקציה ולהזין את הקוד.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://totaldrop.app/he/r/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=d075185718">
+</head>
+<body data-page="receive">
+  <a class="skip" href="#main" data-i18n="skip">דילוג לתוכן</a>
+
+  <header class="top">
+    <a class="brand" href="/he/" aria-label="דף הבית של TotalDrop" data-i18n-label="nav.home">
+      <svg class="mark" viewBox="0 0 112 112" aria-hidden="true"><path class="mk" d="M55 15H97V57A42 42 0 1 1 55 15Z"/></svg>
+      <span>TotalDrop</span>
+    </a>
+    <nav class="top-nav" aria-label="ראשי" data-i18n-label="nav.label">
+      <a href="/he/#why" data-i18n="nav.why">למה TotalDrop</a>
+      <a href="/he/#how" data-i18n="nav.how">איך זה עובד</a>
+      <a href="/he/#security" data-i18n="nav.security">אבטחה</a>
+      <a href="/he/download/" data-i18n="nav.download">הורדה</a>
+      <select class="lang" id="lang-select" aria-label="שפה" data-i18n-label="lang.label" hidden></select>
+    </nav>
+  </header>
+
+  <main id="main">
+    <p class="lang-note" role="note">תרגום זה הוא טיוטה ונמצא בבדיקה.</p>
+    <section class="dl-hero" aria-labelledby="r-title">
+      <p class="eyebrow" data-i18n="r.eyebrow">מישהו שולח לך קבצים</p>
+      <h1 id="r-title" data-i18n="r.title">קבלה עם TotalDrop</h1>
+      <div id="r-has-code" hidden>
+        <div class="code-card">
+          <p class="code-label" data-i18n="r.code">קוד העברה</p>
+          <p class="code" id="r-code" lang="en" dir="ltr"></p>
+        </div>
+        <p class="lede" data-i18n="r.lede">פותחים את TotalDrop במכשיר הזה; הקוד ימולא אוטומטית. במכשיר אחר, בוחרים קבלה ומקלידים את הקוד.</p>
+        <div class="actions">
+          <a class="btn btn-primary" id="r-open" href="#" data-i18n="r.open">פתיחה ב־TotalDrop</a>
+          <button class="btn btn-quiet copy" type="button" id="r-copy" data-i18n="r.copy">העתקת הקוד</button>
+        </div>
+      </div>
+      <p class="lede" id="r-no-code" hidden data-i18n="r.none">בקישור הזה אין קוד TotalDrop. יש לבקש מהשולח את הקוד, ואז לפתוח את TotalDrop ולבחור קבלה.</p>
+    </section>
+
+    <section class="block" aria-labelledby="r-get">
+      <h2 id="r-get" data-i18n="r.get.title">עדיין אין לך TotalDrop?</h2>
+      <p data-i18n="r.get.body">זה חינם, לא צריך חשבון, וההתקנה לוקחת דקה. הקוד נשאר תקף כל עוד השולח משאיר את TotalDrop פתוח.</p>
+      <div class="actions"><a class="btn btn-quiet" href="/he/download/" data-i18n="r.get.cta">הורדת TotalDrop</a></div>
+      <p class="note" data-i18n="r.private">הקוד נקרא רק בדף הזה; הוא לעולם לא נשלח לשרת שלנו.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p data-i18n="foot.line">TotalDrop הוא קוד פתוח ומפותח בגלוי.</p>
+    <p class="foot-links">
+      <a href="https://github.com/totaldrop-app">GitHub</a>
+      <a href="https://x.com/totaldropapp" rel="me" aria-label="X: @totaldropapp">X</a>
+      <a href="https://www.instagram.com/totaldropapp/" rel="me" aria-label="Instagram: @totaldropapp">Instagram</a>
+      <a href="https://www.threads.com/@totaldropapp" rel="me" aria-label="Threads: @totaldropapp">Threads</a>
+      <a href="https://www.bestpractices.dev/projects/16332">OpenSSF Best Practices</a>
+      <a href="https://github.com/totaldrop-app/totaldrop/releases.atom" data-i18n="foot.rss">RSS</a>
+      <a href="https://totaldrop.app/roadmap/" data-i18n="foot.roadmap">מפת דרכים</a>
+      <a href="https://totaldrop.app/team/" data-i18n="foot.team">צוות</a>
+      <a href="https://totaldrop.app/donate/" data-i18n="foot.donate">תרומה</a>
+      <a href="https://totaldrop.app/brand/" data-i18n="foot.brand">מותג</a>
+      <a href="https://totaldrop.app/privacy/he" hreflang="he" data-i18n="foot.privacy">פרטיות</a>
+      <a href="mailto:hello@totaldrop.app">hello@totaldrop.app</a>
+    </p>
+  </footer>
+
+  <script src="/lang.js?v=496d43e3b9" defer></script>
+  <script src="/app.js?v=be457484b6" defer></script>
+</body>
+</html>

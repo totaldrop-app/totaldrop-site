@@ -38,6 +38,7 @@ jobs:
           node --check tools/probe-site.mjs
           node tools/asset-versions.mjs --check
           node tools/privacy.mjs --check
+          node tools/static-locales.mjs --check
           node tools/check-i18n.mjs
           node tools/favicons.mjs
           node tools/brand-files.mjs

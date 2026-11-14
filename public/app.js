@@ -20,6 +20,7 @@
     try { return RTL_SCRIPTS.includes(new Intl.Locale(tag).maximize().script); } catch (e) { return false; }
   };
   const PAGE = document.body.dataset.page || "home";
+  const STATIC_LOCALE = document.documentElement.dataset.staticLocale || "";
 
   const nodes = Array.from(document.querySelectorAll("[data-i18n]"));
   const descTag = document.querySelector('meta[name="description"]');
@@ -34,6 +35,7 @@
   EN["r.copied"] = "Copied";
   EN["lang.label"] = "Language";
   EN["lang.draft"] = "This translation is a draft and is being reviewed.";
+  let enLoaded = !STATIC_LOCALE || STATIC_LOCALE === "en";
   let dict = EN;
   // An empty or missing translation falls back to English.
   const has = (d, key) => typeof d[key] === "string" && d[key] !== "";
@@ -47,9 +49,9 @@
   const picker = document.getElementById("lang-select");
   // The draft note opens the main content, so it is read (and found by
   // landmark navigation) before the translated text.
-  let note = null;
   const main = document.getElementById("main");
-  if (main) {
+  let note = main ? main.querySelector(".lang-note") : null;
+  if (main && !note) {
     note = document.createElement("p");
     note.className = "lang-note";
     note.setAttribute("role", "note");
@@ -59,8 +61,8 @@
 
   // The privacy policy has a page in every language (/privacy/<tag>, #207);
   // its links follow the language shown.
-  const privacyLinks = Array.from(document.querySelectorAll('a[href="/privacy"], a[href="https://totaldrop.app/privacy"]'))
-    .map((a) => [a, a.getAttribute("href")]);
+  const privacyLinks = Array.from(document.querySelectorAll('a[href="/privacy"], a[href^="/privacy/"], a[href="https://totaldrop.app/privacy"], a[href^="https://totaldrop.app/privacy/"]'))
+    .map((a) => [a, a.getAttribute("href").replace(/(\/privacy)\/[A-Za-z-]+$/, "$1")]);
 
   function apply(tag, d) {
     dict = d;
@@ -102,6 +104,15 @@
   const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   async function show(tag, { save = false, animate = false } = {}) {
     const mine = ++request;
+    if (!enLoaded) {
+      try {
+        const enRes = await fetch("/i18n/en.json", { credentials: "omit" });
+        if (enRes.ok) {
+          Object.assign(EN, await enRes.json());
+          enLoaded = true;
+        }
+      } catch (e) { /* keep pre-rendered fallback */ }
+    }
     let d = EN;
     if (tag !== "en") {
       try {
@@ -116,7 +127,18 @@
       }
     }
     if (mine !== request) return;
-    if (save) store.set(tag);
+    if (save) {
+      store.set(tag);
+      if (STATIC_LOCALE && window.history && window.history.replaceState) {
+        const prefixRe = new RegExp("^/" + STATIC_LOCALE.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?=/|$)");
+        const curPath = location.pathname;
+        if (prefixRe.test(curPath) || /^\/[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,4})?(?=\/|$)/.test(curPath)) {
+          const rest = curPath.replace(/^\/[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,4})?(?=\/|$)/, "") || "/";
+          const nextPath = "/" + tag + (rest.startsWith("/") ? rest : "/" + rest);
+          window.history.replaceState(null, "", nextPath + location.search + location.hash);
+        }
+      }
+    }
     if (animate && !reduced && document.startViewTransition) document.startViewTransition(() => apply(tag, d));
     else apply(tag, d);
   }
@@ -136,9 +158,11 @@
   const saved = store.get();
   const initial = LANGUAGES.some((l) => l[0] === saved)
     ? saved
-    : negotiate(navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language]);
+    : (STATIC_LOCALE && LANGUAGES.some((l) => l[0] === STATIC_LOCALE))
+      ? STATIC_LOCALE
+      : negotiate(navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language]);
   if (picker) picker.value = initial;
-  if (initial !== "en") show(initial);
+  if (STATIC_LOCALE ? initial !== STATIC_LOCALE : initial !== "en") show(initial);
 
   // Download page: mark the card for the device in hand, and copy commands.
   const cards = document.querySelectorAll("[data-platform]");
