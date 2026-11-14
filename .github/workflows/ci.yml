@@ -1,0 +1,153 @@
+# Continuous integration for TotalDrop Web Site (totaldrop.app): static site
+# verification across x86_64 and ARM64 Linux runners, REUSE 3.3 license
+# compliance, and secret scanning. The final "CI" gate job is the single
+# required status check.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  merge_group:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event_name }}-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  site:
+    name: Site (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, ubuntu-24.04-arm]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "24"
+      - name: Check browser and Pages Function script syntax
+        run: >-
+          node --check public/app.js &&
+          node --check public/lang.js &&
+          node --check public/msg.js &&
+          node --check functions/_middleware.js
+      - name: Check asset cache-busting versions
+        run: node tools/asset-versions.mjs --check
+      - name: Check 35-language privacy policy pages
+        run: node tools/privacy.mjs --check
+      - name: Check UI translations and ICU vectors
+        run: node tools/check-i18n.mjs
+      - name: Check site favicons and link tags
+        run: node tools/favicons.mjs
+      - name: Check generated brand SVG and PNG assets
+        run: node tools/brand-files.mjs
+      - name: Check team page against offline GitHub snapshot
+        run: node tools/team.mjs
+      - name: Check README links and formatting
+        run: node tools/check-readmes.mjs
+      - name: Run site tool unit tests
+        run: node --test tools/test-*.mjs
+      - name: Verify every page links only to files that exist
+        working-directory: public
+        run: |
+          status=0
+          for page in index.html download/index.html donate/index.html roadmap/index.html brand/index.html team/index.html r/index.html privacy.html privacy/*.html 404.html; do
+            for ref in $(grep -oE '(href|src)="/[^"#]*"' "$page" | sed -E 's/.*="\/([^"?]*)[^"]*"/\1/'); do
+              [ -z "$ref" ] && continue
+              [ -e "$ref" ] || [ -e "$ref/index.html" ] || [ -e "$ref.html" ] || { echo "$page -> /$ref missing"; status=1; }
+            done
+          done
+          exit $status
+
+  reuse:
+    name: Licenses (REUSE)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Source files carry SPDX lines
+        run: ./tools/check-spdx.sh
+      - name: reuse lint
+        run: >-
+          docker run --rm --volume "$PWD:/data"
+          fsfe/reuse:6.2.0@sha256:85462a75c0f8efda09ddd190b92816b70e7662577c8427429e11e1b9f25a992e
+          lint
+
+  secrets:
+    name: Secrets
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Commits to scan
+        id: range
+        env:
+          EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
+          MERGE_GROUP_BASE: ${{ github.event.merge_group.base_sha }}
+        run: |
+          case $EVENT in
+            pull_request) base=HEAD^1 ;;
+            push) base=$BEFORE ;;
+            merge_group) base=$MERGE_GROUP_BASE ;;
+            *) base= ;;
+          esac
+          if [ -n "$base" ] && git cat-file -e "$base^{commit}" 2>/dev/null; then
+            range=$base..HEAD
+          else
+            base=HEAD range=HEAD
+          fi
+          echo "Scanning $range"
+          { echo "BASE=$base"; echo "RANGE=$range"; } >>"$GITHUB_ENV"
+      - name: No signing keys, key.properties, or .gitleaksignore
+        run: |
+          found=$(
+            { git ls-files -z
+              git -c core.quotePath=false log --format= --name-only -z --no-renames --diff-filter=d "$RANGE"
+            } | grep -ziE '(^|/)(key\.properties|\.gitleaksignore)$|\.(jks|keystore|p12|pfx|pepk)$' | tr '\0' '\n' | sort -u
+          )
+          if [ -n "$found" ]; then
+            printf '%s\n' "$found"
+            echo "::error::Signing keys, key.properties, and .gitleaksignore must not be committed."
+            exit 1
+          fi
+      - name: gitleaks
+        if: ${{ !cancelled() && steps.range.outcome == 'success' }}
+        run: |
+          cfg=$RUNNER_TEMP/gitleaks
+          mkdir -p "$cfg"
+          if ! git show "$BASE:.gitleaks.toml" >"$cfg/gitleaks.toml" 2>/dev/null; then
+            printf '[extend]\nuseDefault = true\n' >"$cfg/gitleaks.toml"
+          fi
+          docker run --rm --volume "$PWD/.git:/repo/.git:ro" --volume "$cfg:/cfg:ro" \
+            ghcr.io/gitleaks/gitleaks:v8.30.0@sha256:691af3c7c5a48b16f187ce3446d5f194838f91238f27270ed36eef6359a574d9 \
+            git --no-banner --redact --verbose --config /cfg/gitleaks.toml \
+            --gitleaks-ignore-path /cfg --ignore-gitleaks-allow \
+            --log-opts="--text $RANGE" /repo
+
+  gate:
+    name: CI
+    if: always()
+    needs: [site, reuse, secrets]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - env:
+          NEEDS: ${{ toJSON(needs) }}
+        run: |
+          jq -r 'to_entries[] | "\(.key): \(.value.result)"' <<<"$NEEDS"
+          jq -e 'all(.[]; .result == "success")' <<<"$NEEDS" >/dev/null

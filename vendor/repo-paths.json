@@ -1,0 +1,24 @@
+{
+  "repo": "totaldrop-app/totaldrop",
+  "paths": [
+    ".github",
+    "CONTRIBUTING.md",
+    "GOVERNANCE.md",
+    "README.md",
+    "SECURITY.md",
+    "app",
+    "crates/totaldrop-cli",
+    "crates/totaldrop-core",
+    "crates/totaldrop-crypto",
+    "crates/totaldrop-l10n",
+    "crates/totaldrop-proto",
+    "docs",
+    "formal",
+    "fuzz",
+    "l10n",
+    "linux",
+    "packaging",
+    "server",
+    "site"
+  ]
+}

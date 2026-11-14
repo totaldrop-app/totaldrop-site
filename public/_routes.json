@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "include": [
+    "/*"
+  ],
+  "exclude": [
+    "/fonts/*",
+    "/brand/files/*",
+    "/team/avatars/*",
+    "/i18n/*",
+    "/styles.css",
+    "/app.js",
+    "/lang.js",
+    "/msg.js",
+    "/favicon.svg",
+    "/favicon.ico",
+    "/apple-touch-icon.png",
+    "/robots.txt",
+    "/.well-known/*",
+    "/sitemap.xml"
+  ]
+}

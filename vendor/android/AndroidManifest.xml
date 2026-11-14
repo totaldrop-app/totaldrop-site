@@ -1,0 +1,119 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- A send or receive keeps going while the app is in the background,
+         as a user-initiated data transfer job with a notification (#194). -->
+    <uses-permission android:name="android.permission.RUN_USER_INITIATED_JOBS"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <!-- Required for a job with a network constraint. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application
+        android:label="TotalDrop"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:localeConfig="@xml/locales_config"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <!-- "Share" from any app: one or more files of any type (#53).
+                 One window: singleTask brings the open TotalDrop forward
+                 with the new files instead of starting a second one inside
+                 the sharing app. The files are copied before they are
+                 sent; only content:// URIs of other apps are read
+                 (SharedFiles.kt). -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <!-- "Send with TotalDrop" in the menu of text selected in any
+                 app (#326): the text opens in Send, to be looked at before a
+                 code is made. Nothing is given back to that app. -->
+            <intent-filter android:label="@string/process_text">
+                <action android:name="android.intent.action.PROCESS_TEXT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <!-- A link to receive (#445): totaldrop://r/<code>, from the
+                 "Open in TotalDrop" button of totaldrop.app/r. It only fills
+                 in the code on the Receive screen; nothing connects until
+                 the person does. The code is read strictly, in Rust
+                 (TransferCode::from_link). -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="totaldrop" android:host="r"/>
+            </intent-filter>
+            <!-- The same link as a web address, https://totaldrop.app/r#<code>
+                 (#445). Android checks totaldrop.app/.well-known/assetlinks.json
+                 (site/public) against the Play signing key, so only this app
+                 opens these links; no other app can claim them as it can the
+                 totaldrop:// scheme. The code is in the fragment and never
+                 reaches the site. -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="totaldrop.app" android:path="/r"/>
+            </intent-filter>
+            <!-- Links are read only by MainActivity.kt. Left on, Flutter also
+                 pushes each VIEW intent's path as a route, and totaldrop://r/
+                 opened a second Home screen over Receive (#445). -->
+            <meta-data
+                android:name="flutter_deeplinking_enabled"
+                android:value="false"/>
+            <!-- Send and Receive when the icon is held (res/xml/shortcuts.xml). -->
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity>
+        <service
+            android:name=".TransferJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <receiver
+            android:name=".StopTransferReceiver"
+            android:exported="false"/>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+    <!-- Required to query activities that can process text, see:
+         https://developer.android.com/training/package-visibility and
+         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+
+         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+    </queries>
+</manifest>
