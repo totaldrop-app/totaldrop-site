@@ -45,7 +45,7 @@ test("it names the channels SECURITY.md names, and only those", () => {
   ]);
   assert.ok(policy.includes("security@totaldrop.app"), "SECURITY.md no longer names security@");
   assert.ok(policy.includes("private vulnerability reporting"), "SECURITY.md no longer names GitHub's private reporting");
-  assert.deepEqual(f.get("policy"), ["https://github.com/totaldrop-app/totaldrop/blob/main/SECURITY.md"]);
+  assert.deepEqual(f.get("policy"), ["https://github.com/totaldrop-app/.github/blob/main/SECURITY.md"]);
   assert.deepEqual(f.get("canonical"), [
     "https://totaldrop.app/.well-known/security.txt",
     "https://download.totaldrop.app/.well-known/security.txt",

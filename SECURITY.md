@@ -19,7 +19,7 @@ Include what you found, how to reproduce it, and what an attacker could do with 
 ## How we handle a report
 
 1. **Acknowledge** within 72 hours, privately, on the channel you used.
-2. **Triage:** reproduce it, judge its impact against the [threat model](docs/tehdit-modeli.md), and agree a severity with you.
+2. **Triage:** reproduce it, judge its impact against the [threat model](https://github.com/totaldrop-app/totaldrop-core/blob/main/docs/threat-model.md), and agree a severity with you.
 3. **Fix** in a private fork or a draft security advisory, with a test that fails before the fix. Fixes for exploitable issues come before any other work.
 4. **Release** the fix for every affected platform, then publish a GitHub security advisory (with a CVE where one applies) and a Security entry in [CHANGELOG.md](CHANGELOG.md).
 5. **Credit** the reporter in the advisory and the changelog, unless they ask to stay anonymous.
@@ -43,7 +43,7 @@ TotalDrop does not:
 - protect files on a device that is already compromised, or check whether a file you receive is harmful;
 - have an independent security audit yet.
 
-The [threat model](docs/tehdit-modeli.md) (in Turkish) lists every threat, how it is countered and what risk remains.
+The [threat model](https://github.com/totaldrop-app/totaldrop-core/blob/main/docs/threat-model.md) lists every threat, how it is countered and what risk remains.
 
 ## Scope
 
