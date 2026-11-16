@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>آدم‌های پشت TotalDrop</title>
   <meta name="description" content="چه کسی TotalDrop را می‌سازد و هر کس کدام بخش کار را انجام می‌دهد؛ همهٔ اعداد از تاریخچهٔ عمومی پروژه در GitHub گرفته شده‌اند.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/fa/team/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/team/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/team/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="team">
   <a class="skip" href="#main" data-i18n="skip">رفتن به محتوا</a>
@@ -142,7 +145,7 @@
 
     <section class="block" aria-labelledby="tm-tools">
       <h2 id="tm-tools" data-i18n="tm.tools.title">هوش مصنوعی و خودکارسازی</h2>
-      <p class="block-lede" data-i18n="tm.tools.lede">این‌جا نرم‌افزار هم تغییر می‌نویسد. کار آن از همان بررسی‌ها و بازبینی‌هایی می‌گذرد که کار هر کس دیگری، و فقط رهبر پروژه می‌تواند آن را ادغام کند.</p>
+      <p class="block-lede" data-i18n="tm.tools.lede">این‌جا نرم‌افزار هم تغییر می‌نویسد. کار آن از همان بررسی‌ها و بازبینی‌هایی می‌گذرد که کار هر کس دیگری، و یکی از نگهدارندگان هر تغییر را تأیید یا ادغام می‌کند.</p>
       <!-- team:helpers -->
       <ul class="helpers">
         <li class="helper">
@@ -326,10 +329,10 @@
 
     <section class="block" aria-labelledby="tm-how">
       <h2 id="tm-how" data-i18n="tm.how.title">کار چگونه بازبینی می‌شود</h2>
-      <ol class="steps tm-steps">
+      <ol class="steps tm-steps" role="list">
         <li><p data-i18n="tm.how.h1">تغییرات روزمره با یک مسئلهٔ عمومی آغاز می‌شوند و فقط از راه یک درخواست ادغام به برنامه می‌رسند.</p></li>
         <li><p data-i18n="tm.how.h2">هر درخواست ادغام از بررسی‌های خودکار و از بازبینی شخص یا عامل هوش مصنوعی‌ای می‌گذرد که آن را ننوشته است.</p></li>
-        <li><p data-i18n="tm.how.h3">فقط رهبر پروژه ادغام، منتشر و مستقر می‌کند. نسخه‌ها در GitHub Actions ساخته می‌شوند، هرگز روی رایانهٔ شخصی.</p></li>
+        <li><p data-i18n="tm.how.h3">نگهدارندگان تغییرهای بازبینی‌شده را ادغام می‌کنند، و فقط رهبر پروژه انتشارها و استقرارها را تأیید می‌کند. نسخه‌ها در GitHub Actions ساخته می‌شوند، هرگز روی رایانهٔ شخصی.</p></li>
       </ol>
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/totaldrop-app/totaldrop/blob/main/CONTRIBUTING.md" data-i18n="tm.join">همراه شوید</a>
@@ -357,6 +360,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

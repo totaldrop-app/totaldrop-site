@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Foaia de parcurs TotalDrop</title>
   <meta name="description" content="Ce este gata, ce urmează și ce vine mai târziu în TotalDrop, platformă cu platformă, pe drumul spre versiunea 1.0.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ro/roadmap/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/roadmap/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/roadmap/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="roadmap">
   <a class="skip" href="#main" data-i18n="skip">Salt la conținut</a>
@@ -84,7 +87,7 @@
         <span class="road-state" data-i18n="rm.done.state">Gata</span>
         <h2 id="rm-done" data-i18n="rm.done.when">Octombrie 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.d1.t">Un protocol deschis</h3>
             <p data-i18n="rm.d1.d">TotalDrop Protocol v0: coduri de transfer cu CPace, Noise XXpsk3 cu ML-KEM-768 post-cuantic, QUIC cu chei de unică folosință. Documentat ca oricine să poată construi o aplicație compatibilă.</p>
@@ -92,8 +95,8 @@
           </li>
           <li>
             <h3 data-i18n="rm.d2.t">Client pentru linia de comandă</h3>
-            <p data-i18n="rm.d2.d">Trimitere și primire din terminal pe Linux, macOS și Windows.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <p data-i18n="rm.d2.d">Trimitere și primire dintr-un terminal Linux, sau compilare din sursă cu Cargo (binare precompilate pentru macOS și Windows planificate).</p>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.d3.t">Beta pentru Android</h3>
@@ -118,7 +121,7 @@
           <li>
             <h3 data-i18n="rm.n2.t">Modul de confidențialitate în linia de comandă</h3>
             <p data-i18n="rm.n2.d">Doar prin releu: cealaltă parte nu vă află niciodată adresa IP.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.x7.t">Modul de confidențialitate în aplicații</h3>
@@ -142,7 +145,7 @@
         <span class="road-state" data-i18n="rm.now.state">Acum</span>
         <h2 id="rm-now" data-i18n="rm.now.when">Noiembrie 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x1.t">Scanarea codului QR cu camera</h3>
             <p data-i18n="rm.x1.d">Îndreptați telefonul spre ecranul expeditorului în loc să tastați codul.</p>
@@ -160,7 +163,7 @@
         <span class="road-state" data-i18n="rm.next.state">Urmează</span>
         <h2 id="rm-next" data-i18n="rm.next.when">Iarna 2026–27</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x3.t">Reluarea transferurilor întrerupte</h3>
             <p data-i18n="rm.x3.d">O conexiune întreruptă continuă de unde a rămas, fără să retrimită ce a ajuns deja.</p>
@@ -188,7 +191,7 @@
         <span class="road-state" data-i18n="rm.later.state">Mai târziu</span>
         <h2 id="rm-later" data-i18n="rm.later.when">2027</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.l1.t">iPhone, iPad și Mac</h3>
             <p data-i18n="rm.l1.d">Aplicații native, după ce donațiile acoperă contul de dezvoltator Apple.</p>
@@ -221,7 +224,7 @@
         <span class="road-state" data-i18n="rm.v1.state">Versiunea 1.0</span>
         <h2 id="rm-v1" data-i18n="rm.v1.when">După audit</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.v1.t">Audit de securitate independent</h3>
             <p data-i18n="rm.v1.d">O firmă externă analizează protocolul, criptografia și codul care procesează date nesigure. Raportul complet este publicat.</p>
@@ -273,6 +276,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lataa TotalDrop</title>
   <meta name="description" content="Lataa TotalDrop Linuxille, Androidille ja komentoriville. Windows, macOS, iOS ja selain ovat tulossa.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/fi/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">Alustat</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">Tälle laitteelle</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">Beta</span></header>
-          <p data-i18n="dl.android.d">Koko sovellus omalla kielelläsi, puhelimesi väreissä.</p>
+          <p data-i18n="dl.android.d">Koko sovellus omalla kielelläsi, puhelimesi väreissä, jakovalikosta ja leikepöydältä lähetyksellä.</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 tai uudempi, 64-bittinen</li>
             <li data-i18n="dl.android.r2">Testissä Google Playssa, kutsusta, kun beta on suljettu</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">Tälle laitteelle</span>
           <header><h3 data-i18n="dl.cli">Komentorivi</h3><span class="pill is-ready" data-i18n="dl.ready">Saatavilla</span></header>
-          <p data-i18n="dl.cli.d">Linuxin, macOS:n ja Windowsin päätteisiin. Lähettää tiedostoja ja kokonaisia kansioita.</p>
+          <p data-i18n="dl.cli.d">Esikäännettynä Linux-paketeissa jo tänään, tai käännettävissä lähdekoodista Cargolla. Lähettää tiedostoja, kokonaisia kansioita ja tekstiä argumenteista tai vakiosyötteestä.</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="Asennuskomento" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">Kopioi komento</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="Käyttöesimerkki" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Tehty Qt 6:lla Waylandille. Ottaa värit, fontit ja kuvakkeet työpöydältäsi: Plasma, Hyprland, Omarchy, GNOME.</p>
           <ul>
             <li data-i18n="dl.linux.r1">Oma paketti kullekin jakeluperheelle: kaikki x86-64:lle; Debian, Ubuntu ja Fedora myös ARM64:lle</li>
-            <li data-i18n="dl.linux.r2">.pkg-, .deb- ja .rpm-paketit asentavat myös totaldrop-komennon</li>
+            <li data-i18n="dl.linux.r2">Paketit .pkg, .deb ja .rpm asentavat myös totaldrop-komennon sekä pikavalikot Dolphiniin, Tiedostoihin ja Nemoon</li>
             <li data-i18n="dl.linux.r3">Käytä vain yhtä Linux-pakettia kerrallaan. Flatpakilla ja .pkg-, .deb- tai .rpm-paketilla on sama nimi, joten kun toinen on auki, toisen käynnistäminen tuo avoimen ikkunan eteen eikä avaa toista.</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">Tulossa</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">Tälle laitteelle</span>
           <header><h3 data-i18n="dl.web">Selaimessa</h3><span class="pill" data-i18n="rm.now.when">Marraskuu 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">Vaatimukset</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">Alusta</th><th scope="col" data-i18n="dl.req.min">Vähintään</th><th scope="col" data-i18n="dl.req.notes">Huomautukset</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, 64-bittinen ARM</td><td data-i18n="dl.req.android.n">Vain internetlupa</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, 64-bittinen ARM</td><td data-i18n="dl.req.android.n">Verkko-, taustasiirto- ja ilmoitusluvat; 16 kt sivutasatut natiivikirjastot</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8: Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland tai X11; x86-64 ja ARM64 (.deb, .rpm, Flatpak; Arch vain x86-64)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">Komentorivi</th><td data-i18n="dl.req.cli">Rust 1.99 kääntämiseen</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">Komentorivi</th><td data-i18n="dl.req.cli">Rust 1.99 kääntämiseen</td><td data-i18n="dl.req.cli.n">Esikäännetty Linuxille; muualla käännetään lähdekoodista Cargolla (esikäännetyt macOS- ja Windows-binäärit suunnitteilla)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">Verkko</th><td data-i18n="dl.req.net.m">Internet tai sama verkko</td><td data-i18n="dl.req.net.n">Suoraan, kun mahdollista, muuten välityspalvelimen kautta</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tải TotalDrop</title>
   <meta name="description" content="Tải TotalDrop cho Linux, Android và dòng lệnh. Windows, macOS, iOS và trình duyệt sắp có.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/vi/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">Chuyển đến nội dung</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">Nền tảng</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">Cho thiết bị này</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">Beta</span></header>
-          <p data-i18n="dl.android.d">Ứng dụng đầy đủ, bằng ngôn ngữ của bạn, theo màu sắc của điện thoại bạn.</p>
+          <p data-i18n="dl.android.d">Ứng dụng đầy đủ, bằng ngôn ngữ của bạn, theo màu sắc của điện thoại, hỗ trợ gửi từ bảng chia sẻ và khay nhớ tạm.</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 trở lên, 64-bit</li>
             <li data-i18n="dl.android.r2">Thử nghiệm trên Google Play, theo lời mời khi bản beta còn đóng</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">Cho thiết bị này</span>
           <header><h3 data-i18n="dl.cli">Dòng lệnh</h3><span class="pill is-ready" data-i18n="dl.ready">Đã có</span></header>
-          <p data-i18n="dl.cli.d">Cho terminal trên Linux, macOS và Windows. Gửi được tệp và cả thư mục.</p>
+          <p data-i18n="dl.cli.d">Được biên dịch sẵn trong các gói Linux hiện nay, hoặc tự biên dịch từ mã nguồn bằng Cargo. Gửi tệp, cả thư mục và văn bản từ tham số hoặc đầu vào chuẩn.</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="Lệnh cài đặt" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">Sao chép lệnh</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="Ví dụ sử dụng" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Xây dựng bằng Qt 6 cho Wayland. Ứng dụng lấy màu sắc, phông chữ và biểu tượng từ màn hình nền của bạn: Plasma, Hyprland, Omarchy, GNOME.</p>
           <ul>
             <li data-i18n="dl.linux.r1">Gói riêng cho từng họ bản phân phối: tất cả cho x86-64; Debian, Ubuntu và Fedora cũng có cho ARM64</li>
-            <li data-i18n="dl.linux.r2">Các gói .pkg, .deb và .rpm cũng cài lệnh totaldrop</li>
+            <li data-i18n="dl.linux.r2">Các gói .pkg , .deb và .rpm cũng cài lệnh totaldrop và menu chuột phải cho Dolphin, Files và Nemo</li>
             <li data-i18n="dl.linux.r3">Mỗi lúc chỉ dùng một gói Linux. Bản Flatpak và gói .pkg, .deb hoặc .rpm dùng chung một tên, nên khi một bản đang mở, khởi động bản kia sẽ đưa cửa sổ đang mở lên trước thay vì mở cửa sổ thứ hai.</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">Sắp có</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">Cho thiết bị này</span>
           <header><h3 data-i18n="dl.web">Trong trình duyệt</h3><span class="pill" data-i18n="rm.now.when">Tháng 11 năm 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">Yêu cầu</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">Nền tảng</th><th scope="col" data-i18n="dl.req.min">Tối thiểu</th><th scope="col" data-i18n="dl.req.notes">Ghi chú</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM 64-bit</td><td data-i18n="dl.req.android.n">Chỉ cần quyền internet</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM 64-bit</td><td data-i18n="dl.req.android.n">Quyền mạng, truyền dưới nền và thông báo; thư viện gốc căn chỉnh trang 16 KB</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8: Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland hoặc X11; x86-64 và ARM64 (.deb, .rpm, Flatpak; Arch chỉ x86-64)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">Dòng lệnh</th><td data-i18n="dl.req.cli">Rust 1.99 để biên dịch</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">Dòng lệnh</th><td data-i18n="dl.req.cli">Rust 1.99 để biên dịch</td><td data-i18n="dl.req.cli.n">Biên dịch sẵn trên Linux; biên dịch từ mã nguồn bằng Cargo ở hệ thống khác (bản dựng sẵn cho macOS và Windows đang được lên kế hoạch)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">Mạng</th><td data-i18n="dl.req.net.m">Internet, hoặc cùng một mạng</td><td data-i18n="dl.req.net.n">Trực tiếp khi có thể, nếu không thì qua máy chủ chuyển tiếp</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

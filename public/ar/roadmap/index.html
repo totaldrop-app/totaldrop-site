@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>خارطة طريق TotalDrop</title>
   <meta name="description" content="ما أُنجز، وما يأتي بعده، وما يأتي لاحقًا في TotalDrop، منصة تلو أخرى، في الطريق إلى الإصدار 1.0.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ar/roadmap/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/roadmap/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/roadmap/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="roadmap">
   <a class="skip" href="#main" data-i18n="skip">الانتقال إلى المحتوى</a>
@@ -84,7 +87,7 @@
         <span class="road-state" data-i18n="rm.done.state">أُنجز</span>
         <h2 id="rm-done" data-i18n="rm.done.when">أكتوبر 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.d1.t">بروتوكول مفتوح</h3>
             <p data-i18n="rm.d1.d">بروتوكول TotalDrop الإصدار v0: رموز نقل عبر CPace، وNoise XXpsk3 مع ML-KEM-768 المقاوم للحوسبة الكمومية، وQUIC بمفاتيح تُستخدم مرة واحدة. موثّق كتابيًا ليتمكن أي شخص من بناء تطبيق متوافق.</p>
@@ -92,8 +95,8 @@
           </li>
           <li>
             <h3 data-i18n="rm.d2.t">عميل سطر الأوامر</h3>
-            <p data-i18n="rm.d2.d">الإرسال والاستلام من الطرفية على Linux وmacOS وWindows.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <p data-i18n="rm.d2.d">الإرسال والاستلام من طرفية Linux، أو البناء من المصدر عبر Cargo (نسخ macOS وWindows الجاهزة قيد التخطيط).</p>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.d3.t">نسخة Android التجريبية</h3>
@@ -118,7 +121,7 @@
           <li>
             <h3 data-i18n="rm.n2.t">وضع الخصوصية في سطر الأوامر</h3>
             <p data-i18n="rm.n2.d">عبر خادم الترحيل فقط: لا يعرف الطرف الآخر عنوان IP الخاص بك أبدًا.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.x7.t">وضع الخصوصية في التطبيقات</h3>
@@ -142,7 +145,7 @@
         <span class="road-state" data-i18n="rm.now.state">الآن</span>
         <h2 id="rm-now" data-i18n="rm.now.when">نوفمبر 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x1.t">مسح رمز QR بالكاميرا</h3>
             <p data-i18n="rm.x1.d">وجّه الهاتف إلى شاشة المرسل بدلًا من كتابة الرمز.</p>
@@ -160,7 +163,7 @@
         <span class="road-state" data-i18n="rm.next.state">التالي</span>
         <h2 id="rm-next" data-i18n="rm.next.when">شتاء 2026–27</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x3.t">استئناف عمليات النقل المنقطعة</h3>
             <p data-i18n="rm.x3.d">يستأنف الاتصال المنقطع من حيث توقف، دون إعادة إرسال ما وصل.</p>
@@ -188,7 +191,7 @@
         <span class="road-state" data-i18n="rm.later.state">لاحقًا</span>
         <h2 id="rm-later" data-i18n="rm.later.when">2027</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.l1.t">iPhone وiPad وMac</h3>
             <p data-i18n="rm.l1.d">تطبيقات أصلية، بعد أن تغطي التبرعات حساب المطوّر لدى Apple.</p>
@@ -221,7 +224,7 @@
         <span class="road-state" data-i18n="rm.v1.state">الإصدار 1.0</span>
         <h2 id="rm-v1" data-i18n="rm.v1.when">بعد التدقيق</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.v1.t">تدقيق أمني مستقل</h3>
             <p data-i18n="rm.v1.d">تراجع شركة خارجية البروتوكول والتشفير والشيفرة التي تعالج المدخلات غير الموثوقة. ويُنشر التقرير كاملًا.</p>
@@ -273,6 +276,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

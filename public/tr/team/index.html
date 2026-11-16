@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop'un arkasındaki ekip</title>
   <meta name="description" content="TotalDrop'u kimin yaptığı ve işin hangi bölümünü kimin üstlendiği; her sayı projenin GitHub'daki herkese açık geçmişinden alınır.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/tr/team/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/team/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/team/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="team">
   <a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
@@ -142,7 +145,7 @@
 
     <section class="block" aria-labelledby="tm-tools">
       <h2 id="tm-tools" data-i18n="tm.tools.title">Yapay zekâ ve otomasyon</h2>
-      <p class="block-lede" data-i18n="tm.tools.lede">Burada değişiklikleri yazılım da yazar. Bu işler herkesinki gibi aynı denetimlerden ve incelemelerden geçer; yalnızca proje lideri birleştirebilir.</p>
+      <p class="block-lede" data-i18n="tm.tools.lede">Burada değişiklikleri yazılım da yazar. Bu işler herkesinki gibi aynı denetimlerden ve incelemelerden geçer; her değişikliği bir bakımcı onaylar ya da birleştirir.</p>
       <!-- team:helpers -->
       <ul class="helpers">
         <li class="helper">
@@ -326,10 +329,10 @@
 
     <section class="block" aria-labelledby="tm-how">
       <h2 id="tm-how" data-i18n="tm.how.title">İş nasıl denetlenir</h2>
-      <ol class="steps tm-steps">
+      <ol class="steps tm-steps" role="list">
         <li><p data-i18n="tm.how.h1">Günlük değişiklikler herkese açık bir issue ile başlar ve uygulamaya yalnızca bir çekme isteğiyle girer.</p></li>
         <li><p data-i18n="tm.how.h2">Her çekme isteği otomatik denetimlerden ve onu yazmamış bir kişinin ya da yapay zekâ ajanının incelemesinden geçer.</p></li>
-        <li><p data-i18n="tm.how.h3">Birleştirmeyi, sürümü ve dağıtımı yalnızca proje lideri yapar. Sürümler kişisel bir bilgisayarda değil, GitHub Actions'ta derlenir.</p></li>
+        <li><p data-i18n="tm.how.h3">İncelenen değişiklikleri bakımcılar birleştirir; sürümleri ve dağıtımları yalnızca proje lideri onaylar. Sürümler kişisel bir bilgisayarda değil, GitHub Actions'ta derlenir.</p></li>
       </ol>
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/totaldrop-app/totaldrop/blob/main/CONTRIBUTING.md" data-i18n="tm.join">Katkıda bulunun</a>
@@ -357,6 +360,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

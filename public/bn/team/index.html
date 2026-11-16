@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop-এর পেছনের মানুষেরা</title>
   <meta name="description" content="কে TotalDrop তৈরি করেন এবং কাজের কোন অংশ কে করেন; প্রতিটি সংখ্যা GitHub-এ প্রকল্পের প্রকাশ্য ইতিহাস থেকে নেওয়া।">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/bn/team/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/team/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/team/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="team">
   <a class="skip" href="#main" data-i18n="skip">মূল বিষয়বস্তুতে যান</a>
@@ -142,7 +145,7 @@
 
     <section class="block" aria-labelledby="tm-tools">
       <h2 id="tm-tools" data-i18n="tm.tools.title">এআই ও স্বয়ংক্রিয়তা</h2>
-      <p class="block-lede" data-i18n="tm.tools.lede">এখানে সফটওয়্যারও পরিবর্তন লেখে। তার কাজ অন্য সবার মতোই একই যাচাই ও পর্যালোচনার মধ্য দিয়ে যায়, আর শুধু প্রকল্প প্রধানই তা মার্জ করতে পারেন।</p>
+      <p class="block-lede" data-i18n="tm.tools.lede">এখানে সফটওয়্যারও পরিবর্তন লেখে। তার কাজ অন্য সবার মতোই একই যাচাই ও পর্যালোচনার মধ্য দিয়ে যায়, আর একজন রক্ষণাবেক্ষণকারী প্রতিটি পরিবর্তন অনুমোদন বা মার্জ করেন।</p>
       <!-- team:helpers -->
       <ul class="helpers">
         <li class="helper">
@@ -326,10 +329,10 @@
 
     <section class="block" aria-labelledby="tm-how">
       <h2 id="tm-how" data-i18n="tm.how.title">কাজ কীভাবে যাচাই হয়</h2>
-      <ol class="steps tm-steps">
+      <ol class="steps tm-steps" role="list">
         <li><p data-i18n="tm.how.h1">দৈনন্দিন পরিবর্তনগুলো একটি প্রকাশ্য issue হিসেবে শুরু হয় এবং কেবল pull request-এর মাধ্যমে অ্যাপে পৌঁছায়।</p></li>
         <li><p data-i18n="tm.how.h2">প্রতিটি pull request স্বয়ংক্রিয় পরীক্ষা এবং এমন একজন মানুষ বা AI এজেন্টের পর্যালোচনা পার হয়, যে এটি লেখেনি।</p></li>
-        <li><p data-i18n="tm.how.h3">কেবল প্রকল্প প্রধান মার্জ, রিলিজ ও ডিপ্লয় করেন। রিলিজ তৈরি হয় GitHub Actions-এ, কখনো ব্যক্তিগত কম্পিউটারে নয়।</p></li>
+        <li><p data-i18n="tm.how.h3">রক্ষণাবেক্ষণকারীরা পর্যালোচিত পরিবর্তন মার্জ করেন, আর কেবল প্রকল্প প্রধান রিলিজ ও ডিপ্লয় অনুমোদন করেন। রিলিজ তৈরি হয় GitHub Actions-এ, কখনো ব্যক্তিগত কম্পিউটারে নয়।</p></li>
       </ol>
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/totaldrop-app/totaldrop/blob/main/CONTRIBUTING.md" data-i18n="tm.join">যুক্ত হোন</a>
@@ -357,6 +360,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

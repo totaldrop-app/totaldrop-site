@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: küldj fájlokat közvetlenül, végpontok közötti titkosítással</title>
-  <meta name="description" content="A TotalDrop ingyenes, nyílt forráskódú alkalmazás, amely közvetlenül küld fájlokat egyik eszközről a másikra, végpontok közötti titkosítással. Nincs fiók, e-mail-cím vagy telefonszám.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: küldj fájlokat és szöveget közvetlenül, végpontok közötti titkosítással</title>
+  <meta name="description" content="A TotalDrop ingyenes, nyílt forráskódú alkalmazás, amely fájlokat, mappákat és szöveget küld közvetlenül egyik eszközről a másikra, végpontok közötti titkosítással. Nincs fiók, e-mail-cím vagy telefonszám.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/hu/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: küldj fájlokat közvetlenül, végpontok közötti titkosítással">
-  <meta property="og:description" content="A TotalDrop ingyenes, nyílt forráskódú alkalmazás, amely közvetlenül küld fájlokat egyik eszközről a másikra, végpontok közötti titkosítással. Nincs fiók, e-mail-cím vagy telefonszám.">
+  <meta property="og:title" content="TotalDrop: küldj fájlokat és szöveget közvetlenül, végpontok közötti titkosítással">
+  <meta property="og:description" content="A TotalDrop ingyenes, nyílt forráskódú alkalmazás, amely fájlokat, mappákat és szöveget küld közvetlenül egyik eszközről a másikra, végpontok közötti titkosítással. Nincs fiók, e-mail-cím vagy telefonszám.">
   <meta property="og:url" content="https://totaldrop.app/hu/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Ugrás a tartalomhoz</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="Főmenü" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">Alkalmazások</a>
       <a href="#why" data-i18n="nav.why">Miért a TotalDrop</a>
       <a href="#how" data-i18n="nav.how">Hogyan működik</a>
       <a href="#security" data-i18n="nav.security">Biztonság</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">Ingyenes · Nyílt forráskódú · Béta</p>
-        <h1 id="hero-title" data-i18n="hero.title">Küldj fájlt egyenesen egy másik eszközre.</h1>
-        <p class="lede" data-i18n="hero.lede">A TotalDrop közvetlenül a te eszközödről az övékre viszi a fájlokat, végpontok közötti titkosítással. Megosztasz egy rövid kódot; útközben senki sem olvashatja el, amit küldesz. Nincs fiók, e-mail-cím vagy telefonszám.</p>
+        <h1 id="hero-title" data-i18n="hero.title">Küldj fájlokat és szöveget egyenesen egy másik eszközre.</h1>
+        <p class="lede" data-i18n="hero.lede">A TotalDrop közvetlenül a te eszközödről a másikéra viszi át a fájlokat, a teljes mappákat és a vágólap szövegét, posztkvantum kulcsokkal végpontok között titkosítva. Ossz meg egy rövid kódot; útközben senki sem olvashatja el, amit küldesz. Nincs fiók, e-mail-cím vagy telefonszám.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/hu/download/" data-i18n="hero.cta">A béta letöltése</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">A kód megtekintése</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">Android, Linux és CLI már ma</li>
+          <li data-i18n="hero.h2">Posztkvantum ML-KEM-768</li>
+          <li data-i18n="hero.h3">35 nyelv, zéró követő</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">Átviteli kód</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">Átviteli kód</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">Másik példa</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">Négy ellenőrző szó</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">Mondd ki hangosan a kódot, vagy illeszd be egy üzenetbe. Aki beírja, az kapja meg a fájlokat.</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">Natív minden asztali gépen és telefonon</p>
+        <h2 id="apps-title" data-i18n="apps.title">Úgy épült, hogy a rendszeredhez tartozzon</h2>
+        <p data-i18n="apps.lede">A TotalDrop a színeit, a betűképeit, a sötét módot és a megosztási menüket abból az operációs rendszerből veszi, amelyet használsz. Küldj a galériából, a kijelölt szövegből, a vágólapról vagy a fájlkezelőből anélkül, hogy előbb böngészőlapot nyitnál.</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="A TotalDrop Androidon világos és sötét Material You témában" data-i18n-label="apps.android.alt" aria-label="A TotalDrop Androidon világos és sötét Material You témában" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Dinamikus Material You színek és Material 3 Expressive vezérlők. Ossz meg fájlokat vagy kijelölt szöveget közvetlenül bármely alkalmazásból, vagy tartsd nyomva az indítóikont a vágólap elküldéséhez.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">Rendszerszintű megosztási panel</li>
+              <li data-i18n="apps.tag.text">Szöveg és vágólap</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="A TotalDrop natív Qt 6 Wayland-alkalmazása Linuxon" data-i18n-label="apps.linux.alt" aria-label="A TotalDrop natív Qt 6 Wayland-alkalmazása Linuxon" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Linux-alkalmazás</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Natív Qt 6 és QML Waylandhez, amely élőben követi a KDE Plasma, a Hyprland, az Omarchy és a GNOME témáját. Kattints jobb gombbal bármely fájlra vagy mappára a Dolphinban, a Fájlokban vagy a Nemóban az azonnali küldéshez.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, Fájlok, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 és ARM64</li>
+              <li data-i18n="apps.tag.pkg">Natív és Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">Miért a TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">Semmi sem töltődik fel</h3>
           <p data-i18n="why.r1.d">A fájlok a te eszközödről az övékre mennek. Semmilyen másolat nem vár egy cég szerverén, és semmilyen link nem jár le egy hét múlva.</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">Ma Android, Linux és parancssor; a Windows, a macOS és az iOS úton van. Telefonról laptopra, bármilyen márkáról bármilyenre.</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">Tőlünk nincs méretkorlát</h3>
-          <p data-i18n="why.r4.d">Teljes mappák, hosszú videók, eredeti minőségű fotók. Csak a lemezed és a kapcsolatod szab határt.</p>
+          <h3 data-i18n="why.r4.t">Fájlok, mappák és a vágólap szövege</h3>
+          <p data-i18n="why.r4.d">Küldj eredeti minőségű fotókat, hatalmas mappákat vagy egy kimásolt jegyzetet. A szöveg másolásra készen érkezik, a rejtett karaktereket név szerint feltüntetve, és soha nem íródik a lemezre.</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">Ellenőrzött, nem vakon megbízható</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">Nyílt forráskód GPL alatt, adományokból fenntartva. Nincs reklám, nincs követés, nincs prémium csomag.</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">Hogyan viszonyul a TotalDrop a fájlküldés megszokott módjaihoz</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">Hogyan viszonyul a TotalDrop a fájlküldés megszokott módjaihoz</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">Funkció</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">Felhőalapú linkek</th><th scope="col" data-i18n="why.cmp.nearby">Közeli megosztás</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">Három lépés</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">Válaszd ki a fájlokat</h3>
-          <p data-i18n="how.s1.d">Bármilyen típusú, bármennyi. A címzett csak azt kapja meg, amit kiválasztottál.</p>
+          <h3 data-i18n="how.s1.t">Válassz fájlokat vagy szöveget</h3>
+          <p data-i18n="how.s1.d">Válassz fájlokat, teljes mappákat vagy a vágólap szövegét — vagy küldj egyenesen a rendszer megosztási menüjéből vagy a fájlkezelőből.</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">Oszd meg a kódot</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">Csak te és a címzett nyithatja meg</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">Kriptográfia és formális ellenőrzés</p>
+        <h2 id="sec-title" data-i18n="sec.title">Csak te és a címzett nyithatja meg</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">Titkosítva, mielőtt elindul</dt>
           <dd data-i18n="sec.f1.d">A fájlok a te eszközödön titkosítódnak, és csak a címzett eszközén fejtődnek vissza. A kulcsok sehol máshol nem léteznek.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">A kód offline nem találgatható ki</dt>
-          <dd data-i18n="sec.f2.d">A kódból PAKE-kézfogással lesz kulcs, így egy rossz tipp azonnal elbukik, és a próbálkozás elvész. A kulcscsere posztkvantum ML-KEM-et is tartalmaz.</dd>
+          <dt data-i18n="sec.f2.t">Posztkvantum PAKE-kézfogás</dt>
+          <dd data-i18n="sec.f2.d">A kód egy CPace kézfogást vezérel, amely ellátja a Noise XXpsk3-at hibrid X25519 és ML-KEM-768 kulcsokkal. A rossz tipp azonnal elbukik, és elégeti a próbálkozást.</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">A szerverünk csak bemutat</dt>
-          <dd data-i18n="sec.f3.d">Látja az IP-címedet és a kód számát, de soha a szavakat, a fájlneveket vagy a fájlokat. Nem naplóz.</dd>
+          <dd data-i18n="sec.f3.d">Látja az IP-címedet és a kód számát, de soha nem látja a szavakat, a fájlneveket vagy a fájlokat. Bekapcsolt Adatvédelmi mód mellett még a másik eszköz sem tudja meg soha az IP-címedet.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">Bárki által ellenőrizhető kód</dt>
-          <dd data-i18n="sec.f4.d">Minden sor nyilvános. Az 1.0-s verzió csak egy független biztonsági audit után jelenik meg.</dd>
+          <dt data-i18n="sec.f4.t">Tamarinnal bizonyítva, az 1.0 előtt auditálva</dt>
+          <dd data-i18n="sec.f4.d">Hat szimbolikus modell, 61 géppel ellenőrzött lemma és 27 regressziós mutáns igazolja a készülő, a szerver számára vak Ghost Ring-fiókot a Tamarin bizonyítóban. Az 1.0-s verzió független auditra vár.</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/hu" hreflang="hu" data-i18n="sec.privacy">Az adatvédelmi irányelvek elolvasása</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">Hol tartunk</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">Kész</span>
           <h3 data-i18n="road.p0">Nyílt protokoll, parancssori kliens, Android béta és Linux-alkalmazás</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

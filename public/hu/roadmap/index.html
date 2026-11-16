@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A TotalDrop ütemterve</title>
   <meta name="description" content="Mi készült el, mi jön ezután és mi később a TotalDropban, platformonként, az 1.0-s verzióig vezető úton.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/hu/roadmap/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/roadmap/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/roadmap/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="roadmap">
   <a class="skip" href="#main" data-i18n="skip">Ugrás a tartalomhoz</a>
@@ -84,7 +87,7 @@
         <span class="road-state" data-i18n="rm.done.state">Kész</span>
         <h2 id="rm-done" data-i18n="rm.done.when">2026. október</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.d1.t">Nyílt protokoll</h3>
             <p data-i18n="rm.d1.d">TotalDrop Protocol v0: átviteli kódok CPace-szel, Noise XXpsk3 posztkvantum ML-KEM-768-cal, QUIC egyszer használatos kulcsokkal. Leírva, hogy bárki készíthessen vele kompatibilis alkalmazást.</p>
@@ -92,8 +95,8 @@
           </li>
           <li>
             <h3 data-i18n="rm.d2.t">Parancssori kliens</h3>
-            <p data-i18n="rm.d2.d">Küldés és fogadás terminálból Linuxon, macOS-en és Windowson.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <p data-i18n="rm.d2.d">Küldés és fogadás Linux-terminálból, vagy fordítás forrásból Cargóval (előre lefordított macOS- és Windows-binárisok tervezve).</p>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.d3.t">Android béta</h3>
@@ -118,7 +121,7 @@
           <li>
             <h3 data-i18n="rm.n2.t">Adatvédelmi mód a parancssorban</h3>
             <p data-i18n="rm.n2.d">Csak továbbító szerveren át: a másik fél sosem tudja meg az IP-címedet.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.x7.t">Adatvédelmi mód az alkalmazásokban</h3>
@@ -142,7 +145,7 @@
         <span class="road-state" data-i18n="rm.now.state">Most</span>
         <h2 id="rm-now" data-i18n="rm.now.when">2026. november</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x1.t">QR-kód beolvasása kamerával</h3>
             <p data-i18n="rm.x1.d">A kód beírása helyett tartsd a telefont a küldő képernyője felé.</p>
@@ -160,7 +163,7 @@
         <span class="road-state" data-i18n="rm.next.state">Következik</span>
         <h2 id="rm-next" data-i18n="rm.next.when">2026–27 tele</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x3.t">Megszakadt átvitelek folytatása</h3>
             <p data-i18n="rm.x3.d">A megszakadt kapcsolat ott folytatódik, ahol abbamaradt, és nem küldi újra azt, ami már megérkezett.</p>
@@ -188,7 +191,7 @@
         <span class="road-state" data-i18n="rm.later.state">Később</span>
         <h2 id="rm-later" data-i18n="rm.later.when">2027</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.l1.t">iPhone, iPad és Mac</h3>
             <p data-i18n="rm.l1.d">Natív alkalmazások, amint az adományok fedezik az Apple fejlesztői fiókot.</p>
@@ -221,7 +224,7 @@
         <span class="road-state" data-i18n="rm.v1.state">1.0-s verzió</span>
         <h2 id="rm-v1" data-i18n="rm.v1.when">Az audit után</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.v1.t">Független biztonsági audit</h3>
             <p data-i18n="rm.v1.d">Egy külső cég átvizsgálja a protokollt, a kriptográfiát és a nem megbízható bemenetet kezelő kódot. A teljes jelentés nyilvános lesz.</p>
@@ -273,6 +276,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

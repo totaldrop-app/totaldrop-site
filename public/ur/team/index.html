@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop کے پیچھے لوگ</title>
   <meta name="description" content="TotalDrop کون بناتا ہے اور کام کا کون سا حصہ کون کرتا ہے؛ ہر عدد GitHub پر منصوبے کی عوامی تاریخ سے لیا گیا ہے۔">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ur/team/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/team/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/team/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="team">
   <a class="skip" href="#main" data-i18n="skip">مواد پر جائیں</a>
@@ -142,7 +145,7 @@
 
     <section class="block" aria-labelledby="tm-tools">
       <h2 id="tm-tools" data-i18n="tm.tools.title">مصنوعی ذہانت اور خودکاری</h2>
-      <p class="block-lede" data-i18n="tm.tools.lede">یہاں سافٹ ویئر بھی تبدیلیاں لکھتا ہے۔ اس کا کام انہی جانچوں اور جائزوں سے گزرتا ہے جن سے کسی اور کا، اور صرف پروجیکٹ سربراہ ہی اسے ضم کر سکتا ہے۔</p>
+      <p class="block-lede" data-i18n="tm.tools.lede">یہاں سافٹ ویئر بھی تبدیلیاں لکھتا ہے۔ اس کا کام انہی جانچوں اور جائزوں سے گزرتا ہے جن سے کسی اور کا، اور کوئی نگران ہر تبدیلی کو منظور یا ضم کرتا ہے۔</p>
       <!-- team:helpers -->
       <ul class="helpers">
         <li class="helper">
@@ -326,10 +329,10 @@
 
     <section class="block" aria-labelledby="tm-how">
       <h2 id="tm-how" data-i18n="tm.how.title">کام کی جانچ کیسے ہوتی ہے</h2>
-      <ol class="steps tm-steps">
+      <ol class="steps tm-steps" role="list">
         <li><p data-i18n="tm.how.h1">روزمرہ کی تبدیلیاں ایک عوامی issue سے شروع ہوتی ہیں اور صرف pull request کے ذریعے ایپ تک پہنچتی ہیں۔</p></li>
         <li><p data-i18n="tm.how.h2">ہر pull request خودکار جانچ سے گزرتی ہے اور کسی ایسے شخص یا مصنوعی ذہانت ایجنٹ کے جائزے سے جس نے اسے نہیں لکھا۔</p></li>
-        <li><p data-i18n="tm.how.h3">صرف پروجیکٹ سربراہ ضم، ریلیز اور تعینات کرتا ہے۔ ریلیزیں GitHub Actions میں بنتی ہیں، کبھی ذاتی کمپیوٹر پر نہیں۔</p></li>
+        <li><p data-i18n="tm.how.h3">جائزہ شدہ تبدیلیوں کو نگران ضم کرتے ہیں، اور ریلیزوں اور تعیناتیوں کی منظوری صرف پروجیکٹ سربراہ دیتا ہے۔ ریلیزیں GitHub Actions میں بنتی ہیں، کبھی ذاتی کمپیوٹر پر نہیں۔</p></li>
       </ol>
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/totaldrop-app/totaldrop/blob/main/CONTRIBUTING.md" data-i18n="tm.join">شامل ہوں</a>
@@ -357,6 +360,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

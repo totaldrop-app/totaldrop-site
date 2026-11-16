@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Last ned TotalDrop</title>
   <meta name="description" content="Last ned TotalDrop for Linux, Android og kommandolinjen. Windows, macOS, iOS og nettleseren er på vei.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/nb/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">Gå til innholdet</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">Plattformer</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">For denne enheten</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">Beta</span></header>
-          <p data-i18n="dl.android.d">Hele appen, på ditt språk, i telefonens farger.</p>
+          <p data-i18n="dl.android.d">Hele appen, på ditt språk, i telefonens farger, med sending fra delingsmenyen og utklippstavlen.</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 eller nyere, 64-bit</li>
             <li data-i18n="dl.android.r2">Testes på Google Play, etter invitasjon mens betaen er lukket</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">For denne enheten</span>
           <header><h3 data-i18n="dl.cli">Kommandolinje</h3><span class="pill is-ready" data-i18n="dl.ready">Tilgjengelig</span></header>
-          <p data-i18n="dl.cli.d">For terminaler i Linux, macOS og Windows. Sender filer og hele mapper.</p>
+          <p data-i18n="dl.cli.d">Ferdigbygd i Linux-pakkene i dag, eller bygd fra kildekode med Cargo. Sender filer, hele mapper og tekst fra argumenter eller standard inn.</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="Installasjonskommando" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">Kopier kommandoen</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="Eksempel på bruk" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Bygget med Qt 6 for Wayland. Henter farger, skrifter og ikoner fra skrivebordet ditt: Plasma, Hyprland, Omarchy, GNOME.</p>
           <ul>
             <li data-i18n="dl.linux.r1">En egen pakke for hver distribusjonsfamilie: alle for x86-64; Debian, Ubuntu og Fedora også for ARM64</li>
-            <li data-i18n="dl.linux.r2">Pakkene .pkg, .deb og .rpm installerer også kommandoen totaldrop</li>
+            <li data-i18n="dl.linux.r2">Pakkene .pkg, .deb og .rpm installerer også kommandoen totaldrop og høyreklikkmenyer for Dolphin, Filer og Nemo</li>
             <li data-i18n="dl.linux.r3">Bruk én Linux-pakke om gangen. Flatpak-pakken og .pkg-, .deb- eller .rpm-pakken deler ett navn, så mens den ene er åpen, henter start av den andre det åpne vinduet frem i stedet for å åpne et nytt.</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">På vei</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">For denne enheten</span>
           <header><h3 data-i18n="dl.web">I nettleseren</h3><span class="pill" data-i18n="rm.now.when">November 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">Krav</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">Plattform</th><th scope="col" data-i18n="dl.req.min">Minimum</th><th scope="col" data-i18n="dl.req.notes">Merknader</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, 64-bit ARM</td><td data-i18n="dl.req.android.n">Bare internettillatelse</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, 64-bit ARM</td><td data-i18n="dl.req.android.n">Tillatelser for nettverk, bakgrunnsoverføring og varsler; 16 KB sidejusterte innebygde biblioteker</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8: Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland eller X11; x86-64 og ARM64 (.deb, .rpm, Flatpak; Arch bare x86-64)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">Kommandolinje</th><td data-i18n="dl.req.cli">Rust 1.99 for å bygge</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">Kommandolinje</th><td data-i18n="dl.req.cli">Rust 1.99 for å bygge</td><td data-i18n="dl.req.cli.n">Ferdigbygd på Linux; bygges fra kildekode med Cargo andre steder (ferdigbygde binærfiler for macOS og Windows planlagt)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">Nettverk</th><td data-i18n="dl.req.net.m">Internett eller samme nettverk</td><td data-i18n="dl.req.net.n">Direkte der det er mulig, ellers gjennom reléserveren</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

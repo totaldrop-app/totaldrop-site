@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop：ファイルを直接、エンドツーエンドで暗号化して送る</title>
-  <meta name="description" content="TotalDrop は、ファイルをデバイスからデバイスへ直接、エンドツーエンドで暗号化して送る、無料のオープンソースアプリです。アカウントもメールアドレスも電話番号も不要です。">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop：ファイルとテキストを直接、エンドツーエンドで暗号化して送る</title>
+  <meta name="description" content="TotalDrop は、ファイル、フォルダー、テキストをデバイスからデバイスへ直接、エンドツーエンドで暗号化して送る無料のオープンソースアプリです。アカウントもメールアドレスも電話番号も不要です。">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ja/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop：ファイルを直接、エンドツーエンドで暗号化して送る">
-  <meta property="og:description" content="TotalDrop は、ファイルをデバイスからデバイスへ直接、エンドツーエンドで暗号化して送る、無料のオープンソースアプリです。アカウントもメールアドレスも電話番号も不要です。">
+  <meta property="og:title" content="TotalDrop：ファイルとテキストを直接、エンドツーエンドで暗号化して送る">
+  <meta property="og:description" content="TotalDrop は、ファイル、フォルダー、テキストをデバイスからデバイスへ直接、エンドツーエンドで暗号化して送る無料のオープンソースアプリです。アカウントもメールアドレスも電話番号も不要です。">
   <meta property="og:url" content="https://totaldrop.app/ja/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">本文へスキップ</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="メイン" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">アプリ</a>
       <a href="#why" data-i18n="nav.why">TotalDrop を選ぶ理由</a>
       <a href="#how" data-i18n="nav.how">仕組み</a>
       <a href="#security" data-i18n="nav.security">セキュリティ</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">無料 · オープンソース · ベータ</p>
-        <h1 id="hero-title" data-i18n="hero.title">ファイルを別のデバイスへ直接送る。</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop は、ファイルをあなたのデバイスから相手のデバイスへ直接、エンドツーエンドで暗号化して届けます。短いコードを共有するだけで、途中の誰も中身を読めません。アカウントもメールアドレスも電話番号も不要です。</p>
+        <h1 id="hero-title" data-i18n="hero.title">ファイルもテキストも、別のデバイスへ直接送る。</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop は、ファイル、フォルダー全体、クリップボードのテキストをあなたのデバイスから相手のデバイスへ直接、耐量子鍵でエンドツーエンド暗号化して届けます。短いコードを共有するだけで、途中の誰も送信内容を読めません。アカウントもメールアドレスも電話番号も不要です。</p>
         <div class="actions">
           <a class="btn btn-primary" href="/ja/download/" data-i18n="hero.cta">ベータ版をダウンロード</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">コードを読む</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">Android、Linux、CLI で提供中</li>
+          <li data-i18n="hero.h2">耐量子 ML-KEM-768</li>
+          <li data-i18n="hero.h3">35 言語、トラッカーゼロ</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">転送コード</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">転送コード</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">別の例</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">4つの確認用の単語</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">コードを口頭で伝えるか、メッセージに貼り付けてください。入力した人がファイルを受け取ります。</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">すべてのデスクトップとスマートフォンでネイティブ動作</p>
+        <h2 id="apps-title" data-i18n="apps.title">お使いのシステムになじむ設計</h2>
+        <p data-i18n="apps.lede">TotalDrop は配色、書体、ダークモード、共有メニューをお使いの OS からそのまま取り込みます。先にブラウザのタブを開かなくても、ギャラリー、選択したテキスト、クリップボード、ファイルマネージャーから直接送れます。</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="ライトとダークの Material You テーマで表示された Android 版 TotalDrop" data-i18n-label="apps.android.alt" aria-label="ライトとダークの Material You テーマで表示された Android 版 TotalDrop" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Material You のダイナミックカラーと Material 3 Expressive のコントロールに対応。どのアプリからでもファイルや選択したテキストを直接共有でき、ランチャーアイコンを長押しすればクリップボードを送信できます。</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">システムの共有シート</li>
+              <li data-i18n="apps.tag.text">テキストとクリップボード</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="Linux 上の TotalDrop ネイティブ Qt 6 Wayland アプリ" data-i18n-label="apps.linux.alt" aria-label="Linux 上の TotalDrop ネイティブ Qt 6 Wayland アプリ" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Linux アプリ</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Wayland 向けのネイティブな Qt 6 と QML で作られ、KDE Plasma、Hyprland、Omarchy、GNOME のテーマにリアルタイムで追従します。Dolphin、Files、Nemo でファイルやフォルダーを右クリックしてすぐに送信できます。</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin、Files、Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 と ARM64</li>
+              <li data-i18n="apps.tag.pkg">ネイティブと Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">TotalDrop を選ぶ理由</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">何もアップロードしない</h3>
           <p data-i18n="why.r1.d">ファイルはあなたのデバイスから相手のデバイスへ届きます。企業のサーバーでコピーが待つことも、1週間で期限切れになるリンクもありません。</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">現在は Android、Linux、コマンドラインに対応し、Windows、macOS、iOS も準備中です。スマートフォンからノートパソコンへ、どのメーカーからどのメーカーへも。</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">私たちによるサイズ制限なし</h3>
-          <p data-i18n="why.r4.d">フォルダ全体も、長い動画も、オリジナル画質の写真も。上限を決めるのはディスクと回線だけです。</p>
+          <h3 data-i18n="why.r4.t">ファイル、フォルダー、クリップボードのテキスト</h3>
+          <p data-i18n="why.r4.d">オリジナル画質の写真、巨大なフォルダー、コピーしたメモを送れます。テキストはすぐにコピーできる状態で届き、隠れた文字は名前で示され、ディスクには一切書き込まれません。</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">信頼ではなく検証</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">GPL のオープンソースで、寄付によって運営されています。広告なし、追跡なし、有料プランなし。</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">ファイルを送る一般的な方法と TotalDrop の比較</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">ファイルを送る一般的な方法と TotalDrop の比較</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">機能</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">クラウドのリンク</th><th scope="col" data-i18n="why.cmp.nearby">近距離共有</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">3つのステップ</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">ファイルを選ぶ</h3>
-          <p data-i18n="how.s1.d">種類も数も自由です。受信者が受け取るのは、あなたが選んだものだけです。</p>
+          <h3 data-i18n="how.s1.t">ファイルやテキストを選ぶ</h3>
+          <p data-i18n="how.s1.d">ファイル、フォルダー全体、クリップボードのテキストを選ぶか、システムの共有メニューやファイルマネージャーから直接送ります。</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">コードを共有する</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">開けるのはあなたと受信者だけ</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">暗号技術と形式検証</p>
+        <h2 id="sec-title" data-i18n="sec.title">開けるのはあなたと受信者だけ</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">送る前に暗号化</dt>
           <dd data-i18n="sec.f1.d">ファイルはあなたのデバイスで暗号化され、受信者のデバイスでのみ復号されます。鍵はそれ以外の場所には一切存在しません。</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">コードはオフラインで推測できない</dt>
-          <dd data-i18n="sec.f2.d">コードは PAKE ハンドシェイクで鍵に変わるため、推測が外れればその場で失敗し、その試行は使えなくなります。鍵交換には耐量子 ML-KEM も含まれます。</dd>
+          <dt data-i18n="sec.f2.t">耐量子 PAKE ハンドシェイク</dt>
+          <dd data-i18n="sec.f2.d">コードが CPace ハンドシェイクを駆動し、ハイブリッド X25519 と ML-KEM-768 鍵を用いる Noise XXpsk3 に鍵を供給します。推測が外れると即座に失敗し、その試行は無効になります。</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">私たちのサーバーは引き合わせるだけ</dt>
-          <dd data-i18n="sec.f3.d">サーバーが見るのはあなたの IP アドレスとコードの数字だけで、単語、ファイル名、ファイルは決して見ません。ログも残しません。</dd>
+          <dd data-i18n="sec.f3.d">サーバーが見るのはあなたの IP アドレスとコードの数字だけで、単語、ファイル名、ファイルは決して見ません。プライバシーモードをオンにすれば、相手のデバイスにさえあなたの IP アドレスは伝わりません。</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">誰でも確認できるコード</dt>
-          <dd data-i18n="sec.f4.d">すべての行が公開されています。バージョン 1.0 は、独立したセキュリティ監査を経てからリリースします。</dd>
+          <dt data-i18n="sec.f4.t">Tamarin で証明し、1.0 の前に監査</dt>
+          <dd data-i18n="sec.f4.d">6 つの記号モデル、機械検証済みの 61 の補題、27 の回帰ミュータントにより、今後導入するサーバーが関知しない Ghost Ring アカウントを Tamarin 証明器で検証しています。バージョン 1.0 は独立した監査を経てリリースします。</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/ja" hreflang="ja" data-i18n="sec.privacy">プライバシーポリシーを読む</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">現在地</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">完了</span>
           <h3 data-i18n="road.p0">オープンなプロトコル、コマンドラインクライアント、Android ベータ版、Linux アプリ</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

@@ -124,11 +124,19 @@ export function renderLocalizedPage({ templateHtml, route, tag, dict, enDict, la
     `<meta property="og:url" content="${SITE_ORIGIN}/${tag}${route.subpath}">`,
   );
 
-  // 4. Accessible names: data-i18n-label="..." -> localized aria-label="..."
+  // 4. Accessible names: data-i18n-label="..." -> localized aria-label="..." (and non-empty alt="...")
   html = html.replace(/<([a-z0-9]+)\b[^>]*\bdata-i18n-label="([^"]+)"[^>]*>/g, (fullTag, _el, key) => {
     const label = tr(key);
     if (typeof label !== "string" || !/\baria-label="/.test(fullTag)) return fullTag;
-    return fullTag.replace(/\baria-label="[^"]*"/, `aria-label="${escAttr(label)}"`);
+    let updated = fullTag.replace(/\baria-label="[^"]*"/, `aria-label="${escAttr(label)}"`);
+    if (/\balt="[^"]+"/.test(updated)) {
+      updated = updated.replace(/\balt="[^"]*"/, `alt="${escAttr(label)}"`);
+    }
+    const isTranslated = tag === "en" || hasText(dict, key);
+    if (!isTranslated && !/\blang="/.test(updated)) {
+      updated = updated.slice(0, -1) + ' lang="en" dir="ltr">';
+    }
+    return updated;
   });
 
   // 5. Text content: data-i18n="..." -> localized inner text (preserving English lang/dir fallback)
@@ -245,7 +253,7 @@ export function runStaticLocales({ pubDir = PUB, write = false } = {}) {
   }
 
   // Detect any leftover locale directory that is no longer in LANGUAGES
-  const reservedDirs = new Set(["brand", "donate", "download", "fonts", "i18n", "privacy", "r", "roadmap", "team", ".well-known"]);
+  const reservedDirs = new Set(["assets", "brand", "donate", "download", "fonts", "i18n", "privacy", "r", "roadmap", "team", ".well-known"]);
   for (const entry of readdirSync(pubDir)) {
     const full = join(pubDir, entry);
     if (!statSync(full).isDirectory() || reservedDirs.has(entry)) continue;

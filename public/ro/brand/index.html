@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Marca TotalDrop</title>
   <meta name="description" content="Semnul TotalDrop, mișcarea, culorile, literele, butoanele și pictogramele lui, cum se folosesc și fișierele logo de descărcat.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ro/brand/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/brand/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/brand/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="brand">
   <a class="skip" href="#main" data-i18n="skip">Salt la conținut</a>
@@ -76,7 +79,7 @@
     <section class="dl-hero bk-hero" aria-labelledby="bk-title">
       <p class="eyebrow" data-i18n="bk.eyebrow">Ghidul mărcii</p>
       <h1 id="bk-title" data-i18n="bk.title">Marca TotalDrop</h1>
-      <p class="lede" data-i18n="bk.lede">Un semn, o culoare de accent, două fonturi. Tot restul vine din sistemul pe care rulează TotalDrop. Pagina aceasta arată elementele, cum se folosesc și de unde se descarcă.</p>
+      <p class="lede" data-i18n="bk.lede">Un singur semn, suprafețe neutre calme, un singur accent interactiv, două familii de fonturi. Tot restul vine din sistemul pe care rulează TotalDrop. Această pagină arată elementele, cum se folosesc și de unde se descarcă.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#files" data-i18n="bk.cta">Descarcă logoul</a>
         <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop/blob/main/docs/tasarim.md" data-i18n="bk.source">Regulile de design în depozit</a>
@@ -104,14 +107,14 @@
     <section class="block" id="principles" aria-labelledby="principles-title">
       <h2 id="principles-title" data-i18n="bk.p.title">Mai puțin, dar mai bine</h2>
       <p data-i18n="bk.p.lede">TotalDrop îl urmează pe Dieter Rams: fiecare element are un rol, iar ce nu are niciunul este lăsat deoparte.</p>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.p1.t">Parte din sistem</h3>
           <p data-i18n="bk.p1.d">Aplicațiile iau din sistem culorile, tema deschisă sau închisă, pictogramele și ferestrele, iar pe Linux și fonturile. Doar semnul și culorile lui rămân la fel peste tot.</p>
         </li>
         <li>
           <h3 data-i18n="bk.p2.t">Un singur accent pe ecran</h3>
-          <p data-i18n="bk.p2.d">Violetul marchează singurul pas următor, linkurile și inelul de focalizare. Restul este cerneală pe hârtie.</p>
+          <p data-i18n="bk.p2.d">Violetul aparține doar semnului Köşe. Pe web, Cobalt marchează acțiunea principală, linkurile și inelul de focalizare, în timp ce suprafețele neutre Mineral păstrează textul clar.</p>
         </li>
         <li>
           <h3 data-i18n="bk.p3.t">Fără efecte</h3>
@@ -235,7 +238,7 @@
       <div class="bk-grid bk-grid-2">
         <figure class="bk-fig">
           <div class="bk-stage bk-on-light bk-wide">
-            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.word">Logo</span>
@@ -244,7 +247,7 @@
         </figure>
         <figure class="bk-fig">
           <div class="bk-stage bk-on-dark bk-wide">
-            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.dark">Logo pe fundal închis</span>
@@ -287,7 +290,7 @@
     <section class="block" id="misuse" aria-labelledby="misuse-title">
       <h2 id="misuse-title" data-i18n="bk.no.title">Ce să nu faci</h2>
       <p data-i18n="bk.no.lede">Semnul este o singură culoare plată, folosită așa cum este. Acestea sunt greșelile frecvente.</p>
-      <ul class="bk-grid bk-grid-4 bk-donts">
+      <ul class="bk-grid bk-grid-4 bk-donts" role="list">
         <li class="bk-fig">
           <div class="bk-stage"><svg viewBox="0 0 112 112" aria-hidden="true"><path class="mk" d="M55 15H83A14 14 0 0 1 97 29V57A42 42 0 1 1 55 15Z"/></svg></div>
           <p class="bk-no" data-i18n="bk.no.label">De evitat</p>
@@ -334,38 +337,40 @@
 
     <section class="block" id="colour" aria-labelledby="colour-title">
       <h2 id="colour-title" data-i18n="bk.col.title">Culoare</h2>
-      <p data-i18n="bk.col.lede">Aplicațiile folosesc culorile sistemului pe care rulează: Material You pe Android, tema desktopului pe Linux. Paleta Aurora de mai jos se folosește când sistemul nu oferă culori și pe acest site. Textul pe fundalul paginii depășește 4,5:1 în ambele teme.</p>
+      <p data-i18n="bk.col.lede">Aplicațiile folosesc culorile sistemului pe care rulează: Material You pe Android, tema desktopului pe Linux, păstrând Aurora doar când sistemul nu expune nicio paletă. Pe acest site, paleta Mineral de mai jos alătură suprafețe neutre comenzilor interactive Cobalt, astfel încât semnul Köşe violet să se distingă clar. Fiecare rol de text și interactiv respectă WCAG AA în ambele teme.</p>
       <div class="bk-swatches bk-brand">
-        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">Semnul și accentul pe fundal deschis.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">Semnul și accentul pe fundal închis.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-paper"></span><span class="bk-sw-name">Paper</span><code>#F4F2FB</code><span class="bk-sw-use" data-i18n="bk.col.paper">Fundal deschis; semnul de pe pictograma aplicației.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-ink"></span><span class="bk-sw-name">Ink</span><code>#22184F</code><span class="bk-sw-use" data-i18n="bk.col.ink">Text pe fundal deschis.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-night"></span><span class="bk-sw-name">Night</span><code>#140E33</code><span class="bk-sw-use" data-i18n="bk.col.night">Fundal închis.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-mist"></span><span class="bk-sw-name">Mist</span><code>#E2DCF6</code><span class="bk-sw-use" data-i18n="bk.col.mist">Suprafață ridicată discretă pe fundal deschis.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">Semnul Köşe pe fundal deschis și placa pictogramei aplicației.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">Semnul Köşe pe fundal închis.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-cobalt"></span><span class="bk-sw-name">Cobalt</span><code>#1E47B8</code><span class="bk-sw-use" data-i18n="bk.col.cobalt">Acțiunile principale, linkurile și inelul de focalizare pe fundal deschis.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-ice"></span><span class="bk-sw-name">Ice Cobalt</span><code>#7DB4FF</code><span class="bk-sw-use" data-i18n="bk.col.ice">Acțiunile principale, linkurile și inelul de focalizare pe fundal închis.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-alabaster"></span><span class="bk-sw-name">Alabaster</span><code>#F7F7F5</code><span class="bk-sw-use" data-i18n="bk.col.paper">Fundal deschis al paginii, alături de carduri alb pur.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-obsidian"></span><span class="bk-sw-name">Obsidian</span><code>#0F1116</code><span class="bk-sw-use" data-i18n="bk.col.night">Fundal închis al paginii, alături de carduri grafit.</span></div>
       </div>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="bk-col-tokens">
         <table class="req bk-tokens">
-          <caption data-i18n="bk.col.tokens">Roluri de culoare, tema deschisă și închisă</caption>
+          <caption id="bk-col-tokens" data-i18n="bk.col.tokens">Roluri de culoare, tema deschisă și închisă</caption>
           <thead>
             <tr><th scope="col" data-i18n="bk.col.role">Rol</th><th scope="col" data-i18n="bk.col.light">Deschisă</th><th scope="col" data-i18n="bk.col.dark">Închisă</th><th scope="col" data-i18n="bk.col.use">Utilizare</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.bg">Fundalul paginii și al ecranului.</td></tr>
-            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-night2"></span><code>#1E1648</code></td><td data-i18n="bk.col.raised">A doua suprafață, discretă, de exemplu cardul Primește.</td></tr>
-            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-rule"></span><code>#2E2566</code></td><td data-i18n="bk.col.rule">Linii despărțitoare; doar decor.</td></tr>
-            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.outline">Marginile câmpurilor și ale butoanelor cu contur.</td></tr>
-            <tr><th scope="row"><code>ink</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-ink"></span><code>#22184F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td data-i18n="bk.col.text">Text și titluri.</td></tr>
-            <tr><th scope="row"><code>ink-muted</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.muted">Text secundar: descrieri, note, unități.</td></tr>
-            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.accent">Singura acțiune principală, linkurile, inelul de focalizare. O dată pe ecran.</td></tr>
-            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.onaccent">Text pe umplutură de accent; închis în tema închisă, pentru că acolo accentul e mai deschis.</td></tr>
-            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-success"></span><code>#0A7357</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-success-d"></span><code>#7ED9B5</code></td><td data-i18n="bk.col.success">Gata. Mereu cu o pictogramă sau un cuvânt, niciodată doar culoarea.</td></tr>
-            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-error"></span><code>#BA1A1A</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FFB4AB</code></td><td data-i18n="bk.col.error">Ceva n-a mers. Mereu cu o pictogramă sau un cuvânt.</td></tr>
+            <tr><th scope="row"><code>mark</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.mark">Doar semnul Köşe; niciodată butoane sau text curent.</td></tr>
+            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-alabaster"></span><code>#F7F7F5</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-obsidian"></span><code>#0F1116</code></td><td data-i18n="bk.col.bg">Fundalul paginii și al ecranului.</td></tr>
+            <tr><th scope="row"><code>surface</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-surface"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-graphite"></span><code>#161922</code></td><td data-i18n="bk.col.surface">Carduri, mostre de transfer, cadre de aplicație și tabele.</td></tr>
+            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-stone"></span><code>#EEEEEC</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-elevated"></span><code>#1E222E</code></td><td data-i18n="bk.col.raised">Suprafață adâncită discretă pentru blocuri de cod și etichete.</td></tr>
+            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-rule-l"></span><code>#DFDFE2</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-rule-d"></span><code>#282E3D</code></td><td data-i18n="bk.col.rule">Linii despărțitoare; doar decor.</td></tr>
+            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-outline-l"></span><code>#646A78</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-outline-d"></span><code>#8790A1</code></td><td data-i18n="bk.col.outline">Marginile câmpurilor și ale butoanelor cu contur.</td></tr>
+            <tr><th scope="row"><code>text</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-carbon"></span><code>#14161D</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-chalk"></span><code>#F2F4F8</code></td><td data-i18n="bk.col.text">Text și titluri.</td></tr>
+            <tr><th scope="row"><code>text-2</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-slate"></span><code>#4A4F5C</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-silver"></span><code>#A3ABB9</code></td><td data-i18n="bk.col.muted">Text secundar: descrieri, note, unități.</td></tr>
+            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-cobalt"></span><code>#1E47B8</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-ice"></span><code>#7DB4FF</code></td><td data-i18n="bk.col.accent">Singura acțiune principală, linkurile, inelul de focalizare. O dată pe ecran.</td></tr>
+            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-navy"></span><code>#0B1220</code></td><td data-i18n="bk.col.onaccent">Text pe umplutură de accent; închis în tema închisă, pentru că acolo accentul e mai deschis.</td></tr>
+            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-success"></span><code>#0B6E4F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-success-d"></span><code>#6EE7B7</code></td><td data-i18n="bk.col.success">Gata. Mereu cu o pictogramă sau un cuvânt, niciodată doar culoarea.</td></tr>
+            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Deschisă</span><span class="bk-dot-sw bk-c-error"></span><code>#B81D24</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Închisă</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FCA5A5</code></td><td data-i18n="bk.col.error">Ceva n-a mers. Mereu cu o pictogramă sau un cuvânt.</td></tr>
           </tbody>
         </table>
       </div>
       <dl class="facts bk-contrast">
-        <div><dt data-i18n="bk.col.c1">Text pe fundal</dt><dd data-i18n="bk.col.c1.d">Cerneală pe hârtie 14,4:1, hârtie pe noapte 16,6:1.</dd></div>
-        <div><dt data-i18n="bk.col.c2">Accentul ca text</dt><dd data-i18n="bk.col.c2.d">Violet pe hârtie 5,1:1, strălucire pe noapte 6,8:1. Pe suprafața ridicată, culorile de accent și de succes sunt doar pentru text mare și pictograme.</dd></div>
+        <div><dt data-i18n="bk.col.c1">Text pe fundal</dt><dd data-i18n="bk.col.c1.d">Cerneală carbon pe alabastru 16,8:1; cerneală cretă pe obsidian 17,2:1.</dd></div>
+        <div><dt data-i18n="bk.col.c2">Accentul ca text și umplutură</dt><dd data-i18n="bk.col.c2.d">Cobalt pe alabastru 7,4:1 (alb pe cobalt 7,9:1); cobalt înghețat pe obsidian 8,9:1 (bleumarin pe cobalt înghețat 8,8:1).</dd></div>
       </dl>
     </section>
 
@@ -384,12 +389,12 @@
           <p data-i18n="bk.type.body">Tot restul: text curent, butoane și câmpuri. Creat de Braille Institute ca semne asemănătoare precum I, l și 1 să rămână distincte.</p>
         </div>
       </div>
-      <ol class="bk-scale">
-        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.6rem, 6.4vw, 4.75rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">De pe orice dispozitiv pe orice dispozitiv</span></li>
-        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.75rem, 3.6vw, 2.5rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">Cum funcționează</span></li>
-        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.25rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">Împărtășiți codul</span></li>
+      <ol class="bk-scale" role="list">
+        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.15rem, 1.1rem + 4.4vw, 4.4rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">De pe orice dispozitiv pe orice dispozitiv</span></li>
+        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.65rem, 1.1rem + 2vw, 2.45rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">Cum funcționează</span></li>
+        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.225rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">Împărtășiți codul</span></li>
         <li><span class="bk-scale-meta"><code>body</code> <span>Atkinson 400 · 1.0625rem · 1.6</span></span><span class="bk-t-body" data-i18n="why.r1.d">Fișierele merg de pe dispozitivul dvs. pe al lor. Nicio copie nu așteaptă pe serverul unei companii și niciun link nu expiră într-o săptămână.</span></li>
-        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.875rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">Gratuit · Open source · Beta</span></li>
+        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.8125rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">Gratuit · Open source · Beta</span></li>
       </ol>
       <p class="note" data-i18n="bk.type.rules">Rândurile de text curent rămân sub 44rem. Cifrele care se aliniază, precum dimensiunile și procentele, folosesc cifre tabulare. Spațierea literelor este eliminată în limbile cu scriere arabă, unde ar rupe legăturile.</p>
     </section>
@@ -400,7 +405,7 @@
       <h3 data-i18n="bk.btn.kinds">Trei tipuri de butoane</h3>
       <div class="bk-grid bk-grid-3">
         <figure class="bk-fig">
-          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="how.s1.t">Alegeți fișierele</span></div>
+          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="bk.cmp.choose">Alegeți fișierele</span></div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.btn.main">Acțiunea principală</span>
             <span data-i18n="bk.btn.main.d">Umplut cu culoarea de accent, eticheta în culoarea textului pe accent. Unul pe ecran, pentru ce face majoritatea oamenilor în continuare.</span>
@@ -494,7 +499,7 @@
       <div class="bk-grid bk-grid-2">
         <div class="bk-col">
           <h3 data-i18n="bk.sp.scale">Spațiere</h3>
-          <ul class="bk-bars">
+          <ul class="bk-bars" role="list">
             <li><span class="bk-bar bk-w8"></span><code>8</code><span data-i18n="bk.sp.8">Pictogramă la etichetă, titlu la text</span></li>
             <li><span class="bk-bar bk-w16"></span><code>16</code><span data-i18n="bk.sp.16">Între carduri, în interiorul unui bloc</span></li>
             <li><span class="bk-bar bk-w24"></span><code>24</code><span data-i18n="bk.sp.24">În interiorul unui card, marginea ecranului (16 pe telefoane)</span></li>
@@ -504,7 +509,7 @@
         </div>
         <div class="bk-col">
           <h3 data-i18n="bk.sp.radius">Colțuri</h3>
-          <ul class="bk-radii">
+          <ul class="bk-radii" role="list">
             <li><span class="bk-rad bk-r8"></span><code>8</code><span data-i18n="bk.sp.r8">Bara de progres</span></li>
             <li><span class="bk-rad bk-r16"></span><code>16</code><span data-i18n="bk.sp.r16">Câmp de text, casetă de cod</span></li>
             <li><span class="bk-rad bk-r28"></span><code>28</code><span data-i18n="bk.sp.r28">Carduri</span></li>
@@ -536,7 +541,7 @@
 
     <section class="block" id="voice" aria-labelledby="voice-title">
       <h2 id="voice-title" data-i18n="bk.vo.title">Ton</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.vo1.t">Spune ce se întâmplă</h3>
           <p data-i18n="bk.vo1.d">Un buton își numește acțiunea: „Alege fișiere”, „Acceptă”. O eroare spune ce n-a mers și ce e de făcut, fără scuze.</p>
@@ -559,7 +564,7 @@
     <section class="block" id="use" aria-labelledby="use-title">
       <h2 id="use-title" data-i18n="bk.use.title">Folosirea numelui și a semnului</h2>
       <p data-i18n="bk.use.lede">TotalDrop este open source, dar licențele sale acoperă codul, nu numele și semnul TotalDrop. Aceste reguli există pentru ca o aplicație numită TotalDrop să vină cu adevărat din acest proiect.</p>
-      <ul class="reasons bk-use-yes">
+      <ul class="reasons bk-use-yes" role="list">
         <li>
           <h3 data-i18n="bk.use1.t">Scrieți despre el</h3>
           <p data-i18n="bk.use1.d">Puneți un link către totaldrop.app și menționați TotalDrop în articole, recenzii, videoclipuri și lecții, cu numele și semnul nemodificat. Nu e nevoie să cereți voie.</p>
@@ -577,7 +582,7 @@
           <p data-i18n="bk.use4.d">Licențele vă permit să schimbați codul. Publicați versiunea dumneavoastră cu nume și semn proprii. Puteți spune că se bazează pe TotalDrop, dar nu să sugerați că TotalDrop o aprobă.</p>
         </li>
       </ul>
-      <ul class="reasons bk-use-no">
+      <ul class="reasons bk-use-no" role="list">
         <li>
           <p class="bk-no" data-i18n="bk.no.label">De evitat</p>
           <p data-i18n="bk.use.no1">Prezentarea a orice drept versiune oficială, partener sau produs susținut de TotalDrop.</p>
@@ -606,34 +611,34 @@
     <section class="block" id="files" aria-labelledby="files-title">
       <h2 id="files-title" data-i18n="bk.files.title">Descărcări</h2>
       <p data-i18n="bk.files.lede">Fișiere vectoriale (SVG) pentru tipar și ecrane și fișiere PNG cu fundal transparent. Folosește-le așa cum sunt.</p>
-      <ul class="platforms bk-files">
+      <ul class="platforms bk-files" role="list">
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-mark" data-i18n="bk.f.mark">Semn pentru fundal deschis</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-markdark" data-i18n="bk.f.markdark">Semn pentru fundal închis</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logo" data-i18n="bk.f.logo">Logo pentru fundal deschis</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logodark" data-i18n="bk.f.logodark">Logo pentru fundal închis</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-icon" data-i18n="bk.f.icon">Pictograma aplicației</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48"></div>
+          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48" loading="lazy" decoding="async"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-mono" data-i18n="bk.f.mono">O singură culoare, negru sau alb</h3>
           <p data-i18n="bk.f.mono.d">Doar unde culoarea nu poate fi tipărită, de exemplu ștampile sau gravuri.</p>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-black.svg" download data-i18n="bk.f.black">SVG negru</a><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-white.svg" download data-i18n="bk.f.white">SVG alb</a></p>
@@ -664,6 +669,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop रोडमैप</title>
   <meta name="description" content="TotalDrop में क्या हो चुका है, आगे क्या है और बाद में क्या आएगा, प्लैटफ़ॉर्म दर प्लैटफ़ॉर्म, वर्शन 1.0 की ओर।">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/hi/roadmap/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/roadmap/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/roadmap/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="roadmap">
   <a class="skip" href="#main" data-i18n="skip">सामग्री पर जाएँ</a>
@@ -84,7 +87,7 @@
         <span class="road-state" data-i18n="rm.done.state">हो गया</span>
         <h2 id="rm-done" data-i18n="rm.done.when">अक्टूबर 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.d1.t">एक खुला प्रोटोकॉल</h3>
             <p data-i18n="rm.d1.d">TotalDrop Protocol v0: CPace के साथ ट्रांसफ़र कोड, पोस्ट-क्वांटम ML-KEM-768 के साथ Noise XXpsk3, एक बार इस्तेमाल होने वाली कुंजियों के साथ QUIC। लिखित रूप में, ताकि कोई भी संगत ऐप बना सके।</p>
@@ -92,8 +95,8 @@
           </li>
           <li>
             <h3 data-i18n="rm.d2.t">कमांड-लाइन क्लाइंट</h3>
-            <p data-i18n="rm.d2.d">Linux, macOS और Windows पर टर्मिनल से भेजें और प्राप्त करें।</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <p data-i18n="rm.d2.d">Linux टर्मिनल से भेजें और प्राप्त करें, या Cargo से सोर्स द्वारा बनाएँ (macOS और Windows के प्रीबिल्ट बाइनरी प्रस्तावित)।</p>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.d3.t">Android बीटा</h3>
@@ -118,7 +121,7 @@
           <li>
             <h3 data-i18n="rm.n2.t">कमांड लाइन में निजता मोड</h3>
             <p data-i18n="rm.n2.d">सिर्फ़ रिले: दूसरी तरफ़ को आपका IP पता कभी पता नहीं चलता।</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.x7.t">ऐप में निजता मोड</h3>
@@ -142,7 +145,7 @@
         <span class="road-state" data-i18n="rm.now.state">अभी</span>
         <h2 id="rm-now" data-i18n="rm.now.when">नवंबर 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x1.t">कैमरे से QR कोड स्कैन करें</h3>
             <p data-i18n="rm.x1.d">कोड टाइप करने के बजाय फ़ोन को भेजने वाले की स्क्रीन की ओर करें।</p>
@@ -160,7 +163,7 @@
         <span class="road-state" data-i18n="rm.next.state">आगे</span>
         <h2 id="rm-next" data-i18n="rm.next.when">सर्दी 2026–27</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x3.t">रुके हुए ट्रांसफ़र फिर से शुरू करें</h3>
             <p data-i18n="rm.x3.d">टूटा कनेक्शन वहीं से शुरू होता है जहाँ रुका था, जो पहुँच चुका है उसे दोबारा भेजे बिना।</p>
@@ -188,7 +191,7 @@
         <span class="road-state" data-i18n="rm.later.state">बाद में</span>
         <h2 id="rm-later" data-i18n="rm.later.when">2027</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.l1.t">iPhone, iPad और Mac</h3>
             <p data-i18n="rm.l1.d">नेटिव ऐप, जब दान से Apple का डेवलपर खाता पूरा हो जाए।</p>
@@ -221,7 +224,7 @@
         <span class="road-state" data-i18n="rm.v1.state">वर्शन 1.0</span>
         <h2 id="rm-v1" data-i18n="rm.v1.when">ऑडिट के बाद</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.v1.t">स्वतंत्र सुरक्षा ऑडिट</h3>
             <p data-i18n="rm.v1.d">एक बाहरी फ़र्म प्रोटोकॉल, क्रिप्टोग्राफ़ी और अविश्वसनीय इनपुट संभालने वाले कोड की समीक्षा करती है। पूरी रिपोर्ट प्रकाशित होती है।</p>
@@ -273,6 +276,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

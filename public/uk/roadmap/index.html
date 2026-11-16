@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Плани TotalDrop</title>
   <meta name="description" content="Що зроблено, що далі й що пізніше в TotalDrop, за платформами, на шляху до версії 1.0.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/uk/roadmap/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/roadmap/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/roadmap/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="roadmap">
   <a class="skip" href="#main" data-i18n="skip">Перейти до вмісту</a>
@@ -84,7 +87,7 @@
         <span class="road-state" data-i18n="rm.done.state">Готово</span>
         <h2 id="rm-done" data-i18n="rm.done.when">Жовтень 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.d1.t">Відкритий протокол</h3>
             <p data-i18n="rm.d1.d">TotalDrop Protocol v0: коди передачі на CPace, Noise XXpsk3 з постквантовим ML-KEM-768, QUIC з одноразовими ключами. Описаний, щоб будь-хто міг створити сумісний застосунок.</p>
@@ -92,8 +95,8 @@
           </li>
           <li>
             <h3 data-i18n="rm.d2.t">Клієнт командного рядка</h3>
-            <p data-i18n="rm.d2.d">Надсилання й отримання з термінала в Linux, macOS і Windows.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <p data-i18n="rm.d2.d">Надсилання й отримання з термінала в Linux або збирання з вихідного коду через Cargo (готові бінарні файли для macOS і Windows заплановано).</p>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.d3.t">Бета для Android</h3>
@@ -118,7 +121,7 @@
           <li>
             <h3 data-i18n="rm.n2.t">Режим конфіденційності в командному рядку</h3>
             <p data-i18n="rm.n2.d">Лише через ретранслятор: інша сторона ніколи не дізнається вашої IP-адреси.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.x7.t">Режим конфіденційності в застосунках</h3>
@@ -142,7 +145,7 @@
         <span class="road-state" data-i18n="rm.now.state">Зараз</span>
         <h2 id="rm-now" data-i18n="rm.now.when">Листопад 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x1.t">Сканування QR-коду камерою</h3>
             <p data-i18n="rm.x1.d">Наведіть телефон на екран відправника замість того, щоб вводити код.</p>
@@ -160,7 +163,7 @@
         <span class="road-state" data-i18n="rm.next.state">Далі</span>
         <h2 id="rm-next" data-i18n="rm.next.when">Зима 2026–27</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x3.t">Відновлення перерваних передач</h3>
             <p data-i18n="rm.x3.d">Обірване з'єднання продовжує з місця зупинки, не надсилаючи знову те, що вже надійшло.</p>
@@ -188,7 +191,7 @@
         <span class="road-state" data-i18n="rm.later.state">Пізніше</span>
         <h2 id="rm-later" data-i18n="rm.later.when">2027</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.l1.t">iPhone, iPad і Mac</h3>
             <p data-i18n="rm.l1.d">Нативні застосунки, коли пожертви покриють обліковий запис розробника Apple.</p>
@@ -221,7 +224,7 @@
         <span class="road-state" data-i18n="rm.v1.state">Версія 1.0</span>
         <h2 id="rm-v1" data-i18n="rm.v1.when">Після аудиту</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.v1.t">Незалежний аудит безпеки</h3>
             <p data-i18n="rm.v1.d">Стороння компанія перевіряє протокол, криптографію і код, що обробляє недовірені дані. Повний звіт публікується.</p>
@@ -273,6 +276,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

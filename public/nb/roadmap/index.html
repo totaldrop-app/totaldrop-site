@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Veikart for TotalDrop</title>
   <meta name="description" content="Hva som er ferdig, hva som kommer neste gang og hva som kommer senere i TotalDrop, plattform for plattform, på veien mot versjon 1.0.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/nb/roadmap/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/roadmap/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/roadmap/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="roadmap">
   <a class="skip" href="#main" data-i18n="skip">Gå til innholdet</a>
@@ -84,7 +87,7 @@
         <span class="road-state" data-i18n="rm.done.state">Ferdig</span>
         <h2 id="rm-done" data-i18n="rm.done.when">Oktober 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.d1.t">En åpen protokoll</h3>
             <p data-i18n="rm.d1.d">TotalDrop Protocol v0: overføringskoder med CPace, Noise XXpsk3 med postkvante ML-KEM-768, QUIC med engangsnøkler. Skrevet ned så alle kan bygge en kompatibel app.</p>
@@ -92,8 +95,8 @@
           </li>
           <li>
             <h3 data-i18n="rm.d2.t">Kommandolinjeklient</h3>
-            <p data-i18n="rm.d2.d">Send og motta fra en terminal på Linux, macOS og Windows.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <p data-i18n="rm.d2.d">Send og motta fra en Linux-terminal, eller bygg fra kildekode med Cargo (ferdigbygde binærfiler for macOS og Windows planlagt).</p>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.d3.t">Android-beta</h3>
@@ -118,7 +121,7 @@
           <li>
             <h3 data-i18n="rm.n2.t">Personvernmodus på kommandolinjen</h3>
             <p data-i18n="rm.n2.d">Bare via reléserveren: den andre siden får aldri vite IP-adressen din.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.x7.t">Personvernmodus i appene</h3>
@@ -142,7 +145,7 @@
         <span class="road-state" data-i18n="rm.now.state">Nå</span>
         <h2 id="rm-now" data-i18n="rm.now.when">November 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x1.t">Skann QR-koden med kameraet</h3>
             <p data-i18n="rm.x1.d">Rett telefonen mot skjermen til avsenderen i stedet for å skrive koden.</p>
@@ -160,7 +163,7 @@
         <span class="road-state" data-i18n="rm.next.state">Neste</span>
         <h2 id="rm-next" data-i18n="rm.next.when">Vinteren 2026–27</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x3.t">Gjenoppta avbrutte overføringer</h3>
             <p data-i18n="rm.x3.d">En brutt tilkobling fortsetter der den stoppet, uten å sende det som allerede har kommet fram.</p>
@@ -188,7 +191,7 @@
         <span class="road-state" data-i18n="rm.later.state">Senere</span>
         <h2 id="rm-later" data-i18n="rm.later.when">2027</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.l1.t">iPhone, iPad og Mac</h3>
             <p data-i18n="rm.l1.d">Innebygde apper, når donasjoner dekker Apples utviklerkonto.</p>
@@ -221,7 +224,7 @@
         <span class="road-state" data-i18n="rm.v1.state">Versjon 1.0</span>
         <h2 id="rm-v1" data-i18n="rm.v1.when">Etter revisjonen</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.v1.t">Uavhengig sikkerhetsrevisjon</h3>
             <p data-i18n="rm.v1.d">Et eksternt firma gjennomgår protokollen, kryptografien og koden som håndterer uklarert inndata. Hele rapporten publiseres.</p>
@@ -273,6 +276,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

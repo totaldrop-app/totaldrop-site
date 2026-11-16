@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop をダウンロード</title>
   <meta name="description" content="Linux、Android、コマンドライン向けの TotalDrop をダウンロード。Windows、macOS、iOS、ブラウザ版も準備中です。">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ja/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">本文へスキップ</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">プラットフォーム</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">このデバイス向け</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">ベータ</span></header>
-          <p data-i18n="dl.android.d">すべての機能を備えたアプリ。あなたの言語で表示され、スマートフォンの配色に合わせて表示されます。</p>
+          <p data-i18n="dl.android.d">すべての機能を備えたアプリ。あなたの言語で表示され、スマートフォンの配色に追従し、共有シートとクリップボードからの送信に対応しています。</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 以降、64 ビット</li>
             <li data-i18n="dl.android.r2">ベータ期間中は Google Play で招待制のテスト</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">このデバイス向け</span>
           <header><h3 data-i18n="dl.cli">コマンドライン</h3><span class="pill is-ready" data-i18n="dl.ready">提供中</span></header>
-          <p data-i18n="dl.cli.d">Linux、macOS、Windows のターミナル向け。ファイルもフォルダ全体も送れます。</p>
+          <p data-i18n="dl.cli.d">現在は Linux パッケージにビルド済みで同梱、または Cargo でソースからビルドできます。引数や標準入力からファイル、フォルダー全体、テキストを送信します。</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="インストールコマンド" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">コマンドをコピー</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="使用例" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Wayland 向けに Qt 6 で作られています。配色、フォント、アイコンはデスクトップ（Plasma、Hyprland、Omarchy、GNOME）から取り込みます。</p>
           <ul>
             <li data-i18n="dl.linux.r1">ディストリビューションの系統ごとに別のパッケージ：すべて x86-64 用があり、Debian、Ubuntu、Fedora は ARM64 用もあります</li>
-            <li data-i18n="dl.linux.r2">.pkg、.deb、.rpm パッケージは totaldrop コマンドもインストールします</li>
+            <li data-i18n="dl.linux.r2">Linux の .pkg 、 .deb 、 .rpm パッケージは totaldrop コマンドと Dolphin、Files、Nemo 用の右クリックメニューもインストールします</li>
             <li data-i18n="dl.linux.r3">Linux のパッケージは一度に 1 つだけ使ってください。Flatpak と .pkg・.deb・.rpm パッケージは同じ名前を使うため、一方を開いている間にもう一方を起動すると、2 つ目のウィンドウは開かず、開いているウィンドウが前面に出ます。</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">準備中</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">このデバイス向け</span>
           <header><h3 data-i18n="dl.web">ブラウザ</h3><span class="pill" data-i18n="rm.now.when">2026年11月</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">動作環境</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">プラットフォーム</th><th scope="col" data-i18n="dl.req.min">最小要件</th><th scope="col" data-i18n="dl.req.notes">備考</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15、64 ビット ARM</td><td data-i18n="dl.req.android.n">必要な権限はインターネットのみ</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15、64 ビット ARM</td><td data-i18n="dl.req.android.n">ネットワーク・バックグラウンド転送・通知の権限のみ。16 KB ページ境界対応ネイティブライブラリ</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8：Debian 13、Ubuntu 25.04、Fedora 43、Arch</td><td data-i18n="dl.req.linux.n">Wayland または X11、x86-64 と ARM64（.deb、.rpm、Flatpak。Arch は x86-64 のみ）</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">コマンドライン</th><td data-i18n="dl.req.cli">ビルドには Rust 1.99</td><td data-i18n="dl.req.cli.n">Linux、macOS、Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">コマンドライン</th><td data-i18n="dl.req.cli">ビルドには Rust 1.99</td><td data-i18n="dl.req.cli.n">Linux はビルド済み。その他は Cargo でソースからビルド（macOS と Windows のビルド済みバイナリも予定）</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">ネットワーク</th><td data-i18n="dl.req.net.m">インターネット、または同じネットワーク</td><td data-i18n="dl.req.net.n">可能なら直接、できなければリレー経由</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

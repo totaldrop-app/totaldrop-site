@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Roadmap di TotalDrop</title>
   <meta name="description" content="Cosa è fatto, cosa viene dopo e cosa arriverà più avanti in TotalDrop, piattaforma per piattaforma, verso la versione 1.0.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/it/roadmap/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/roadmap/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/roadmap/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="roadmap">
   <a class="skip" href="#main" data-i18n="skip">Vai al contenuto</a>
@@ -84,7 +87,7 @@
         <span class="road-state" data-i18n="rm.done.state">Fatto</span>
         <h2 id="rm-done" data-i18n="rm.done.when">Ottobre 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.d1.t">Un protocollo aperto</h3>
             <p data-i18n="rm.d1.d">TotalDrop Protocol v0: codici di trasferimento con CPace, Noise XXpsk3 con ML-KEM-768 post-quantistico, QUIC con chiavi monouso. Messo per iscritto perché chiunque possa realizzare un'app compatibile.</p>
@@ -92,8 +95,8 @@
           </li>
           <li>
             <h3 data-i18n="rm.d2.t">Client a riga di comando</h3>
-            <p data-i18n="rm.d2.d">Invia e ricevi da un terminale su Linux, macOS e Windows.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <p data-i18n="rm.d2.d">Invia e ricevi da un terminale Linux, oppure compila dai sorgenti con Cargo (binari precompilati per macOS e Windows in programma).</p>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.d3.t">Beta per Android</h3>
@@ -118,7 +121,7 @@
           <li>
             <h3 data-i18n="rm.n2.t">Modalità privacy nella riga di comando</h3>
             <p data-i18n="rm.n2.d">Solo inoltro: l'altra parte non conosce mai il tuo indirizzo IP.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.x7.t">Modalità privacy nelle app</h3>
@@ -142,7 +145,7 @@
         <span class="road-state" data-i18n="rm.now.state">Ora</span>
         <h2 id="rm-now" data-i18n="rm.now.when">Novembre 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x1.t">Scansiona il codice QR con la fotocamera</h3>
             <p data-i18n="rm.x1.d">Inquadra lo schermo di chi invia con il telefono invece di digitare il codice.</p>
@@ -160,7 +163,7 @@
         <span class="road-state" data-i18n="rm.next.state">Prossimamente</span>
         <h2 id="rm-next" data-i18n="rm.next.when">Inverno 2026–27</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x3.t">Riprendi i trasferimenti interrotti</h3>
             <p data-i18n="rm.x3.d">Una connessione caduta riprende da dove si era fermata, senza reinviare ciò che è già arrivato.</p>
@@ -188,7 +191,7 @@
         <span class="road-state" data-i18n="rm.later.state">Più avanti</span>
         <h2 id="rm-later" data-i18n="rm.later.when">2027</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.l1.t">iPhone, iPad e Mac</h3>
             <p data-i18n="rm.l1.d">App native, quando le donazioni copriranno l'account sviluppatore Apple.</p>
@@ -221,7 +224,7 @@
         <span class="road-state" data-i18n="rm.v1.state">Versione 1.0</span>
         <h2 id="rm-v1" data-i18n="rm.v1.when">Dopo l'audit</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.v1.t">Audit di sicurezza indipendente</h3>
             <p data-i18n="rm.v1.d">Una società esterna esamina il protocollo, la crittografia e il codice che gestisce input non attendibili. Il rapporto completo viene pubblicato.</p>
@@ -273,6 +276,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

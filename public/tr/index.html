@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: dosyaları doğrudan, uçtan uca şifreli gönderin</title>
-  <meta name="description" content="TotalDrop dosyaları bir cihazdan ötekine doğrudan, uçtan uca şifreli gönderen ücretsiz ve açık kaynak bir uygulama. Hesap yok, e-posta yok, telefon numarası yok.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: dosya ve metni doğrudan, uçtan uca şifreli gönderin</title>
+  <meta name="description" content="TotalDrop dosyaları, klasörleri ve metni bir cihazdan öbürüne doğrudan, uçtan uca şifreli gönderen ücretsiz ve açık kaynaklı bir uygulamadır. Hesap yok, e-posta yok, telefon numarası yok.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/tr/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: dosyaları doğrudan, uçtan uca şifreli gönderin">
-  <meta property="og:description" content="TotalDrop dosyaları bir cihazdan ötekine doğrudan, uçtan uca şifreli gönderen ücretsiz ve açık kaynak bir uygulama. Hesap yok, e-posta yok, telefon numarası yok.">
+  <meta property="og:title" content="TotalDrop: dosya ve metni doğrudan, uçtan uca şifreli gönderin">
+  <meta property="og:description" content="TotalDrop dosyaları, klasörleri ve metni bir cihazdan öbürüne doğrudan, uçtan uca şifreli gönderen ücretsiz ve açık kaynaklı bir uygulamadır. Hesap yok, e-posta yok, telefon numarası yok.">
   <meta property="og:url" content="https://totaldrop.app/tr/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="Ana menü" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">Uygulamalar</a>
       <a href="#why" data-i18n="nav.why">Neden TotalDrop</a>
       <a href="#how" data-i18n="nav.how">Nasıl çalışır</a>
       <a href="#security" data-i18n="nav.security">Güvenlik</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">Ücretsiz · Açık kaynak · Beta</p>
-        <h1 id="hero-title" data-i18n="hero.title">Dosyayı doğrudan öbür cihaza gönderin.</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop dosyaları cihazınızdan karşı cihaza doğrudan, uçtan uca şifreli taşır. Kısa bir kod paylaşırsınız; aradaki hiç kimse gönderdiğinizi okuyamaz. Hesap yok, e-posta yok, telefon numarası yok.</p>
+        <h1 id="hero-title" data-i18n="hero.title">Dosya ve metni doğrudan öbür cihaza gönderin.</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop dosyaları, tüm klasörleri ve pano metnini cihazınızdan karşı cihaza doğrudan, kuantum sonrası anahtarlarla uçtan uca şifreli taşır. Kısa bir kod paylaşırsınız; aradaki hiç kimse gönderdiğinizi okuyamaz. Hesap yok, e-posta yok, telefon numarası yok.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/tr/download/" data-i18n="hero.cta">Betayı indirin</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">Kodu inceleyin</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">Bugün Android, Linux ve komut satırı</li>
+          <li data-i18n="hero.h2">Kuantum sonrası ML-KEM-768</li>
+          <li data-i18n="hero.h3">35 dil, sıfır izleyici</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">Aktarım kodu</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">Aktarım kodu</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">Başka bir örnek</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">Dört doğrulama sözcüğü</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">Kodu sesli söyleyin ya da bir mesaja yapıştırın. Kodu kim girerse dosyaları o alır.</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">Her masaüstü ve telefonda yerleşik</p>
+        <h2 id="apps-title" data-i18n="apps.title">Sisteminize ait olacak biçimde tasarlandı</h2>
+        <p data-i18n="apps.lede">TotalDrop renklerini, yazı tiplerini, koyu modunu ve paylaşım menülerini çalıştırdığınız işletim sisteminden alır. Önce bir tarayıcı sekmesi açmadan galerinizden, seçili metinden, panodan ya da dosya yöneticisinden gönderin.</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="Açık ve koyu Material You temalarında Android'de TotalDrop" data-i18n-label="apps.android.alt" aria-label="Açık ve koyu Material You temalarında Android'de TotalDrop" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Material You dinamik renkleri ve Material 3 Expressive denetimleri. Herhangi bir uygulamadan dosya ya da seçili metni doğrudan paylaşın ya da panonuzu göndermek için uygulama simgesine basılı tutun.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">Sistem paylaşım menüsü</li>
+              <li data-i18n="apps.tag.text">Metin ve pano</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="Linux'ta yerleşik Qt 6 Wayland TotalDrop uygulaması" data-i18n-label="apps.linux.alt" aria-label="Linux'ta yerleşik Qt 6 Wayland TotalDrop uygulaması" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Linux uygulaması</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">KDE Plasma, Hyprland, Omarchy ve GNOME temalarını canlı izleyen yerleşik Wayland Qt 6 ve QML uygulaması. Anında göndermek için Dolphin, Dosyalar ya da Nemo'da herhangi bir dosya veya klasöre sağ tıklayın.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, Dosyalar, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 ve ARM64</li>
+              <li data-i18n="apps.tag.pkg">Yerleşik paket ve Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">Neden TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">Hiçbir şey yüklenmez</h3>
           <p data-i18n="why.r1.d">Dosyalar sizin cihazınızdan onunkine gider. Bir şirketin sunucusunda bekleyen kopya yok, bir haftada süresi dolan link yok.</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">Bugün Android, Linux ve komut satırı; Windows, macOS ve iOS yolda. Telefondan bilgisayara, her markadan her markaya.</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">Bizden boyut sınırı yok</h3>
-          <p data-i18n="why.r4.d">Bütün klasörler, uzun videolar, orijinal kalitede fotoğraflar. Sınırı yalnızca diskiniz ve bağlantınız belirler.</p>
+          <h3 data-i18n="why.r4.t">Dosyalar, klasörler ve pano metni</h3>
+          <p data-i18n="why.r4.d">Özgün kalitede fotoğraflar, dev klasörler ya da kopyalanmış bir not gönderin. Metin, gizli karakterleri adlandırılmış olarak, diske hiç yazılmadan kopyalanmaya hazır ulaşır.</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">Güvenilmez, doğrulanır</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">GPL ile açık kaynak, bağışlarla ayakta. Reklam yok, takip yok, ücretli sürüm yok.</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">TotalDrop, dosya göndermenin alışılmış yollarıyla karşılaştırıldığında</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">TotalDrop, dosya göndermenin alışılmış yollarıyla karşılaştırıldığında</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">Özellik</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">Bulut linkleri</th><th scope="col" data-i18n="why.cmp.nearby">Yakındaki paylaşım</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">Üç adım</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">Dosyaları seçin</h3>
-          <p data-i18n="how.s1.d">Her türden, istediğiniz kadar. Alıcı yalnızca seçtiklerinizi alır.</p>
+          <h3 data-i18n="how.s1.t">Dosya ya da metin seçin</h3>
+          <p data-i18n="how.s1.d">Dosyaları, tüm klasörleri ya da pano metnini seçin—veya doğrudan sistem paylaşım menünüzden ya da dosya yöneticinizden gönderin.</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">Kodu paylaşın</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">Dosyayı yalnızca siz ve alıcı açabilir</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">Şifreleme ve biçimsel doğrulama</p>
+        <h2 id="sec-title" data-i18n="sec.title">Dosyayı yalnızca siz ve alıcı açabilir</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">Çıkmadan şifrelenir</dt>
           <dd data-i18n="sec.f1.d">Dosyalar cihazınızda şifrelenir ve yalnızca alıcının cihazında açılır. Anahtarlar başka hiçbir yerde bulunmaz.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">Kod çevrimdışı tahmin edilemez</dt>
-          <dd data-i18n="sec.f2.d">Kod, PAKE el sıkışmasıyla bir anahtara dönüşür; yanlış bir tahmin hemen başarısız olur ve o deneme yanar. Anahtar değişimi kuantum sonrası ML-KEM'i de içerir.</dd>
+          <dt data-i18n="sec.f2.t">Kuantum sonrası PAKE el sıkışması</dt>
+          <dd data-i18n="sec.f2.d">Kod, hibrit X25519 ve ML-KEM-768 anahtarlarıyla Noise XXpsk3'ü besleyen bir CPace el sıkışmasını yürütür. Yanlış tahmin anında başarısız olur ve denemeyi yakar.</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">Sunucumuz yalnızca tanıştırır</dt>
-          <dd data-i18n="sec.f3.d">IP adresinizi ve kodun sayısını görür; sözcükleri, dosya adlarını ya da dosyaları asla görmez. Kayıt tutmaz.</dd>
+          <dd data-i18n="sec.f3.d">IP adresinizi ve kodun numarasını görür; sözcükleri, dosya adlarını ya da dosyaları asla görmez. Gizlilik Modu açıkken karşı cihaz bile IP adresinizi öğrenemez.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">Herkesin inceleyebileceği kod</dt>
-          <dd data-i18n="sec.f4.d">Her satır herkese açık. 1.0 sürümü ancak bağımsız bir güvenlik denetiminden sonra çıkar.</dd>
+          <dt data-i18n="sec.f4.t">Tamarin ile kanıtlandı, 1.0 öncesi denetlenecek</dt>
+          <dd data-i18n="sec.f4.d">Altı sembolik model, makinece denetlenmiş 61 lemma ve 27 regresyon mutantı, yakında gelecek sunucu-kör Ghost Ring hesabını Tamarin kanıtlayıcısında doğrular. 1.0 sürümü bağımsız bir denetimi bekler.</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/tr" hreflang="tr" data-i18n="sec.privacy">Gizlilik politikasını okuyun</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">Neredeyiz</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">Bitti</span>
           <h3 data-i18n="road.p0">Açık protokol, komut satırı istemcisi, Android betası ve Linux uygulaması</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

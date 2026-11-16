@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Por que o TotalDrop precisa de doações</title>
   <meta name="description" content="O TotalDrop é gratuito e não tem anúncios nem investidores. Aqui está cada custo para mantê-lo, hoje e a caminho da versão 1.0, e o que as doações pagam.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/pt-BR/donate/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/donate/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/donate/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="donate">
   <a class="skip" href="#main" data-i18n="skip">Pular para o conteúdo</a>
@@ -89,11 +92,11 @@
         <div><dt data-i18n="don.raised.t2">39,20 USD gastos</dt><dd data-i18n="don.raised.d2">O domínio e a conta do Google Play, pagos até agora pelo mantenedor. As vagas do Claude entram nesta conta quando as doações passarem a pagá-las</dd></div>
         <div><dt data-i18n="don.raised.t3">Meta: 2.575 USD</dt><dd data-i18n="don.raised.d3">Quanto somam em um ano todos os custos desta página</dd></div>
       </dl>
-      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label">0%</progress>
+      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label"></progress>
       <p class="note" id="don-goal-label" data-i18n="don.raised.goal">0 de 2.575 USD para o primeiro ano: 0%. Atualizado em 11 de novembro de 2026.</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-ledger-caption">
         <table class="req narrow">
-          <caption data-i18n="don.ledger.caption">Todo mês, item por item</caption>
+          <caption id="don-ledger-caption" data-i18n="don.ledger.caption">Todo mês, item por item</caption>
           <thead><tr><th scope="col" data-i18n="don.ledger.month">Mês</th><th scope="col" data-i18n="don.ledger.in">Entradas</th><th scope="col" data-i18n="don.ledger.out">Saídas</th><th scope="col" data-i18n="don.ledger.what">Para quê</th></tr></thead>
           <tbody>
             <tr><th scope="row" data-i18n="don.ledger.m1">Outubro de 2026</th><td>0 USD</td><td data-i18n="don.m.3920">39,20 USD</td><td data-i18n="don.ledger.m1.w">Domínio totaldrop.app, 14,20 USD; conta de desenvolvedor do Google Play, 25 USD</td></tr>
@@ -104,7 +107,7 @@
 
     <section class="block" aria-labelledby="don-budget">
       <h2 id="don-budget" data-i18n="don.budget.title">Cada custo, item por item</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-budget">
         <table class="req stack">
           <thead><tr><th scope="col" data-i18n="don.col.item">Item</th><th scope="col" data-i18n="don.col.for">Para que serve</th><th scope="col" data-i18n="don.col.when">Quando</th><th scope="col" data-i18n="don.col.year">Por ano</th></tr></thead>
           <tbody>
@@ -124,7 +127,7 @@
     <section class="block" aria-labelledby="don-relay">
       <h2 id="don-relay" data-i18n="don.relay.title">Se a retransmissão crescer</h2>
       <p data-i18n="don.relay.d">A maioria das transferências se conecta diretamente e não custa nada. As que não conseguem passam pelo servidor de retransmissão. Se ele precisar de mais velocidade, o Cloudflare Realtime TURN as transporta por UDP perto de cada usuário: os primeiros 1.000 GB por mês são gratuitos, depois 0,05 USD por GB. As doações vão pagar isso conforme o tráfego crescer.</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-relay">
         <table class="req narrow">
           <thead><tr><th scope="col" data-i18n="don.relay.c1">Tráfego retransmitido por mês</th><th scope="col" data-i18n="don.relay.c2">Por mês</th><th scope="col" data-i18n="don.relay.c3">Por ano</th></tr></thead>
           <tbody>
@@ -177,6 +180,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

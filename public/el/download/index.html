@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Λήψη του TotalDrop</title>
   <meta name="description" content="Κατεβάστε το TotalDrop για Linux, Android και γραμμή εντολών. Windows, macOS, iOS και πρόγραμμα περιήγησης έρχονται.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/el/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">Μετάβαση στο περιεχόμενο</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">Πλατφόρμες</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">Για αυτή τη συσκευή</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">Beta</span></header>
-          <p data-i18n="dl.android.d">Η πλήρης εφαρμογή, στη γλώσσα σας, με τα χρώματα του τηλεφώνου σας.</p>
+          <p data-i18n="dl.android.d">Η πλήρης εφαρμογή, στη γλώσσα σας, με τα χρώματα του τηλεφώνου σας, και αποστολή από το μενού κοινοποίησης και το πρόχειρο.</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 ή νεότερο, 64-bit</li>
             <li data-i18n="dl.android.r2">Δοκιμή στο Google Play, με πρόσκληση όσο η beta είναι κλειστή</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">Για αυτή τη συσκευή</span>
           <header><h3 data-i18n="dl.cli">Γραμμή εντολών</h3><span class="pill is-ready" data-i18n="dl.ready">Διαθέσιμο</span></header>
-          <p data-i18n="dl.cli.d">Για τερματικά σε Linux, macOS και Windows. Στέλνει αρχεία και ολόκληρους φακέλους.</p>
+          <p data-i18n="dl.cli.d">Έτοιμο σήμερα στα πακέτα Linux, ή χτισμένο από τον πηγαίο κώδικα με το Cargo. Στέλνει αρχεία, ολόκληρους φακέλους και κείμενο από ορίσματα ή από την τυπική είσοδο.</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="Εντολή εγκατάστασης" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">Αντιγραφή εντολής</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="Παράδειγμα χρήσης" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Φτιαγμένη με Qt 6 για Wayland. Παίρνει χρώματα, γραμματοσειρές και εικονίδια από την επιφάνεια εργασίας σας: Plasma, Hyprland, Omarchy, GNOME.</p>
           <ul>
             <li data-i18n="dl.linux.r1">Ξεχωριστό πακέτο για κάθε οικογένεια διανομών: όλα για x86-64· Debian, Ubuntu και Fedora και για ARM64</li>
-            <li data-i18n="dl.linux.r2">Τα πακέτα .pkg, .deb και .rpm εγκαθιστούν και την εντολή totaldrop</li>
+            <li data-i18n="dl.linux.r2">Τα πακέτα .pkg, .deb και .rpm εγκαθιστούν επίσης την εντολή totaldrop και τα μενού δεξιού κλικ για Dolphin, Αρχεία και Nemo</li>
             <li data-i18n="dl.linux.r3">Χρησιμοποιείτε ένα πακέτο Linux τη φορά. Το Flatpak και το πακέτο .pkg, .deb ή .rpm μοιράζονται ένα όνομα, οπότε όσο το ένα είναι ανοιχτό, η εκκίνηση του άλλου φέρνει μπροστά το ανοιχτό παράθυρο αντί να ανοίξει δεύτερο.</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">Έρχεται</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">Για αυτή τη συσκευή</span>
           <header><h3 data-i18n="dl.web">Στο πρόγραμμα περιήγησης</h3><span class="pill" data-i18n="rm.now.when">Νοέμβριος 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">Απαιτήσεις</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">Πλατφόρμα</th><th scope="col" data-i18n="dl.req.min">Ελάχιστα</th><th scope="col" data-i18n="dl.req.notes">Σημειώσεις</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM 64-bit</td><td data-i18n="dl.req.android.n">Μόνο άδεια διαδικτύου</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM 64-bit</td><td data-i18n="dl.req.android.n">Άδειες δικτύου, μεταφοράς στο παρασκήνιο και ειδοποιήσεων· εγγενείς βιβλιοθήκες ευθυγραμμισμένες σε σελίδες 16 KB</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8: Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland ή X11· x86-64 και ARM64 (.deb, .rpm, Flatpak· Arch μόνο x86-64)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">Γραμμή εντολών</th><td data-i18n="dl.req.cli">Rust 1.99 για μεταγλώττιση</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">Γραμμή εντολών</th><td data-i18n="dl.req.cli">Rust 1.99 για μεταγλώττιση</td><td data-i18n="dl.req.cli.n">Έτοιμο σε Linux· χτίζεται από τον πηγαίο κώδικα με το Cargo αλλού (έτοιμα εκτελέσιμα για macOS και Windows προγραμματίζονται)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">Δίκτυο</th><td data-i18n="dl.req.net.m">Διαδίκτυο ή το ίδιο δίκτυο</td><td data-i18n="dl.req.net.n">Απευθείας όπου είναι δυνατό, αλλιώς μέσω του διακομιστή αναμετάδοσης</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

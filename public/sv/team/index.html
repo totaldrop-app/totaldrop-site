@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Människorna bakom TotalDrop</title>
   <meta name="description" content="Vem som bygger TotalDrop och vilken del av arbetet var och en gör, med varje siffra hämtad från projektets öppna historik på GitHub.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/sv/team/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/team/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/team/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="team">
   <a class="skip" href="#main" data-i18n="skip">Hoppa till innehållet</a>
@@ -142,7 +145,7 @@
 
     <section class="block" aria-labelledby="tm-tools">
       <h2 id="tm-tools" data-i18n="tm.tools.title">AI och automatisering</h2>
-      <p class="block-lede" data-i18n="tm.tools.lede">Här skriver även programvara ändringar. Arbetet går igenom samma kontroller och granskningar som allas, och bara projektledaren kan slå ihop det.</p>
+      <p class="block-lede" data-i18n="tm.tools.lede">Här skriver även programvara ändringar. Arbetet går igenom samma kontroller och granskningar som allas, och en underhållare godkänner eller slår samman varje ändring.</p>
       <!-- team:helpers -->
       <ul class="helpers">
         <li class="helper">
@@ -326,10 +329,10 @@
 
     <section class="block" aria-labelledby="tm-how">
       <h2 id="tm-how" data-i18n="tm.how.title">Hur arbetet granskas</h2>
-      <ol class="steps tm-steps">
+      <ol class="steps tm-steps" role="list">
         <li><p data-i18n="tm.how.h1">Vardagliga ändringar börjar som ett öppet ärende och når appen bara genom en pull request.</p></li>
         <li><p data-i18n="tm.how.h2">Varje pull request går igenom de automatiska kontrollerna och en granskning av en person eller en AI-agent som inte skrev den.</p></li>
-        <li><p data-i18n="tm.how.h3">Bara projektledaren slår samman, släpper och driftsätter. Versioner byggs av GitHub Actions, aldrig på en privat dator.</p></li>
+        <li><p data-i18n="tm.how.h3">Underhållare slår samman granskade ändringar, och bara projektledaren godkänner versioner och driftsättningar. Versioner byggs av GitHub Actions, aldrig på en privat dator.</p></li>
       </ol>
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/totaldrop-app/totaldrop/blob/main/CONTRIBUTING.md" data-i18n="tm.join">Var med</a>
@@ -357,6 +360,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

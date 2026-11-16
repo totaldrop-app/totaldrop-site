@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: lähetä tiedostot suoraan, päästä päähän salattuina</title>
-  <meta name="description" content="TotalDrop on ilmainen avoimen lähdekoodin sovellus, joka lähettää tiedostot suoraan laitteelta toiselle päästä päähän salattuina. Ei tiliä, ei sähköpostia, ei puhelinnumeroa.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: lähetä tiedostoja ja tekstiä suoraan, päästä päähän salattuina</title>
+  <meta name="description" content="TotalDrop on ilmainen avoimen lähdekoodin sovellus, joka lähettää tiedostoja, kansioita ja tekstiä suoraan laitteelta toiselle päästä päähän salattuina. Ei tiliä, ei sähköpostia, ei puhelinnumeroa.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/fi/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: lähetä tiedostot suoraan, päästä päähän salattuina">
-  <meta property="og:description" content="TotalDrop on ilmainen avoimen lähdekoodin sovellus, joka lähettää tiedostot suoraan laitteelta toiselle päästä päähän salattuina. Ei tiliä, ei sähköpostia, ei puhelinnumeroa.">
+  <meta property="og:title" content="TotalDrop: lähetä tiedostoja ja tekstiä suoraan, päästä päähän salattuina">
+  <meta property="og:description" content="TotalDrop on ilmainen avoimen lähdekoodin sovellus, joka lähettää tiedostoja, kansioita ja tekstiä suoraan laitteelta toiselle päästä päähän salattuina. Ei tiliä, ei sähköpostia, ei puhelinnumeroa.">
   <meta property="og:url" content="https://totaldrop.app/fi/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="Päävalikko" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">Sovellukset</a>
       <a href="#why" data-i18n="nav.why">Miksi TotalDrop</a>
       <a href="#how" data-i18n="nav.how">Miten se toimii</a>
       <a href="#security" data-i18n="nav.security">Tietoturva</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">Ilmainen · Avoin lähdekoodi · Beta</p>
-        <h1 id="hero-title" data-i18n="hero.title">Lähetä tiedosto suoraan toiselle laitteelle.</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop siirtää tiedostot suoraan laitteeltasi vastaanottajan laitteelle päästä päähän salattuina. Jaat lyhyen koodin; kukaan välissä ei voi lukea, mitä lähetät. Ei tiliä, ei sähköpostia, ei puhelinnumeroa.</p>
+        <h1 id="hero-title" data-i18n="hero.title">Lähetä tiedostoja ja tekstiä suoraan toiselle laitteelle.</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop siirtää tiedostot, kokonaiset kansiot ja leikepöydän tekstin suoraan laitteeltasi vastaanottajan laitteelle päästä päähän kvanttiturvallisilla avaimilla salattuina. Jaa lyhyt koodi; kukaan välissä ei voi lukea lähettämääsi. Ei tiliä, ei sähköpostia, ei puhelinnumeroa.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/fi/download/" data-i18n="hero.cta">Lataa beta</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">Lue koodi</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">Android, Linux ja CLI jo tänään</li>
+          <li data-i18n="hero.h2">Kvanttiturvallinen ML-KEM-768</li>
+          <li data-i18n="hero.h3">35 kieltä, ei seurantaa</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">Siirtokoodi</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">Siirtokoodi</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">Toinen esimerkki</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">Neljä vahvistussanaa</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">Sano koodi ääneen tai liitä se viestiin. Se, joka kirjoittaa sen, saa tiedostot.</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">Natiivi jokaisella tietokoneella ja puhelimella</p>
+        <h2 id="apps-title" data-i18n="apps.title">Tehty kuulumaan järjestelmääsi</h2>
+        <p data-i18n="apps.lede">TotalDrop saa värinsä, typografiansa, tumman tilansa ja jakovalikkonsa käyttämästäsi käyttöjärjestelmästä. Lähetä galleriasta, valitusta tekstistä, leikepöydältä tai tiedostonhallinnasta avaamatta ensin selaimen välilehteä.</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="TotalDrop Androidissa vaaleassa ja tummassa Material You -teemassa" data-i18n-label="apps.android.alt" aria-label="TotalDrop Androidissa vaaleassa ja tummassa Material You -teemassa" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Dynaamiset Material You -värit ja Material 3 Expressive -säätimet. Jaa tiedostoja tai valittua tekstiä suoraan mistä tahansa sovelluksesta, tai pidä sovelluskuvaketta painettuna lähettääksesi leikepöydän sisällön.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">Järjestelmän jakovalikko</li>
+              <li data-i18n="apps.tag.text">Teksti ja leikepöytä</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="TotalDropin natiivi Qt 6 Wayland -sovellus Linuxissa" data-i18n-label="apps.linux.alt" aria-label="TotalDropin natiivi Qt 6 Wayland -sovellus Linuxissa" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Linux-sovellus</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Natiivi Qt 6 ja QML Waylandille, joka seuraa KDE Plasman, Hyprlandin, Omarchyn ja GNOMEn teemaa reaaliajassa. Napsauta tiedostoa tai kansiota hiiren oikealla painikkeella Dolphinissa, Tiedostoissa tai Nemossa lähettääksesi sen heti.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, Tiedostot, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 ja ARM64</li>
+              <li data-i18n="apps.tag.pkg">Natiivi ja Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">Miksi TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">Mitään ei ladata pilveen</h3>
           <p data-i18n="why.r1.d">Tiedostot kulkevat sinun laitteeltasi vastaanottajan laitteelle. Mikään kopio ei odota yrityksen palvelimella, eikä mikään linkki vanhene viikossa.</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">Android, Linux ja komentorivi nyt; Windows, macOS ja iOS tulossa. Puhelimesta kannettavaan, mistä tahansa merkistä mihin tahansa.</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">Emme rajoita kokoa</h3>
-          <p data-i18n="why.r4.d">Kokonaiset kansiot, pitkät videot, alkuperäislaatuiset kuvat. Rajan asettavat vain levysi ja yhteytesi.</p>
+          <h3 data-i18n="why.r4.t">Tiedostot, kansiot ja leikepöydän teksti</h3>
+          <p data-i18n="why.r4.d">Lähetä alkuperäislaatuisia kuvia, valtavia kansioita tai kopioitu muistiinpano. Teksti saapuu valmiina kopioitavaksi piilomerkit nimettyinä, eikä sitä koskaan kirjoiteta levylle.</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">Tarkistettu, ei luotettu</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">Avointa lähdekoodia GPL-lisenssillä, lahjoituksilla rahoitettu. Ei mainoksia, ei seurantaa, ei maksullista tasoa.</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">TotalDrop verrattuna tavallisiin tapoihin lähettää tiedosto</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">TotalDrop verrattuna tavallisiin tapoihin lähettää tiedosto</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">Ominaisuus</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">Pilvilinkit</th><th scope="col" data-i18n="why.cmp.nearby">Lähijako</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">Kolme vaihetta</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">Valitse tiedostot</h3>
-          <p data-i18n="how.s1.d">Mitä tahansa tyyppiä, niin monta kuin haluat. Vastaanottaja saa vain valitsemasi.</p>
+          <h3 data-i18n="how.s1.t">Valitse tiedostoja tai tekstiä</h3>
+          <p data-i18n="how.s1.d">Valitse tiedostoja, kokonaisia kansioita tai leikepöydän tekstiä — tai lähetä suoraan järjestelmän jakovalikosta tai tiedostonhallinnasta.</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">Jaa koodi</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">Vain sinä ja vastaanottaja voitte avata sen</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">Kryptografia ja formaali verifiointi</p>
+        <h2 id="sec-title" data-i18n="sec.title">Vain sinä ja vastaanottaja voitte avata sen</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">Salattu ennen lähtöä</dt>
           <dd data-i18n="sec.f1.d">Tiedostot salataan laitteellasi ja puretaan vain vastaanottajan laitteella. Avaimia ei ole missään muualla.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">Koodia ei voi arvata offline-tilassa</dt>
-          <dd data-i18n="sec.f2.d">Koodista tulee avain PAKE-kättelyssä, joten väärä arvaus epäonnistuu heti ja yritys menee hukkaan. Avaintenvaihto sisältää kvanttiturvallisen ML-KEMin.</dd>
+          <dt data-i18n="sec.f2.t">Kvanttiturvallinen PAKE-kättely</dt>
+          <dd data-i18n="sec.f2.d">Koodi ohjaa CPace-kättelyä, joka syöttää avaimen Noise XXpsk3 -kättelylle hybridien X25519- ja ML-KEM-768-avainten kanssa. Väärä arvaus hylätään heti ja kuluttaa yrityksen.</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">Palvelimemme vain esittelee</dt>
-          <dd data-i18n="sec.f3.d">Se näkee IP-osoitteesi ja koodin numeron, ei koskaan sanoja, tiedostojen nimiä tai tiedostoja. Se ei tallenna lokeja.</dd>
+          <dd data-i18n="sec.f3.d">Se näkee IP-osoitteesi ja koodin numeron, ei koskaan sanoja, tiedostonimiä tai tiedostoja. Kun Yksityisyystila on päällä, edes toinen laite ei koskaan saa tietää IP-osoitettasi.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">Koodi, jonka kuka tahansa voi tarkistaa</dt>
-          <dd data-i18n="sec.f4.d">Jokainen rivi on julkinen. Versio 1.0 julkaistaan vasta riippumattoman tietoturvatarkastuksen jälkeen.</dd>
+          <dt data-i18n="sec.f4.t">Todistettu Tamarinilla, tarkastettu ennen versiota 1.0</dt>
+          <dd data-i18n="sec.f4.d">Kuusi symbolista mallia, 61 koneellisesti tarkistettua lemmaa ja 27 regressiomutanttia todentavat tulevan palvelimelle näkymättömän Ghost Ring -tilin Tamarin-todistimessa. Versio 1.0 odottaa riippumatonta tarkastusta.</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/fi" hreflang="fi" data-i18n="sec.privacy">Lue tietosuojakäytäntö</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">Missä olemme</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">Valmis</span>
           <h3 data-i18n="road.p0">Avoin protokolla, komentoriviasiakas, Android-beta ja Linux-sovellus</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

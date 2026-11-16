@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: trimiteți fișiere direct, criptate end-to-end</title>
-  <meta name="description" content="TotalDrop este o aplicație gratuită și open source care trimite fișiere direct de pe un dispozitiv pe altul, criptate end-to-end. Fără cont, fără e-mail, fără număr de telefon.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: trimiteți fișiere și text direct, criptate end-to-end</title>
+  <meta name="description" content="TotalDrop este o aplicație gratuită și open source care trimite fișiere, dosare și text direct de pe un dispozitiv pe altul, criptate end-to-end. Fără cont, fără e-mail, fără număr de telefon.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ro/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: trimiteți fișiere direct, criptate end-to-end">
-  <meta property="og:description" content="TotalDrop este o aplicație gratuită și open source care trimite fișiere direct de pe un dispozitiv pe altul, criptate end-to-end. Fără cont, fără e-mail, fără număr de telefon.">
+  <meta property="og:title" content="TotalDrop: trimiteți fișiere și text direct, criptate end-to-end">
+  <meta property="og:description" content="TotalDrop este o aplicație gratuită și open source care trimite fișiere, dosare și text direct de pe un dispozitiv pe altul, criptate end-to-end. Fără cont, fără e-mail, fără număr de telefon.">
   <meta property="og:url" content="https://totaldrop.app/ro/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Salt la conținut</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="Meniu principal" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">Aplicații</a>
       <a href="#why" data-i18n="nav.why">De ce TotalDrop</a>
       <a href="#how" data-i18n="nav.how">Cum funcționează</a>
       <a href="#security" data-i18n="nav.security">Securitate</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">Gratuit · Open source · Beta</p>
-        <h1 id="hero-title" data-i18n="hero.title">Trimiteți un fișier direct pe alt dispozitiv.</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop mută fișierele direct de pe dispozitivul dvs. pe al lor, criptate end-to-end. Împărtășiți un cod scurt; nimeni de pe traseu nu poate citi ce trimiteți. Fără cont, fără e-mail, fără număr de telefon.</p>
+        <h1 id="hero-title" data-i18n="hero.title">Trimiteți fișiere și text direct pe alt dispozitiv.</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop mută fișiere, dosare întregi și text din clipboard direct de pe dispozitivul dvs. pe al lor, criptate end-to-end cu chei post-cuantice. Împărtășiți un cod scurt; nimeni de pe traseu nu poate citi ce trimiteți. Fără cont, fără e-mail, fără număr de telefon.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/ro/download/" data-i18n="hero.cta">Descărcați beta</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">Citiți codul</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">Android, Linux și CLI astăzi</li>
+          <li data-i18n="hero.h2">ML-KEM-768 post-cuantic</li>
+          <li data-i18n="hero.h3">35 de limbi, zero urmăritoare</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">Cod de transfer</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">Cod de transfer</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">Alt exemplu</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">Patru cuvinte de verificare</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">Spuneți codul cu voce tare sau lipiți-l într-un mesaj. Cine îl introduce primește fișierele.</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">Nativ pe fiecare desktop și telefon</p>
+        <h2 id="apps-title" data-i18n="apps.title">Construit să facă parte din sistemul dvs.</h2>
+        <p data-i18n="apps.lede">TotalDrop își ia culorile, tipografia, modul întunecat și meniurile de partajare din sistemul de operare pe care îl folosiți. Trimiteți din galerie, din textul selectat, din clipboard sau din managerul de fișiere fără să deschideți mai întâi o filă de browser.</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="TotalDrop pe Android în temele Material You deschisă și închisă" data-i18n-label="apps.android.alt" aria-label="TotalDrop pe Android în temele Material You deschisă și închisă" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Culori dinamice Material You și comenzi Material 3 Expressive. Partajați fișiere sau text selectat direct din orice aplicație ori țineți apăsată pictograma din lansator pentru a trimite clipboardul.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">Meniul de partajare al sistemului</li>
+              <li data-i18n="apps.tag.text">Text și clipboard</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="Aplicația nativă TotalDrop în Qt 6 și Wayland pe Linux" data-i18n-label="apps.linux.alt" aria-label="Aplicația nativă TotalDrop în Qt 6 și Wayland pe Linux" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Aplicația pentru Linux</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Qt 6 și QML native pentru Wayland, urmărind în timp real KDE Plasma, Hyprland, Omarchy și GNOME. Faceți clic dreapta pe orice fișier sau dosar în Dolphin, Fișiere ori Nemo pentru a-l trimite pe loc.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, Fișiere, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 și ARM64</li>
+              <li data-i18n="apps.tag.pkg">Nativ și Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">De ce TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">Nimic nu este încărcat</h3>
           <p data-i18n="why.r1.d">Fișierele merg de pe dispozitivul dvs. pe al lor. Nicio copie nu așteaptă pe serverul unei companii și niciun link nu expiră într-o săptămână.</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">Android, Linux și linia de comandă azi; Windows, macOS și iOS urmează. De pe telefon pe laptop, de la orice marcă la orice marcă.</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">Nicio limită de dimensiune din partea noastră</h3>
-          <p data-i18n="why.r4.d">Dosare întregi, videoclipuri lungi, fotografii la calitate originală. Doar discul și conexiunea dvs. stabilesc limita.</p>
+          <h3 data-i18n="why.r4.t">Fișiere, dosare și text din clipboard</h3>
+          <p data-i18n="why.r4.d">Trimiteți fotografii la calitatea originală, dosare uriașe sau o notiță copiată. Textul ajunge gata de copiat, cu caracterele ascunse numite, fără să fie scris vreodată pe disc.</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">Verificat, nu luat pe încredere</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">Open source sub GPL, plătit din donații. Fără reclame, fără urmărire, fără versiune premium.</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">Cum se compară TotalDrop cu modurile obișnuite de a trimite un fișier</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">Cum se compară TotalDrop cu modurile obișnuite de a trimite un fișier</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">Funcție</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">Linkuri în cloud</th><th scope="col" data-i18n="why.cmp.nearby">Partajare în apropiere</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">Trei pași</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">Alegeți fișierele</h3>
-          <p data-i18n="how.s1.d">Orice tip, oricâte doriți. Destinatarul primește doar ce ați ales.</p>
+          <h3 data-i18n="how.s1.t">Alegeți fișiere sau text</h3>
+          <p data-i18n="how.s1.d">Alegeți fișiere, dosare întregi sau text din clipboard — ori trimiteți direct din meniul de partajare al sistemului sau din managerul de fișiere.</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">Împărtășiți codul</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">Doar dvs. și destinatarul îl puteți deschide</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">Criptografie și verificare formală</p>
+        <h2 id="sec-title" data-i18n="sec.title">Doar dvs. și destinatarul îl puteți deschide</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">Criptat înainte să plece</dt>
           <dd data-i18n="sec.f1.d">Fișierele sunt criptate pe dispozitivul dvs. și decriptate doar pe cel al destinatarului. Cheile nu există nicăieri altundeva.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">Codul nu poate fi ghicit offline</dt>
-          <dd data-i18n="sec.f2.d">Codul devine o cheie printr-un handshake PAKE, așa că o încercare greșită eșuează imediat și se pierde. Schimbul de chei include ML-KEM post-cuantic.</dd>
+          <dt data-i18n="sec.f2.t">Handshake PAKE post-cuantic</dt>
+          <dd data-i18n="sec.f2.d">Codul conduce un acord CPace care alimentează Noise XXpsk3 cu chei hibride X25519 și ML-KEM-768. O încercare greșită eșuează pe loc și arde tentativa.</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">Serverul nostru doar face prezentările</dt>
-          <dd data-i18n="sec.f3.d">Vede adresa dvs. IP și numărul din cod, niciodată cuvintele, numele fișierelor sau fișierele. Nu păstrează jurnale.</dd>
+          <dd data-i18n="sec.f3.d">Vede adresa dvs. IP și numărul din cod, niciodată cuvintele, numele fișierelor sau fișierele. Cu Modul de confidențialitate activat, nici măcar celălalt dispozitiv nu vă află adresa IP.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">Cod pe care oricine îl poate verifica</dt>
-          <dd data-i18n="sec.f4.d">Fiecare linie este publică. Versiunea 1.0 apare doar după un audit de securitate independent.</dd>
+          <dt data-i18n="sec.f4.t">Demonstrat cu Tamarin, auditat înainte de 1.0</dt>
+          <dd data-i18n="sec.f4.d">Șase modele simbolice, 61 de leme verificate automat și 27 de mutanți de regresie verifică viitorul cont Ghost Ring invizibil pentru server în demonstratorul Tamarin. Versiunea 1.0 așteaptă un audit independent.</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/ro" hreflang="ro" data-i18n="sec.privacy">Citiți politica de confidențialitate</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">Unde suntem</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">Gata</span>
           <h3 data-i18n="road.p0">Protocol deschis, client pentru linia de comandă, beta pentru Android și aplicația pentru Linux</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

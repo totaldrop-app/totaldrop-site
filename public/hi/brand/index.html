@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop ब्रांड</title>
   <meta name="description" content="TotalDrop का चिह्न, उसकी गति, रंग, टाइप, बटन और आइकन, उनका इस्तेमाल, और डाउनलोड के लिए लोगो फ़ाइलें।">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/hi/brand/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/brand/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/brand/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="brand">
   <a class="skip" href="#main" data-i18n="skip">सामग्री पर जाएँ</a>
@@ -76,7 +79,7 @@
     <section class="dl-hero bk-hero" aria-labelledby="bk-title">
       <p class="eyebrow" data-i18n="bk.eyebrow">ब्रांड दिशानिर्देश</p>
       <h1 id="bk-title" data-i18n="bk.title">TotalDrop ब्रांड</h1>
-      <p class="lede" data-i18n="bk.lede">एक चिह्न, एक उभार रंग, दो टाइपफ़ेस। बाकी सब कुछ उस सिस्टम से आता है जिस पर TotalDrop चलता है। यह पेज हिस्से, उनका इस्तेमाल और उन्हें डाउनलोड करने की जगह दिखाता है।</p>
+      <p class="lede" data-i18n="bk.lede">एक चिह्न, शांत तटस्थ सतहें, एक इंटरैक्टिव उभार रंग, दो टाइपफ़ेस। बाकी सब कुछ उस सिस्टम से आता है जिस पर TotalDrop चलता है। यह पेज हिस्से, उनका इस्तेमाल और उन्हें डाउनलोड करने की जगह दिखाता है।</p>
       <div class="actions">
         <a class="btn btn-primary" href="#files" data-i18n="bk.cta">लोगो डाउनलोड करें</a>
         <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop/blob/main/docs/tasarim.md" data-i18n="bk.source">रिपॉज़िटरी में डिज़ाइन नियम</a>
@@ -104,14 +107,14 @@
     <section class="block" id="principles" aria-labelledby="principles-title">
       <h2 id="principles-title" data-i18n="bk.p.title">कम, पर बेहतर</h2>
       <p data-i18n="bk.p.lede">TotalDrop डीटर राम्स के रास्ते पर चलता है: हर तत्व का एक काम है, और जिसका कोई काम नहीं, उसे हटा दिया जाता है।</p>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.p1.t">सिस्टम का हिस्सा</h3>
           <p data-i18n="bk.p1.d">ऐप्स रंग, हल्की या गहरी थीम, आइकन और विंडो सिस्टम से लेते हैं, और Linux पर फ़ॉन्ट भी। सिर्फ़ चिह्न और उसके रंग हर जगह एक जैसे रहते हैं।</p>
         </li>
         <li>
           <h3 data-i18n="bk.p2.t">हर स्क्रीन पर एक उभार</h3>
-          <p data-i18n="bk.p2.d">बैंगनी रंग अगले एकमात्र कदम, लिंक और फ़ोकस रिंग को दर्शाता है। बाकी सब कागज़ पर स्याही है।</p>
+          <p data-i18n="bk.p2.d">बैंगनी रंग सिर्फ़ Köşe चिह्न का है। वेब पर कोबाल्ट मुख्य क्रिया, लिंक और फ़ोकस रिंग को दर्शाता है, जबकि तटस्थ Mineral सतहें टेक्स्ट को तीक्ष्ण और साफ़ रखती हैं।</p>
         </li>
         <li>
           <h3 data-i18n="bk.p3.t">कोई इफ़ेक्ट नहीं</h3>
@@ -235,7 +238,7 @@
       <div class="bk-grid bk-grid-2">
         <figure class="bk-fig">
           <div class="bk-stage bk-on-light bk-wide">
-            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.word">लोगो</span>
@@ -244,7 +247,7 @@
         </figure>
         <figure class="bk-fig">
           <div class="bk-stage bk-on-dark bk-wide">
-            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.dark">गहरी पृष्ठभूमि पर लोगो</span>
@@ -287,7 +290,7 @@
     <section class="block" id="misuse" aria-labelledby="misuse-title">
       <h2 id="misuse-title" data-i18n="bk.no.title">क्या न करें</h2>
       <p data-i18n="bk.no.lede">चिह्न एक सपाट रंग है और जैसा है वैसा इस्तेमाल होता है। ये आम गलतियाँ हैं।</p>
-      <ul class="bk-grid bk-grid-4 bk-donts">
+      <ul class="bk-grid bk-grid-4 bk-donts" role="list">
         <li class="bk-fig">
           <div class="bk-stage"><svg viewBox="0 0 112 112" aria-hidden="true"><path class="mk" d="M55 15H83A14 14 0 0 1 97 29V57A42 42 0 1 1 55 15Z"/></svg></div>
           <p class="bk-no" data-i18n="bk.no.label">न करें</p>
@@ -334,38 +337,40 @@
 
     <section class="block" id="colour" aria-labelledby="colour-title">
       <h2 id="colour-title" data-i18n="bk.col.title">रंग</h2>
-      <p data-i18n="bk.col.lede">ऐप्स उस सिस्टम के रंग इस्तेमाल करते हैं जिस पर वे चलते हैं: Android पर Material You, Linux पर डेस्कटॉप थीम। नीचे दिया Aurora पैलेट तब इस्तेमाल होता है जब सिस्टम कोई रंग न दे, और इस वेबसाइट पर। पेज की पृष्ठभूमि पर टेक्स्ट दोनों थीम में 4.5:1 से ऊपर रहता है।</p>
+      <p data-i18n="bk.col.lede">ऐप्स उसी सिस्टम के रंग इस्तेमाल करते हैं जिस पर वे चलते हैं: Android पर Material You, Linux पर डेस्कटॉप थीम, और Aurora सिर्फ़ तब रखा जाता है जब सिस्टम कोई पैलेट न दे। इस वेबसाइट पर नीचे दिया Mineral पैलेट तटस्थ सतहों को कोबाल्ट इंटरैक्टिव कंट्रोल के साथ जोड़ता है ताकि बैंगनी Köşe चिह्न साफ़ अलग दिखे। हर टेक्स्ट और इंटरैक्टिव भूमिका दोनों थीम में WCAG AA मानक पास करती है।</p>
       <div class="bk-swatches bk-brand">
-        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">हल्की पृष्ठभूमि पर चिह्न और उभार।</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">गहरी पृष्ठभूमि पर चिह्न और उभार।</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-paper"></span><span class="bk-sw-name">Paper</span><code>#F4F2FB</code><span class="bk-sw-use" data-i18n="bk.col.paper">हल्की पृष्ठभूमि; ऐप आइकन पर चिह्न।</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-ink"></span><span class="bk-sw-name">Ink</span><code>#22184F</code><span class="bk-sw-use" data-i18n="bk.col.ink">हल्की पृष्ठभूमि पर टेक्स्ट।</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-night"></span><span class="bk-sw-name">Night</span><code>#140E33</code><span class="bk-sw-use" data-i18n="bk.col.night">गहरी पृष्ठभूमि।</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-mist"></span><span class="bk-sw-name">Mist</span><code>#E2DCF6</code><span class="bk-sw-use" data-i18n="bk.col.mist">हल्की पृष्ठभूमि पर शांत उभरी सतह।</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">हल्की पृष्ठभूमि और ऐप आइकन टाइल पर Köşe चिह्न।</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">गहरी पृष्ठभूमि पर Köşe चिह्न।</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-cobalt"></span><span class="bk-sw-name">Cobalt</span><code>#1E47B8</code><span class="bk-sw-use" data-i18n="bk.col.cobalt">हल्की पृष्ठभूमि पर मुख्य क्रियाएँ, लिंक और फ़ोकस रिंग।</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-ice"></span><span class="bk-sw-name">Ice Cobalt</span><code>#7DB4FF</code><span class="bk-sw-use" data-i18n="bk.col.ice">गहरी पृष्ठभूमि पर मुख्य क्रियाएँ, लिंक और फ़ोकस रिंग।</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-alabaster"></span><span class="bk-sw-name">Alabaster</span><code>#F7F7F5</code><span class="bk-sw-use" data-i18n="bk.col.paper">पेज की हल्की पृष्ठभूमि, शुद्ध सफ़ेद कार्ड के साथ।</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-obsidian"></span><span class="bk-sw-name">Obsidian</span><code>#0F1116</code><span class="bk-sw-use" data-i18n="bk.col.night">पेज की गहरी पृष्ठभूमि, ग्रेफ़ाइट कार्ड के साथ।</span></div>
       </div>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="bk-col-tokens">
         <table class="req bk-tokens">
-          <caption data-i18n="bk.col.tokens">रंगों की भूमिकाएँ, हल्की और गहरी थीम</caption>
+          <caption id="bk-col-tokens" data-i18n="bk.col.tokens">रंगों की भूमिकाएँ, हल्की और गहरी थीम</caption>
           <thead>
             <tr><th scope="col" data-i18n="bk.col.role">भूमिका</th><th scope="col" data-i18n="bk.col.light">हल्की</th><th scope="col" data-i18n="bk.col.dark">गहरी</th><th scope="col" data-i18n="bk.col.use">इस्तेमाल</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.bg">पेज और स्क्रीन की पृष्ठभूमि।</td></tr>
-            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-night2"></span><code>#1E1648</code></td><td data-i18n="bk.col.raised">शांत दूसरी सतह, जैसे «प्राप्त करें» कार्ड।</td></tr>
-            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-rule"></span><code>#2E2566</code></td><td data-i18n="bk.col.rule">विभाजक रेखाएँ; सिर्फ़ सजावट।</td></tr>
-            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.outline">फ़ील्ड और आउटलाइन बटनों के किनारे।</td></tr>
-            <tr><th scope="row"><code>ink</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-ink"></span><code>#22184F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td data-i18n="bk.col.text">टेक्स्ट और शीर्षक।</td></tr>
-            <tr><th scope="row"><code>ink-muted</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.muted">गौण टेक्स्ट: विवरण, नोट, इकाइयाँ।</td></tr>
-            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.accent">एकमात्र मुख्य क्रिया, लिंक, फ़ोकस रिंग। हर स्क्रीन पर एक बार।</td></tr>
-            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.onaccent">उभार रंग की भराई पर टेक्स्ट; गहरी थीम में गहरा, क्योंकि वहाँ उभार रंग हल्का है।</td></tr>
-            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-success"></span><code>#0A7357</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-success-d"></span><code>#7ED9B5</code></td><td data-i18n="bk.col.success">पूरा हुआ। हमेशा आइकन या शब्द के साथ, कभी सिर्फ़ रंग नहीं।</td></tr>
-            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-error"></span><code>#BA1A1A</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FFB4AB</code></td><td data-i18n="bk.col.error">कुछ गलत हुआ। हमेशा आइकन या शब्द के साथ।</td></tr>
+            <tr><th scope="row"><code>mark</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.mark">सिर्फ़ Köşe चिह्न; बटन या मुख्य टेक्स्ट के लिए कभी नहीं।</td></tr>
+            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-alabaster"></span><code>#F7F7F5</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-obsidian"></span><code>#0F1116</code></td><td data-i18n="bk.col.bg">पेज और स्क्रीन की पृष्ठभूमि।</td></tr>
+            <tr><th scope="row"><code>surface</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-surface"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-graphite"></span><code>#161922</code></td><td data-i18n="bk.col.surface">कार्ड, ट्रांसफ़र नमूने, ऐप फ़्रेम और तालिकाएँ।</td></tr>
+            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-stone"></span><code>#EEEEEC</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-elevated"></span><code>#1E222E</code></td><td data-i18n="bk.col.raised">कोड ब्लॉक और टैग के लिए शांत धँसी हुई सतह।</td></tr>
+            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-rule-l"></span><code>#DFDFE2</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-rule-d"></span><code>#282E3D</code></td><td data-i18n="bk.col.rule">विभाजक रेखाएँ; सिर्फ़ सजावट।</td></tr>
+            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-outline-l"></span><code>#646A78</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-outline-d"></span><code>#8790A1</code></td><td data-i18n="bk.col.outline">फ़ील्ड और आउटलाइन बटनों के किनारे।</td></tr>
+            <tr><th scope="row"><code>text</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-carbon"></span><code>#14161D</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-chalk"></span><code>#F2F4F8</code></td><td data-i18n="bk.col.text">टेक्स्ट और शीर्षक।</td></tr>
+            <tr><th scope="row"><code>text-2</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-slate"></span><code>#4A4F5C</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-silver"></span><code>#A3ABB9</code></td><td data-i18n="bk.col.muted">गौण टेक्स्ट: विवरण, नोट, इकाइयाँ।</td></tr>
+            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-cobalt"></span><code>#1E47B8</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-ice"></span><code>#7DB4FF</code></td><td data-i18n="bk.col.accent">एकमात्र मुख्य क्रिया, लिंक, फ़ोकस रिंग। हर स्क्रीन पर एक बार।</td></tr>
+            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-navy"></span><code>#0B1220</code></td><td data-i18n="bk.col.onaccent">उभार रंग की भराई पर टेक्स्ट; गहरी थीम में गहरा, क्योंकि वहाँ उभार रंग हल्का है।</td></tr>
+            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-success"></span><code>#0B6E4F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-success-d"></span><code>#6EE7B7</code></td><td data-i18n="bk.col.success">पूरा हुआ। हमेशा आइकन या शब्द के साथ, कभी सिर्फ़ रंग नहीं।</td></tr>
+            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">हल्की</span><span class="bk-dot-sw bk-c-error"></span><code>#B81D24</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">गहरी</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FCA5A5</code></td><td data-i18n="bk.col.error">कुछ गलत हुआ। हमेशा आइकन या शब्द के साथ।</td></tr>
           </tbody>
         </table>
       </div>
       <dl class="facts bk-contrast">
-        <div><dt data-i18n="bk.col.c1">पृष्ठभूमि पर टेक्स्ट</dt><dd data-i18n="bk.col.c1.d">कागज़ पर स्याही 14.4:1, रात पर कागज़ 16.6:1।</dd></div>
-        <div><dt data-i18n="bk.col.c2">टेक्स्ट के रूप में उभार</dt><dd data-i18n="bk.col.c2.d">कागज़ पर बैंगनी 5.1:1, रात पर चमक 6.8:1। उभरी सतह पर उभार और सफलता के रंग सिर्फ़ बड़े टेक्स्ट और आइकन के लिए हैं।</dd></div>
+        <div><dt data-i18n="bk.col.c1">पृष्ठभूमि पर टेक्स्ट</dt><dd data-i18n="bk.col.c1.d">ऐलाबास्टर पर कार्बन स्याही 16.8:1; ऑब्सिडियन पर चॉक स्याही 17.2:1।</dd></div>
+        <div><dt data-i18n="bk.col.c2">टेक्स्ट और भराव के रूप में उभार रंग</dt><dd data-i18n="bk.col.c2.d">ऐलाबास्टर पर कोबाल्ट 7.4:1 (कोबाल्ट पर सफ़ेद 7.9:1); ऑब्सिडियन पर आइस कोबाल्ट 8.9:1 (आइस कोबाल्ट पर नेवी 8.8:1)।</dd></div>
       </dl>
     </section>
 
@@ -384,12 +389,12 @@
           <p data-i18n="bk.type.body">बाकी सब: सामान्य टेक्स्ट, बटन और फ़ील्ड। Braille Institute ने बनाया ताकि I, l और 1 जैसे मिलते-जुलते अक्षर अलग पहचाने जाएँ।</p>
         </div>
       </div>
-      <ol class="bk-scale">
-        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.6rem, 6.4vw, 4.75rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">हर डिवाइस से हर डिवाइस तक</span></li>
-        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.75rem, 3.6vw, 2.5rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">यह कैसे काम करता है</span></li>
-        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.25rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">कोड साझा करें</span></li>
+      <ol class="bk-scale" role="list">
+        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.15rem, 1.1rem + 4.4vw, 4.4rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">हर डिवाइस से हर डिवाइस तक</span></li>
+        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.65rem, 1.1rem + 2vw, 2.45rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">यह कैसे काम करता है</span></li>
+        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.225rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">कोड साझा करें</span></li>
         <li><span class="bk-scale-meta"><code>body</code> <span>Atkinson 400 · 1.0625rem · 1.6</span></span><span class="bk-t-body" data-i18n="why.r1.d">फ़ाइलें आपके डिवाइस से उनके डिवाइस तक जाती हैं। किसी कंपनी के सर्वर पर कोई कॉपी इंतज़ार नहीं करती, और कोई लिंक एक हफ़्ते में खत्म नहीं होता।</span></li>
-        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.875rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">मुफ़्त · ओपन सोर्स · बीटा</span></li>
+        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.8125rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">मुफ़्त · ओपन सोर्स · बीटा</span></li>
       </ol>
       <p class="note" data-i18n="bk.type.rules">सामान्य टेक्स्ट की पंक्तियाँ 44rem से कम रहती हैं। एक के नीचे एक आने वाली संख्याएँ, जैसे आकार और प्रतिशत, सारणी अंक इस्तेमाल करती हैं। अरबी लिपि वाली भाषाओं में अक्षरों के बीच की दूरी हटा दी जाती है, क्योंकि वह जोड़ तोड़ देगी।</p>
     </section>
@@ -400,7 +405,7 @@
       <h3 data-i18n="bk.btn.kinds">तीन तरह के बटन</h3>
       <div class="bk-grid bk-grid-3">
         <figure class="bk-fig">
-          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="how.s1.t">फ़ाइलें चुनें</span></div>
+          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="bk.cmp.choose">फ़ाइलें चुनें</span></div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.btn.main">मुख्य क्रिया</span>
             <span data-i18n="bk.btn.main.d">उभार रंग से भरा, लेबल उभार पर टेक्स्ट के रंग में। हर स्क्रीन पर एक, उस काम के लिए जो ज़्यादातर लोग आगे करते हैं।</span>
@@ -494,7 +499,7 @@
       <div class="bk-grid bk-grid-2">
         <div class="bk-col">
           <h3 data-i18n="bk.sp.scale">दूरी</h3>
-          <ul class="bk-bars">
+          <ul class="bk-bars" role="list">
             <li><span class="bk-bar bk-w8"></span><code>8</code><span data-i18n="bk.sp.8">आइकन से लेबल, शीर्षक से टेक्स्ट</span></li>
             <li><span class="bk-bar bk-w16"></span><code>16</code><span data-i18n="bk.sp.16">कार्डों के बीच, ब्लॉक के अंदर</span></li>
             <li><span class="bk-bar bk-w24"></span><code>24</code><span data-i18n="bk.sp.24">कार्ड के अंदर, स्क्रीन का किनारा (फ़ोन पर 16)</span></li>
@@ -504,7 +509,7 @@
         </div>
         <div class="bk-col">
           <h3 data-i18n="bk.sp.radius">कोने</h3>
-          <ul class="bk-radii">
+          <ul class="bk-radii" role="list">
             <li><span class="bk-rad bk-r8"></span><code>8</code><span data-i18n="bk.sp.r8">प्रगति बार</span></li>
             <li><span class="bk-rad bk-r16"></span><code>16</code><span data-i18n="bk.sp.r16">टेक्स्ट फ़ील्ड, कोड बॉक्स</span></li>
             <li><span class="bk-rad bk-r28"></span><code>28</code><span data-i18n="bk.sp.r28">कार्ड</span></li>
@@ -536,7 +541,7 @@
 
     <section class="block" id="voice" aria-labelledby="voice-title">
       <h2 id="voice-title" data-i18n="bk.vo.title">लहजा</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.vo1.t">बताएँ कि क्या हो रहा है</h3>
           <p data-i18n="bk.vo1.d">बटन अपनी क्रिया का नाम लेता है: «फ़ाइलें चुनें», «स्वीकार करें»। त्रुटि बताती है कि क्या गलत हुआ और आगे क्या करें, बिना माफ़ी माँगे।</p>
@@ -559,7 +564,7 @@
     <section class="block" id="use" aria-labelledby="use-title">
       <h2 id="use-title" data-i18n="bk.use.title">नाम और चिह्न का उपयोग</h2>
       <p data-i18n="bk.use.lede">TotalDrop ओपन सोर्स है, लेकिन इसके लाइसेंस कोड पर लागू होते हैं, TotalDrop के नाम और चिह्न पर नहीं। ये नियम इसलिए हैं ताकि TotalDrop नाम वाला ऐप सच में इसी प्रोजेक्ट से आए।</p>
-      <ul class="reasons bk-use-yes">
+      <ul class="reasons bk-use-yes" role="list">
         <li>
           <h3 data-i18n="bk.use1.t">इसके बारे में लिखें</h3>
           <p data-i18n="bk.use1.d">totaldrop.app का लिंक दें और लेखों, समीक्षाओं, वीडियो और कक्षाओं में TotalDrop का ज़िक्र नाम और बिना बदले चिह्न के साथ करें। अनुमति माँगने की ज़रूरत नहीं।</p>
@@ -577,7 +582,7 @@
           <p data-i18n="bk.use4.d">लाइसेंस आपको कोड बदलने देते हैं। अपना संस्करण अपने नाम और चिह्न के साथ प्रकाशित करें। आप कह सकते हैं कि यह TotalDrop पर आधारित है, लेकिन यह संकेत न दें कि TotalDrop इसे अनुमोदित करता है।</p>
         </li>
       </ul>
-      <ul class="reasons bk-use-no">
+      <ul class="reasons bk-use-no" role="list">
         <li>
           <p class="bk-no" data-i18n="bk.no.label">न करें</p>
           <p data-i18n="bk.use.no1">किसी भी चीज़ को TotalDrop का आधिकारिक संस्करण, साझेदार या अनुमोदित उत्पाद बताना।</p>
@@ -606,34 +611,34 @@
     <section class="block" id="files" aria-labelledby="files-title">
       <h2 id="files-title" data-i18n="bk.files.title">डाउनलोड</h2>
       <p data-i18n="bk.files.lede">प्रिंट और स्क्रीन के लिए वेक्टर फ़ाइलें (SVG), और पारदर्शी पृष्ठभूमि वाली PNG फ़ाइलें। इन्हें जैसी हैं वैसी इस्तेमाल करें।</p>
-      <ul class="platforms bk-files">
+      <ul class="platforms bk-files" role="list">
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-mark" data-i18n="bk.f.mark">हल्की पृष्ठभूमि के लिए चिह्न</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-markdark" data-i18n="bk.f.markdark">गहरी पृष्ठभूमि के लिए चिह्न</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logo" data-i18n="bk.f.logo">हल्की पृष्ठभूमि के लिए लोगो</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logodark" data-i18n="bk.f.logodark">गहरी पृष्ठभूमि के लिए लोगो</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-icon" data-i18n="bk.f.icon">ऐप आइकन</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48"></div>
+          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48" loading="lazy" decoding="async"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-mono" data-i18n="bk.f.mono">एक रंग, काला या सफ़ेद</h3>
           <p data-i18n="bk.f.mono.d">सिर्फ़ वहाँ जहाँ रंगीन छपाई न हो सके, जैसे मुहर या नक्काशी।</p>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-black.svg" download data-i18n="bk.f.black">काला SVG</a><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-white.svg" download data-i18n="bk.f.white">सफ़ेद SVG</a></p>
@@ -664,6 +669,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>
