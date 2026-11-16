@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: надсилайте файли напряму, з наскрізним шифруванням</title>
-  <meta name="description" content="TotalDrop — безкоштовний застосунок з відкритим кодом, який передає файли напряму з одного пристрою на інший з наскрізним шифруванням. Без облікового запису, пошти й номера телефону.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: надсилайте файли й текст напряму, з наскрізним шифруванням</title>
+  <meta name="description" content="TotalDrop — безкоштовний застосунок із відкритим кодом, який передає файли, папки й текст напряму з одного пристрою на інший із наскрізним шифруванням. Без облікового запису, без пошти, без номера телефону.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/uk/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: надсилайте файли напряму, з наскрізним шифруванням">
-  <meta property="og:description" content="TotalDrop — безкоштовний застосунок з відкритим кодом, який передає файли напряму з одного пристрою на інший з наскрізним шифруванням. Без облікового запису, пошти й номера телефону.">
+  <meta property="og:title" content="TotalDrop: надсилайте файли й текст напряму, з наскрізним шифруванням">
+  <meta property="og:description" content="TotalDrop — безкоштовний застосунок із відкритим кодом, який передає файли, папки й текст напряму з одного пристрою на інший із наскрізним шифруванням. Без облікового запису, без пошти, без номера телефону.">
   <meta property="og:url" content="https://totaldrop.app/uk/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Перейти до вмісту</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="Основне меню" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">Застосунки</a>
       <a href="#why" data-i18n="nav.why">Чому TotalDrop</a>
       <a href="#how" data-i18n="nav.how">Як це працює</a>
       <a href="#security" data-i18n="nav.security">Безпека</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">Безкоштовно · Відкритий код · Бета</p>
-        <h1 id="hero-title" data-i18n="hero.title">Надішліть файл прямо на інший пристрій.</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop передає файли напряму з вашого пристрою на пристрій отримувача з наскрізним шифруванням. Ви ділитеся коротким кодом; ніхто посередині не зможе прочитати те, що ви надсилаєте. Без облікового запису, пошти й номера телефону.</p>
+        <h1 id="hero-title" data-i18n="hero.title">Надсилайте файли й текст просто на інший пристрій.</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop передає файли, цілі папки й текст із буфера обміну напряму з вашого пристрою на інший, із наскрізним шифруванням на постквантових ключах. Поділіться коротким кодом; ніхто посередині не зможе прочитати те, що ви надсилаєте. Без облікового запису, без пошти, без номера телефону.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/uk/download/" data-i18n="hero.cta">Завантажити бету</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">Переглянути код</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">Android, Linux і CLI вже сьогодні</li>
+          <li data-i18n="hero.h2">Постквантовий ML-KEM-768</li>
+          <li data-i18n="hero.h3">35 мов, нуль трекерів</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">Код передачі</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">Код передачі</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">Інший приклад</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">Чотири слова перевірки</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">Промовте код уголос або вставте його в повідомлення. Хто його введе, той і отримає файли.</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">Нативно на кожному комп'ютері й телефоні</p>
+        <h2 id="apps-title" data-i18n="apps.title">Створено, щоб бути частиною вашої системи</h2>
+        <p data-i18n="apps.lede">TotalDrop бере кольори, типографіку, темний режим і меню «Поділитися» з вашої операційної системи. Надсилайте з галереї, виділеного тексту, буфера обміну чи файлового менеджера, не відкриваючи спершу вкладку браузера.</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="TotalDrop на Android у світлій і темній темах Material You" data-i18n-label="apps.android.alt" aria-label="TotalDrop на Android у світлій і темній темах Material You" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Динамічні кольори Material You та елементи керування Material 3 Expressive. Діліться файлами чи виділеним текстом просто з будь-якого застосунку або утримуйте значок на головному екрані, щоб надіслати буфер обміну.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">Системне меню «Поділитися»</li>
+              <li data-i18n="apps.tag.text">Текст і буфер обміну</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="Нативний застосунок TotalDrop на Qt 6 і Wayland у Linux" data-i18n-label="apps.linux.alt" aria-label="Нативний застосунок TotalDrop на Qt 6 і Wayland у Linux" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Застосунок для Linux</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Нативні Qt 6 і QML для Wayland, що на льоту слідують за KDE Plasma, Hyprland, Omarchy та GNOME. Клацніть правою кнопкою на будь-якому файлі чи папці в Dolphin, Файлах або Nemo, щоб одразу надіслати.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, Файли, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 і ARM64</li>
+              <li data-i18n="apps.tag.pkg">Нативно та Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">Чому TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">Нічого не вивантажується</h3>
           <p data-i18n="why.r1.d">Файли йдуть з вашого пристрою на пристрій отримувача. Жодна копія не чекає на сервері компанії, і жодне посилання не спливає за тиждень.</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">Android, Linux і командний рядок уже сьогодні; Windows, macOS та iOS на підході. З телефона на ноутбук, з будь-якої марки на будь-яку.</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">Ми не обмежуємо розмір</h3>
-          <p data-i18n="why.r4.d">Цілі папки, довгі відео, фото в оригінальній якості. Межу задають лише ваш диск і ваше з'єднання.</p>
+          <h3 data-i18n="why.r4.t">Файли, папки й текст із буфера обміну</h3>
+          <p data-i18n="why.r4.d">Надсилайте фото в оригінальній якості, величезні папки або скопійовану нотатку. Текст надходить готовим до копіювання, з названими прихованими символами, і ніколи не записується на диск.</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">Перевірено, а не на довірі</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">Відкритий код під GPL, коштом пожертв. Без реклами, без стеження, без платної версії.</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">Порівняння TotalDrop зі звичними способами надіслати файл</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">Порівняння TotalDrop зі звичними способами надіслати файл</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">Можливість</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">Хмарні посилання</th><th scope="col" data-i18n="why.cmp.nearby">Обмін поблизу</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">Три кроки</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">Виберіть файли</h3>
-          <p data-i18n="how.s1.d">Будь-якого типу, скільки завгодно. Отримувач отримає лише те, що ви вибрали.</p>
+          <h3 data-i18n="how.s1.t">Виберіть файли або текст</h3>
+          <p data-i18n="how.s1.d">Виберіть файли, цілі папки чи текст із буфера обміну — або надішліть просто із системного меню «Поділитися» чи файлового менеджера.</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">Поділіться кодом</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">Відкрити можете лише ви й отримувач</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">Криптографія та формальна верифікація</p>
+        <h2 id="sec-title" data-i18n="sec.title">Відкрити можете лише ви й отримувач</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">Зашифровано до відправлення</dt>
           <dd data-i18n="sec.f1.d">Файли шифруються на вашому пристрої й розшифровуються лише на пристрої отримувача. Ключі більше ніде не існують.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">Код не можна підібрати офлайн</dt>
-          <dd data-i18n="sec.f2.d">Код перетворюється на ключ через рукостискання PAKE, тож хибна здогадка одразу зазнає невдачі, а спроба згорає. Обмін ключами включає постквантовий ML-KEM.</dd>
+          <dt data-i18n="sec.f2.t">Постквантове рукостискання PAKE</dt>
+          <dd data-i18n="sec.f2.d">Код запускає рукостискання CPace, яке живить Noise XXpsk3 із гібридними ключами X25519 та ML-KEM-768. Неправильний здогад одразу відхиляється і спалює спробу.</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">Наш сервер лише знайомить</dt>
-          <dd data-i18n="sec.f3.d">Він бачить вашу IP-адресу й число з коду, але ніколи не бачить слів, назв файлів і самих файлів. Журналів він не веде.</dd>
+          <dd data-i18n="sec.f3.d">Він бачить вашу IP-адресу й число з коду, але ніколи не бачить слів, назв файлів і самих файлів. Коли увімкнено Режим конфіденційності, навіть інший пристрій ніколи не дізнається вашої IP-адреси.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">Код, який може перевірити кожен</dt>
-          <dd data-i18n="sec.f4.d">Кожен рядок відкритий. Версія 1.0 вийде лише після незалежного аудиту безпеки.</dd>
+          <dt data-i18n="sec.f4.t">Доведено в Tamarin, аудит до 1.0</dt>
+          <dd data-i18n="sec.f4.d">Шість символьних моделей, 61 машинно перевірена лема та 27 регресійних мутантів підтверджують у прувері Tamarin безпеку майбутнього невидимого для сервера облікового запису Ghost Ring. Версія 1.0 чекає на незалежний аудит.</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/uk" hreflang="uk" data-i18n="sec.privacy">Прочитати політику конфіденційності</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">Де ми зараз</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">Готово</span>
           <h3 data-i18n="road.p0">Відкритий протокол, клієнт командного рядка, бета для Android і застосунок для Linux</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

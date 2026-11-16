@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Roadmap van TotalDrop</title>
   <meta name="description" content="Wat er klaar is, wat er hierna komt en wat later volgt in TotalDrop, platform voor platform, op weg naar versie 1.0.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/nl/roadmap/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/roadmap/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/roadmap/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="roadmap">
   <a class="skip" href="#main" data-i18n="skip">Naar de inhoud</a>
@@ -84,7 +87,7 @@
         <span class="road-state" data-i18n="rm.done.state">Klaar</span>
         <h2 id="rm-done" data-i18n="rm.done.when">Oktober 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.d1.t">Een open protocol</h3>
             <p data-i18n="rm.d1.d">TotalDrop Protocol v0: overdrachtscodes met CPace, Noise XXpsk3 met post-kwantum ML-KEM-768, QUIC met sleutels voor eenmalig gebruik. Op papier gezet zodat iedereen een compatibele app kan bouwen.</p>
@@ -92,8 +95,8 @@
           </li>
           <li>
             <h3 data-i18n="rm.d2.t">Opdrachtregelclient</h3>
-            <p data-i18n="rm.d2.d">Versturen en ontvangen vanuit een terminal op Linux, macOS en Windows.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <p data-i18n="rm.d2.d">Versturen en ontvangen vanuit een Linux-terminal, of vanuit broncode bouwen met Cargo (voorgebouwde macOS- en Windows-binaries gepland).</p>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.d3.t">Android-bèta</h3>
@@ -118,7 +121,7 @@
           <li>
             <h3 data-i18n="rm.n2.t">Privacymodus in de opdrachtregel</h3>
             <p data-i18n="rm.n2.d">Alleen via de relayserver: de andere kant komt je IP-adres nooit te weten.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.x7.t">Privacymodus in de apps</h3>
@@ -142,7 +145,7 @@
         <span class="road-state" data-i18n="rm.now.state">Nu</span>
         <h2 id="rm-now" data-i18n="rm.now.when">November 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x1.t">Scan de QR-code met de camera</h3>
             <p data-i18n="rm.x1.d">Richt de telefoon op het scherm van de afzender in plaats van de code te typen.</p>
@@ -160,7 +163,7 @@
         <span class="road-state" data-i18n="rm.next.state">Hierna</span>
         <h2 id="rm-next" data-i18n="rm.next.when">Winter 2026–27</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x3.t">Onderbroken overdrachten hervatten</h3>
             <p data-i18n="rm.x3.d">Een verbroken verbinding gaat verder waar ze stopte, zonder te versturen wat al is aangekomen.</p>
@@ -188,7 +191,7 @@
         <span class="road-state" data-i18n="rm.later.state">Later</span>
         <h2 id="rm-later" data-i18n="rm.later.when">2027</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.l1.t">iPhone, iPad en Mac</h3>
             <p data-i18n="rm.l1.d">Native apps, zodra donaties het Apple-ontwikkelaarsaccount dekken.</p>
@@ -221,7 +224,7 @@
         <span class="road-state" data-i18n="rm.v1.state">Versie 1.0</span>
         <h2 id="rm-v1" data-i18n="rm.v1.when">Na de audit</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.v1.t">Onafhankelijke beveiligingsaudit</h3>
             <p data-i18n="rm.v1.d">Een extern bedrijf onderzoekt het protocol, de cryptografie en de code die onbetrouwbare invoer verwerkt. Het volledige rapport wordt gepubliceerd.</p>
@@ -273,6 +276,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

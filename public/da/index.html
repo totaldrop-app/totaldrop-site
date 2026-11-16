@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: send filer direkte, end-to-end-krypteret</title>
-  <meta name="description" content="TotalDrop er en gratis open source-app, der sender filer direkte fra en enhed til en anden, end-to-end-krypteret. Ingen konto, ingen e-mail, intet telefonnummer.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: send filer og tekst direkte, end-to-end-krypteret</title>
+  <meta name="description" content="TotalDrop er en gratis open source-app, der sender filer, mapper og tekst direkte fra én enhed til en anden, end-to-end-krypteret. Ingen konto, ingen e-mail, intet telefonnummer.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/da/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: send filer direkte, end-to-end-krypteret">
-  <meta property="og:description" content="TotalDrop er en gratis open source-app, der sender filer direkte fra en enhed til en anden, end-to-end-krypteret. Ingen konto, ingen e-mail, intet telefonnummer.">
+  <meta property="og:title" content="TotalDrop: send filer og tekst direkte, end-to-end-krypteret">
+  <meta property="og:description" content="TotalDrop er en gratis open source-app, der sender filer, mapper og tekst direkte fra én enhed til en anden, end-to-end-krypteret. Ingen konto, ingen e-mail, intet telefonnummer.">
   <meta property="og:url" content="https://totaldrop.app/da/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Gå til indhold</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="Hovedmenu" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">Apps</a>
       <a href="#why" data-i18n="nav.why">Hvorfor TotalDrop</a>
       <a href="#how" data-i18n="nav.how">Sådan virker det</a>
       <a href="#security" data-i18n="nav.security">Sikkerhed</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">Gratis · Open source · Beta</p>
-        <h1 id="hero-title" data-i18n="hero.title">Send en fil direkte til en anden enhed.</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop flytter filer direkte fra din enhed til modtagerens, end-to-end-krypteret. Du deler en kort kode; ingen undervejs kan læse det, du sender. Ingen konto, ingen e-mail, intet telefonnummer.</p>
+        <h1 id="hero-title" data-i18n="hero.title">Send filer og tekst direkte til en anden enhed.</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop flytter filer, hele mapper og tekst fra udklipsholderen direkte fra din enhed til modtagerens, end-to-end-krypteret med post-kvante-nøgler. Del en kort kode; ingen undervejs kan læse det, du sender. Ingen konto, ingen e-mail, intet telefonnummer.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/da/download/" data-i18n="hero.cta">Download betaen</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">Læs koden</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">Android, Linux og CLI i dag</li>
+          <li data-i18n="hero.h2">Post-kvante ML-KEM-768</li>
+          <li data-i18n="hero.h3">35 sprog, ingen sporing</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">Overførselskode</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">Overførselskode</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">Et andet eksempel</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">Fire bekræftelsesord</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">Sig koden højt, eller indsæt den i en besked. Den, der indtaster den, får filerne.</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">Indbygget på alle computere og telefoner</p>
+        <h2 id="apps-title" data-i18n="apps.title">Bygget til at høre hjemme i dit system</h2>
+        <p data-i18n="apps.lede">TotalDrop henter farver, typografi, mørkt tema og delmenuer fra det styresystem, du bruger. Send fra galleriet, markeret tekst, udklipsholderen eller filhåndteringen uden først at åbne en browserfane.</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="TotalDrop på Android i lyst og mørkt Material You-tema" data-i18n-label="apps.android.alt" aria-label="TotalDrop på Android i lyst og mørkt Material You-tema" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Dynamiske Material You-farver og kontrolelementer i Material 3 Expressive. Del filer eller markeret tekst direkte fra enhver app, eller hold appikonet nede for at sende udklipsholderen.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">Systemets delmenu</li>
+              <li data-i18n="apps.tag.text">Tekst og udklipsholder</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="TotalDrops native Qt 6 Wayland-app på Linux" data-i18n-label="apps.linux.alt" aria-label="TotalDrops native Qt 6 Wayland-app på Linux" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Linux-app</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Nativt Qt 6 og QML til Wayland, der følger KDE Plasma, Hyprland, Omarchy og GNOME live. Højreklik på en fil eller mappe i Dolphin, Filer eller Nemo for at sende med det samme.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, Filer, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 og ARM64</li>
+              <li data-i18n="apps.tag.pkg">Nativ og Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">Hvorfor TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">Intet uploades</h3>
           <p data-i18n="why.r1.d">Filerne går fra din enhed til modtagerens. Ingen kopi venter på et firmas server, og intet link udløber efter en uge.</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">Android, Linux og kommandolinjen i dag; Windows, macOS og iOS på vej. Fra telefon til bærbar, fra ethvert mærke til ethvert mærke.</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">Ingen størrelsesgrænse fra os</h3>
-          <p data-i18n="why.r4.d">Hele mapper, lange videoer, billeder i original kvalitet. Kun din disk og din forbindelse sætter grænsen.</p>
+          <h3 data-i18n="why.r4.t">Filer, mapper og tekst fra udklipsholderen</h3>
+          <p data-i18n="why.r4.d">Send billeder i original kvalitet, kæmpestore mapper eller en kopieret note. Tekst kommer frem klar til kopiering med skjulte tegn nævnt ved navn, aldrig skrevet til disken.</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">Bekræftet, ikke betroet</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">Open source under GPL, betalt af donationer. Ingen reklamer, ingen sporing, intet premiumniveau.</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">Sådan klarer TotalDrop sig i forhold til de almindelige måder at sende en fil på</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">Sådan klarer TotalDrop sig i forhold til de almindelige måder at sende en fil på</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">Funktion</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">Cloudlinks</th><th scope="col" data-i18n="why.cmp.nearby">Deling i nærheden</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">Tre trin</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">Vælg filer</h3>
-          <p data-i18n="how.s1.d">Alle typer, så mange du vil. Modtageren får kun det, du har valgt.</p>
+          <h3 data-i18n="how.s1.t">Vælg filer eller tekst</h3>
+          <p data-i18n="how.s1.d">Vælg filer, hele mapper eller tekst fra udklipsholderen — eller send direkte fra systemets delmenu eller filhåndtering.</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">Del koden</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">Kun du og modtageren kan åbne den</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">Kryptografi og formel verifikation</p>
+        <h2 id="sec-title" data-i18n="sec.title">Kun du og modtageren kan åbne den</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">Krypteret, før det forlader enheden</dt>
           <dd data-i18n="sec.f1.d">Filerne krypteres på din enhed og dekrypteres kun på modtagerens. Nøglerne findes aldrig andre steder.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">Koden kan ikke gættes offline</dt>
-          <dd data-i18n="sec.f2.d">Koden bliver til en nøgle gennem et PAKE-handshake, så et forkert gæt fejler med det samme, og forsøget er brugt. Nøgleudvekslingen omfatter post-kvante ML-KEM.</dd>
+          <dt data-i18n="sec.f2.t">Post-kvante PAKE-handshake</dt>
+          <dd data-i18n="sec.f2.d">Koden driver et CPace-håndtryk, der føder Noise XXpsk3 med hybride X25519- og ML-KEM-768-nøgler. Et forkert gæt afvises straks og brænder forsøget.</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">Vores server præsenterer kun</dt>
-          <dd data-i18n="sec.f3.d">Den ser din IP-adresse og kodens nummer, aldrig ordene, filnavnene eller filerne. Den gemmer ingen logs.</dd>
+          <dd data-i18n="sec.f3.d">Den ser din IP-adresse og kodens nummer, aldrig ordene, filnavnene eller filerne. Med Privatlivstilstand slået til får selv den anden enhed aldrig din IP-adresse at vide.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">Kode, som alle kan tjekke</dt>
-          <dd data-i18n="sec.f4.d">Hver linje er offentlig. Version 1.0 udgives først efter en uafhængig sikkerhedsrevision.</dd>
+          <dt data-i18n="sec.f4.t">Bevist med Tamarin, revideret før 1.0</dt>
+          <dd data-i18n="sec.f4.d">Seks symbolske modeller, 61 maskinkontrollerede lemmaer og 27 regressionsmutanter verificerer den kommende serverblinde Ghost Ring-konto i Tamarin-bevisføreren. Version 1.0 venter på en uafhængig revision.</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/da" hreflang="da" data-i18n="sec.privacy">Læs privatlivspolitikken</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">Hvor vi er</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">Færdig</span>
           <h3 data-i18n="road.p0">Åben protokol, kommandolinjeklient, Android-beta og Linux-app</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

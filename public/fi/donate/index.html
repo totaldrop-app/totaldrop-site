@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Miksi TotalDrop tarvitsee lahjoituksia</title>
   <meta name="description" content="TotalDrop on ilmainen, eikä sillä ole mainoksia tai sijoittajia. Tässä ovat kaikki sen ylläpidon kulut nyt ja matkalla versioon 1.0, ja mihin lahjoitukset menevät.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/fi/donate/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/donate/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/donate/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="donate">
   <a class="skip" href="#main" data-i18n="skip">Siirry sisältöön</a>
@@ -89,11 +92,11 @@
         <div><dt data-i18n="don.raised.t2">39,20 USD käytetty</dt><dd data-i18n="don.raised.d2">Verkkotunnus ja Google Play -tili, toistaiseksi ylläpitäjän maksamat. Claude-paikat lasketaan tähän, kun lahjoitukset maksavat ne</dd></div>
         <div><dt data-i18n="don.raised.t3">Tavoite 2 575 USD</dt><dd data-i18n="don.raised.d3">Kaikkien tämän sivun kulujen yhteissumma vuodessa</dd></div>
       </dl>
-      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label">0%</progress>
+      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label"></progress>
       <p class="note" id="don-goal-label" data-i18n="don.raised.goal">0 / 2 575 USD ensimmäiselle vuodelle: 0 %. Päivitetty 11. marraskuuta 2026.</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-ledger-caption">
         <table class="req narrow">
-          <caption data-i18n="don.ledger.caption">Joka kuukausi eriteltynä</caption>
+          <caption id="don-ledger-caption" data-i18n="don.ledger.caption">Joka kuukausi eriteltynä</caption>
           <thead><tr><th scope="col" data-i18n="don.ledger.month">Kuukausi</th><th scope="col" data-i18n="don.ledger.in">Tulot</th><th scope="col" data-i18n="don.ledger.out">Menot</th><th scope="col" data-i18n="don.ledger.what">Mihin</th></tr></thead>
           <tbody>
             <tr><th scope="row" data-i18n="don.ledger.m1">Lokakuu 2026</th><td>0 USD</td><td data-i18n="don.m.3920">39,20 USD</td><td data-i18n="don.ledger.m1.w">Verkkotunnus totaldrop.app, 14,20 USD; Google Playn kehittäjätili, 25 USD</td></tr>
@@ -104,7 +107,7 @@
 
     <section class="block" aria-labelledby="don-budget">
       <h2 id="don-budget" data-i18n="don.budget.title">Jokainen kulu eriteltynä</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-budget">
         <table class="req stack">
           <thead><tr><th scope="col" data-i18n="don.col.item">Kulu</th><th scope="col" data-i18n="don.col.for">Mihin se on</th><th scope="col" data-i18n="don.col.when">Milloin</th><th scope="col" data-i18n="don.col.year">Vuodessa</th></tr></thead>
           <tbody>
@@ -124,7 +127,7 @@
     <section class="block" aria-labelledby="don-relay">
       <h2 id="don-relay" data-i18n="don.relay.title">Jos välitys kasvaa</h2>
       <p data-i18n="don.relay.d">Useimmat siirrot yhdistyvät suoraan eivätkä maksa mitään. Ne, jotka eivät voi, kulkevat välityspalvelimen kautta. Jos se tarvitsee lisää nopeutta, Cloudflare Realtime TURN kuljettaa ne UDP:llä lähellä kutakin käyttäjää: ensimmäiset 1 000 GB kuukaudessa ovat ilmaisia, sen jälkeen 0,05 USD/GB. Lahjoitukset maksavat tämän liikenteen kasvaessa.</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-relay">
         <table class="req narrow">
           <thead><tr><th scope="col" data-i18n="don.relay.c1">Välitetty liikenne kuukaudessa</th><th scope="col" data-i18n="don.relay.c2">Kuukaudessa</th><th scope="col" data-i18n="don.relay.c3">Vuodessa</th></tr></thead>
           <tbody>
@@ -177,6 +180,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

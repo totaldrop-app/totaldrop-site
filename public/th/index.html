@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: ส่งไฟล์โดยตรง เข้ารหัสตั้งแต่ต้นทางถึงปลายทาง</title>
-  <meta name="description" content="TotalDrop เป็นแอปฟรีแบบโอเพนซอร์สที่ส่งไฟล์จากอุปกรณ์หนึ่งไปยังอีกเครื่องโดยตรง เข้ารหัสตั้งแต่ต้นทางถึงปลายทาง ไม่ต้องมีบัญชี อีเมล หรือเบอร์โทรศัพท์">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: ส่งไฟล์และข้อความโดยตรง เข้ารหัสตั้งแต่ต้นทางถึงปลายทาง</title>
+  <meta name="description" content="TotalDrop เป็นแอปฟรีแบบโอเพนซอร์สที่ส่งไฟล์ โฟลเดอร์ และข้อความจากอุปกรณ์หนึ่งไปยังอีกเครื่องโดยตรง เข้ารหัสตั้งแต่ต้นทางถึงปลายทาง ไม่ต้องมีบัญชี อีเมล หรือเบอร์โทรศัพท์">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/th/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: ส่งไฟล์โดยตรง เข้ารหัสตั้งแต่ต้นทางถึงปลายทาง">
-  <meta property="og:description" content="TotalDrop เป็นแอปฟรีแบบโอเพนซอร์สที่ส่งไฟล์จากอุปกรณ์หนึ่งไปยังอีกเครื่องโดยตรง เข้ารหัสตั้งแต่ต้นทางถึงปลายทาง ไม่ต้องมีบัญชี อีเมล หรือเบอร์โทรศัพท์">
+  <meta property="og:title" content="TotalDrop: ส่งไฟล์และข้อความโดยตรง เข้ารหัสตั้งแต่ต้นทางถึงปลายทาง">
+  <meta property="og:description" content="TotalDrop เป็นแอปฟรีแบบโอเพนซอร์สที่ส่งไฟล์ โฟลเดอร์ และข้อความจากอุปกรณ์หนึ่งไปยังอีกเครื่องโดยตรง เข้ารหัสตั้งแต่ต้นทางถึงปลายทาง ไม่ต้องมีบัญชี อีเมล หรือเบอร์โทรศัพท์">
   <meta property="og:url" content="https://totaldrop.app/th/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">ข้ามไปยังเนื้อหา</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="เมนูหลัก" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">แอป</a>
       <a href="#why" data-i18n="nav.why">ทำไมต้อง TotalDrop</a>
       <a href="#how" data-i18n="nav.how">วิธีการทำงาน</a>
       <a href="#security" data-i18n="nav.security">ความปลอดภัย</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">ฟรี · โอเพนซอร์ส · เบต้า</p>
-        <h1 id="hero-title" data-i18n="hero.title">ส่งไฟล์ตรงไปยังอุปกรณ์อีกเครื่อง</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop ส่งไฟล์จากอุปกรณ์ของคุณไปยังอุปกรณ์ของอีกฝ่ายโดยตรง เข้ารหัสตั้งแต่ต้นทางถึงปลายทาง คุณแชร์รหัสสั้นๆ และไม่มีใครระหว่างทางอ่านสิ่งที่คุณส่งได้ ไม่ต้องมีบัญชี อีเมล หรือเบอร์โทรศัพท์</p>
+        <h1 id="hero-title" data-i18n="hero.title">ส่งไฟล์และข้อความตรงไปยังอุปกรณ์อีกเครื่อง</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop ส่งไฟล์ ทั้งโฟลเดอร์ และข้อความในคลิปบอร์ดจากอุปกรณ์ของคุณไปยังของอีกฝ่ายโดยตรง เข้ารหัสตั้งแต่ต้นทางถึงปลายทางด้วยคีย์แบบหลังควอนตัม แชร์เพียงรหัสสั้นๆ ไม่มีใครระหว่างทางอ่านสิ่งที่คุณส่งได้ ไม่ต้องมีบัญชี อีเมล หรือเบอร์โทรศัพท์</p>
         <div class="actions">
           <a class="btn btn-primary" href="/th/download/" data-i18n="hero.cta">ดาวน์โหลดเบต้า</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">อ่านโค้ด</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">พร้อมใช้บน Android, Linux และ CLI วันนี้</li>
+          <li data-i18n="hero.h2">ML-KEM-768 แบบหลังควอนตัม</li>
+          <li data-i18n="hero.h3">35 ภาษา ไม่มีตัวติดตาม</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">รหัสการโอน</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">รหัสการโอน</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">ตัวอย่างอื่น</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">คำยืนยันสี่คำ</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">บอกรหัสออกเสียง หรือวางในข้อความ ใครป้อนรหัสนี้ก็จะได้รับไฟล์</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">ทำงานแบบเนทีฟบนเดสก์ท็อปและโทรศัพท์ทุกเครื่อง</p>
+        <h2 id="apps-title" data-i18n="apps.title">สร้างมาเพื่อเป็นส่วนหนึ่งของระบบคุณ</h2>
+        <p data-i18n="apps.lede">TotalDrop ดึงสี การจัดวางตัวอักษร โหมดมืด และเมนูแชร์มาจากระบบปฏิบัติการที่คุณใช้อยู่ ส่งจากแกลเลอรี ข้อความที่เลือก คลิปบอร์ด หรือโปรแกรมจัดการไฟล์ได้ทันทีโดยไม่ต้องเปิดแท็บเบราว์เซอร์ก่อน</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="TotalDrop บน Android ในธีม Material You แบบสว่างและมืด" data-i18n-label="apps.android.alt" aria-label="TotalDrop บน Android ในธีม Material You แบบสว่างและมืด" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">สีไดนามิก Material You และปุ่มควบคุม Material 3 Expressive แชร์ไฟล์หรือข้อความที่เลือกจากแอปใดก็ได้โดยตรง หรือกดไอคอนตัวเปิดแอปค้างไว้เพื่อส่งคลิปบอร์ดของคุณ</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">ชีตแชร์ของระบบ</li>
+              <li data-i18n="apps.tag.text">ข้อความและคลิปบอร์ด</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="แอป Qt 6 Wayland แบบเนทีฟของ TotalDrop บน Linux" data-i18n-label="apps.linux.alt" aria-label="แอป Qt 6 Wayland แบบเนทีฟของ TotalDrop บน Linux" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">แอป Linux</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Qt 6 และ QML แบบเนทีฟสำหรับ Wayland ปรับตามธีม KDE Plasma, Hyprland, Omarchy และ GNOME แบบสด คลิกขวาที่ไฟล์หรือโฟลเดอร์ใดก็ได้ใน Dolphin, Files หรือ Nemo เพื่อส่งทันที</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, Files, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 และ ARM64</li>
+              <li data-i18n="apps.tag.pkg">เนทีฟและ Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">ทำไมต้อง TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">ไม่มีอะไรถูกอัปโหลด</h3>
           <p data-i18n="why.r1.d">ไฟล์ส่งจากอุปกรณ์ของคุณไปยังของอีกฝ่าย ไม่มีสำเนารออยู่บนเซิร์ฟเวอร์ของบริษัท และไม่มีลิงก์ที่หมดอายุในหนึ่งสัปดาห์</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">วันนี้มี Android, Linux และบรรทัดคำสั่ง Windows, macOS และ iOS กำลังมา จากโทรศัพท์ถึงแล็ปท็อป จากแบรนด์ใดก็ได้ถึงแบรนด์ใดก็ได้</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">เราไม่จำกัดขนาด</h3>
-          <p data-i18n="why.r4.d">ทั้งโฟลเดอร์ วิดีโอยาว รูปภาพคุณภาพต้นฉบับ มีเพียงดิสก์และการเชื่อมต่อของคุณที่เป็นขีดจำกัด</p>
+          <h3 data-i18n="why.r4.t">ไฟล์ โฟลเดอร์ และข้อความในคลิปบอร์ด</h3>
+          <p data-i18n="why.r4.d">ส่งรูปภาพคุณภาพต้นฉบับ โฟลเดอร์ขนาดใหญ่มาก หรือโน้ตที่คัดลอกไว้ ข้อความมาถึงพร้อมคัดลอกทันที โดยแสดงชื่ออักขระที่ซ่อนอยู่ และไม่เคยเขียนลงดิสก์</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">ตรวจสอบได้ ไม่ต้องเชื่อใจ</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">โอเพนซอร์สภายใต้ GPL ดำเนินงานด้วยเงินบริจาค ไม่มีโฆษณา ไม่มีการติดตาม ไม่มีแพ็กเกจพรีเมียม</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">TotalDrop เทียบกับวิธีส่งไฟล์ที่ใช้กันทั่วไป</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">TotalDrop เทียบกับวิธีส่งไฟล์ที่ใช้กันทั่วไป</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">ฟีเจอร์</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">ลิงก์คลาวด์</th><th scope="col" data-i18n="why.cmp.nearby">การแชร์ใกล้เคียง</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">สามขั้นตอน</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">เลือกไฟล์</h3>
-          <p data-i18n="how.s1.d">ไฟล์ประเภทใดก็ได้ กี่ไฟล์ก็ได้ ผู้รับจะได้เฉพาะสิ่งที่คุณเลือก</p>
+          <h3 data-i18n="how.s1.t">เลือกไฟล์หรือข้อความ</h3>
+          <p data-i18n="how.s1.d">เลือกไฟล์ ทั้งโฟลเดอร์ หรือข้อความจากคลิปบอร์ด หรือส่งตรงจากเมนูแชร์ของระบบหรือโปรแกรมจัดการไฟล์</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">แชร์รหัส</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">มีเพียงคุณและผู้รับที่เปิดได้</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">วิทยาการเข้ารหัสและการพิสูจน์เชิงรูปนัย</p>
+        <h2 id="sec-title" data-i18n="sec.title">มีเพียงคุณและผู้รับที่เปิดได้</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">เข้ารหัสก่อนออกจากเครื่อง</dt>
           <dd data-i18n="sec.f1.d">ไฟล์ถูกเข้ารหัสบนอุปกรณ์ของคุณ และถอดรหัสได้เฉพาะบนอุปกรณ์ของผู้รับ คีย์ไม่เคยอยู่ที่อื่น</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">เดารหัสแบบออฟไลน์ไม่ได้</dt>
-          <dd data-i18n="sec.f2.d">รหัสถูกแปลงเป็นคีย์ผ่านแฮนด์เชกแบบ PAKE การเดาผิดจึงล้มเหลวทันทีและความพยายามนั้นใช้ไม่ได้อีก การแลกเปลี่ยนคีย์รวม ML-KEM แบบหลังควอนตัมด้วย</dd>
+          <dt data-i18n="sec.f2.t">แฮนด์เชก PAKE แบบหลังควอนตัม</dt>
+          <dd data-i18n="sec.f2.d">รหัสจะขับเคลื่อนการจับมือ CPace เพื่อป้อนกุญแจเริ่มต้นให้ Noise XXpsk3 ร่วมกับกุญแจไฮบริด X25519 และ ML-KEM-768 หากเดาผิดจะล้มเหลวทันทีและเผารอบนั้นทิ้ง</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">เซิร์ฟเวอร์ของเราทำหน้าที่แนะนำเท่านั้น</dt>
-          <dd data-i18n="sec.f3.d">เห็นที่อยู่ IP ของคุณและตัวเลขของรหัส แต่ไม่เคยเห็นคำ ชื่อไฟล์ หรือไฟล์ และไม่เก็บบันทึก</dd>
+          <dd data-i18n="sec.f3.d">เซิร์ฟเวอร์เห็นเพียงที่อยู่ IP ของคุณและตัวเลขของรหัส ไม่เคยเห็นคำ ชื่อไฟล์ หรือตัวไฟล์ เมื่อเปิดโหมดความเป็นส่วนตัว แม้แต่อุปกรณ์อีกฝั่งก็จะไม่มีทางรู้ที่อยู่ IP ของคุณ</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">โค้ดที่ใครก็ตรวจสอบได้</dt>
-          <dd data-i18n="sec.f4.d">ทุกบรรทัดเปิดเผยต่อสาธารณะ เวอร์ชัน 1.0 จะออกหลังการตรวจสอบความปลอดภัยโดยอิสระเท่านั้น</dd>
+          <dt data-i18n="sec.f4.t">พิสูจน์ด้วย Tamarin ตรวจสอบก่อน 1.0</dt>
+          <dd data-i18n="sec.f4.d">แบบจำลองเชิงสัญลักษณ์ 6 แบบ บทตั้งที่ตรวจด้วยเครื่อง 61 ข้อ และมิวแทนต์ทดสอบการถดถอย 27 ตัว ใช้พิสูจน์บัญชี Ghost Ring ที่เซิร์ฟเวอร์มองไม่เห็นซึ่งกำลังจะมาในตัวพิสูจน์ Tamarin ส่วนเวอร์ชัน 1.0 รอการตรวจสอบความปลอดภัยโดยอิสระ</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/th" hreflang="th" data-i18n="sec.privacy">อ่านนโยบายความเป็นส่วนตัว</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">เราอยู่ตรงไหน</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">เสร็จแล้ว</span>
           <h3 data-i18n="road.p0">โปรโตคอลแบบเปิด ไคลเอนต์บรรทัดคำสั่ง Android เบต้า และแอป Linux</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

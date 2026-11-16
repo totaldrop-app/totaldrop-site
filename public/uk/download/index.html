@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Завантажити TotalDrop</title>
   <meta name="description" content="Завантажте TotalDrop для Linux, Android і командного рядка. Windows, macOS, iOS і браузер на підході.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/uk/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">Перейти до вмісту</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">Платформи</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">Для цього пристрою</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">Бета</span></header>
-          <p data-i18n="dl.android.d">Повноцінний застосунок вашою мовою, у кольорах вашого телефона.</p>
+          <p data-i18n="dl.android.d">Повноцінний застосунок вашою мовою, у кольорах вашого телефона, з надсиланням через меню «Поділитися» та з буфера обміну.</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 або новіший, 64-біт</li>
             <li data-i18n="dl.android.r2">Тестування в Google Play, за запрошеннями, поки бета закрита</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">Для цього пристрою</span>
           <header><h3 data-i18n="dl.cli">Командний рядок</h3><span class="pill is-ready" data-i18n="dl.ready">Доступно</span></header>
-          <p data-i18n="dl.cli.d">Для терміналів Linux, macOS і Windows. Надсилає файли й цілі папки.</p>
+          <p data-i18n="dl.cli.d">Сьогодні вже зібрано в пакетах для Linux або збирається з вихідного коду через Cargo. Надсилає файли, цілі папки й текст із аргументів або стандартного введення.</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="Команда встановлення" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">Копіювати команду</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="Приклад використання" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Створено на Qt 6 для Wayland. Бере кольори, шрифти й значки з вашої стільниці: Plasma, Hyprland, Omarchy, GNOME.</p>
           <ul>
             <li data-i18n="dl.linux.r1">Окремий пакет для кожної родини дистрибутивів: усі для x86-64; Debian, Ubuntu і Fedora також для ARM64</li>
-            <li data-i18n="dl.linux.r2">Пакети .pkg, .deb і .rpm встановлюють і команду totaldrop</li>
+            <li data-i18n="dl.linux.r2">Пакети .pkg, .deb і .rpm також установлюють команду totaldrop і контекстні меню для Dolphin, Файлів і Nemo</li>
             <li data-i18n="dl.linux.r3">Використовуйте одночасно лише один пакет для Linux. Flatpak і пакет .pkg, .deb чи .rpm мають спільне ім'я, тож поки один відкритий, запуск іншого виводить відкрите вікно на передній план, а не відкриває друге.</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">Незабаром</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">Для цього пристрою</span>
           <header><h3 data-i18n="dl.web">У браузері</h3><span class="pill" data-i18n="rm.now.when">Листопад 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">Вимоги</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">Платформа</th><th scope="col" data-i18n="dl.req.min">Мінімум</th><th scope="col" data-i18n="dl.req.notes">Примітки</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, 64-біт ARM</td><td data-i18n="dl.req.android.n">Лише дозвіл на доступ до інтернету</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, 64-біт ARM</td><td data-i18n="dl.req.android.n">Дозволи на мережу, фонове передавання та сповіщення; нативні бібліотеки з вирівнюванням сторінок по 16 КБ</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8: Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland або X11; x86-64 і ARM64 (.deb, .rpm, Flatpak; Arch лише x86-64)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">Командний рядок</th><td data-i18n="dl.req.cli">Rust 1.99 для збирання</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">Командний рядок</th><td data-i18n="dl.req.cli">Rust 1.99 для збирання</td><td data-i18n="dl.req.cli.n">Готова збірка для Linux; на інших системах збирається з вихідного коду через Cargo (готові бінарні файли для macOS і Windows заплановано)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">Мережа</th><td data-i18n="dl.req.net.m">Інтернет або одна мережа</td><td data-i18n="dl.req.net.n">Напряму, де можливо, інакше через ретранслятор</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Le persone dietro TotalDrop</title>
   <meta name="description" content="Chi costruisce TotalDrop e quale parte del lavoro svolge ciascuno, con ogni numero preso dalla cronologia pubblica del progetto su GitHub.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/it/team/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/team/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/team/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="team">
   <a class="skip" href="#main" data-i18n="skip">Vai al contenuto</a>
@@ -142,7 +145,7 @@
 
     <section class="block" aria-labelledby="tm-tools">
       <h2 id="tm-tools" data-i18n="tm.tools.title">IA e automazione</h2>
-      <p class="block-lede" data-i18n="tm.tools.lede">Anche il software scrive modifiche qui. Il suo lavoro passa per gli stessi controlli e le stesse revisioni di quello di chiunque, e solo il responsabile del progetto può unirlo.</p>
+      <p class="block-lede" data-i18n="tm.tools.lede">Anche il software scrive modifiche qui. Il suo lavoro passa per gli stessi controlli e le stesse revisioni di quello di chiunque, e un maintainer approva o unisce ogni modifica.</p>
       <!-- team:helpers -->
       <ul class="helpers">
         <li class="helper">
@@ -326,10 +329,10 @@
 
     <section class="block" aria-labelledby="tm-how">
       <h2 id="tm-how" data-i18n="tm.how.title">Come viene verificato il lavoro</h2>
-      <ol class="steps tm-steps">
+      <ol class="steps tm-steps" role="list">
         <li><p data-i18n="tm.how.h1">Le modifiche quotidiane nascono come issue pubblica ed entrano nell'app solo tramite una pull request.</p></li>
         <li><p data-i18n="tm.how.h2">Ogni pull request supera i controlli automatici e la revisione di una persona o di un agente IA che non l'ha scritta.</p></li>
-        <li><p data-i18n="tm.how.h3">Solo il responsabile del progetto unisce, rilascia e distribuisce. I rilasci sono compilati da GitHub Actions, mai su un computer personale.</p></li>
+        <li><p data-i18n="tm.how.h3">I maintainer uniscono le modifiche revisionate, e solo il responsabile del progetto approva i rilasci e le distribuzioni. I rilasci sono compilati da GitHub Actions, mai su un computer personale.</p></li>
       </ol>
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/totaldrop-app/totaldrop/blob/main/CONTRIBUTING.md" data-i18n="tm.join">Partecipa</a>
@@ -357,6 +360,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

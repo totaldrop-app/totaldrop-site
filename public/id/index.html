@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: kirim file secara langsung, terenkripsi end-to-end</title>
-  <meta name="description" content="TotalDrop adalah aplikasi gratis dan open source yang mengirim file langsung dari satu perangkat ke perangkat lain, terenkripsi end-to-end. Tanpa akun, email, atau nomor telepon.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: kirim file dan teks secara langsung, terenkripsi end-to-end</title>
+  <meta name="description" content="TotalDrop adalah aplikasi gratis dan open source yang mengirim file, folder, dan teks langsung dari satu perangkat ke perangkat lain, terenkripsi end-to-end. Tanpa akun, tanpa email, tanpa nomor telepon.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/id/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: kirim file secara langsung, terenkripsi end-to-end">
-  <meta property="og:description" content="TotalDrop adalah aplikasi gratis dan open source yang mengirim file langsung dari satu perangkat ke perangkat lain, terenkripsi end-to-end. Tanpa akun, email, atau nomor telepon.">
+  <meta property="og:title" content="TotalDrop: kirim file dan teks secara langsung, terenkripsi end-to-end">
+  <meta property="og:description" content="TotalDrop adalah aplikasi gratis dan open source yang mengirim file, folder, dan teks langsung dari satu perangkat ke perangkat lain, terenkripsi end-to-end. Tanpa akun, tanpa email, tanpa nomor telepon.">
   <meta property="og:url" content="https://totaldrop.app/id/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Lewati ke konten</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="Utama" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">Aplikasi</a>
       <a href="#why" data-i18n="nav.why">Mengapa TotalDrop</a>
       <a href="#how" data-i18n="nav.how">Cara kerja</a>
       <a href="#security" data-i18n="nav.security">Keamanan</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">Gratis · Open source · Beta</p>
-        <h1 id="hero-title" data-i18n="hero.title">Kirim file langsung ke perangkat lain.</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop memindahkan file langsung dari perangkat Anda ke perangkat penerima, terenkripsi end-to-end. Anda membagikan kode singkat; tidak ada seorang pun di tengah jalan yang dapat membaca apa yang Anda kirim. Tanpa akun, email, atau nomor telepon.</p>
+        <h1 id="hero-title" data-i18n="hero.title">Kirim file dan teks langsung ke perangkat lain.</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop memindahkan file, seluruh folder, dan teks papan klip langsung dari perangkat Anda ke perangkat penerima, terenkripsi end-to-end dengan kunci pascakuantum. Bagikan kode singkat; tidak seorang pun di tengah jalan dapat membaca apa yang Anda kirim. Tanpa akun, tanpa email, tanpa nomor telepon.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/id/download/" data-i18n="hero.cta">Unduh beta</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">Baca kodenya</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">Android, Linux, dan CLI hari ini</li>
+          <li data-i18n="hero.h2">ML-KEM-768 pascakuantum</li>
+          <li data-i18n="hero.h3">35 bahasa, tanpa pelacak</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">Kode transfer</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">Kode transfer</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">Contoh lain</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">Empat kata verifikasi</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">Ucapkan kodenya atau tempelkan di pesan. Siapa pun yang memasukkannya akan mendapat file.</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">Native di setiap desktop dan ponsel</p>
+        <h2 id="apps-title" data-i18n="apps.title">Dirancang menyatu dengan sistem Anda</h2>
+        <p data-i18n="apps.lede">TotalDrop mengambil warna, tipografi, mode gelap, dan menu bagikan dari sistem operasi yang Anda jalankan. Kirim dari galeri, teks yang dipilih, papan klip, atau pengelola file tanpa membuka tab browser terlebih dahulu.</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="TotalDrop di Android dalam tema Material You terang dan gelap" data-i18n-label="apps.android.alt" aria-label="TotalDrop di Android dalam tema Material You terang dan gelap" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Warna dinamis Material You dan kontrol Material 3 Expressive. Bagikan file atau teks yang dipilih langsung dari aplikasi apa pun, atau tahan ikon peluncur untuk mengirim papan klip Anda.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">Menu bagikan sistem</li>
+              <li data-i18n="apps.tag.text">Teks dan papan klip</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="Aplikasi Wayland Qt 6 native TotalDrop di Linux" data-i18n-label="apps.linux.alt" aria-label="Aplikasi Wayland Qt 6 native TotalDrop di Linux" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Aplikasi Linux</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Qt 6 dan QML native untuk Wayland, mengikuti KDE Plasma, Hyprland, Omarchy, dan GNOME secara langsung. Klik kanan file atau folder apa pun di Dolphin, Files, atau Nemo untuk langsung mengirim.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, Files, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 dan ARM64</li>
+              <li data-i18n="apps.tag.pkg">Native dan Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">Mengapa TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">Tidak ada yang diunggah</h3>
           <p data-i18n="why.r1.d">File berpindah dari perangkat Anda ke perangkat penerima. Tidak ada salinan yang menunggu di server perusahaan, dan tidak ada tautan yang kedaluwarsa dalam seminggu.</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">Android, Linux, dan baris perintah hari ini; Windows, macOS, dan iOS segera hadir. Dari ponsel ke laptop, dari merek apa pun ke merek apa pun.</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">Tanpa batas ukuran dari kami</h3>
-          <p data-i18n="why.r4.d">Seluruh folder, video panjang, foto kualitas asli. Hanya disk dan koneksi Anda yang menentukan batasnya.</p>
+          <h3 data-i18n="why.r4.t">File, folder, dan teks papan klip</h3>
+          <p data-i18n="why.r4.d">Kirim foto kualitas asli, folder berukuran besar, atau catatan yang disalin. Teks tiba siap disalin dengan karakter tersembunyi yang dinamai, tanpa pernah ditulis ke disk.</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">Diverifikasi, bukan dipercaya</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">Open source di bawah GPL, dibiayai oleh donasi. Tanpa iklan, tanpa pelacakan, tanpa paket premium.</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">Perbandingan TotalDrop dengan cara umum mengirim file</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">Perbandingan TotalDrop dengan cara umum mengirim file</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">Fitur</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">Tautan cloud</th><th scope="col" data-i18n="why.cmp.nearby">Berbagi di sekitar</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">Tiga langkah</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">Pilih file</h3>
-          <p data-i18n="how.s1.d">Jenis apa pun, sebanyak yang Anda mau. Penerima hanya mendapat apa yang Anda pilih.</p>
+          <h3 data-i18n="how.s1.t">Pilih file atau teks</h3>
+          <p data-i18n="how.s1.d">Pilih file, seluruh folder, atau teks papan klip—atau kirim langsung dari menu bagikan sistem atau pengelola file Anda.</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">Bagikan kode</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">Hanya Anda dan penerima yang dapat membukanya</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">Kriptografi dan verifikasi formal</p>
+        <h2 id="sec-title" data-i18n="sec.title">Hanya Anda dan penerima yang dapat membukanya</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">Terenkripsi sebelum keluar</dt>
           <dd data-i18n="sec.f1.d">File dienkripsi di perangkat Anda dan hanya didekripsi di perangkat penerima. Kuncinya tidak pernah ada di tempat lain.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">Kode tidak dapat ditebak secara offline</dt>
-          <dd data-i18n="sec.f2.d">Kode diubah menjadi kunci melalui handshake PAKE, sehingga tebakan yang salah langsung gagal dan percobaan itu hangus. Pertukaran kunci menyertakan ML-KEM pascakuantum.</dd>
+          <dt data-i18n="sec.f2.t">Handshake PAKE pascakuantum</dt>
+          <dd data-i18n="sec.f2.d">Kode menggerakkan jabat tangan CPace yang memasok kunci bagi Noise XXpsk3 dengan kunci hibrida X25519 dan ML-KEM-768. Tebakan salah langsung gagal dan menghanguskan percobaan.</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">Server kami hanya memperkenalkan</dt>
-          <dd data-i18n="sec.f3.d">Server melihat alamat IP Anda dan angka pada kode, tidak pernah kata-katanya, nama file, atau filenya. Server tidak menyimpan log.</dd>
+          <dd data-i18n="sec.f3.d">Server melihat alamat IP Anda dan angka pada kode, tidak pernah kata-katanya, nama file, atau filenya. Saat Mode Privasi aktif, perangkat lawan pun tidak pernah mengetahui alamat IP Anda.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">Kode yang dapat diperiksa siapa pun</dt>
-          <dd data-i18n="sec.f4.d">Setiap baris bersifat publik. Versi 1.0 baru dirilis setelah audit keamanan independen.</dd>
+          <dt data-i18n="sec.f4.t">Dibuktikan dengan Tamarin, diaudit sebelum 1.0</dt>
+          <dd data-i18n="sec.f4.d">Enam model simbolis, 61 lema terperiksa mesin, dan 27 mutan regresi memverifikasi calon akun Ghost Ring yang tak terlihat server di pembukti Tamarin. Versi 1.0 menunggu audit independen.</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/id" hreflang="id" data-i18n="sec.privacy">Baca kebijakan privasi</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">Di mana kami sekarang</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">Selesai</span>
           <h3 data-i18n="road.p0">Protokol terbuka, klien baris perintah, Android beta, dan aplikasi Linux</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

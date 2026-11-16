@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop को दान की ज़रूरत क्यों है</title>
   <meta name="description" content="TotalDrop मुफ़्त है और इसमें न विज्ञापन हैं, न निवेशक। यहाँ इसे चलाने का हर खर्च है, आज का और वर्शन 1.0 तक का, और यह भी कि दान किस पर खर्च होता है।">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/hi/donate/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/donate/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/donate/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="donate">
   <a class="skip" href="#main" data-i18n="skip">सामग्री पर जाएँ</a>
@@ -89,11 +92,11 @@
         <div><dt data-i18n="don.raised.t2">39.20 USD खर्च हुए</dt><dd data-i18n="don.raised.d2">डोमेन और Google Play खाता, अब तक मेंटेनर ने चुकाए। दान से भुगतान शुरू होने पर Claude सीटें भी यहाँ गिनी जाएँगी</dd></div>
         <div><dt data-i18n="don.raised.t3">लक्ष्य 2,575 USD</dt><dd data-i18n="don.raised.d3">इस पेज के सभी खर्चों का एक साल का जोड़</dd></div>
       </dl>
-      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label">0%</progress>
+      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label"></progress>
       <p class="note" id="don-goal-label" data-i18n="don.raised.goal">पहले साल के लिए 2,575 USD में से 0: 0%। 11 नवंबर 2026 को अपडेट किया गया।</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-ledger-caption">
         <table class="req narrow">
-          <caption data-i18n="don.ledger.caption">हर महीना, एक-एक करके</caption>
+          <caption id="don-ledger-caption" data-i18n="don.ledger.caption">हर महीना, एक-एक करके</caption>
           <thead><tr><th scope="col" data-i18n="don.ledger.month">महीना</th><th scope="col" data-i18n="don.ledger.in">आया</th><th scope="col" data-i18n="don.ledger.out">गया</th><th scope="col" data-i18n="don.ledger.what">किसलिए</th></tr></thead>
           <tbody>
             <tr><th scope="row" data-i18n="don.ledger.m1">अक्टूबर 2026</th><td>0 USD</td><td data-i18n="don.m.3920">39.20 USD</td><td data-i18n="don.ledger.m1.w">totaldrop.app डोमेन, 14.20 USD; Google Play डेवलपर खाता, 25 USD</td></tr>
@@ -104,7 +107,7 @@
 
     <section class="block" aria-labelledby="don-budget">
       <h2 id="don-budget" data-i18n="don.budget.title">हर खर्च, एक-एक करके</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-budget">
         <table class="req stack">
           <thead><tr><th scope="col" data-i18n="don.col.item">मद</th><th scope="col" data-i18n="don.col.for">किसलिए</th><th scope="col" data-i18n="don.col.when">कब</th><th scope="col" data-i18n="don.col.year">प्रति वर्ष</th></tr></thead>
           <tbody>
@@ -124,7 +127,7 @@
     <section class="block" aria-labelledby="don-relay">
       <h2 id="don-relay" data-i18n="don.relay.title">अगर रिले बढ़े</h2>
       <p data-i18n="don.relay.d">ज़्यादातर ट्रांसफ़र सीधे कनेक्ट होते हैं और उनका कोई खर्च नहीं होता। जो ऐसा नहीं कर पाते, वे रिले सर्वर से होकर जाते हैं। अगर उसे ज़्यादा गति चाहिए, तो Cloudflare Realtime TURN उन्हें हर उपयोगकर्ता के पास से UDP पर ले जाता है: हर महीने पहले 1,000 GB मुफ़्त, फिर 0.05 USD प्रति GB। ट्रैफ़िक बढ़ने पर इसका खर्च दान से पूरा होगा।</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-relay">
         <table class="req narrow">
           <thead><tr><th scope="col" data-i18n="don.relay.c1">हर महीने रिले हुआ ट्रैफ़िक</th><th scope="col" data-i18n="don.relay.c2">प्रति माह</th><th scope="col" data-i18n="don.relay.c3">प्रति वर्ष</th></tr></thead>
           <tbody>
@@ -177,6 +180,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

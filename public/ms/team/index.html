@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Orang di sebalik TotalDrop</title>
   <meta name="description" content="Siapa yang membina TotalDrop dan bahagian kerja mana yang dilakukan oleh setiap orang, dengan setiap angka diambil daripada sejarah awam projek di GitHub.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ms/team/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/team/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/team/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="team">
   <a class="skip" href="#main" data-i18n="skip">Langkau ke kandungan</a>
@@ -142,7 +145,7 @@
 
     <section class="block" aria-labelledby="tm-tools">
       <h2 id="tm-tools" data-i18n="tm.tools.title">AI dan automasi</h2>
-      <p class="block-lede" data-i18n="tm.tools.lede">Di sini perisian juga menulis perubahan. Kerjanya melalui semakan dan ulasan yang sama seperti kerja sesiapa pun, dan hanya ketua projek boleh menggabungkannya.</p>
+      <p class="block-lede" data-i18n="tm.tools.lede">Di sini perisian juga menulis perubahan. Kerjanya melalui semakan dan ulasan yang sama seperti kerja sesiapa pun, dan penyelenggara meluluskan atau menggabungkan setiap perubahan.</p>
       <!-- team:helpers -->
       <ul class="helpers">
         <li class="helper">
@@ -326,10 +329,10 @@
 
     <section class="block" aria-labelledby="tm-how">
       <h2 id="tm-how" data-i18n="tm.how.title">Cara kerja disemak</h2>
-      <ol class="steps tm-steps">
+      <ol class="steps tm-steps" role="list">
         <li><p data-i18n="tm.how.h1">Perubahan harian bermula sebagai issue awam dan hanya masuk ke aplikasi melalui pull request.</p></li>
         <li><p data-i18n="tm.how.h2">Setiap pull request melalui semakan automatik dan semakan oleh orang atau ejen AI yang tidak menulisnya.</p></li>
-        <li><p data-i18n="tm.how.h3">Hanya ketua projek yang menggabungkan, mengeluarkan dan melaksanakan. Keluaran dibina oleh GitHub Actions, tidak pernah pada komputer peribadi.</p></li>
+        <li><p data-i18n="tm.how.h3">Penyelenggara menggabungkan perubahan yang telah disemak, dan hanya ketua projek meluluskan keluaran serta pelaksanaan. Keluaran dibina oleh GitHub Actions, tidak pernah pada komputer peribadi.</p></li>
       </ol>
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/totaldrop-app/totaldrop/blob/main/CONTRIBUTING.md" data-i18n="tm.join">Sertai kami</a>
@@ -357,6 +360,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

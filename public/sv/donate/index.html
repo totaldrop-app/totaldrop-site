@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Därför behöver TotalDrop donationer</title>
   <meta name="description" content="TotalDrop är gratis och har inga annonser eller investerare. Här är varje kostnad för att driva det, i dag och på vägen mot version 1.0, och vad donationer betalar för.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/sv/donate/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/donate/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/donate/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="donate">
   <a class="skip" href="#main" data-i18n="skip">Hoppa till innehållet</a>
@@ -89,11 +92,11 @@
         <div><dt data-i18n="don.raised.t2">39,20 USD använt</dt><dd data-i18n="don.raised.d2">Domänen och Google Play-kontot, hittills betalda av projektets underhållare. Claude-platserna räknas in här när donationerna betalar för dem</dd></div>
         <div><dt data-i18n="don.raised.t3">Mål: 2 575 USD</dt><dd data-i18n="don.raised.d3">Vad alla kostnader på den här sidan blir på ett år</dd></div>
       </dl>
-      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label">0%</progress>
+      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label"></progress>
       <p class="note" id="don-goal-label" data-i18n="don.raised.goal">0 av 2 575 USD för det första året: 0 %. Uppdaterat 11 november 2026.</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-ledger-caption">
         <table class="req narrow">
-          <caption data-i18n="don.ledger.caption">Varje månad, post för post</caption>
+          <caption id="don-ledger-caption" data-i18n="don.ledger.caption">Varje månad, post för post</caption>
           <thead><tr><th scope="col" data-i18n="don.ledger.month">Månad</th><th scope="col" data-i18n="don.ledger.in">In</th><th scope="col" data-i18n="don.ledger.out">Ut</th><th scope="col" data-i18n="don.ledger.what">Till vad</th></tr></thead>
           <tbody>
             <tr><th scope="row" data-i18n="don.ledger.m1">Oktober 2026</th><td>0 USD</td><td data-i18n="don.m.3920">39,20 USD</td><td data-i18n="don.ledger.m1.w">Domänen totaldrop.app, 14,20 USD; utvecklarkonto för Google Play, 25 USD</td></tr>
@@ -104,7 +107,7 @@
 
     <section class="block" aria-labelledby="don-budget">
       <h2 id="don-budget" data-i18n="don.budget.title">Varje kostnad, post för post</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-budget">
         <table class="req stack">
           <thead><tr><th scope="col" data-i18n="don.col.item">Post</th><th scope="col" data-i18n="don.col.for">Vad den är till för</th><th scope="col" data-i18n="don.col.when">När</th><th scope="col" data-i18n="don.col.year">Per år</th></tr></thead>
           <tbody>
@@ -124,7 +127,7 @@
     <section class="block" aria-labelledby="don-relay">
       <h2 id="don-relay" data-i18n="don.relay.title">Om relätrafiken växer</h2>
       <p data-i18n="don.relay.d">De flesta överföringar ansluter direkt och kostar ingenting. De som inte kan det går via reläservern. Om den behöver mer fart bär Cloudflare Realtime TURN trafiken över UDP nära varje användare: de första 1 000 GB i månaden är gratis, sedan 0,05 USD per GB. Donationer ska betala för detta när trafiken växer.</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-relay">
         <table class="req narrow">
           <thead><tr><th scope="col" data-i18n="don.relay.c1">Relätrafik per månad</th><th scope="col" data-i18n="don.relay.c2">Per månad</th><th scope="col" data-i18n="don.relay.c3">Per år</th></tr></thead>
           <tbody>
@@ -177,6 +180,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

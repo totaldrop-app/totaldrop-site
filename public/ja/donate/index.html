@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop に寄付が必要な理由</title>
   <meta name="description" content="TotalDrop は無料で、広告も投資家もありません。現在とバージョン 1.0 までの運営にかかるすべての費用と、寄付の使い道を紹介します。">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ja/donate/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/donate/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/donate/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="donate">
   <a class="skip" href="#main" data-i18n="skip">本文へスキップ</a>
@@ -89,11 +92,11 @@
         <div><dt data-i18n="don.raised.t2">支出 39.20 USD</dt><dd data-i18n="don.raised.d2">ドメインと Google Play アカウント。これまではメンテナーが支払っています。Claude のシートは、寄付で支払うようになった時点でここに加わります</dd></div>
         <div><dt data-i18n="don.raised.t3">目標 2,575 USD</dt><dd data-i18n="don.raised.d3">このページのすべての費用の 1 年分の合計</dd></div>
       </dl>
-      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label">0%</progress>
+      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label"></progress>
       <p class="note" id="don-goal-label" data-i18n="don.raised.goal">初年度の目標 2,575 USD のうち 0 USD：0%。2026年11月11日更新。</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-ledger-caption">
         <table class="req narrow">
-          <caption data-i18n="don.ledger.caption">毎月、項目ごとに</caption>
+          <caption id="don-ledger-caption" data-i18n="don.ledger.caption">毎月、項目ごとに</caption>
           <thead><tr><th scope="col" data-i18n="don.ledger.month">月</th><th scope="col" data-i18n="don.ledger.in">収入</th><th scope="col" data-i18n="don.ledger.out">支出</th><th scope="col" data-i18n="don.ledger.what">用途</th></tr></thead>
           <tbody>
             <tr><th scope="row" data-i18n="don.ledger.m1">2026年10月</th><td>0 USD</td><td data-i18n="don.m.3920">39.20 USD</td><td data-i18n="don.ledger.m1.w">totaldrop.app ドメイン 14.20 USD、Google Play デベロッパー アカウント 25 USD</td></tr>
@@ -104,7 +107,7 @@
 
     <section class="block" aria-labelledby="don-budget">
       <h2 id="don-budget" data-i18n="don.budget.title">すべての費用を項目ごとに</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-budget">
         <table class="req stack">
           <thead><tr><th scope="col" data-i18n="don.col.item">項目</th><th scope="col" data-i18n="don.col.for">用途</th><th scope="col" data-i18n="don.col.when">時期</th><th scope="col" data-i18n="don.col.year">年額</th></tr></thead>
           <tbody>
@@ -124,7 +127,7 @@
     <section class="block" aria-labelledby="don-relay">
       <h2 id="don-relay" data-i18n="don.relay.title">リレーの利用が増えたら</h2>
       <p data-i18n="don.relay.d">ほとんどの転送は直接つながり、費用はかかりません。直接つながらない転送はリレーを経由します。さらに速度が必要になれば、Cloudflare Realtime TURN が各ユーザーの近くから UDP で運びます。月 1,000 GB までは無料、それ以降は 1 GB あたり 0.05 USD です。通信量が増えるにつれ、この費用を寄付でまかないます。</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-relay">
         <table class="req narrow">
           <thead><tr><th scope="col" data-i18n="don.relay.c1">月間のリレー通信量</th><th scope="col" data-i18n="don.relay.c2">月額</th><th scope="col" data-i18n="don.relay.c3">年額</th></tr></thead>
           <tbody>
@@ -177,6 +180,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

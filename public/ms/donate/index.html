@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mengapa TotalDrop memerlukan derma</title>
   <meta name="description" content="TotalDrop percuma dan tiada iklan atau pelabur. Inilah setiap kos untuk menjalankannya, hari ini dan dalam perjalanan ke versi 1.0, serta apa yang dibiayai oleh derma.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ms/donate/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/donate/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/donate/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="donate">
   <a class="skip" href="#main" data-i18n="skip">Langkau ke kandungan</a>
@@ -89,11 +92,11 @@
         <div><dt data-i18n="don.raised.t2">39.20 USD dibelanjakan</dt><dd data-i18n="don.raised.d2">Domain dan akaun Google Play, setakat ini dibayar oleh penyelenggara. Tempat duduk Claude dikira di sini apabila derma membayarnya</dd></div>
         <div><dt data-i18n="don.raised.t3">Sasaran 2,575 USD</dt><dd data-i18n="don.raised.d3">Jumlah semua kos di halaman ini untuk setahun</dd></div>
       </dl>
-      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label">0%</progress>
+      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label"></progress>
       <p class="note" id="don-goal-label" data-i18n="don.raised.goal">0 daripada 2,575 USD untuk tahun pertama: 0%. Dikemas kini 11 November 2026.</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-ledger-caption">
         <table class="req narrow">
-          <caption data-i18n="don.ledger.caption">Setiap bulan, satu demi satu</caption>
+          <caption id="don-ledger-caption" data-i18n="don.ledger.caption">Setiap bulan, satu demi satu</caption>
           <thead><tr><th scope="col" data-i18n="don.ledger.month">Bulan</th><th scope="col" data-i18n="don.ledger.in">Masuk</th><th scope="col" data-i18n="don.ledger.out">Keluar</th><th scope="col" data-i18n="don.ledger.what">Untuk apa</th></tr></thead>
           <tbody>
             <tr><th scope="row" data-i18n="don.ledger.m1">Oktober 2026</th><td>0 USD</td><td data-i18n="don.m.3920">39.20 USD</td><td data-i18n="don.ledger.m1.w">Domain totaldrop.app, 14.20 USD; akaun pembangun Google Play, 25 USD</td></tr>
@@ -104,7 +107,7 @@
 
     <section class="block" aria-labelledby="don-budget">
       <h2 id="don-budget" data-i18n="don.budget.title">Setiap kos, satu demi satu</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-budget">
         <table class="req stack">
           <thead><tr><th scope="col" data-i18n="don.col.item">Perkara</th><th scope="col" data-i18n="don.col.for">Untuk apa</th><th scope="col" data-i18n="don.col.when">Bila</th><th scope="col" data-i18n="don.col.year">Setahun</th></tr></thead>
           <tbody>
@@ -124,7 +127,7 @@
     <section class="block" aria-labelledby="don-relay">
       <h2 id="don-relay" data-i18n="don.relay.title">Jika geganti berkembang</h2>
       <p data-i18n="don.relay.d">Kebanyakan pemindahan bersambung secara terus dan tidak dikenakan kos. Yang tidak dapat berbuat demikian melalui pelayan geganti. Jika ia memerlukan kelajuan lebih, Cloudflare Realtime TURN membawanya melalui UDP dari titik yang dekat dengan setiap pengguna: 1,000 GB pertama sebulan percuma, kemudian 0.05 USD setiap GB. Derma akan membiayai ini apabila trafik meningkat.</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-relay">
         <table class="req narrow">
           <thead><tr><th scope="col" data-i18n="don.relay.c1">Trafik geganti sebulan</th><th scope="col" data-i18n="don.relay.c2">Sebulan</th><th scope="col" data-i18n="don.relay.c3">Setahun</th></tr></thead>
           <tbody>
@@ -177,6 +180,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

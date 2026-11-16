@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Télécharger TotalDrop</title>
   <meta name="description" content="Téléchargez TotalDrop pour Linux, Android et la ligne de commande. Windows, macOS, iOS et le navigateur sont en préparation.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/fr/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">Plateformes</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">Pour cet appareil</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">Bêta</span></header>
-          <p data-i18n="dl.android.d">L'application complète, dans votre langue, aux couleurs de votre téléphone.</p>
+          <p data-i18n="dl.android.d">L'application complète, dans votre langue, aux couleurs de votre téléphone, avec envoi depuis le menu de partage et le presse-papiers.</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 ou version ultérieure, 64 bits</li>
             <li data-i18n="dl.android.r2">En test sur Google Play, sur invitation tant que la bêta est fermée</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">Pour cet appareil</span>
           <header><h3 data-i18n="dl.cli">Ligne de commande</h3><span class="pill is-ready" data-i18n="dl.ready">Disponible</span></header>
-          <p data-i18n="dl.cli.d">Pour les terminaux Linux, macOS et Windows. Envoie des fichiers et des dossiers entiers.</p>
+          <p data-i18n="dl.cli.d">Précompilé aujourd'hui dans les paquets Linux, ou compilé depuis les sources avec Cargo. Envoie des fichiers, des dossiers entiers et du texte passés en argument ou sur l'entrée standard.</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="Commande d'installation" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">Copier la commande</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="Exemple d'utilisation" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Conçue avec Qt 6 pour Wayland. Elle reprend les couleurs, les polices et les icônes de votre bureau : Plasma, Hyprland, Omarchy, GNOME.</p>
           <ul>
             <li data-i18n="dl.linux.r1">Un paquet distinct pour chaque famille de distributions : tous pour x86-64 ; Debian, Ubuntu et Fedora aussi pour ARM64</li>
-            <li data-i18n="dl.linux.r2">Les paquets .pkg, .deb et .rpm installent aussi la commande totaldrop</li>
+            <li data-i18n="dl.linux.r2">Les paquets .pkg, .deb et .rpm installent aussi la commande totaldrop et les menus contextuels pour Dolphin, Fichiers et Nemo</li>
             <li data-i18n="dl.linux.r3">Utilisez un seul paquet Linux à la fois. Le Flatpak et le paquet .pkg, .deb ou .rpm partagent un même nom : quand l'un est ouvert, lancer l'autre ramène la fenêtre ouverte au premier plan au lieu d'en ouvrir une seconde.</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">En préparation</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">Pour cet appareil</span>
           <header><h3 data-i18n="dl.web">Dans le navigateur</h3><span class="pill" data-i18n="rm.now.when">Novembre 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">Configuration requise</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">Plateforme</th><th scope="col" data-i18n="dl.req.min">Minimum</th><th scope="col" data-i18n="dl.req.notes">Remarques</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM 64 bits</td><td data-i18n="dl.req.android.n">Autorisation Internet uniquement</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM 64 bits</td><td data-i18n="dl.req.android.n">Autorisations de réseau, de transfert en arrière-plan et de notification ; bibliothèques natives alignées sur 16 Ko</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8 : Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland ou X11 ; x86-64 et ARM64 (.deb, .rpm, Flatpak ; Arch en x86-64 uniquement)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">Ligne de commande</th><td data-i18n="dl.req.cli">Rust 1.99 pour compiler</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">Ligne de commande</th><td data-i18n="dl.req.cli">Rust 1.99 pour compiler</td><td data-i18n="dl.req.cli.n">Précompilé sous Linux ; compilé depuis les sources avec Cargo ailleurs (binaires précompilés macOS et Windows prévus)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">Réseau</th><td data-i18n="dl.req.net.m">Internet, ou le même réseau</td><td data-i18n="dl.req.net.n">En direct si possible, sinon via le serveur relais</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

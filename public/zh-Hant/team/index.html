@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop 背後的人</title>
   <meta name="description" content="誰在打造 TotalDrop，每個人負責哪部分工作；所有數字都來自專案在 GitHub 上的公開歷史。">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/zh-Hant/team/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/team/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/team/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="team">
   <a class="skip" href="#main" data-i18n="skip">跳到主要內容</a>
@@ -142,7 +145,7 @@
 
     <section class="block" aria-labelledby="tm-tools">
       <h2 id="tm-tools" data-i18n="tm.tools.title">AI 與自動化</h2>
-      <p class="block-lede" data-i18n="tm.tools.lede">這裡也有軟體撰寫變更。它的工作與任何人的一樣經過相同的檢查和審查，只有專案負責人才能合併。</p>
+      <p class="block-lede" data-i18n="tm.tools.lede">這裡也有軟體撰寫變更。它的工作與任何人的一樣經過相同的檢查和審查，每項變更都由維護者核准或合併。</p>
       <!-- team:helpers -->
       <ul class="helpers">
         <li class="helper">
@@ -326,10 +329,10 @@
 
     <section class="block" aria-labelledby="tm-how">
       <h2 id="tm-how" data-i18n="tm.how.title">工作如何被檢查</h2>
-      <ol class="steps tm-steps">
+      <ol class="steps tm-steps" role="list">
         <li><p data-i18n="tm.how.h1">日常變更都從公開的 issue 開始，只能透過拉取請求進入應用程式。</p></li>
         <li><p data-i18n="tm.how.h2">每個拉取請求都要通過自動檢查，並由不是作者的人或 AI 代理審查。</p></li>
-        <li><p data-i18n="tm.how.h3">只有專案負責人可以合併、發行和部署。發行版本由 GitHub Actions 建置，從不在個人電腦上建置。</p></li>
+        <li><p data-i18n="tm.how.h3">維護者合併已審查的變更，只有專案負責人可以核准發行和部署。發行版本由 GitHub Actions 建置，從不在個人電腦上建置。</p></li>
       </ol>
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/totaldrop-app/totaldrop/blob/main/CONTRIBUTING.md" data-i18n="tm.join">一起參與</a>
@@ -357,6 +360,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

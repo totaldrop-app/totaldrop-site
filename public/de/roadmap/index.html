@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop-Roadmap</title>
   <meta name="description" content="Was in TotalDrop fertig ist, was als Nächstes kommt und was später folgt, Plattform für Plattform, auf dem Weg zu Version 1.0.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/de/roadmap/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/roadmap/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/roadmap/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="roadmap">
   <a class="skip" href="#main" data-i18n="skip">Zum Inhalt springen</a>
@@ -84,7 +87,7 @@
         <span class="road-state" data-i18n="rm.done.state">Fertig</span>
         <h2 id="rm-done" data-i18n="rm.done.when">Oktober 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.d1.t">Ein offenes Protokoll</h3>
             <p data-i18n="rm.d1.d">TotalDrop Protocol v0: Übertragungscodes mit CPace, Noise XXpsk3 mit Post-Quanten-ML-KEM-768, QUIC mit Einmalschlüsseln. Schriftlich festgehalten, damit jeder eine kompatible App bauen kann.</p>
@@ -92,8 +95,8 @@
           </li>
           <li>
             <h3 data-i18n="rm.d2.t">Kommandozeilen-Client</h3>
-            <p data-i18n="rm.d2.d">Senden und Empfangen im Terminal unter Linux, macOS und Windows.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <p data-i18n="rm.d2.d">Senden und Empfangen im Linux-Terminal oder mit Cargo aus dem Quellcode gebaut (vorkompilierte macOS- und Windows-Binärdateien geplant).</p>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.d3.t">Android-Beta</h3>
@@ -118,7 +121,7 @@
           <li>
             <h3 data-i18n="rm.n2.t">Privatsphäre-Modus in der Kommandozeile</h3>
             <p data-i18n="rm.n2.d">Nur über den Relay-Server: Die Gegenseite erfährt Ihre IP-Adresse nie.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.x7.t">Privatsphäre-Modus in den Apps</h3>
@@ -142,7 +145,7 @@
         <span class="road-state" data-i18n="rm.now.state">Jetzt</span>
         <h2 id="rm-now" data-i18n="rm.now.when">November 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x1.t">QR-Code mit der Kamera scannen</h3>
             <p data-i18n="rm.x1.d">Richten Sie das Telefon auf den Bildschirm des Absenders, statt den Code einzutippen.</p>
@@ -160,7 +163,7 @@
         <span class="road-state" data-i18n="rm.next.state">Als Nächstes</span>
         <h2 id="rm-next" data-i18n="rm.next.when">Winter 2026–27</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x3.t">Unterbrochene Übertragungen fortsetzen</h3>
             <p data-i18n="rm.x3.d">Eine abgebrochene Verbindung macht dort weiter, wo sie aufgehört hat, ohne bereits Angekommenes erneut zu senden.</p>
@@ -188,7 +191,7 @@
         <span class="road-state" data-i18n="rm.later.state">Später</span>
         <h2 id="rm-later" data-i18n="rm.later.when">2027</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.l1.t">iPhone, iPad und Mac</h3>
             <p data-i18n="rm.l1.d">Native Apps, sobald Spenden das Apple-Entwicklerkonto decken.</p>
@@ -221,7 +224,7 @@
         <span class="road-state" data-i18n="rm.v1.state">Version 1.0</span>
         <h2 id="rm-v1" data-i18n="rm.v1.when">Nach dem Audit</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.v1.t">Unabhängiges Sicherheitsaudit</h3>
             <p data-i18n="rm.v1.d">Eine externe Firma prüft das Protokoll, die Kryptografie und den Code, der nicht vertrauenswürdige Eingaben verarbeitet. Der vollständige Bericht wird veröffentlicht.</p>
@@ -273,6 +276,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

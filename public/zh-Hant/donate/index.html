@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop 為什麼需要捐款</title>
   <meta name="description" content="TotalDrop 免費，沒有廣告也沒有投資人。這裡列出了現在以及邁向 1.0 版途中營運它的每一項費用，以及捐款的用途。">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/zh-Hant/donate/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/donate/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/donate/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="donate">
   <a class="skip" href="#main" data-i18n="skip">跳到主要內容</a>
@@ -89,11 +92,11 @@
         <div><dt data-i18n="don.raised.t2">已支出 39.20 USD</dt><dd data-i18n="don.raised.d2">網域和 Google Play 帳戶，目前由維護者支付。Claude 席位改由捐款支付後，才計入這裡</dd></div>
         <div><dt data-i18n="don.raised.t3">目標 2,575 USD</dt><dd data-i18n="don.raised.d3">本頁所有費用一年的總和</dd></div>
       </dl>
-      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label">0%</progress>
+      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label"></progress>
       <p class="note" id="don-goal-label" data-i18n="don.raised.goal">第一年目標 2,575 USD，已募得 0 USD：0%。更新於 2026年11月11日。</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-ledger-caption">
         <table class="req narrow">
-          <caption data-i18n="don.ledger.caption">每月，逐條列出</caption>
+          <caption id="don-ledger-caption" data-i18n="don.ledger.caption">每月，逐條列出</caption>
           <thead><tr><th scope="col" data-i18n="don.ledger.month">月份</th><th scope="col" data-i18n="don.ledger.in">收入</th><th scope="col" data-i18n="don.ledger.out">支出</th><th scope="col" data-i18n="don.ledger.what">用途</th></tr></thead>
           <tbody>
             <tr><th scope="row" data-i18n="don.ledger.m1">2026年10月</th><td>0 USD</td><td data-i18n="don.m.3920">39.20 USD</td><td data-i18n="don.ledger.m1.w">totaldrop.app 網域，14.20 USD；Google Play 開發人員帳戶，25 USD</td></tr>
@@ -104,7 +107,7 @@
 
     <section class="block" aria-labelledby="don-budget">
       <h2 id="don-budget" data-i18n="don.budget.title">每一項費用，逐條列出</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-budget">
         <table class="req stack">
           <thead><tr><th scope="col" data-i18n="don.col.item">項目</th><th scope="col" data-i18n="don.col.for">用途</th><th scope="col" data-i18n="don.col.when">時間</th><th scope="col" data-i18n="don.col.year">每年</th></tr></thead>
           <tbody>
@@ -124,7 +127,7 @@
     <section class="block" aria-labelledby="don-relay">
       <h2 id="don-relay" data-i18n="don.relay.title">如果中繼流量成長</h2>
       <p data-i18n="don.relay.d">大多數傳輸都能直接連線，不產生任何費用。無法直接連線的傳輸會經過中繼伺服器。如果需要更快的速度，Cloudflare Realtime TURN 會在靠近每位使用者的地方透過 UDP 轉送：每月前 1,000 GB 免費，之後每 GB 0.05 USD。隨著流量成長，這部分費用將由捐款支付。</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-relay">
         <table class="req narrow">
           <thead><tr><th scope="col" data-i18n="don.relay.c1">每月中繼流量</th><th scope="col" data-i18n="don.relay.c2">每月</th><th scope="col" data-i18n="don.relay.c3">每年</th></tr></thead>
           <tbody>
@@ -177,6 +180,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

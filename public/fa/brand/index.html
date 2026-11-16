@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>هویت بصری TotalDrop</title>
   <meta name="description" content="نشان TotalDrop، حرکت، رنگ‌ها، قلم‌ها، دکمه‌ها و نمادهایش، شیوهٔ استفاده و فایل‌های لوگو برای دریافت.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/fa/brand/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/brand/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/brand/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="brand">
   <a class="skip" href="#main" data-i18n="skip">رفتن به محتوا</a>
@@ -76,7 +79,7 @@
     <section class="dl-hero bk-hero" aria-labelledby="bk-title">
       <p class="eyebrow" data-i18n="bk.eyebrow">راهنمای هویت بصری</p>
       <h1 id="bk-title" data-i18n="bk.title">هویت بصری TotalDrop</h1>
-      <p class="lede" data-i18n="bk.lede">یک نشان، یک رنگ تأکید، دو قلم. همه‌چیز دیگر از سیستمی می‌آید که TotalDrop روی آن اجرا می‌شود. این صفحه اجزا، شیوهٔ استفاده و محل دریافت آن‌ها را نشان می‌دهد.</p>
+      <p class="lede" data-i18n="bk.lede">یک نشان، سطح‌های خنثی و آرام، یک رنگ تأکید تعاملی، دو قلم. همه‌چیز دیگر از سیستمی می‌آید که TotalDrop روی آن اجرا می‌شود. این صفحه اجزا، شیوهٔ استفاده و محل دریافت آن‌ها را نشان می‌دهد.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#files" data-i18n="bk.cta">دریافت لوگو</a>
         <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop/blob/main/docs/tasarim.md" data-i18n="bk.source">قواعد طراحی در مخزن</a>
@@ -104,14 +107,14 @@
     <section class="block" id="principles" aria-labelledby="principles-title">
       <h2 id="principles-title" data-i18n="bk.p.title">کمتر، اما بهتر</h2>
       <p data-i18n="bk.p.lede">TotalDrop از دیتر رامس پیروی می‌کند: هر جزء کاری دارد و آنچه کاری ندارد کنار گذاشته می‌شود.</p>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.p1.t">بخشی از سیستم</h3>
           <p data-i18n="bk.p1.d">برنامه‌ها رنگ‌ها، پوستهٔ روشن یا تیره، نمادها و پنجره‌ها را از سیستم می‌گیرند و در لینوکس قلم‌ها را هم. فقط نشان و رنگ‌هایش همه‌جا یکسان می‌مانند.</p>
         </li>
         <li>
           <h3 data-i18n="bk.p2.t">یک تأکید در هر نما</h3>
-          <p data-i18n="bk.p2.d">بنفش تنها کار بعدی، پیوندها و حلقهٔ تمرکز را مشخص می‌کند. باقی همه جوهر روی کاغذ است.</p>
+          <p data-i18n="bk.p2.d">بنفش فقط به نشان Köşe تعلق دارد. در وب، کبالت کار اصلی، پیوندها و حلقهٔ تمرکز را مشخص می‌کند، در حالی که سطح‌های خنثای Mineral متن را شفاف نگه می‌دارند.</p>
         </li>
         <li>
           <h3 data-i18n="bk.p3.t">بدون جلوه</h3>
@@ -235,7 +238,7 @@
       <div class="bk-grid bk-grid-2">
         <figure class="bk-fig">
           <div class="bk-stage bk-on-light bk-wide">
-            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.word">لوگو</span>
@@ -244,7 +247,7 @@
         </figure>
         <figure class="bk-fig">
           <div class="bk-stage bk-on-dark bk-wide">
-            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.dark">لوگو روی زمینهٔ تیره</span>
@@ -287,7 +290,7 @@
     <section class="block" id="misuse" aria-labelledby="misuse-title">
       <h2 id="misuse-title" data-i18n="bk.no.title">آنچه نباید کرد</h2>
       <p data-i18n="bk.no.lede">نشان یک رنگ تخت است و همان‌طور که هست به کار می‌رود. این‌ها اشتباه‌های رایج‌اند.</p>
-      <ul class="bk-grid bk-grid-4 bk-donts">
+      <ul class="bk-grid bk-grid-4 bk-donts" role="list">
         <li class="bk-fig">
           <div class="bk-stage"><svg viewBox="0 0 112 112" aria-hidden="true"><path class="mk" d="M55 15H83A14 14 0 0 1 97 29V57A42 42 0 1 1 55 15Z"/></svg></div>
           <p class="bk-no" data-i18n="bk.no.label">نکنید</p>
@@ -334,38 +337,40 @@
 
     <section class="block" id="colour" aria-labelledby="colour-title">
       <h2 id="colour-title" data-i18n="bk.col.title">رنگ</h2>
-      <p data-i18n="bk.col.lede">برنامه‌ها رنگ‌های سیستمی را به کار می‌برند که روی آن اجرا می‌شوند: Material You در اندروید، پوستهٔ میزکار در لینوکس. پالت Aurora در زیر وقتی به کار می‌رود که سیستم رنگی ندهد، و در این وب‌سایت. متن روی زمینهٔ صفحه در هر دو پوسته از ۴٫۵:۱ بالاتر است.</p>
+      <p data-i18n="bk.col.lede">برنامه‌ها رنگ‌های سیستمی را به کار می‌برند که روی آن اجرا می‌شوند: Material You در اندروید، پوستهٔ میزکار در لینوکس، و پالت Aurora فقط زمانی نگه داشته می‌شود که سیستم پالتی در اختیار نگذارد. در این وب‌سایت، پالت Mineral در زیر سطح‌های خنثی را با کنترل‌های تعاملی کبالت جفت می‌کند تا نشان بنفش Köşe به‌روشنی متمایز بماند. هر نقش متنی و تعاملی در هر دو پوسته معیار WCAG AA را می‌گذراند.</p>
       <div class="bk-swatches bk-brand">
-        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">نشان و تأکید روی زمینهٔ روشن.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">نشان و تأکید روی زمینهٔ تیره.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-paper"></span><span class="bk-sw-name">Paper</span><code>#F4F2FB</code><span class="bk-sw-use" data-i18n="bk.col.paper">زمینهٔ روشن؛ نشان روی نماد برنامه.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-ink"></span><span class="bk-sw-name">Ink</span><code>#22184F</code><span class="bk-sw-use" data-i18n="bk.col.ink">متن روی زمینهٔ روشن.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-night"></span><span class="bk-sw-name">Night</span><code>#140E33</code><span class="bk-sw-use" data-i18n="bk.col.night">زمینهٔ تیره.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-mist"></span><span class="bk-sw-name">Mist</span><code>#E2DCF6</code><span class="bk-sw-use" data-i18n="bk.col.mist">سطح برجستهٔ آرام روی زمینهٔ روشن.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">نشان Köşe روی زمینه‌های روشن و کاشی نماد برنامه.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">نشان Köşe روی زمینه‌های تیره.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-cobalt"></span><span class="bk-sw-name">Cobalt</span><code>#1E47B8</code><span class="bk-sw-use" data-i18n="bk.col.cobalt">کارهای اصلی، پیوندها و حلقهٔ تمرکز روی زمینه‌های روشن.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-ice"></span><span class="bk-sw-name">Ice Cobalt</span><code>#7DB4FF</code><span class="bk-sw-use" data-i18n="bk.col.ice">کارهای اصلی، پیوندها و حلقهٔ تمرکز روی زمینه‌های تیره.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-alabaster"></span><span class="bk-sw-name">Alabaster</span><code>#F7F7F5</code><span class="bk-sw-use" data-i18n="bk.col.paper">زمینهٔ روشن صفحه، همراه با کارت‌های سفید خالص.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-obsidian"></span><span class="bk-sw-name">Obsidian</span><code>#0F1116</code><span class="bk-sw-use" data-i18n="bk.col.night">زمینهٔ تیرهٔ صفحه، همراه با کارت‌های گرافیتی.</span></div>
       </div>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="bk-col-tokens">
         <table class="req bk-tokens">
-          <caption data-i18n="bk.col.tokens">نقش رنگ‌ها، پوستهٔ روشن و تیره</caption>
+          <caption id="bk-col-tokens" data-i18n="bk.col.tokens">نقش رنگ‌ها، پوستهٔ روشن و تیره</caption>
           <thead>
             <tr><th scope="col" data-i18n="bk.col.role">نقش</th><th scope="col" data-i18n="bk.col.light">روشن</th><th scope="col" data-i18n="bk.col.dark">تیره</th><th scope="col" data-i18n="bk.col.use">کاربرد</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.bg">زمینهٔ صفحه و نمایشگر.</td></tr>
-            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-night2"></span><code>#1E1648</code></td><td data-i18n="bk.col.raised">سطح دوم آرام، مانند کارت «دریافت».</td></tr>
-            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-rule"></span><code>#2E2566</code></td><td data-i18n="bk.col.rule">خطوط جداکننده؛ فقط تزئینی.</td></tr>
-            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.outline">لبهٔ فیلدها و دکمه‌های دورخط‌دار.</td></tr>
-            <tr><th scope="row"><code>ink</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-ink"></span><code>#22184F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td data-i18n="bk.col.text">متن و عنوان‌ها.</td></tr>
-            <tr><th scope="row"><code>ink-muted</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.muted">متن فرعی: توضیح‌ها، یادداشت‌ها، یکاها.</td></tr>
-            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.accent">تنها کار اصلی، پیوندها، حلقهٔ تمرکز. یک بار در هر نما.</td></tr>
-            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.onaccent">متن روی پرشدگی تأکید؛ در پوستهٔ تیره تیره است، چون آنجا تأکید روشن‌تر است.</td></tr>
-            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-success"></span><code>#0A7357</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-success-d"></span><code>#7ED9B5</code></td><td data-i18n="bk.col.success">انجام شد. همیشه با نماد یا واژه، هرگز فقط با رنگ.</td></tr>
-            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-error"></span><code>#BA1A1A</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FFB4AB</code></td><td data-i18n="bk.col.error">مشکلی پیش آمد. همیشه با نماد یا واژه.</td></tr>
+            <tr><th scope="row"><code>mark</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.mark">فقط نشان Köşe؛ هرگز برای دکمه‌ها یا متن بدنه.</td></tr>
+            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-alabaster"></span><code>#F7F7F5</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-obsidian"></span><code>#0F1116</code></td><td data-i18n="bk.col.bg">زمینهٔ صفحه و نمایشگر.</td></tr>
+            <tr><th scope="row"><code>surface</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-surface"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-graphite"></span><code>#161922</code></td><td data-i18n="bk.col.surface">کارت‌ها، نمونه‌های انتقال، قاب برنامه‌ها و جدول‌ها.</td></tr>
+            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-stone"></span><code>#EEEEEC</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-elevated"></span><code>#1E222E</code></td><td data-i18n="bk.col.raised">سطح فرورفتهٔ آرام برای بلوک‌های کد و برچسب‌ها.</td></tr>
+            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-rule-l"></span><code>#DFDFE2</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-rule-d"></span><code>#282E3D</code></td><td data-i18n="bk.col.rule">خطوط جداکننده؛ فقط تزئینی.</td></tr>
+            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-outline-l"></span><code>#646A78</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-outline-d"></span><code>#8790A1</code></td><td data-i18n="bk.col.outline">لبهٔ فیلدها و دکمه‌های دورخط‌دار.</td></tr>
+            <tr><th scope="row"><code>text</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-carbon"></span><code>#14161D</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-chalk"></span><code>#F2F4F8</code></td><td data-i18n="bk.col.text">متن و عنوان‌ها.</td></tr>
+            <tr><th scope="row"><code>text-2</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-slate"></span><code>#4A4F5C</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-silver"></span><code>#A3ABB9</code></td><td data-i18n="bk.col.muted">متن فرعی: توضیح‌ها، یادداشت‌ها، یکاها.</td></tr>
+            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-cobalt"></span><code>#1E47B8</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-ice"></span><code>#7DB4FF</code></td><td data-i18n="bk.col.accent">تنها کار اصلی، پیوندها، حلقهٔ تمرکز. یک بار در هر نما.</td></tr>
+            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-navy"></span><code>#0B1220</code></td><td data-i18n="bk.col.onaccent">متن روی پرشدگی تأکید؛ در پوستهٔ تیره تیره است، چون آنجا تأکید روشن‌تر است.</td></tr>
+            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-success"></span><code>#0B6E4F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-success-d"></span><code>#6EE7B7</code></td><td data-i18n="bk.col.success">انجام شد. همیشه با نماد یا واژه، هرگز فقط با رنگ.</td></tr>
+            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">روشن</span><span class="bk-dot-sw bk-c-error"></span><code>#B81D24</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">تیره</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FCA5A5</code></td><td data-i18n="bk.col.error">مشکلی پیش آمد. همیشه با نماد یا واژه.</td></tr>
           </tbody>
         </table>
       </div>
       <dl class="facts bk-contrast">
-        <div><dt data-i18n="bk.col.c1">متن روی زمینه</dt><dd data-i18n="bk.col.c1.d">جوهر روی کاغذ ۱۴٫۴:۱، کاغذ روی شب ۱۶٫۶:۱.</dd></div>
-        <div><dt data-i18n="bk.col.c2">تأکید به‌صورت متن</dt><dd data-i18n="bk.col.c2.d">بنفش روی کاغذ ۵٫۱:۱، درخشش روی شب ۶٫۸:۱. روی سطح برجسته رنگ تأکید و رنگ موفقیت فقط برای متن بزرگ و نمادهاست.</dd></div>
+        <div><dt data-i18n="bk.col.c1">متن روی زمینه</dt><dd data-i18n="bk.col.c1.d">جوهر کربنی روی مرمر سفید ۱۶٫۸:۱؛ جوهر گچی روی ابسیدین ۱۷٫۲:۱.</dd></div>
+        <div><dt data-i18n="bk.col.c2">تأکید به‌عنوان متن و پرکردن</dt><dd data-i18n="bk.col.c2.d">کبالت روی مرمر سفید ۷٫۴:۱ (سفید روی کبالت ۷٫۹:۱)؛ کبالت یخی روی ابسیدین ۸٫۹:۱ (سرمه‌ای روی کبالت یخی ۸٫۸:۱).</dd></div>
       </dl>
     </section>
 
@@ -384,12 +389,12 @@
           <p data-i18n="bk.type.body">همه‌چیز دیگر: متن پیوسته، دکمه‌ها و فیلدها. ساختهٔ Braille Institute تا نویسه‌های مشابهی چون I، l و 1 از هم جدا بمانند.</p>
         </div>
       </div>
-      <ol class="bk-scale">
-        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.6rem, 6.4vw, 4.75rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">از هر دستگاه به هر دستگاه</span></li>
-        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.75rem, 3.6vw, 2.5rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">چگونه کار می‌کند</span></li>
-        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.25rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">کد را هم‌رسانی کنید</span></li>
+      <ol class="bk-scale" role="list">
+        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.15rem, 1.1rem + 4.4vw, 4.4rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">از هر دستگاه به هر دستگاه</span></li>
+        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.65rem, 1.1rem + 2vw, 2.45rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">چگونه کار می‌کند</span></li>
+        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.225rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">کد را هم‌رسانی کنید</span></li>
         <li><span class="bk-scale-meta"><code>body</code> <span>Atkinson 400 · 1.0625rem · 1.6</span></span><span class="bk-t-body" data-i18n="why.r1.d">فایل‌ها از دستگاه شما به دستگاه طرف مقابل می‌روند. هیچ نسخه‌ای روی سرور یک شرکت منتظر نمی‌ماند و هیچ پیوندی پس از یک هفته منقضی نمی‌شود.</span></li>
-        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.875rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">رایگان · متن‌باز · بتا</span></li>
+        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.8125rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">رایگان · متن‌باز · بتا</span></li>
       </ol>
       <p class="note" data-i18n="bk.type.rules">سطرهای متن پیوسته زیر 44rem می‌مانند. عددهایی که زیر هم قرار می‌گیرند، مانند اندازه‌ها و درصدها، از ارقام جدولی استفاده می‌کنند. فاصله‌گذاری حروف در زبان‌هایی با خط عربی حذف می‌شود، چون اتصال حروف را می‌شکند.</p>
     </section>
@@ -400,7 +405,7 @@
       <h3 data-i18n="bk.btn.kinds">سه گونه دکمه</h3>
       <div class="bk-grid bk-grid-3">
         <figure class="bk-fig">
-          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="how.s1.t">فایل‌ها را انتخاب کنید</span></div>
+          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="bk.cmp.choose">فایل‌ها را انتخاب کنید</span></div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.btn.main">کار اصلی</span>
             <span data-i18n="bk.btn.main.d">پرشده با رنگ تأکید، برچسب به رنگ متن روی تأکید. یکی در هر نما، برای کاری که بیشتر مردم بعد انجام می‌دهند.</span>
@@ -494,7 +499,7 @@
       <div class="bk-grid bk-grid-2">
         <div class="bk-col">
           <h3 data-i18n="bk.sp.scale">فاصله‌ها</h3>
-          <ul class="bk-bars">
+          <ul class="bk-bars" role="list">
             <li><span class="bk-bar bk-w8"></span><code>8</code><span data-i18n="bk.sp.8">نماد تا برچسب، عنوان تا متن</span></li>
             <li><span class="bk-bar bk-w16"></span><code>16</code><span data-i18n="bk.sp.16">میان کارت‌ها، درون یک بلوک</span></li>
             <li><span class="bk-bar bk-w24"></span><code>24</code><span data-i18n="bk.sp.24">درون کارت، لبهٔ صفحه (۱۶ در گوشی‌ها)</span></li>
@@ -504,7 +509,7 @@
         </div>
         <div class="bk-col">
           <h3 data-i18n="bk.sp.radius">گوشه‌ها</h3>
-          <ul class="bk-radii">
+          <ul class="bk-radii" role="list">
             <li><span class="bk-rad bk-r8"></span><code>8</code><span data-i18n="bk.sp.r8">نوار پیشرفت</span></li>
             <li><span class="bk-rad bk-r16"></span><code>16</code><span data-i18n="bk.sp.r16">فیلد متن، جعبهٔ کد</span></li>
             <li><span class="bk-rad bk-r28"></span><code>28</code><span data-i18n="bk.sp.r28">کارت‌ها</span></li>
@@ -536,7 +541,7 @@
 
     <section class="block" id="voice" aria-labelledby="voice-title">
       <h2 id="voice-title" data-i18n="bk.vo.title">لحن</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.vo1.t">بگویید چه می‌شود</h3>
           <p data-i18n="bk.vo1.d">دکمه کارش را نام می‌برد: «انتخاب فایل‌ها»، «پذیرفتن». پیام خطا می‌گوید چه چیزی خراب شد و قدم بعدی چیست، بدون عذرخواهی.</p>
@@ -559,7 +564,7 @@
     <section class="block" id="use" aria-labelledby="use-title">
       <h2 id="use-title" data-i18n="bk.use.title">استفاده از نام و نشان</h2>
       <p data-i18n="bk.use.lede">TotalDrop متن‌باز است، اما مجوزهایش کد را پوشش می‌دهند، نه نام و نشان TotalDrop را. این قواعد برای آن است که برنامه‌ای به نام TotalDrop واقعاً از همین پروژه آمده باشد.</p>
-      <ul class="reasons bk-use-yes">
+      <ul class="reasons bk-use-yes" role="list">
         <li>
           <h3 data-i18n="bk.use1.t">درباره‌اش بنویسید</h3>
           <p data-i18n="bk.use1.d">به totaldrop.app پیوند دهید و در مقاله، نقد، ویدیو و درس از TotalDrop با نام و نشانِ بدون تغییر یاد کنید. نیازی به اجازه نیست.</p>
@@ -577,7 +582,7 @@
           <p data-i18n="bk.use4.d">مجوزها اجازه می‌دهند کد را تغییر دهید. نسخهٔ خود را با نام و نشان خودش منتشر کنید. می‌توانید بگویید بر پایهٔ TotalDrop است، اما نباید القا کنید که TotalDrop آن را تأیید کرده است.</p>
         </li>
       </ul>
-      <ul class="reasons bk-use-no">
+      <ul class="reasons bk-use-no" role="list">
         <li>
           <p class="bk-no" data-i18n="bk.no.label">نکنید</p>
           <p data-i18n="bk.use.no1">معرفی هر چیزی به عنوان نسخهٔ رسمی، شریک یا محصول تأییدشدهٔ TotalDrop.</p>
@@ -606,34 +611,34 @@
     <section class="block" id="files" aria-labelledby="files-title">
       <h2 id="files-title" data-i18n="bk.files.title">دریافت‌ها</h2>
       <p data-i18n="bk.files.lede">فایل‌های برداری (SVG) برای چاپ و نمایشگر، و فایل‌های PNG با زمینهٔ شفاف. همان‌طور که هستند به کارشان ببرید.</p>
-      <ul class="platforms bk-files">
+      <ul class="platforms bk-files" role="list">
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-mark" data-i18n="bk.f.mark">نشان برای زمینهٔ روشن</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-markdark" data-i18n="bk.f.markdark">نشان برای زمینهٔ تیره</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logo" data-i18n="bk.f.logo">لوگو برای زمینهٔ روشن</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logodark" data-i18n="bk.f.logodark">لوگو برای زمینهٔ تیره</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-icon" data-i18n="bk.f.icon">نماد برنامه</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48"></div>
+          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48" loading="lazy" decoding="async"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-mono" data-i18n="bk.f.mono">یک رنگ، سیاه یا سفید</h3>
           <p data-i18n="bk.f.mono.d">فقط جایی که چاپ رنگی ممکن نیست، مانند مهر یا حکاکی.</p>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-black.svg" download data-i18n="bk.f.black">SVG سیاه</a><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-white.svg" download data-i18n="bk.f.white">SVG سفید</a></p>
@@ -664,6 +669,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

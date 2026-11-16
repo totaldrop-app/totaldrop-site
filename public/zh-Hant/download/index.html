@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>下載 TotalDrop</title>
   <meta name="description" content="下載適用於 Linux、Android 和命令列的 TotalDrop。Windows、macOS、iOS 和瀏覽器版即將推出。">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/zh-Hant/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">跳到主要內容</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">平台</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">適用於這部裝置</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">測試版</span></header>
-          <p data-i18n="dl.android.d">功能完整的 App，使用你的語言，跟隨手機的配色。</p>
+          <p data-i18n="dl.android.d">功能完整的 App，使用你的語言，跟隨手機配色，支援分享面板和剪貼簿傳送。</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 以上版本，64 位元</li>
             <li data-i18n="dl.android.r2">測試版未公開期間，透過邀請在 Google Play 上測試</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">適用於這部裝置</span>
           <header><h3 data-i18n="dl.cli">命令列</h3><span class="pill is-ready" data-i18n="dl.ready">已推出</span></header>
-          <p data-i18n="dl.cli.d">適用於 Linux、macOS 和 Windows 終端機。可傳送檔案，也可傳送整個資料夾。</p>
+          <p data-i18n="dl.cli.d">目前已預先編譯包含在 Linux 套件中，也可使用 Cargo 從原始碼建置。可透過參數或標準輸入傳送檔案、整個資料夾和文字。</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="安裝指令" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">複製指令</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="使用範例" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">以 Qt 6 為 Wayland 打造。從你的桌面（Plasma、Hyprland、Omarchy、GNOME）取得配色、字型和圖示。</p>
           <ul>
             <li data-i18n="dl.linux.r1">每個發行版系列各有一個套件：全部支援 x86-64；Debian、Ubuntu 和 Fedora 也支援 ARM64</li>
-            <li data-i18n="dl.linux.r2">.pkg、.deb 和 .rpm 套件也會安裝 totaldrop 指令</li>
+            <li data-i18n="dl.linux.r2">Linux 的 .pkg 、 .deb 和 .rpm 套件也會安裝 totaldrop 指令，以及適用於 Dolphin、Files 和 Nemo 的右鍵選單</li>
             <li data-i18n="dl.linux.r3">請一次只使用一個 Linux 套件。Flatpak 與 .pkg、.deb 或 .rpm 套件使用同一個名稱，因此當其中一個已開啟時，啟動另一個只會把已開啟的視窗帶到前景，而不會再開啟一個視窗。</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">即將推出</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">適用於這部裝置</span>
           <header><h3 data-i18n="dl.web">在瀏覽器中</h3><span class="pill" data-i18n="rm.now.when">2026年11月</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">系統需求</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">平台</th><th scope="col" data-i18n="dl.req.min">最低需求</th><th scope="col" data-i18n="dl.req.notes">說明</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15，64 位元 ARM</td><td data-i18n="dl.req.android.n">只需要網路權限</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15，64 位元 ARM</td><td data-i18n="dl.req.android.n">網路、背景傳輸與通知權限；16 KB 頁面對齊原生程式庫</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8：Debian 13、Ubuntu 25.04、Fedora 43、Arch</td><td data-i18n="dl.req.linux.n">Wayland 或 X11；x86-64 和 ARM64（.deb、.rpm、Flatpak；Arch 僅支援 x86-64）</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">命令列</th><td data-i18n="dl.req.cli">建置需要 Rust 1.99</td><td data-i18n="dl.req.cli.n">Linux、macOS、Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">命令列</th><td data-i18n="dl.req.cli">建置需要 Rust 1.99</td><td data-i18n="dl.req.cli.n">Linux 提供預先編譯版本；其他平台可透過 Cargo 從原始碼建置（計畫提供 macOS 和 Windows 預先編譯執行檔）</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">網路</th><td data-i18n="dl.req.net.m">網際網路，或同一個網路</td><td data-i18n="dl.req.net.n">盡可能直接連線，否則經由中繼伺服器</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Planejamento do TotalDrop</title>
   <meta name="description" content="O que está pronto, o que vem a seguir e o que vem depois no TotalDrop, plataforma por plataforma, a caminho da versão 1.0.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/pt-BR/roadmap/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/roadmap/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/roadmap/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="roadmap">
   <a class="skip" href="#main" data-i18n="skip">Pular para o conteúdo</a>
@@ -84,7 +87,7 @@
         <span class="road-state" data-i18n="rm.done.state">Pronto</span>
         <h2 id="rm-done" data-i18n="rm.done.when">Outubro de 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.d1.t">Um protocolo aberto</h3>
             <p data-i18n="rm.d1.d">TotalDrop Protocol v0: códigos de transferência com CPace, Noise XXpsk3 com ML-KEM-768 pós-quântico, QUIC com chaves de uso único. Documentado para que qualquer pessoa possa criar um app compatível.</p>
@@ -92,8 +95,8 @@
           </li>
           <li>
             <h3 data-i18n="rm.d2.t">Cliente de linha de comando</h3>
-            <p data-i18n="rm.d2.d">Envie e receba pelo terminal no Linux, macOS e Windows.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <p data-i18n="rm.d2.d">Envie e receba pelo terminal no Linux, ou compile a partir do código-fonte com o Cargo (binários pré-compilados para macOS e Windows planejados).</p>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.d3.t">Beta para Android</h3>
@@ -118,7 +121,7 @@
           <li>
             <h3 data-i18n="rm.n2.t">Modo de privacidade na linha de comando</h3>
             <p data-i18n="rm.n2.d">Só retransmissão: o outro lado nunca descobre seu endereço IP.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.x7.t">Modo de privacidade nos apps</h3>
@@ -142,7 +145,7 @@
         <span class="road-state" data-i18n="rm.now.state">Agora</span>
         <h2 id="rm-now" data-i18n="rm.now.when">Novembro de 2026</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x1.t">Escanear o QR code com a câmera</h3>
             <p data-i18n="rm.x1.d">Aponte o celular para a tela de quem envia em vez de digitar o código.</p>
@@ -160,7 +163,7 @@
         <span class="road-state" data-i18n="rm.next.state">A seguir</span>
         <h2 id="rm-next" data-i18n="rm.next.when">Inverno de 2026–27</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x3.t">Retomar transferências interrompidas</h3>
             <p data-i18n="rm.x3.d">Uma conexão interrompida continua de onde parou, sem reenviar o que já chegou.</p>
@@ -188,7 +191,7 @@
         <span class="road-state" data-i18n="rm.later.state">Depois</span>
         <h2 id="rm-later" data-i18n="rm.later.when">2027</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.l1.t">iPhone, iPad e Mac</h3>
             <p data-i18n="rm.l1.d">Apps nativos, quando as doações cobrirem a conta de desenvolvedor da Apple.</p>
@@ -221,7 +224,7 @@
         <span class="road-state" data-i18n="rm.v1.state">Versão 1.0</span>
         <h2 id="rm-v1" data-i18n="rm.v1.when">Depois da auditoria</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.v1.t">Auditoria de segurança independente</h3>
             <p data-i18n="rm.v1.d">Uma empresa externa analisa o protocolo, a criptografia e o código que lida com dados não confiáveis. O relatório completo é publicado.</p>
@@ -273,6 +276,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

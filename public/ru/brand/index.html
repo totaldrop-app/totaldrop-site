@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Бренд TotalDrop</title>
   <meta name="description" content="Знак TotalDrop, его движение, цвета, шрифты, кнопки и значки, правила их использования и файлы логотипа для скачивания.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ru/brand/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/brand/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/brand/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="brand">
   <a class="skip" href="#main" data-i18n="skip">Перейти к содержимому</a>
@@ -76,7 +79,7 @@
     <section class="dl-hero bk-hero" aria-labelledby="bk-title">
       <p class="eyebrow" data-i18n="bk.eyebrow">Брендбук</p>
       <h1 id="bk-title" data-i18n="bk.title">Бренд TotalDrop</h1>
-      <p class="lede" data-i18n="bk.lede">Один знак, один акцентный цвет, два шрифта. Всё остальное берётся из системы, в которой работает TotalDrop. На этой странице показаны элементы, правила их использования и где их скачать.</p>
+      <p class="lede" data-i18n="bk.lede">Один знак, спокойные нейтральные поверхности, один интерактивный акцент, два шрифта. Всё остальное берётся из системы, в которой работает TotalDrop. На этой странице показаны элементы, правила их использования и где их скачать.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#files" data-i18n="bk.cta">Скачать логотип</a>
         <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop/blob/main/docs/tasarim.md" data-i18n="bk.source">Правила дизайна в репозитории</a>
@@ -104,14 +107,14 @@
     <section class="block" id="principles" aria-labelledby="principles-title">
       <h2 id="principles-title" data-i18n="bk.p.title">Меньше, но лучше</h2>
       <p data-i18n="bk.p.lede">TotalDrop следует Дитеру Рамсу: у каждого элемента есть задача, а то, у чего её нет, убирается.</p>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.p1.t">Часть системы</h3>
           <p data-i18n="bk.p1.d">Приложения берут у системы цвета, светлую или тёмную тему, значки и окна, а в Linux — ещё и шрифты. Везде одинаковы только знак и его цвета.</p>
         </li>
         <li>
           <h3 data-i18n="bk.p2.t">Один акцент на экран</h3>
-          <p data-i18n="bk.p2.d">Фиолетовым отмечено единственное следующее действие, ссылки и рамка фокуса. Всё остальное — чернила на бумаге.</p>
+          <p data-i18n="bk.p2.d">Фиолетовый принадлежит только знаку Köşe. В вебе Cobalt выделяет главное действие, ссылки и кольцо фокуса, а нейтральные поверхности Mineral сохраняют чёткость текста.</p>
         </li>
         <li>
           <h3 data-i18n="bk.p3.t">Без эффектов</h3>
@@ -235,7 +238,7 @@
       <div class="bk-grid bk-grid-2">
         <figure class="bk-fig">
           <div class="bk-stage bk-on-light bk-wide">
-            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.word">Логотип</span>
@@ -244,7 +247,7 @@
         </figure>
         <figure class="bk-fig">
           <div class="bk-stage bk-on-dark bk-wide">
-            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.dark">Логотип на тёмном фоне</span>
@@ -287,7 +290,7 @@
     <section class="block" id="misuse" aria-labelledby="misuse-title">
       <h2 id="misuse-title" data-i18n="bk.no.title">Чего не делать</h2>
       <p data-i18n="bk.no.lede">Знак — один плоский цвет, его используют как есть. Вот частые ошибки.</p>
-      <ul class="bk-grid bk-grid-4 bk-donts">
+      <ul class="bk-grid bk-grid-4 bk-donts" role="list">
         <li class="bk-fig">
           <div class="bk-stage"><svg viewBox="0 0 112 112" aria-hidden="true"><path class="mk" d="M55 15H83A14 14 0 0 1 97 29V57A42 42 0 1 1 55 15Z"/></svg></div>
           <p class="bk-no" data-i18n="bk.no.label">Нельзя</p>
@@ -334,38 +337,40 @@
 
     <section class="block" id="colour" aria-labelledby="colour-title">
       <h2 id="colour-title" data-i18n="bk.col.title">Цвет</h2>
-      <p data-i18n="bk.col.lede">Приложения используют цвета системы, в которой работают: Material You на Android, тему рабочего стола в Linux. Палитра Aurora ниже используется, когда система не даёт цветов, и на этом сайте. Текст на фоне страницы проходит 4,5:1 в обеих темах.</p>
+      <p data-i18n="bk.col.lede">Приложения используют цвета системы, в которой работают: Material You на Android, тему рабочего стола в Linux, а Aurora сохраняется лишь там, где система не предоставляет палитру. На этом сайте палитра Mineral ниже сочетает нейтральные поверхности с интерактивными элементами цвета Cobalt, чтобы фиолетовый знак Köşe чётко выделялся. Каждая текстовая и интерактивная роль проходит стандарт WCAG AA в обеих темах.</p>
       <div class="bk-swatches bk-brand">
-        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">Знак и акцент на светлом фоне.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">Знак и акцент на тёмном фоне.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-paper"></span><span class="bk-sw-name">Paper</span><code>#F4F2FB</code><span class="bk-sw-use" data-i18n="bk.col.paper">Светлый фон; знак на значке приложения.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-ink"></span><span class="bk-sw-name">Ink</span><code>#22184F</code><span class="bk-sw-use" data-i18n="bk.col.ink">Текст на светлом фоне.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-night"></span><span class="bk-sw-name">Night</span><code>#140E33</code><span class="bk-sw-use" data-i18n="bk.col.night">Тёмный фон.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-mist"></span><span class="bk-sw-name">Mist</span><code>#E2DCF6</code><span class="bk-sw-use" data-i18n="bk.col.mist">Спокойная приподнятая поверхность на светлом фоне.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">Знак Köşe на светлом фоне и плитка значка приложения.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">Знак Köşe на тёмном фоне.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-cobalt"></span><span class="bk-sw-name">Cobalt</span><code>#1E47B8</code><span class="bk-sw-use" data-i18n="bk.col.cobalt">Главные действия, ссылки и кольцо фокуса на светлом фоне.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-ice"></span><span class="bk-sw-name">Ice Cobalt</span><code>#7DB4FF</code><span class="bk-sw-use" data-i18n="bk.col.ice">Главные действия, ссылки и кольцо фокуса на тёмном фоне.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-alabaster"></span><span class="bk-sw-name">Alabaster</span><code>#F7F7F5</code><span class="bk-sw-use" data-i18n="bk.col.paper">Светлый фон страницы в паре с чисто-белыми карточками.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-obsidian"></span><span class="bk-sw-name">Obsidian</span><code>#0F1116</code><span class="bk-sw-use" data-i18n="bk.col.night">Тёмный фон страницы в паре с графитовыми карточками.</span></div>
       </div>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="bk-col-tokens">
         <table class="req bk-tokens">
-          <caption data-i18n="bk.col.tokens">Роли цветов, светлая и тёмная тема</caption>
+          <caption id="bk-col-tokens" data-i18n="bk.col.tokens">Роли цветов, светлая и тёмная тема</caption>
           <thead>
             <tr><th scope="col" data-i18n="bk.col.role">Роль</th><th scope="col" data-i18n="bk.col.light">Светлая</th><th scope="col" data-i18n="bk.col.dark">Тёмная</th><th scope="col" data-i18n="bk.col.use">Назначение</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.bg">Фон страницы и экрана.</td></tr>
-            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-night2"></span><code>#1E1648</code></td><td data-i18n="bk.col.raised">Спокойная вторая поверхность, например карточка «Получить».</td></tr>
-            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-rule"></span><code>#2E2566</code></td><td data-i18n="bk.col.rule">Разделительные линии; только для оформления.</td></tr>
-            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.outline">Границы полей и контурных кнопок.</td></tr>
-            <tr><th scope="row"><code>ink</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-ink"></span><code>#22184F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td data-i18n="bk.col.text">Текст и заголовки.</td></tr>
-            <tr><th scope="row"><code>ink-muted</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.muted">Второстепенный текст: описания, примечания, единицы.</td></tr>
-            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.accent">Единственное главное действие, ссылки, рамка фокуса. Один раз на экран.</td></tr>
-            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.onaccent">Текст на акцентной заливке; тёмный в тёмной теме, потому что там акцент светлее.</td></tr>
-            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-success"></span><code>#0A7357</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-success-d"></span><code>#7ED9B5</code></td><td data-i18n="bk.col.success">Готово. Всегда со значком или словом, никогда только цветом.</td></tr>
-            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-error"></span><code>#BA1A1A</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FFB4AB</code></td><td data-i18n="bk.col.error">Что-то пошло не так. Всегда со значком или словом.</td></tr>
+            <tr><th scope="row"><code>mark</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.mark">Только знак Köşe; никогда для кнопок или основного текста.</td></tr>
+            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-alabaster"></span><code>#F7F7F5</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-obsidian"></span><code>#0F1116</code></td><td data-i18n="bk.col.bg">Фон страницы и экрана.</td></tr>
+            <tr><th scope="row"><code>surface</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-surface"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-graphite"></span><code>#161922</code></td><td data-i18n="bk.col.surface">Карточки, образцы передач, рамки приложений и таблицы.</td></tr>
+            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-stone"></span><code>#EEEEEC</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-elevated"></span><code>#1E222E</code></td><td data-i18n="bk.col.raised">Спокойная углублённая поверхность для блоков кода и меток.</td></tr>
+            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-rule-l"></span><code>#DFDFE2</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-rule-d"></span><code>#282E3D</code></td><td data-i18n="bk.col.rule">Разделительные линии; только для оформления.</td></tr>
+            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-outline-l"></span><code>#646A78</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-outline-d"></span><code>#8790A1</code></td><td data-i18n="bk.col.outline">Границы полей и контурных кнопок.</td></tr>
+            <tr><th scope="row"><code>text</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-carbon"></span><code>#14161D</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-chalk"></span><code>#F2F4F8</code></td><td data-i18n="bk.col.text">Текст и заголовки.</td></tr>
+            <tr><th scope="row"><code>text-2</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-slate"></span><code>#4A4F5C</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-silver"></span><code>#A3ABB9</code></td><td data-i18n="bk.col.muted">Второстепенный текст: описания, примечания, единицы.</td></tr>
+            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-cobalt"></span><code>#1E47B8</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-ice"></span><code>#7DB4FF</code></td><td data-i18n="bk.col.accent">Единственное главное действие, ссылки, рамка фокуса. Один раз на экран.</td></tr>
+            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-navy"></span><code>#0B1220</code></td><td data-i18n="bk.col.onaccent">Текст на акцентной заливке; тёмный в тёмной теме, потому что там акцент светлее.</td></tr>
+            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-success"></span><code>#0B6E4F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-success-d"></span><code>#6EE7B7</code></td><td data-i18n="bk.col.success">Готово. Всегда со значком или словом, никогда только цветом.</td></tr>
+            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Светлая</span><span class="bk-dot-sw bk-c-error"></span><code>#B81D24</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Тёмная</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FCA5A5</code></td><td data-i18n="bk.col.error">Что-то пошло не так. Всегда со значком или словом.</td></tr>
           </tbody>
         </table>
       </div>
       <dl class="facts bk-contrast">
-        <div><dt data-i18n="bk.col.c1">Текст на фоне</dt><dd data-i18n="bk.col.c1.d">Чернила на бумаге 14,4:1, бумага на ночи 16,6:1.</dd></div>
-        <div><dt data-i18n="bk.col.c2">Акцент как текст</dt><dd data-i18n="bk.col.c2.d">Фиолетовый на бумаге 5,1:1, свечение на ночи 6,8:1. На приподнятой поверхности акцентный цвет и цвет успеха — только для крупного текста и значков.</dd></div>
+        <div><dt data-i18n="bk.col.c1">Текст на фоне</dt><dd data-i18n="bk.col.c1.d">Угольные чернила на алебастре 16,8:1; меловые чернила на обсидиане 17,2:1.</dd></div>
+        <div><dt data-i18n="bk.col.c2">Акцент как текст и заливка</dt><dd data-i18n="bk.col.c2.d">Кобальт на алебастре 7,4:1 (белый на кобальте 7,9:1); ледяной кобальт на обсидиане 8,9:1 (тёмно-синий на ледяном кобальте 8,8:1).</dd></div>
       </dl>
     </section>
 
@@ -384,12 +389,12 @@
           <p data-i18n="bk.type.body">Всё остальное: основной текст, кнопки и поля. Создан Braille Institute, чтобы похожие знаки вроде I, l и 1 не путались.</p>
         </div>
       </div>
-      <ol class="bk-scale">
-        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.6rem, 6.4vw, 4.75rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">С любого устройства на любое устройство</span></li>
-        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.75rem, 3.6vw, 2.5rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">Как это работает</span></li>
-        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.25rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">Поделитесь кодом</span></li>
+      <ol class="bk-scale" role="list">
+        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.15rem, 1.1rem + 4.4vw, 4.4rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">С любого устройства на любое устройство</span></li>
+        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.65rem, 1.1rem + 2vw, 2.45rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">Как это работает</span></li>
+        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.225rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">Поделитесь кодом</span></li>
         <li><span class="bk-scale-meta"><code>body</code> <span>Atkinson 400 · 1.0625rem · 1.6</span></span><span class="bk-t-body" data-i18n="why.r1.d">Файлы идут с вашего устройства на устройство получателя. Никакая копия не ждёт на сервере компании, и никакая ссылка не истекает через неделю.</span></li>
-        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.875rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">Бесплатно · Открытый код · Бета</span></li>
+        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.8125rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">Бесплатно · Открытый код · Бета</span></li>
       </ol>
       <p class="note" data-i18n="bk.type.rules">Строки основного текста не длиннее 44rem. Числа в колонках, например размеры и проценты, набираются табличными цифрами. В языках с арабским письмом межбуквенный интервал убирается, иначе он разорвал бы соединения букв.</p>
     </section>
@@ -400,7 +405,7 @@
       <h3 data-i18n="bk.btn.kinds">Три вида кнопок</h3>
       <div class="bk-grid bk-grid-3">
         <figure class="bk-fig">
-          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="how.s1.t">Выберите файлы</span></div>
+          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="bk.cmp.choose">Выберите файлы</span></div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.btn.main">Главное действие</span>
             <span data-i18n="bk.btn.main.d">Залита акцентным цветом, подпись цветом текста на акценте. Одна на экран, для того, что большинство сделает дальше.</span>
@@ -494,7 +499,7 @@
       <div class="bk-grid bk-grid-2">
         <div class="bk-col">
           <h3 data-i18n="bk.sp.scale">Отступы</h3>
-          <ul class="bk-bars">
+          <ul class="bk-bars" role="list">
             <li><span class="bk-bar bk-w8"></span><code>8</code><span data-i18n="bk.sp.8">Значок к подписи, заголовок к тексту</span></li>
             <li><span class="bk-bar bk-w16"></span><code>16</code><span data-i18n="bk.sp.16">Между карточками, внутри блока</span></li>
             <li><span class="bk-bar bk-w24"></span><code>24</code><span data-i18n="bk.sp.24">Внутри карточки, край экрана (16 на телефонах)</span></li>
@@ -504,7 +509,7 @@
         </div>
         <div class="bk-col">
           <h3 data-i18n="bk.sp.radius">Углы</h3>
-          <ul class="bk-radii">
+          <ul class="bk-radii" role="list">
             <li><span class="bk-rad bk-r8"></span><code>8</code><span data-i18n="bk.sp.r8">Индикатор хода</span></li>
             <li><span class="bk-rad bk-r16"></span><code>16</code><span data-i18n="bk.sp.r16">Текстовое поле, поле с кодом</span></li>
             <li><span class="bk-rad bk-r28"></span><code>28</code><span data-i18n="bk.sp.r28">Карточки</span></li>
@@ -536,7 +541,7 @@
 
     <section class="block" id="voice" aria-labelledby="voice-title">
       <h2 id="voice-title" data-i18n="bk.vo.title">Тон</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.vo1.t">Говорите, что происходит</h3>
           <p data-i18n="bk.vo1.d">Кнопка называет своё действие: «Выбрать файлы», «Принять». Ошибка говорит, что пошло не так и что делать дальше, без извинений.</p>
@@ -559,7 +564,7 @@
     <section class="block" id="use" aria-labelledby="use-title">
       <h2 id="use-title" data-i18n="bk.use.title">Использование имени и знака</h2>
       <p data-i18n="bk.use.lede">TotalDrop — открытый проект, но его лицензии распространяются на код, а не на имя и знак TotalDrop. Эти правила существуют, чтобы приложение под названием TotalDrop действительно было создано этим проектом.</p>
-      <ul class="reasons bk-use-yes">
+      <ul class="reasons bk-use-yes" role="list">
         <li>
           <h3 data-i18n="bk.use1.t">Пишите о нём</h3>
           <p data-i18n="bk.use1.d">Ставьте ссылку на totaldrop.app и упоминайте TotalDrop в статьях, обзорах, видео и на уроках, с именем и неизменённым знаком. Спрашивать не нужно.</p>
@@ -577,7 +582,7 @@
           <p data-i18n="bk.use4.d">Лицензии позволяют изменять код. Выпускайте свою версию под собственным именем и знаком. Можно сказать, что она основана на TotalDrop, но нельзя намекать, что TotalDrop её одобряет.</p>
         </li>
       </ul>
-      <ul class="reasons bk-use-no">
+      <ul class="reasons bk-use-no" role="list">
         <li>
           <p class="bk-no" data-i18n="bk.no.label">Нельзя</p>
           <p data-i18n="bk.use.no1">Выдавать что-либо за официальную версию, партнёра или одобренный продукт TotalDrop.</p>
@@ -606,34 +611,34 @@
     <section class="block" id="files" aria-labelledby="files-title">
       <h2 id="files-title" data-i18n="bk.files.title">Файлы</h2>
       <p data-i18n="bk.files.lede">Векторные файлы (SVG) для печати и экранов и файлы PNG с прозрачным фоном. Используйте их как есть.</p>
-      <ul class="platforms bk-files">
+      <ul class="platforms bk-files" role="list">
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-mark" data-i18n="bk.f.mark">Знак для светлого фона</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-markdark" data-i18n="bk.f.markdark">Знак для тёмного фона</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logo" data-i18n="bk.f.logo">Логотип для светлого фона</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logodark" data-i18n="bk.f.logodark">Логотип для тёмного фона</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-icon" data-i18n="bk.f.icon">Значок приложения</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48"></div>
+          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48" loading="lazy" decoding="async"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-mono" data-i18n="bk.f.mono">Один цвет, чёрный или белый</h3>
           <p data-i18n="bk.f.mono.d">Только там, где нельзя печатать в цвете, например на штампах или гравировке.</p>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-black.svg" download data-i18n="bk.f.black">Чёрный SVG</a><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-white.svg" download data-i18n="bk.f.white">Белый SVG</a></p>
@@ -664,6 +669,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

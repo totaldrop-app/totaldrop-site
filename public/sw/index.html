@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: tuma faili moja kwa moja, zimesimbwa fiche kutoka mwanzo hadi mwisho</title>
-  <meta name="description" content="TotalDrop ni programu ya bure na ya chanzo huria inayotuma faili moja kwa moja kutoka kifaa kimoja hadi kingine, zikiwa zimesimbwa fiche kutoka mwanzo hadi mwisho. Hakuna akaunti, barua pepe wala nambari ya simu.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: tuma faili na maandishi moja kwa moja, kwa usimbaji fiche wa mwanzo hadi mwisho</title>
+  <meta name="description" content="TotalDrop ni programu ya bure na ya chanzo huria inayotuma faili, folda na maandishi moja kwa moja kutoka kifaa kimoja hadi kingine, vikiwa vimesimbwa fiche kutoka mwanzo hadi mwisho. Hakuna akaunti, barua pepe wala nambari ya simu.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/sw/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: tuma faili moja kwa moja, zimesimbwa fiche kutoka mwanzo hadi mwisho">
-  <meta property="og:description" content="TotalDrop ni programu ya bure na ya chanzo huria inayotuma faili moja kwa moja kutoka kifaa kimoja hadi kingine, zikiwa zimesimbwa fiche kutoka mwanzo hadi mwisho. Hakuna akaunti, barua pepe wala nambari ya simu.">
+  <meta property="og:title" content="TotalDrop: tuma faili na maandishi moja kwa moja, kwa usimbaji fiche wa mwanzo hadi mwisho">
+  <meta property="og:description" content="TotalDrop ni programu ya bure na ya chanzo huria inayotuma faili, folda na maandishi moja kwa moja kutoka kifaa kimoja hadi kingine, vikiwa vimesimbwa fiche kutoka mwanzo hadi mwisho. Hakuna akaunti, barua pepe wala nambari ya simu.">
   <meta property="og:url" content="https://totaldrop.app/sw/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Ruka hadi maudhui</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="Kuu" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">Programu</a>
       <a href="#why" data-i18n="nav.why">Kwa nini TotalDrop</a>
       <a href="#how" data-i18n="nav.how">Jinsi inavyofanya kazi</a>
       <a href="#security" data-i18n="nav.security">Usalama</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">Bure · Chanzo huria · Beta</p>
-        <h1 id="hero-title" data-i18n="hero.title">Tuma faili moja kwa moja kwenye kifaa kingine.</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop huhamisha faili moja kwa moja kutoka kifaa chako hadi kifaa chao, zikiwa zimesimbwa fiche kutoka mwanzo hadi mwisho. Unashiriki msimbo mfupi; hakuna mtu katikati anayeweza kusoma unachotuma. Hakuna akaunti, barua pepe wala nambari ya simu.</p>
+        <h1 id="hero-title" data-i18n="hero.title">Tuma faili na maandishi moja kwa moja kwenye kifaa kingine.</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop huhamisha faili, folda nzima na maandishi ya ubao wa kunakili moja kwa moja kutoka kifaa chako hadi kifaa chao, vikiwa vimesimbwa fiche kutoka mwanzo hadi mwisho kwa funguo za baada ya kwanta. Shiriki msimbo mfupi; hakuna mtu katikati anayeweza kusoma unachotuma. Hakuna akaunti, barua pepe wala nambari ya simu.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/sw/download/" data-i18n="hero.cta">Pakua beta</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">Soma msimbo</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">Android, Linux na CLI leo</li>
+          <li data-i18n="hero.h2">ML-KEM-768 ya baada ya kwanta</li>
+          <li data-i18n="hero.h3">Lugha 35, sifuri vifuatiliaji</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">Msimbo wa uhamishaji</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">Msimbo wa uhamishaji</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">Mfano mwingine</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">Maneno manne ya uthibitishaji</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">Taja msimbo kwa sauti au ubandike kwenye ujumbe. Yeyote atakayeuweka ndiye atapata faili.</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">Asilia kwenye kila kompyuta na simu</p>
+        <h2 id="apps-title" data-i18n="apps.title">Imeundwa kuwa sehemu ya mfumo wako</h2>
+        <p data-i18n="apps.lede">TotalDrop huchukua rangi, uchapaji, hali nyeusi na menyu za kushiriki kutoka kwenye mfumo endeshi unaotumia. Tuma kutoka kwenye matunzio, maandishi yaliyochaguliwa, ubao wa kunakili au kidhibiti faili bila kufungua kichupo cha kivinjari kwanza.</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="TotalDrop kwenye Android katika mandhari angavu na meusi ya Material You" data-i18n-label="apps.android.alt" aria-label="TotalDrop kwenye Android katika mandhari angavu na meusi ya Material You" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Rangi badilifu za Material You na vidhibiti vya Material 3 Expressive. Shiriki faili au maandishi yaliyochaguliwa moja kwa moja kutoka programu yoyote, au shikilia aikoni ya kizindua ili kutuma ubao wa kunakili.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">Menyu ya kushiriki ya mfumo</li>
+              <li data-i18n="apps.tag.text">Maandishi na ubao wa kunakili</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="Programu asilia ya TotalDrop ya Qt 6 Wayland kwenye Linux" data-i18n-label="apps.linux.alt" aria-label="Programu asilia ya TotalDrop ya Qt 6 Wayland kwenye Linux" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Programu ya Linux</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Programu asilia ya Qt 6 na QML kwa Wayland, inayofuata KDE Plasma, Hyprland, Omarchy na GNOME papo hapo. Bofya kulia faili au folda yoyote katika Dolphin, Files au Nemo ili kutuma mara moja.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, Files, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 na ARM64</li>
+              <li data-i18n="apps.tag.pkg">Asilia na Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">Kwa nini TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">Hakuna kinachopakiwa</h3>
           <p data-i18n="why.r1.d">Faili husafiri kutoka kifaa chako hadi kifaa chao. Hakuna nakala inayosubiri kwenye seva ya kampuni, na hakuna kiungo kinachoisha muda baada ya wiki.</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">Android, Linux na mstari wa amri leo; Windows, macOS na iOS vinakuja. Kutoka simu hadi kompyuta mpakato, chapa yoyote hadi chapa yoyote.</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">Hakuna kikomo cha ukubwa kutoka kwetu</h3>
-          <p data-i18n="why.r4.d">Folda nzima, video ndefu, picha za ubora asili. Diski yako na muunganisho wako pekee ndivyo vinavyoweka kikomo.</p>
+          <h3 data-i18n="why.r4.t">Faili, folda na maandishi ya ubao wa kunakili</h3>
+          <p data-i18n="why.r4.d">Tuma picha za ubora asili, folda kubwa au dokezo lililonakiliwa. Maandishi hufika tayari kunakiliwa huku herufi zilizofichwa zikitajwa, bila kuandikwa kwenye diski kamwe.</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">Imethibitishwa, si kuaminiwa tu</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">Chanzo huria chini ya GPL, inayofadhiliwa kwa michango. Hakuna matangazo, ufuatiliaji wala kifurushi cha malipo.</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">Jinsi TotalDrop inavyolinganishwa na njia za kawaida za kutuma faili</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">Jinsi TotalDrop inavyolinganishwa na njia za kawaida za kutuma faili</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">Kipengele</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">Viungo vya wingu</th><th scope="col" data-i18n="why.cmp.nearby">Kushiriki karibu</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">Hatua tatu</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">Chagua faili</h3>
-          <p data-i18n="how.s1.d">Aina yoyote, kwa wingi unaotaka. Mpokeaji anapata tu ulichochagua.</p>
+          <h3 data-i18n="how.s1.t">Chagua faili au maandishi</h3>
+          <p data-i18n="how.s1.d">Chagua faili, folda nzima au maandishi ya ubao wa kunakili—au tuma moja kwa moja kutoka kwenye menyu ya kushiriki ya mfumo au kidhibiti faili.</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">Shiriki msimbo</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">Wewe na mpokeaji pekee ndio mnaoweza kuifungua</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">Usimbaji fiche na uthibitishaji rasmi</p>
+        <h2 id="sec-title" data-i18n="sec.title">Wewe na mpokeaji pekee ndio mnaoweza kuifungua</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">Imesimbwa fiche kabla ya kuondoka</dt>
           <dd data-i18n="sec.f1.d">Faili husimbwa fiche kwenye kifaa chako na kufunguliwa kwenye kifaa cha mpokeaji pekee. Funguo hazipo mahali pengine popote.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">Msimbo hauwezi kukisiwa nje ya mtandao</dt>
-          <dd data-i18n="sec.f2.d">Msimbo hugeuka kuwa ufunguo kupitia makubaliano ya PAKE, kwa hiyo kukisia vibaya hushindwa papo hapo na jaribio hilo hupotea. Ubadilishanaji wa funguo unajumuisha ML-KEM ya baada ya kwanta.</dd>
+          <dt data-i18n="sec.f2.t">Makubaliano ya PAKE ya baada ya kwanta</dt>
+          <dd data-i18n="sec.f2.d">Msimbo huendesha makubaliano ya CPace yanayoanzisha Noise XXpsk3 kwa funguo mseto za X25519 na ML-KEM-768. Ubashiri usio sahihi hushindwa papo hapo na kuchoma jaribio.</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">Seva yetu hutambulisha tu</dt>
-          <dd data-i18n="sec.f3.d">Inaona anwani yako ya IP na nambari ya msimbo, kamwe si maneno, majina ya faili wala faili. Haihifadhi kumbukumbu.</dd>
+          <dd data-i18n="sec.f3.d">Inaona anwani yako ya IP na nambari ya msimbo, kamwe si maneno, majina ya faili wala faili zenyewe. Hali ya Faragha ikiwa imewashwa, hata kifaa kingine hakijui kamwe anwani yako ya IP.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">Msimbo ambao yeyote anaweza kukagua</dt>
-          <dd data-i18n="sec.f4.d">Kila mstari ni wa umma. Toleo 1.0 litatoka tu baada ya ukaguzi huru wa usalama.</dd>
+          <dt data-i18n="sec.f4.t">Imethibitishwa kwa Tamarin, itakaguliwa kabla ya 1.0</dt>
+          <dd data-i18n="sec.f4.d">Miundo sita ya kiishara, lema 61 zilizokaguliwa na mashine na mabadiliko 27 ya majaribio yanathibitisha akaunti ijayo ya Ghost Ring isiyoonekana na seva katika kithibitishaji cha Tamarin. Toleo 1.0 linasubiri ukaguzi huru.</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/sw" hreflang="sw" data-i18n="sec.privacy">Soma sera ya faragha</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">Tulipo</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">Imekamilika</span>
           <h3 data-i18n="road.p0">Itifaki huria, programu ya mstari wa amri, beta ya Android na programu ya Linux</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

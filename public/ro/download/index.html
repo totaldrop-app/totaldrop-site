@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Descărcați TotalDrop</title>
   <meta name="description" content="Descărcați TotalDrop pentru Linux, Android și linia de comandă. Windows, macOS, iOS și browserul urmează.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ro/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">Salt la conținut</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">Platforme</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">Pentru acest dispozitiv</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">Beta</span></header>
-          <p data-i18n="dl.android.d">Aplicația completă, în limba dvs., în culorile telefonului dvs.</p>
+          <p data-i18n="dl.android.d">Aplicația completă, în limba dvs., urmând culorile telefonului, cu trimitere din meniul de partajare și din clipboard.</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 sau mai nou, pe 64 de biți</li>
             <li data-i18n="dl.android.r2">Testare pe Google Play, pe bază de invitație cât timp beta este închisă</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">Pentru acest dispozitiv</span>
           <header><h3 data-i18n="dl.cli">Linie de comandă</h3><span class="pill is-ready" data-i18n="dl.ready">Disponibil</span></header>
-          <p data-i18n="dl.cli.d">Pentru terminalele Linux, macOS și Windows. Trimite fișiere și dosare întregi.</p>
+          <p data-i18n="dl.cli.d">Precompilat astăzi în pachetele Linux, sau compilat din codul sursă cu Cargo. Trimite fișiere, dosare întregi și text din argumente sau de la intrarea standard.</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="Comanda de instalare" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">Copiază comanda</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="Exemplu de utilizare" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Construită cu Qt 6 pentru Wayland. Își ia culorile, fonturile și pictogramele de pe desktopul dvs.: Plasma, Hyprland, Omarchy, GNOME.</p>
           <ul>
             <li data-i18n="dl.linux.r1">Un pachet separat pentru fiecare familie de distribuții: toate pentru x86-64; Debian, Ubuntu și Fedora și pentru ARM64</li>
-            <li data-i18n="dl.linux.r2">Pachetele .pkg, .deb și .rpm instalează și comanda totaldrop</li>
+            <li data-i18n="dl.linux.r2">Pachetele .pkg, .deb și .rpm instalează și comanda totaldrop și meniurile de clic dreapta pentru Dolphin, Fișiere și Nemo</li>
             <li data-i18n="dl.linux.r3">Folosiți un singur pachet Linux odată. Flatpak-ul și pachetul .pkg, .deb sau .rpm au același nume, așa că, dacă unul este deschis, pornirea celuilalt aduce în față fereastra deschisă în loc să deschidă una nouă.</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">În curând</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">Pentru acest dispozitiv</span>
           <header><h3 data-i18n="dl.web">În browser</h3><span class="pill" data-i18n="rm.now.when">Noiembrie 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">Cerințe</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">Platformă</th><th scope="col" data-i18n="dl.req.min">Minim</th><th scope="col" data-i18n="dl.req.notes">Note</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM pe 64 de biți</td><td data-i18n="dl.req.android.n">Doar permisiunea de internet</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM pe 64 de biți</td><td data-i18n="dl.req.android.n">Permisiuni pentru rețea, transfer în fundal și notificări; biblioteci native aliniate la pagini de 16 KB</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8: Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland sau X11; x86-64 și ARM64 (.deb, .rpm, Flatpak; Arch doar x86-64)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">Linie de comandă</th><td data-i18n="dl.req.cli">Rust 1.99 pentru compilare</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">Linie de comandă</th><td data-i18n="dl.req.cli">Rust 1.99 pentru compilare</td><td data-i18n="dl.req.cli.n">Precompilat pe Linux; compilat din sursă cu Cargo în rest (binare precompilate pentru macOS și Windows planificate)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">Rețea</th><td data-i18n="dl.req.net.m">Internet sau aceeași rețea</td><td data-i18n="dl.req.net.n">Direct unde se poate, altfel prin serverul releu</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

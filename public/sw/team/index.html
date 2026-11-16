@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Watu walio nyuma ya TotalDrop</title>
   <meta name="description" content="Nani anajenga TotalDrop na kila mmoja anafanya sehemu gani ya kazi, kila nambari ikitoka kwenye historia ya umma ya mradi kwenye GitHub.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/sw/team/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/team/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/team/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="team">
   <a class="skip" href="#main" data-i18n="skip">Ruka hadi maudhui</a>
@@ -142,7 +145,7 @@
 
     <section class="block" aria-labelledby="tm-tools">
       <h2 id="tm-tools" data-i18n="tm.tools.title">Akili bandia na uendeshaji otomatiki</h2>
-      <p class="block-lede" data-i18n="tm.tools.lede">Hapa programu pia huandika mabadiliko. Kazi yake hupitia ukaguzi na mapitio yale yale kama ya mtu yeyote, na ni kiongozi wa mradi pekee anayeweza kuiunganisha.</p>
+      <p class="block-lede" data-i18n="tm.tools.lede">Hapa programu pia huandika mabadiliko. Kazi yake hupitia ukaguzi na mapitio yale yale kama ya mtu yeyote, na mtunzaji huidhinisha au huunganisha kila mabadiliko.</p>
       <!-- team:helpers -->
       <ul class="helpers">
         <li class="helper">
@@ -326,10 +329,10 @@
 
     <section class="block" aria-labelledby="tm-how">
       <h2 id="tm-how" data-i18n="tm.how.title">Kazi inavyokaguliwa</h2>
-      <ol class="steps tm-steps">
+      <ol class="steps tm-steps" role="list">
         <li><p data-i18n="tm.how.h1">Mabadiliko ya kawaida huanza kama issue ya umma na huingia kwenye programu kupitia pull request pekee.</p></li>
         <li><p data-i18n="tm.how.h2">Kila pull request hupitia ukaguzi wa kiotomatiki na ukaguzi wa mtu au wakala wa AI ambaye hakuiandika.</p></li>
-        <li><p data-i18n="tm.how.h3">Kiongozi wa mradi pekee ndiye huunganisha, hutoa matoleo na husambaza. Matoleo hujengwa na GitHub Actions, kamwe si kwenye kompyuta binafsi.</p></li>
+        <li><p data-i18n="tm.how.h3">Watunzaji huunganisha mabadiliko yaliyokaguliwa, na ni kiongozi wa mradi pekee anayeidhinisha matoleo na usambazaji. Matoleo hujengwa na GitHub Actions, kamwe si kwenye kompyuta binafsi.</p></li>
       </ol>
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/totaldrop-app/totaldrop/blob/main/CONTRIBUTING.md" data-i18n="tm.join">Jiunge nasi</a>
@@ -357,6 +360,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

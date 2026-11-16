@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Miért van szüksége a TotalDropnak adományokra</title>
   <meta name="description" content="A TotalDrop ingyenes, nincs benne reklám és nincsenek befektetői. Itt látható a működés minden költsége, ma és az 1.0-s verzióig vezető úton, és hogy mit fizetnek az adományok.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/hu/donate/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/donate/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/donate/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="donate">
   <a class="skip" href="#main" data-i18n="skip">Ugrás a tartalomhoz</a>
@@ -89,11 +92,11 @@
         <div><dt data-i18n="don.raised.t2">39,20 USD elköltve</dt><dd data-i18n="don.raised.d2">A domain és a Google Play-fiók, eddig a projekt karbantartója fizette. A Claude-helyek akkor kerülnek ide, amikor az adományok fizetik őket</dd></div>
         <div><dt data-i18n="don.raised.t3">Cél: 2 575 USD</dt><dd data-i18n="don.raised.d3">Az oldalon szereplő összes költség egy évre</dd></div>
       </dl>
-      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label">0%</progress>
+      <progress class="goal" value="0" max="2575" aria-labelledby="don-goal-label"></progress>
       <p class="note" id="don-goal-label" data-i18n="don.raised.goal">Az első évre szánt 2 575 USD-ből 0: 0%. Frissítve: 2026. november 11.</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-ledger-caption">
         <table class="req narrow">
-          <caption data-i18n="don.ledger.caption">Minden hónap, tételesen</caption>
+          <caption id="don-ledger-caption" data-i18n="don.ledger.caption">Minden hónap, tételesen</caption>
           <thead><tr><th scope="col" data-i18n="don.ledger.month">Hónap</th><th scope="col" data-i18n="don.ledger.in">Bevétel</th><th scope="col" data-i18n="don.ledger.out">Kiadás</th><th scope="col" data-i18n="don.ledger.what">Mire</th></tr></thead>
           <tbody>
             <tr><th scope="row" data-i18n="don.ledger.m1">2026. október</th><td>0 USD</td><td data-i18n="don.m.3920">39,20 USD</td><td data-i18n="don.ledger.m1.w">totaldrop.app domain, 14,20 USD; Google Play fejlesztői fiók, 25 USD</td></tr>
@@ -104,7 +107,7 @@
 
     <section class="block" aria-labelledby="don-budget">
       <h2 id="don-budget" data-i18n="don.budget.title">Minden költség, tételesen</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-budget">
         <table class="req stack">
           <thead><tr><th scope="col" data-i18n="don.col.item">Tétel</th><th scope="col" data-i18n="don.col.for">Mire való</th><th scope="col" data-i18n="don.col.when">Mikor</th><th scope="col" data-i18n="don.col.year">Évente</th></tr></thead>
           <tbody>
@@ -124,7 +127,7 @@
     <section class="block" aria-labelledby="don-relay">
       <h2 id="don-relay" data-i18n="don.relay.title">Ha a továbbított forgalom nő</h2>
       <p data-i18n="don.relay.d">A legtöbb átvitel közvetlenül kapcsolódik, és semmibe sem kerül. Amelyik nem tud, az a továbbító szerveren megy át. Ha több sebesség kell, a Cloudflare Realtime TURN UDP-n továbbítja őket minden felhasználóhoz közel: havonta az első 1 000 GB ingyenes, utána 0,05 USD/GB. A forgalom növekedésével ezt az adományok fedezik.</p>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="don-relay">
         <table class="req narrow">
           <thead><tr><th scope="col" data-i18n="don.relay.c1">Havi továbbított forgalom</th><th scope="col" data-i18n="don.relay.c2">Havonta</th><th scope="col" data-i18n="don.relay.c3">Évente</th></tr></thead>
           <tbody>
@@ -177,6 +180,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

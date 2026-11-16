@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Oamenii din spatele TotalDrop</title>
   <meta name="description" content="Cine construiește TotalDrop și ce parte din muncă face fiecare, cu fiecare cifră luată din istoricul public al proiectului pe GitHub.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ro/team/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/team/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/team/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="team">
   <a class="skip" href="#main" data-i18n="skip">Salt la conținut</a>
@@ -142,7 +145,7 @@
 
     <section class="block" aria-labelledby="tm-tools">
       <h2 id="tm-tools" data-i18n="tm.tools.title">IA și automatizare</h2>
-      <p class="block-lede" data-i18n="tm.tools.lede">Aici și software-ul scrie modificări. Munca lui trece prin aceleași verificări și revizuiri ca a oricui, iar doar coordonatorul de proiect o poate integra.</p>
+      <p class="block-lede" data-i18n="tm.tools.lede">Aici și software-ul scrie modificări. Munca lui trece prin aceleași verificări și revizuiri ca a oricui, iar un întreținător aprobă sau îmbină fiecare modificare.</p>
       <!-- team:helpers -->
       <ul class="helpers">
         <li class="helper">
@@ -326,10 +329,10 @@
 
     <section class="block" aria-labelledby="tm-how">
       <h2 id="tm-how" data-i18n="tm.how.title">Cum este verificată munca</h2>
-      <ol class="steps tm-steps">
+      <ol class="steps tm-steps" role="list">
         <li><p data-i18n="tm.how.h1">Modificările obișnuite încep ca un issue public și ajung în aplicație doar printr-un pull request.</p></li>
         <li><p data-i18n="tm.how.h2">Fiecare pull request trece prin verificările automate și prin revizuirea unei persoane sau a unui agent AI care nu l-a scris.</p></li>
-        <li><p data-i18n="tm.how.h3">Doar coordonatorul de proiect îmbină, publică și implementează. Versiunile sunt compilate de GitHub Actions, niciodată pe un calculator personal.</p></li>
+        <li><p data-i18n="tm.how.h3">Întreținătorii îmbină modificările revizuite, iar doar coordonatorul de proiect aprobă versiunile și implementările. Versiunile sunt compilate de GitHub Actions, niciodată pe un calculator personal.</p></li>
       </ol>
       <div class="actions">
         <a class="btn btn-primary" href="https://github.com/totaldrop-app/totaldrop/blob/main/CONTRIBUTING.md" data-i18n="tm.join">Implică-te</a>
@@ -357,6 +360,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop ڈاؤن لوڈ کریں</title>
   <meta name="description" content="Linux، Android اور کمانڈ لائن کے لیے TotalDrop ڈاؤن لوڈ کریں۔ Windows، macOS، iOS اور براؤزر جلد آ رہے ہیں۔">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ur/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">مواد پر جائیں</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">پلیٹ فارمز</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">اس آلے کے لیے</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">بیٹا</span></header>
-          <p data-i18n="dl.android.d">مکمل ایپ، آپ کی زبان میں، آپ کے فون کے رنگوں کے مطابق۔</p>
+          <p data-i18n="dl.android.d">مکمل ایپ، آپ کی زبان میں، آپ کے فون کے رنگوں کے مطابق، شیئر شیٹ اور کلپ بورڈ سے بھیجنے کی سہولت کے ساتھ۔</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 یا اس سے نیا، 64 بٹ</li>
             <li data-i18n="dl.android.r2">Google Play پر آزمائش جاری ہے، بیٹا بند رہنے تک صرف دعوت پر</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">اس آلے کے لیے</span>
           <header><h3 data-i18n="dl.cli">کمانڈ لائن</h3><span class="pill is-ready" data-i18n="dl.ready">دستیاب</span></header>
-          <p data-i18n="dl.cli.d">Linux، macOS اور Windows ٹرمینلز کے لیے۔ فائلیں اور پورے فولڈرز بھیجتا ہے۔</p>
+          <p data-i18n="dl.cli.d">آج Linux پیکجز میں پہلے سے تیار شدہ، یا Cargo کے ذریعے سورس سے بنایا جا سکتا ہے۔ آرگیومنٹس یا معیاری ان پٹ سے فائلیں، پورے فولڈرز اور متن بھیجتا ہے۔</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="انسٹال کمانڈ" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">کمانڈ کاپی کریں</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="استعمال کی مثال" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Wayland کے لیے Qt 6 سے بنی ہے۔ اپنے رنگ، فونٹس اور آئیکنز آپ کے ڈیسک ٹاپ سے لیتی ہے: Plasma، Hyprland، Omarchy، GNOME۔</p>
           <ul>
             <li data-i18n="dl.linux.r1">ڈسٹری بیوشنز کے ہر خاندان کے لیے الگ پیکیج: سب x86-64 کے لیے؛ Debian، Ubuntu اور Fedora ARM64 کے لیے بھی</li>
-            <li data-i18n="dl.linux.r2">.pkg، .deb اور .rpm پیکیج totaldrop کمانڈ بھی انسٹال کرتے ہیں</li>
+            <li data-i18n="dl.linux.r2">.pkg، .deb اور .rpm پیکیجز totaldrop کمانڈ اور Dolphin، Files اور Nemo کے لیے رائٹ کلک مینو بھی انسٹال کرتے ہیں</li>
             <li data-i18n="dl.linux.r3">ایک وقت میں ایک ہی Linux پیکیج استعمال کریں۔ Flatpak اور .pkg، .deb یا .rpm پیکیج کا نام ایک ہی ہے، اس لیے جب ایک کھلا ہو تو دوسرا چلانے سے دوسری ونڈو نہیں کھلتی بلکہ کھلی ونڈو سامنے آ جاتی ہے۔</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">جلد آ رہا ہے</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">اس آلے کے لیے</span>
           <header><h3 data-i18n="dl.web">براؤزر میں</h3><span class="pill" data-i18n="rm.now.when">نومبر 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">تقاضے</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">پلیٹ فارم</th><th scope="col" data-i18n="dl.req.min">کم از کم</th><th scope="col" data-i18n="dl.req.notes">نوٹس</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15، 64 بٹ ARM</td><td data-i18n="dl.req.android.n">صرف انٹرنیٹ کی اجازت</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15، 64 بٹ ARM</td><td data-i18n="dl.req.android.n">نیٹ ورک، پس منظر میں منتقلی اور اطلاعات کی اجازتیں؛ 16 KB صفحہ بند مقامی لائبریریاں</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8: Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland یا X11؛ x86-64 اور ARM64 (.deb، .rpm، Flatpak؛ Arch صرف x86-64)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">کمانڈ لائن</th><td data-i18n="dl.req.cli">بنانے کے لیے Rust 1.99</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">کمانڈ لائن</th><td data-i18n="dl.req.cli">بنانے کے لیے Rust 1.99</td><td data-i18n="dl.req.cli.n">Linux پر پہلے سے تیار شدہ؛ دیگر نظاموں پر Cargo کے ذریعے سورس سے بنایا جاتا ہے (macOS اور Windows کی تیار شدہ بائنریز کا منصوبہ ہے)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">نیٹ ورک</th><td data-i18n="dl.req.net.m">انٹرنیٹ، یا ایک ہی نیٹ ورک</td><td data-i18n="dl.req.net.n">جہاں ممکن ہو براہ راست، ورنہ ریلے کے ذریعے</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

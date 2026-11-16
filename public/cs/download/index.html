@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stáhnout TotalDrop</title>
   <meta name="description" content="Stáhněte si TotalDrop pro Linux, Android a příkazový řádek. Windows, macOS, iOS a prohlížeč připravujeme.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/cs/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">Přeskočit na obsah</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">Platformy</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">Pro toto zařízení</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">Beta</span></header>
-          <p data-i18n="dl.android.d">Plná aplikace, ve vašem jazyce, v barvách vašeho telefonu.</p>
+          <p data-i18n="dl.android.d">Plná aplikace, ve vašem jazyce, v barvách vašeho telefonu, s odesíláním z nabídky sdílení i ze schránky.</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 nebo novější, 64bitový</li>
             <li data-i18n="dl.android.r2">Testování na Google Play, na pozvání, dokud je beta uzavřená</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">Pro toto zařízení</span>
           <header><h3 data-i18n="dl.cli">Příkazový řádek</h3><span class="pill is-ready" data-i18n="dl.ready">K dispozici</span></header>
-          <p data-i18n="dl.cli.d">Pro terminály v Linuxu, macOS a Windows. Odesílá soubory i celé složky.</p>
+          <p data-i18n="dl.cli.d">Dnes předsestaveno v balíčcích pro Linux, nebo sestaveno ze zdrojového kódu pomocí Cargo. Odesílá soubory, celé složky i text z argumentů nebo ze standardního vstupu.</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="Instalační příkaz" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">Kopírovat příkaz</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="Příklad použití" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Postaveno na Qt 6 pro Wayland. Barvy, písma a ikony přebírá z vašeho prostředí: Plasma, Hyprland, Omarchy, GNOME.</p>
           <ul>
             <li data-i18n="dl.linux.r1">Samostatný balíček pro každou rodinu distribucí: všechny pro x86-64; Debian, Ubuntu a Fedora také pro ARM64</li>
-            <li data-i18n="dl.linux.r2">Balíčky .pkg, .deb a .rpm instalují i příkaz totaldrop</li>
+            <li data-i18n="dl.linux.r2">Balíčky .pkg, .deb a .rpm instalují i příkaz totaldrop a kontextové nabídky pro Dolphin, Soubory a Nemo</li>
             <li data-i18n="dl.linux.r3">Používejte vždy jen jeden linuxový balíček. Flatpak a balíček .pkg, .deb nebo .rpm sdílejí jeden název, takže když je jeden otevřený, spuštění druhého jen přenese otevřené okno do popředí, místo aby otevřelo druhé.</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">Připravujeme</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">Pro toto zařízení</span>
           <header><h3 data-i18n="dl.web">V prohlížeči</h3><span class="pill" data-i18n="rm.now.when">Listopad 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">Požadavky</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">Platforma</th><th scope="col" data-i18n="dl.req.min">Minimum</th><th scope="col" data-i18n="dl.req.notes">Poznámky</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, 64bitový ARM</td><td data-i18n="dl.req.android.n">Jen oprávnění k internetu</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, 64bitový ARM</td><td data-i18n="dl.req.android.n">Oprávnění k síti, přenosu na pozadí a oznámením; nativní knihovny zarovnané na 16KB stránky</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8: Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland nebo X11; x86-64 a ARM64 (.deb, .rpm, Flatpak; Arch jen x86-64)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">Příkazový řádek</th><td data-i18n="dl.req.cli">Rust 1.99 pro sestavení</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">Příkazový řádek</th><td data-i18n="dl.req.cli">Rust 1.99 pro sestavení</td><td data-i18n="dl.req.cli.n">Předpřipraveno pro Linux; jinde sestaveno ze zdrojového kódu pomocí Cargo (předpřipravené binární soubory pro macOS a Windows v plánu)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">Síť</th><td data-i18n="dl.req.net.m">Internet nebo stejná síť</td><td data-i18n="dl.req.net.n">Přímo, kde to jde, jinak přes zprostředkující server</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

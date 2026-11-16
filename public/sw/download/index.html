@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pakua TotalDrop</title>
   <meta name="description" content="Pakua TotalDrop kwa Linux, Android na mstari wa amri. Windows, macOS, iOS na kivinjari vinakuja.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/sw/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">Ruka hadi maudhui</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">Mifumo</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">Kwa kifaa hiki</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">Beta</span></header>
-          <p data-i18n="dl.android.d">Programu kamili, kwa lugha yako, inayofuata rangi za simu yako.</p>
+          <p data-i18n="dl.android.d">Programu kamili, kwa lugha yako, ikifuata rangi za simu yako, pamoja na kutuma kupitia menyu ya kushiriki na ubao wa kunakili.</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 au mpya zaidi, biti 64</li>
             <li data-i18n="dl.android.r2">Majaribio kwenye Google Play, kwa mwaliko wakati beta bado imefungwa</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">Kwa kifaa hiki</span>
           <header><h3 data-i18n="dl.cli">Mstari wa amri</h3><span class="pill is-ready" data-i18n="dl.ready">Inapatikana</span></header>
-          <p data-i18n="dl.cli.d">Kwa terminali za Linux, macOS na Windows. Hutuma faili na folda nzima.</p>
+          <p data-i18n="dl.cli.d">Imeundwa tayari kwenye vifurushi vya Linux leo, au hujengwa kutoka kwa msimbo chanzo kwa Cargo. Hutuma faili, folda nzima na maandishi kutoka kwenye hoja au ingizo la kawaida.</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="Amri ya kusakinisha" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">Nakili amri</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="Mfano wa matumizi" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Imejengwa kwa Qt 6 kwa ajili ya Wayland. Huchukua rangi, fonti na aikoni kutoka kwenye eneo-kazi lako: Plasma, Hyprland, Omarchy, GNOME.</p>
           <ul>
             <li data-i18n="dl.linux.r1">Kifurushi tofauti kwa kila familia ya usambazaji: vyote kwa x86-64; Debian, Ubuntu na Fedora pia kwa ARM64</li>
-            <li data-i18n="dl.linux.r2">Vifurushi vya .pkg, .deb na .rpm pia husakinisha amri ya totaldrop</li>
+            <li data-i18n="dl.linux.r2">Vifurushi vya .pkg, .deb na .rpm pia husakinisha amri ya totaldrop na menyu za kubofya kulia kwa Dolphin, Files na Nemo</li>
             <li data-i18n="dl.linux.r3">Tumia kifurushi kimoja cha Linux kwa wakati mmoja. Flatpak na kifurushi cha .pkg, .deb au .rpm vinashiriki jina moja, kwa hivyo kimoja kikiwa wazi, kuanzisha kingine huleta dirisha lililo wazi mbele badala ya kufungua dirisha la pili.</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">Inakuja</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">Kwa kifaa hiki</span>
           <header><h3 data-i18n="dl.web">Kwenye kivinjari</h3><span class="pill" data-i18n="rm.now.when">Novemba 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">Mahitaji</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">Mfumo</th><th scope="col" data-i18n="dl.req.min">Kiwango cha chini</th><th scope="col" data-i18n="dl.req.notes">Maelezo</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM biti 64</td><td data-i18n="dl.req.android.n">Ruhusa ya intaneti pekee</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM biti 64</td><td data-i18n="dl.req.android.n">Ruhusa za mtandao, uhamisho wa chinichini na arifa; maktaba asilia zilizopangwa kwa kurasa za KB 16</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8: Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland au X11; x86-64 na ARM64 (.deb, .rpm, Flatpak; Arch x86-64 pekee)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">Mstari wa amri</th><td data-i18n="dl.req.cli">Rust 1.99 kwa kujenga</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">Mstari wa amri</th><td data-i18n="dl.req.cli">Rust 1.99 kwa kujenga</td><td data-i18n="dl.req.cli.n">Imeundwa tayari kwenye Linux; hujengwa kutoka kwa msimbo chanzo kwa Cargo kwingineko (programu zilizoundwa tayari za macOS na Windows zimepangwa)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">Mtandao</th><td data-i18n="dl.req.net.m">Intaneti, au mtandao mmoja</td><td data-i18n="dl.req.net.n">Moja kwa moja inapowezekana, vinginevyo kupitia seva ya kati</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

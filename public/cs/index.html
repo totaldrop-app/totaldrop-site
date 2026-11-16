@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: posílejte soubory přímo, s koncovým šifrováním</title>
-  <meta name="description" content="TotalDrop je bezplatná aplikace s otevřeným kódem, která posílá soubory přímo z jednoho zařízení do druhého, s koncovým šifrováním. Žádný účet, e-mail ani telefonní číslo.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: posílejte soubory a text přímo, s koncovým šifrováním</title>
+  <meta name="description" content="TotalDrop je bezplatná open-source aplikace, která posílá soubory, složky a text přímo z jednoho zařízení do druhého, s koncovým šifrováním. Žádný účet, e-mail ani telefonní číslo.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/cs/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: posílejte soubory přímo, s koncovým šifrováním">
-  <meta property="og:description" content="TotalDrop je bezplatná aplikace s otevřeným kódem, která posílá soubory přímo z jednoho zařízení do druhého, s koncovým šifrováním. Žádný účet, e-mail ani telefonní číslo.">
+  <meta property="og:title" content="TotalDrop: posílejte soubory a text přímo, s koncovým šifrováním">
+  <meta property="og:description" content="TotalDrop je bezplatná open-source aplikace, která posílá soubory, složky a text přímo z jednoho zařízení do druhého, s koncovým šifrováním. Žádný účet, e-mail ani telefonní číslo.">
   <meta property="og:url" content="https://totaldrop.app/cs/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Přeskočit na obsah</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="Hlavní nabídka" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">Aplikace</a>
       <a href="#why" data-i18n="nav.why">Proč TotalDrop</a>
       <a href="#how" data-i18n="nav.how">Jak to funguje</a>
       <a href="#security" data-i18n="nav.security">Zabezpečení</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">Zdarma · Otevřený kód · Beta</p>
-        <h1 id="hero-title" data-i18n="hero.title">Pošlete soubor rovnou do jiného zařízení.</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop přenáší soubory přímo z vašeho zařízení do zařízení příjemce, s koncovým šifrováním. Sdílíte krátký kód; nikdo po cestě nepřečte, co posíláte. Žádný účet, e-mail ani telefonní číslo.</p>
+        <h1 id="hero-title" data-i18n="hero.title">Posílejte soubory a text rovnou do jiného zařízení.</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop přenáší soubory, celé složky i text ze schránky přímo z vašeho zařízení do zařízení příjemce, koncově šifrovaně pomocí postkvantových klíčů. Sdílejte krátký kód; nikdo po cestě si nepřečte, co posíláte. Žádný účet, e-mail ani telefonní číslo.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/cs/download/" data-i18n="hero.cta">Stáhnout betu</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">Prohlédnout kód</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">Android, Linux a CLI už dnes</li>
+          <li data-i18n="hero.h2">Postkvantový ML-KEM-768</li>
+          <li data-i18n="hero.h3">35 jazyků, žádné sledování</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">Kód přenosu</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">Kód přenosu</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">Jiný příklad</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">Čtyři ověřovací slova</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">Řekněte kód nahlas nebo ho vložte do zprávy. Kdo ho zadá, ten soubory dostane.</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">Nativní na každém počítači i telefonu</p>
+        <h2 id="apps-title" data-i18n="apps.title">Navržený tak, aby patřil do vašeho systému</h2>
+        <p data-i18n="apps.lede">TotalDrop přebírá barvy, písmo, tmavý režim i nabídky sdílení z operačního systému, který používáte. Posílejte z galerie, z vybraného textu, ze schránky nebo ze správce souborů, aniž byste nejdříve otevírali kartu prohlížeče.</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="TotalDrop v Androidu ve světlém a tmavém motivu Material You" data-i18n-label="apps.android.alt" aria-label="TotalDrop v Androidu ve světlém a tmavém motivu Material You" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Dynamické barvy Material You a ovládací prvky Material 3 Expressive. Sdílejte soubory nebo vybraný text přímo z libovolné aplikace, nebo podržte ikonu na ploše a odešlete obsah schránky.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">Systémová nabídka sdílení</li>
+              <li data-i18n="apps.tag.text">Text a schránka</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="Nativní linuxová aplikace TotalDrop v Qt 6 pro Wayland" data-i18n-label="apps.linux.alt" aria-label="Nativní linuxová aplikace TotalDrop v Qt 6 pro Wayland" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Aplikace pro Linux</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Nativní Qt 6 a QML pro Wayland, živě sledující KDE Plasma, Hyprland, Omarchy a GNOME. Klikněte pravým tlačítkem na libovolný soubor nebo složku v Dolphinu, Souborech nebo Nemu a ihned odešlete.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, Soubory, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 a ARM64</li>
+              <li data-i18n="apps.tag.pkg">Nativně a Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">Proč TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">Nic se nenahrává</h3>
           <p data-i18n="why.r1.d">Soubory jdou z vašeho zařízení do zařízení příjemce. Žádná kopie nečeká na serveru firmy a žádný odkaz nevyprší za týden.</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">Dnes Android, Linux a příkazový řádek; Windows, macOS a iOS připravujeme. Z telefonu do notebooku, z jakékoli značky na jakoukoli.</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">Žádný limit velikosti od nás</h3>
-          <p data-i18n="why.r4.d">Celé složky, dlouhá videa, fotky v původní kvalitě. Limit určuje jen váš disk a vaše připojení.</p>
+          <h3 data-i18n="why.r4.t">Soubory, složky a text ze schránky</h3>
+          <p data-i18n="why.r4.d">Posílejte fotky v původní kvalitě, obrovské složky nebo zkopírovanou poznámku. Text dorazí připravený ke zkopírování se skrytými znaky uvedenými jménem, nikdy neuložený na disk.</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">Ověřeno, ne založeno na důvěře</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">Otevřený kód pod licencí GPL, placený z darů. Žádné reklamy, žádné sledování, žádná placená verze.</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">Srovnání TotalDrop s obvyklými způsoby posílání souborů</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">Srovnání TotalDrop s obvyklými způsoby posílání souborů</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">Funkce</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">Odkazy v cloudu</th><th scope="col" data-i18n="why.cmp.nearby">Sdílení v okolí</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">Tři kroky</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">Vyberte soubory</h3>
-          <p data-i18n="how.s1.d">Jakéhokoli typu, kolik chcete. Příjemce dostane jen to, co vyberete.</p>
+          <h3 data-i18n="how.s1.t">Vyberte soubory nebo text</h3>
+          <p data-i18n="how.s1.d">Vyberte soubory, celé složky nebo text ze schránky — nebo odešlete rovnou ze systémové nabídky sdílení či ze správce souborů.</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">Sdílejte kód</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">Otevřít to můžete jen vy a příjemce</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">Kryptografie a formální ověřování</p>
+        <h2 id="sec-title" data-i18n="sec.title">Otevřít to můžete jen vy a příjemce</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">Zašifrováno před odesláním</dt>
           <dd data-i18n="sec.f1.d">Soubory se šifrují ve vašem zařízení a dešifrují se jen v zařízení příjemce. Klíče nikde jinde neexistují.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">Kód nelze uhodnout offline</dt>
-          <dd data-i18n="sec.f2.d">Kód se mění v klíč pomocí handshaku PAKE, takže špatný tip okamžitě selže a pokus propadne. Výměna klíčů zahrnuje postkvantový ML-KEM.</dd>
+          <dt data-i18n="sec.f2.t">Postkvantový handshake PAKE</dt>
+          <dd data-i18n="sec.f2.d">Kód řídí navázání CPace, které sytí Noise XXpsk3 s hybridními klíči X25519 a ML-KEM-768. Špatný tip okamžitě selže a pokus spálí.</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">Náš server jen seznamuje</dt>
-          <dd data-i18n="sec.f3.d">Vidí vaši IP adresu a číslo kódu, nikdy slova, názvy souborů ani soubory. Nevede žádné záznamy.</dd>
+          <dd data-i18n="sec.f3.d">Vidí vaši IP adresu a číslo kódu, nikdy slova, názvy souborů ani soubory samotné. Se zapnutým Režimem soukromí se vaši IP adresu nikdy nedozví ani druhé zařízení.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">Kód, který může zkontrolovat kdokoli</dt>
-          <dd data-i18n="sec.f4.d">Každý řádek je veřejný. Verze 1.0 vyjde až po nezávislém bezpečnostním auditu.</dd>
+          <dt data-i18n="sec.f4.t">Dokázáno v Tamarinu, auditováno před 1.0</dt>
+          <dd data-i18n="sec.f4.d">Šest symbolických modelů, 61 strojově ověřených lemmat a 27 regresních mutantů ověřuje chystaný, pro server neviditelný účet Ghost Ring v dokazovači Tamarin. Verze 1.0 čeká na nezávislý audit.</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/cs" hreflang="cs" data-i18n="sec.privacy">Přečíst zásady ochrany soukromí</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">Kde jsme</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">Hotovo</span>
           <h3 data-i18n="road.p0">Otevřený protokol, klient pro příkazový řádek, beta pro Android a aplikace pro Linux</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

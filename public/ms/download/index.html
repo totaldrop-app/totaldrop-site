@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Muat turun TotalDrop</title>
   <meta name="description" content="Muat turun TotalDrop untuk Linux, Android dan baris perintah. Windows, macOS, iOS dan pelayar akan datang.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ms/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">Langkau ke kandungan</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">Platform</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">Untuk peranti ini</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">Beta</span></header>
-          <p data-i18n="dl.android.d">Aplikasi penuh, dalam bahasa anda, mengikut warna telefon anda.</p>
+          <p data-i18n="dl.android.d">Aplikasi penuh, dalam bahasa anda, mengikut warna telefon anda, dengan penghantaran melalui menu kongsi dan papan keratan.</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 atau lebih baharu, 64-bit</li>
             <li data-i18n="dl.android.r2">Ujian di Google Play, melalui jemputan semasa beta masih tertutup</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">Untuk peranti ini</span>
           <header><h3 data-i18n="dl.cli">Baris perintah</h3><span class="pill is-ready" data-i18n="dl.ready">Tersedia</span></header>
-          <p data-i18n="dl.cli.d">Untuk terminal Linux, macOS dan Windows. Menghantar fail dan keseluruhan folder.</p>
+          <p data-i18n="dl.cli.d">Prabina dalam pakej Linux hari ini, atau dibina daripada kod sumber dengan Cargo. Menghantar fail, keseluruhan folder dan teks daripada argumen atau input standard.</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="Perintah pemasangan" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">Salin perintah</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="Contoh penggunaan" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">Dibina dengan Qt 6 untuk Wayland. Ia mengambil warna, fon dan ikon daripada desktop anda: Plasma, Hyprland, Omarchy, GNOME.</p>
           <ul>
             <li data-i18n="dl.linux.r1">Pakej berasingan untuk setiap keluarga distribusi: semuanya untuk x86-64; Debian, Ubuntu dan Fedora juga untuk ARM64</li>
-            <li data-i18n="dl.linux.r2">Pakej .pkg, .deb dan .rpm turut memasang arahan totaldrop</li>
+            <li data-i18n="dl.linux.r2">Pakej .pkg, .deb dan .rpm turut memasang arahan totaldrop dan menu klik kanan untuk Dolphin, Files dan Nemo</li>
             <li data-i18n="dl.linux.r3">Gunakan satu pakej Linux pada satu masa. Flatpak dan pakej .pkg, .deb atau .rpm berkongsi satu nama, jadi semasa salah satunya dibuka, memulakan yang lain akan membawa tetingkap yang terbuka ke hadapan dan bukannya membuka tetingkap kedua.</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">Akan datang</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">Untuk peranti ini</span>
           <header><h3 data-i18n="dl.web">Dalam pelayar</h3><span class="pill" data-i18n="rm.now.when">November 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">Keperluan</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">Platform</th><th scope="col" data-i18n="dl.req.min">Minimum</th><th scope="col" data-i18n="dl.req.notes">Nota</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM 64-bit</td><td data-i18n="dl.req.android.n">Kebenaran internet sahaja</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM 64-bit</td><td data-i18n="dl.req.android.n">Kebenaran rangkaian, pemindahan latar belakang dan pemberitahuan; pustaka asli sejajar halaman 16 KB</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8: Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland atau X11; x86-64 dan ARM64 (.deb, .rpm, Flatpak; Arch x86-64 sahaja)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">Baris perintah</th><td data-i18n="dl.req.cli">Rust 1.99 untuk membina</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">Baris perintah</th><td data-i18n="dl.req.cli">Rust 1.99 untuk membina</td><td data-i18n="dl.req.cli.n">Prabina pada Linux; dibina daripada kod sumber dengan Cargo di tempat lain (binari prabina macOS dan Windows dirancang)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">Rangkaian</th><td data-i18n="dl.req.net.m">Internet, atau rangkaian yang sama</td><td data-i18n="dl.req.net.n">Terus apabila boleh, jika tidak melalui pelayan geganti</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

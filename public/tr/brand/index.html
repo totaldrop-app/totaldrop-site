@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop markası</title>
   <meta name="description" content="TotalDrop işareti, hareketi, renkleri, yazı tipleri, düğmeleri ve simgeleri, nasıl kullanılacakları ve indirilecek logo dosyaları.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/tr/brand/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/brand/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/brand/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="brand">
   <a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
@@ -76,7 +79,7 @@
     <section class="dl-hero bk-hero" aria-labelledby="bk-title">
       <p class="eyebrow" data-i18n="bk.eyebrow">Kurumsal kimlik</p>
       <h1 id="bk-title" data-i18n="bk.title">TotalDrop markası</h1>
-      <p class="lede" data-i18n="bk.lede">Bir işaret, bir vurgu rengi, iki yazı tipi. Geri kalan her şey TotalDrop'un çalıştığı sistemden gelir. Bu sayfa parçaları, nasıl kullanılacaklarını ve nereden indirileceklerini gösterir.</p>
+      <p class="lede" data-i18n="bk.lede">Bir işaret, sakin nötr yüzeyler, tek bir etkileşim vurgusu, iki yazı tipi. Geri kalan her şey TotalDrop'un çalıştığı sistemden gelir. Bu sayfa parçaları, nasıl kullanılacaklarını ve nereden indirileceklerini gösterir.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#files" data-i18n="bk.cta">Logoyu indirin</a>
         <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop/blob/main/docs/tasarim.md" data-i18n="bk.source">Depodaki tasarım kuralları</a>
@@ -104,14 +107,14 @@
     <section class="block" id="principles" aria-labelledby="principles-title">
       <h2 id="principles-title" data-i18n="bk.p.title">Daha az, ama daha iyi</h2>
       <p data-i18n="bk.p.lede">TotalDrop, Dieter Rams'ın ilkesini izler: her öğenin bir işi vardır, işi olmayan çıkarılır.</p>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.p1.t">Sistemin bir parçası</h3>
           <p data-i18n="bk.p1.d">Uygulamalar renklerini, açık ya da koyu temayı, simgeleri ve pencereleri sistemden alır; Linux'ta yazı tiplerini de. Her yerde aynı kalan yalnızca işaret ve onun renkleridir.</p>
         </li>
         <li>
           <h3 data-i18n="bk.p2.t">Ekran başına tek vurgu</h3>
-          <p data-i18n="bk.p2.d">Mor; yapılacak tek sonraki işi, bağlantıları ve odak halkasını gösterir. Geri kalan her şey kâğıt üstünde mürekkeptir.</p>
+          <p data-i18n="bk.p2.d">Mor yalnızca Köşe işaretine aittir. Web'de Kobalt ana eylemi, bağlantıları ve odak halkasını gösterir; nötr Mineral yüzeyler ise yazıyı berrak tutar.</p>
         </li>
         <li>
           <h3 data-i18n="bk.p3.t">Efekt yok</h3>
@@ -235,7 +238,7 @@
       <div class="bk-grid bk-grid-2">
         <figure class="bk-fig">
           <div class="bk-stage bk-on-light bk-wide">
-            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.word">Logo</span>
@@ -244,7 +247,7 @@
         </figure>
         <figure class="bk-fig">
           <div class="bk-stage bk-on-dark bk-wide">
-            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.dark">Koyu zeminde logo</span>
@@ -287,7 +290,7 @@
     <section class="block" id="misuse" aria-labelledby="misuse-title">
       <h2 id="misuse-title" data-i18n="bk.no.title">Yapılmaması gerekenler</h2>
       <p data-i18n="bk.no.lede">İşaret tek ve düz bir renktir, olduğu gibi kullanılır. Sık yapılan hatalar şunlar.</p>
-      <ul class="bk-grid bk-grid-4 bk-donts">
+      <ul class="bk-grid bk-grid-4 bk-donts" role="list">
         <li class="bk-fig">
           <div class="bk-stage"><svg viewBox="0 0 112 112" aria-hidden="true"><path class="mk" d="M55 15H83A14 14 0 0 1 97 29V57A42 42 0 1 1 55 15Z"/></svg></div>
           <p class="bk-no" data-i18n="bk.no.label">Yapmayın</p>
@@ -334,38 +337,40 @@
 
     <section class="block" id="colour" aria-labelledby="colour-title">
       <h2 id="colour-title" data-i18n="bk.col.title">Renk</h2>
-      <p data-i18n="bk.col.lede">Uygulamalar çalıştıkları sistemin renklerini kullanır: Android'de Material You, Linux'ta masaüstü teması. Aşağıdaki Aurora paleti sistem renk vermediğinde ve bu web sitesinde kullanılır. Sayfa zeminindeki metin iki temada da 4,5:1'i geçer.</p>
+      <p data-i18n="bk.col.lede">Uygulamalar çalıştıkları sistemin renklerini kullanır: Android'de Material You, Linux'ta masaüstü teması; Aurora yalnızca sistem bir palet sunmadığında yedek olarak tutulur. Bu web sitesinde aşağıdaki Mineral paleti, mor Köşe işaretinin net biçimde ayrışması için nötr yüzeyleri Kobalt etkileşim denetimleriyle eşleştirir. Her metin ve etkileşim rolü iki temada da WCAG AA'yı geçer.</p>
       <div class="bk-swatches bk-brand">
-        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">Açık zeminde işaret ve vurgu.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">Koyu zeminde işaret ve vurgu.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-paper"></span><span class="bk-sw-name">Paper</span><code>#F4F2FB</code><span class="bk-sw-use" data-i18n="bk.col.paper">Açık zemin; uygulama simgesindeki işaret.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-ink"></span><span class="bk-sw-name">Ink</span><code>#22184F</code><span class="bk-sw-use" data-i18n="bk.col.ink">Açık zeminde yazı.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-night"></span><span class="bk-sw-name">Night</span><code>#140E33</code><span class="bk-sw-use" data-i18n="bk.col.night">Koyu zemin.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-mist"></span><span class="bk-sw-name">Mist</span><code>#E2DCF6</code><span class="bk-sw-use" data-i18n="bk.col.mist">Açık zeminde sakin, yükseltilmiş yüzey.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">Açık zeminlerde ve uygulama simgesi karosunda Köşe işareti.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">Koyu zeminlerde Köşe işareti.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-cobalt"></span><span class="bk-sw-name">Cobalt</span><code>#1E47B8</code><span class="bk-sw-use" data-i18n="bk.col.cobalt">Açık zeminlerde ana eylemler, bağlantılar ve odak halkası.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-ice"></span><span class="bk-sw-name">Ice Cobalt</span><code>#7DB4FF</code><span class="bk-sw-use" data-i18n="bk.col.ice">Koyu zeminlerde ana eylemler, bağlantılar ve odak halkası.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-alabaster"></span><span class="bk-sw-name">Alabaster</span><code>#F7F7F5</code><span class="bk-sw-use" data-i18n="bk.col.paper">Saf beyaz kartlarla eşleşen açık sayfa zemini.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-obsidian"></span><span class="bk-sw-name">Obsidian</span><code>#0F1116</code><span class="bk-sw-use" data-i18n="bk.col.night">Grafit kartlarla eşleşen koyu sayfa zemini.</span></div>
       </div>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="bk-col-tokens">
         <table class="req bk-tokens">
-          <caption data-i18n="bk.col.tokens">Renk rolleri, açık ve koyu tema</caption>
+          <caption id="bk-col-tokens" data-i18n="bk.col.tokens">Renk rolleri, açık ve koyu tema</caption>
           <thead>
             <tr><th scope="col" data-i18n="bk.col.role">Rol</th><th scope="col" data-i18n="bk.col.light">Açık</th><th scope="col" data-i18n="bk.col.dark">Koyu</th><th scope="col" data-i18n="bk.col.use">Kullanım</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.bg">Sayfa ve ekran zemini.</td></tr>
-            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-night2"></span><code>#1E1648</code></td><td data-i18n="bk.col.raised">Al kartı gibi sakin ikinci yüzey.</td></tr>
-            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-rule"></span><code>#2E2566</code></td><td data-i18n="bk.col.rule">Ayırıcı çizgiler; yalnızca süs.</td></tr>
-            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.outline">Metin alanlarının ve çerçeveli düğmelerin kenarı.</td></tr>
-            <tr><th scope="row"><code>ink</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-ink"></span><code>#22184F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td data-i18n="bk.col.text">Yazı ve başlıklar.</td></tr>
-            <tr><th scope="row"><code>ink-muted</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.muted">İkincil yazı: açıklamalar, notlar, birimler.</td></tr>
-            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.accent">Tek ana eylem, bağlantılar, odak halkası. Ekran başına bir kez.</td></tr>
-            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.onaccent">Vurgu dolgusu üzerindeki yazı; koyu temada vurgu daha açık olduğu için koyudur.</td></tr>
-            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-success"></span><code>#0A7357</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-success-d"></span><code>#7ED9B5</code></td><td data-i18n="bk.col.success">Tamamlandı. Her zaman bir simge ya da sözcükle, asla yalnızca renkle.</td></tr>
-            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-error"></span><code>#BA1A1A</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FFB4AB</code></td><td data-i18n="bk.col.error">Bir şey ters gitti. Her zaman bir simge ya da sözcükle.</td></tr>
+            <tr><th scope="row"><code>mark</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.mark">Yalnızca Köşe işareti; asla düğmelerde ya da gövde metninde kullanılmaz.</td></tr>
+            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-alabaster"></span><code>#F7F7F5</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-obsidian"></span><code>#0F1116</code></td><td data-i18n="bk.col.bg">Sayfa ve ekran zemini.</td></tr>
+            <tr><th scope="row"><code>surface</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-surface"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-graphite"></span><code>#161922</code></td><td data-i18n="bk.col.surface">Kartlar, aktarım örnekleri, uygulama çerçeveleri ve tablolar.</td></tr>
+            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-stone"></span><code>#EEEEEC</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-elevated"></span><code>#1E222E</code></td><td data-i18n="bk.col.raised">Kod blokları ve etiketler için sakin gömülü yüzey.</td></tr>
+            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-rule-l"></span><code>#DFDFE2</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-rule-d"></span><code>#282E3D</code></td><td data-i18n="bk.col.rule">Ayırıcı çizgiler; yalnızca süs.</td></tr>
+            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-outline-l"></span><code>#646A78</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-outline-d"></span><code>#8790A1</code></td><td data-i18n="bk.col.outline">Metin alanlarının ve çerçeveli düğmelerin kenarı.</td></tr>
+            <tr><th scope="row"><code>text</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-carbon"></span><code>#14161D</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-chalk"></span><code>#F2F4F8</code></td><td data-i18n="bk.col.text">Yazı ve başlıklar.</td></tr>
+            <tr><th scope="row"><code>text-2</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-slate"></span><code>#4A4F5C</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-silver"></span><code>#A3ABB9</code></td><td data-i18n="bk.col.muted">İkincil yazı: açıklamalar, notlar, birimler.</td></tr>
+            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-cobalt"></span><code>#1E47B8</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-ice"></span><code>#7DB4FF</code></td><td data-i18n="bk.col.accent">Tek ana eylem, bağlantılar, odak halkası. Ekran başına bir kez.</td></tr>
+            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-navy"></span><code>#0B1220</code></td><td data-i18n="bk.col.onaccent">Vurgu dolgusu üzerindeki yazı; koyu temada vurgu daha açık olduğu için koyudur.</td></tr>
+            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-success"></span><code>#0B6E4F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-success-d"></span><code>#6EE7B7</code></td><td data-i18n="bk.col.success">Tamamlandı. Her zaman bir simge ya da sözcükle, asla yalnızca renkle.</td></tr>
+            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Açık</span><span class="bk-dot-sw bk-c-error"></span><code>#B81D24</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Koyu</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FCA5A5</code></td><td data-i18n="bk.col.error">Bir şey ters gitti. Her zaman bir simge ya da sözcükle.</td></tr>
           </tbody>
         </table>
       </div>
       <dl class="facts bk-contrast">
-        <div><dt data-i18n="bk.col.c1">Zemin üzerinde yazı</dt><dd data-i18n="bk.col.c1.d">Kâğıt üzerinde mürekkep 14,4:1, gece üzerinde kâğıt 16,6:1.</dd></div>
-        <div><dt data-i18n="bk.col.c2">Yazı olarak vurgu</dt><dd data-i18n="bk.col.c2.d">Kâğıt üzerinde mor 5,1:1, gece üzerinde ışıltı 6,8:1. Yükseltilmiş yüzeyde vurgu ve başarı renkleri yalnızca büyük metin ve simgeler içindir.</dd></div>
+        <div><dt data-i18n="bk.col.c1">Zemin üzerinde yazı</dt><dd data-i18n="bk.col.c1.d">Kaymaktaşı üzerinde karbon mürekkep 16,8:1; obsidyen üzerinde tebeşir mürekkebi 17,2:1.</dd></div>
+        <div><dt data-i18n="bk.col.c2">Yazı ve dolgu olarak vurgu</dt><dd data-i18n="bk.col.c2.d">Kaymaktaşı üzerinde kobalt 7,4:1 (kobalt üzerinde beyaz 7,9:1); obsidyen üzerinde buz kobaltı 8,9:1 (buz kobaltı üzerinde lacivert 8,8:1).</dd></div>
       </dl>
     </section>
 
@@ -384,12 +389,12 @@
           <p data-i18n="bk.type.body">Geri kalan her şey: metin, düğmeler ve alanlar. Braille Institute tarafından I, l ve 1 gibi benzer harfler birbirinden ayrı kalsın diye yapıldı.</p>
         </div>
       </div>
-      <ol class="bk-scale">
-        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.6rem, 6.4vw, 4.75rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">Her cihazdan her cihaza</span></li>
-        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.75rem, 3.6vw, 2.5rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">Nasıl çalışır</span></li>
-        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.25rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">Kodu paylaşın</span></li>
+      <ol class="bk-scale" role="list">
+        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.15rem, 1.1rem + 4.4vw, 4.4rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">Her cihazdan her cihaza</span></li>
+        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.65rem, 1.1rem + 2vw, 2.45rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">Nasıl çalışır</span></li>
+        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.225rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">Kodu paylaşın</span></li>
         <li><span class="bk-scale-meta"><code>body</code> <span>Atkinson 400 · 1.0625rem · 1.6</span></span><span class="bk-t-body" data-i18n="why.r1.d">Dosyalar sizin cihazınızdan onunkine gider. Bir şirketin sunucusunda bekleyen kopya yok, bir haftada süresi dolan link yok.</span></li>
-        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.875rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">Ücretsiz · Açık kaynak · Beta</span></li>
+        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.8125rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">Ücretsiz · Açık kaynak · Beta</span></li>
       </ol>
       <p class="note" data-i18n="bk.type.rules">Akan metnin satırları 44rem'in altında kalır. Hizalanan rakamlar (boyutlar, yüzdeler) eşit genişlikli rakamlarla yazılır. Arap alfabesiyle yazılan dillerde harf aralığı kaldırılır, yoksa harflerin bağlantısı kopar.</p>
     </section>
@@ -400,7 +405,7 @@
       <h3 data-i18n="bk.btn.kinds">Üç tür düğme</h3>
       <div class="bk-grid bk-grid-3">
         <figure class="bk-fig">
-          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="how.s1.t">Dosyaları seçin</span></div>
+          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="bk.cmp.choose">Dosyaları seçin</span></div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.btn.main">Ana eylem</span>
             <span data-i18n="bk.btn.main.d">Vurgu rengiyle dolu, etiketi vurgu üstü renginde. Ekran başına bir tane; çoğu kişinin sonra yapacağı iş için.</span>
@@ -494,7 +499,7 @@
       <div class="bk-grid bk-grid-2">
         <div class="bk-col">
           <h3 data-i18n="bk.sp.scale">Boşluk</h3>
-          <ul class="bk-bars">
+          <ul class="bk-bars" role="list">
             <li><span class="bk-bar bk-w8"></span><code>8</code><span data-i18n="bk.sp.8">Simgeyle etiket, başlıkla metin arası</span></li>
             <li><span class="bk-bar bk-w16"></span><code>16</code><span data-i18n="bk.sp.16">Kartlar arası, bir blok içi</span></li>
             <li><span class="bk-bar bk-w24"></span><code>24</code><span data-i18n="bk.sp.24">Kartın içi, ekran kenarı (telefonda 16)</span></li>
@@ -504,7 +509,7 @@
         </div>
         <div class="bk-col">
           <h3 data-i18n="bk.sp.radius">Köşeler</h3>
-          <ul class="bk-radii">
+          <ul class="bk-radii" role="list">
             <li><span class="bk-rad bk-r8"></span><code>8</code><span data-i18n="bk.sp.r8">İlerleme çubuğu</span></li>
             <li><span class="bk-rad bk-r16"></span><code>16</code><span data-i18n="bk.sp.r16">Metin alanı, kod kutusu</span></li>
             <li><span class="bk-rad bk-r28"></span><code>28</code><span data-i18n="bk.sp.r28">Kartlar</span></li>
@@ -536,7 +541,7 @@
 
     <section class="block" id="voice" aria-labelledby="voice-title">
       <h2 id="voice-title" data-i18n="bk.vo.title">Dil ve üslup</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.vo1.t">Ne olacağını söyleyin</h3>
           <p data-i18n="bk.vo1.d">Düğme eylemini söyler: "Dosyaları seçin", "Kabul et". Hata mesajı neyin ters gittiğini ve ne yapılacağını söyler, özür dilemez.</p>
@@ -559,7 +564,7 @@
     <section class="block" id="use" aria-labelledby="use-title">
       <h2 id="use-title" data-i18n="bk.use.title">Ad ve işaretin kullanımı</h2>
       <p data-i18n="bk.use.lede">TotalDrop açık kaynaklıdır, ama lisansları kodu kapsar, TotalDrop adını ve işaretini değil. Bu kurallar, TotalDrop adını taşıyan bir uygulamanın gerçekten bu projeden gelmesi için var.</p>
-      <ul class="reasons bk-use-yes">
+      <ul class="reasons bk-use-yes" role="list">
         <li>
           <h3 data-i18n="bk.use1.t">Hakkında yazın</h3>
           <p data-i18n="bk.use1.d">totaldrop.app'e bağlantı verin; yazıda, incelemede, videoda ve derste TotalDrop'tan adıyla ve değiştirilmemiş işaretiyle söz edin. İzin almanız gerekmez.</p>
@@ -577,7 +582,7 @@
           <p data-i18n="bk.use4.d">Lisanslar kodu değiştirmenize izin verir. Sürümünüzü kendi adı ve işaretiyle yayımlayın. TotalDrop tabanlı olduğunu söyleyebilirsiniz, ama TotalDrop'un onu onayladığını ima edemezsiniz.</p>
         </li>
       </ul>
-      <ul class="reasons bk-use-no">
+      <ul class="reasons bk-use-no" role="list">
         <li>
           <p class="bk-no" data-i18n="bk.no.label">Yapmayın</p>
           <p data-i18n="bk.use.no1">Herhangi bir şeyi resmî TotalDrop sürümü, ortağı ya da onaylı ürünü gibi göstermek.</p>
@@ -606,34 +611,34 @@
     <section class="block" id="files" aria-labelledby="files-title">
       <h2 id="files-title" data-i18n="bk.files.title">İndirilenler</h2>
       <p data-i18n="bk.files.lede">Baskı ve ekran için vektör dosyalar (SVG) ve saydam zeminli PNG dosyaları. Olduğu gibi kullanın.</p>
-      <ul class="platforms bk-files">
+      <ul class="platforms bk-files" role="list">
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-mark" data-i18n="bk.f.mark">Açık zemin için işaret</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-markdark" data-i18n="bk.f.markdark">Koyu zemin için işaret</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logo" data-i18n="bk.f.logo">Açık zemin için logo</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logodark" data-i18n="bk.f.logodark">Koyu zemin için logo</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-icon" data-i18n="bk.f.icon">Uygulama simgesi</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48"></div>
+          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48" loading="lazy" decoding="async"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-mono" data-i18n="bk.f.mono">Tek renk, siyah ya da beyaz</h3>
           <p data-i18n="bk.f.mono.d">Yalnızca renkli baskının mümkün olmadığı yerlerde, örneğin kaşe ya da gravürde.</p>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-black.svg" download data-i18n="bk.f.black">Siyah SVG</a><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-white.svg" download data-i18n="bk.f.white">Beyaz SVG</a></p>
@@ -664,6 +669,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

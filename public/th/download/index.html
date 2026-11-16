@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ดาวน์โหลด TotalDrop</title>
   <meta name="description" content="ดาวน์โหลด TotalDrop สำหรับ Linux, Android และบรรทัดคำสั่ง Windows, macOS, iOS และเบราว์เซอร์กำลังจะมา">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/th/download/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/download/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/download/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="download">
   <a class="skip" href="#main" data-i18n="skip">ข้ามไปยังเนื้อหา</a>
@@ -81,11 +84,11 @@
 
     <section class="block" aria-labelledby="dl-platforms">
       <h2 id="dl-platforms" class="visually-hidden" data-i18n="dl.platforms">แพลตฟอร์ม</h2>
-      <ul class="platforms">
+      <ul class="platforms" role="list">
         <li class="platform" data-platform="android">
           <span class="yours" data-i18n="dl.yours">สำหรับอุปกรณ์นี้</span>
           <header><h3 data-i18n="dl.android">Android</h3><span class="pill is-beta" data-i18n="dl.beta">เบต้า</span></header>
-          <p data-i18n="dl.android.d">แอปเต็มรูปแบบ ในภาษาของคุณ ใช้สีตามโทรศัพท์ของคุณ</p>
+          <p data-i18n="dl.android.d">แอปเต็มรูปแบบ ในภาษาของคุณ ใช้สีตามโทรศัพท์ พร้อมการส่งผ่านชีตแชร์และคลิปบอร์ด</p>
           <ul>
             <li data-i18n="dl.android.r1">Android 15 ขึ้นไป 64 บิต</li>
             <li data-i18n="dl.android.r2">ทดสอบบน Google Play ด้วยคำเชิญระหว่างที่เบต้ายังปิดอยู่</li>
@@ -95,12 +98,13 @@
         <li class="platform" data-platform="cli">
           <span class="yours" data-i18n="dl.yours">สำหรับอุปกรณ์นี้</span>
           <header><h3 data-i18n="dl.cli">บรรทัดคำสั่ง</h3><span class="pill is-ready" data-i18n="dl.ready">พร้อมใช้งาน</span></header>
-          <p data-i18n="dl.cli.d">สำหรับเทอร์มินัลบน Linux, macOS และ Windows ส่งได้ทั้งไฟล์และทั้งโฟลเดอร์</p>
+          <p data-i18n="dl.cli.d">สร้างไว้ล่วงหน้าในแพ็กเกจ Linux วันนี้ หรือคอมไพล์จากซอร์สโค้ดด้วย Cargo ส่งไฟล์ ทั้งโฟลเดอร์ และข้อความจากอาร์กิวเมนต์หรืออินพุตมาตรฐาน</p>
           <pre class="cmd" tabindex="0" role="group" aria-label="คำสั่งติดตั้ง" data-i18n-label="dl.cmd.install"><code>cargo install --locked \
   --git https://github.com/totaldrop-app/totaldrop \
   totaldrop-cli</code></pre>
           <button class="copy" type="button" data-copy="cargo install --locked --git https://github.com/totaldrop-app/totaldrop totaldrop-cli" data-i18n="dl.copy">คัดลอกคำสั่ง</button>
           <pre class="cmd" tabindex="0" role="group" aria-label="ตัวอย่างการใช้งาน" data-i18n-label="dl.cmd.use"><code>totaldrop send ~/Photos/trip
+totaldrop send --text "hello"
 totaldrop receive 7-harbor-rocket</code></pre>
         </li>
         <li class="platform" data-platform="linux">
@@ -109,7 +113,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
           <p data-i18n="dl.linux.d">สร้างด้วย Qt 6 สำหรับ Wayland ใช้สี ฟอนต์ และไอคอนจากเดสก์ท็อปของคุณ: Plasma, Hyprland, Omarchy, GNOME</p>
           <ul>
             <li data-i18n="dl.linux.r1">แพ็กเกจแยกสำหรับดิสทริบิวชันแต่ละตระกูล: ทั้งหมดสำหรับ x86-64 และ Debian, Ubuntu และ Fedora สำหรับ ARM64 ด้วย</li>
-            <li data-i18n="dl.linux.r2">แพ็กเกจ .pkg, .deb และ .rpm ติดตั้งคำสั่ง totaldrop ด้วย</li>
+            <li data-i18n="dl.linux.r2">แพ็กเกจ .pkg , .deb และ .rpm ยังติดตั้งคำสั่ง totaldrop และเมนูคลิกขวาสำหรับ Dolphin, Files และ Nemo ด้วย</li>
             <li data-i18n="dl.linux.r3">ใช้แพ็กเกจ Linux ครั้งละหนึ่งแพ็กเกจ Flatpak กับแพ็กเกจ .pkg, .deb หรือ .rpm ใช้ชื่อเดียวกัน ขณะที่อันหนึ่งเปิดอยู่ การเปิดอีกอันจะนำหน้าต่างที่เปิดอยู่ขึ้นมาด้านหน้าแทนการเปิดหน้าต่างที่สอง</li>
           </ul>
           <div class="actions">
@@ -125,7 +129,7 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-soon">
       <h2 id="dl-soon" data-i18n="dl.soon">กำลังมา</h2>
-      <ul class="platforms soon">
+      <ul class="platforms soon" role="list">
         <li class="platform" data-platform="web">
           <span class="yours" data-i18n="dl.yours">สำหรับอุปกรณ์นี้</span>
           <header><h3 data-i18n="dl.web">ในเบราว์เซอร์</h3><span class="pill" data-i18n="rm.now.when">พฤศจิกายน 2026</span></header>
@@ -175,13 +179,13 @@ totaldrop receive 7-harbor-rocket</code></pre>
 
     <section class="block" aria-labelledby="dl-req">
       <h2 id="dl-req" data-i18n="dl.req.title">ความต้องการของระบบ</h2>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="dl-req">
         <table class="req">
           <thead><tr><th scope="col" data-i18n="dl.req.platform">แพลตฟอร์ม</th><th scope="col" data-i18n="dl.req.min">ขั้นต่ำ</th><th scope="col" data-i18n="dl.req.notes">หมายเหตุ</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM 64 บิต</td><td data-i18n="dl.req.android.n">ใช้สิทธิ์อินเทอร์เน็ตเท่านั้น</td></tr>
+            <tr><th scope="row">Android</th><td data-i18n="dl.req.android">Android 15, ARM 64 บิต</td><td data-i18n="dl.req.android.n">สิทธิ์เครือข่าย การโอนย้ายเบื้องหลัง และการแจ้งเตือน พร้อมไลบรารีเนทีฟจัดหน้า 16 KB</td></tr>
             <tr><th scope="row">Linux</th><td data-i18n="dl.req.linux">Qt 6.8: Debian 13, Ubuntu 25.04, Fedora 43, Arch</td><td data-i18n="dl.req.linux.n">Wayland หรือ X11; x86-64 และ ARM64 (.deb, .rpm, Flatpak; Arch เฉพาะ x86-64)</td></tr>
-            <tr><th scope="row" data-i18n="dl.cli">บรรทัดคำสั่ง</th><td data-i18n="dl.req.cli">Rust 1.99 สำหรับบิลด์</td><td data-i18n="dl.req.cli.n">Linux, macOS, Windows</td></tr>
+            <tr><th scope="row" data-i18n="dl.cli">บรรทัดคำสั่ง</th><td data-i18n="dl.req.cli">Rust 1.99 สำหรับบิลด์</td><td data-i18n="dl.req.cli.n">สร้างไว้ล่วงหน้าบน Linux ส่วนระบบอื่นคอมไพล์จากซอร์สโค้ดด้วย Cargo (ไบนารีสำเร็จรูปสำหรับ macOS และ Windows มีแผนรองรับ)</td></tr>
             <tr><th scope="row" data-i18n="dl.req.net">เครือข่าย</th><td data-i18n="dl.req.net.m">อินเทอร์เน็ต หรือเครือข่ายเดียวกัน</td><td data-i18n="dl.req.net.n">เชื่อมต่อโดยตรงเมื่อทำได้ ไม่เช่นนั้นผ่านรีเลย์</td></tr>
           </tbody>
         </table>
@@ -219,6 +223,6 @@ totaldrop receive 7-harbor-rocket</code></pre>
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

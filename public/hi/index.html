@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: फ़ाइलें सीधे भेजें, एंड-टू-एंड एन्क्रिप्टेड</title>
-  <meta name="description" content="TotalDrop एक मुफ़्त, ओपन सोर्स ऐप है जो फ़ाइलें एक डिवाइस से दूसरे डिवाइस पर सीधे, एंड-टू-एंड एन्क्रिप्टेड भेजता है। न खाता, न ईमेल, न फ़ोन नंबर।">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: फ़ाइलें और टेक्स्ट सीधे भेजें, एंड-टू-एंड एन्क्रिप्टेड</title>
+  <meta name="description" content="TotalDrop एक मुफ़्त, ओपन-सोर्स ऐप है जो फ़ाइलें, फ़ोल्डर और टेक्स्ट एक डिवाइस से दूसरे डिवाइस पर सीधे, एंड-टू-एंड एन्क्रिप्टेड भेजता है। न खाता, न ईमेल, न फ़ोन नंबर।">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/hi/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: फ़ाइलें सीधे भेजें, एंड-टू-एंड एन्क्रिप्टेड">
-  <meta property="og:description" content="TotalDrop एक मुफ़्त, ओपन सोर्स ऐप है जो फ़ाइलें एक डिवाइस से दूसरे डिवाइस पर सीधे, एंड-टू-एंड एन्क्रिप्टेड भेजता है। न खाता, न ईमेल, न फ़ोन नंबर।">
+  <meta property="og:title" content="TotalDrop: फ़ाइलें और टेक्स्ट सीधे भेजें, एंड-टू-एंड एन्क्रिप्टेड">
+  <meta property="og:description" content="TotalDrop एक मुफ़्त, ओपन-सोर्स ऐप है जो फ़ाइलें, फ़ोल्डर और टेक्स्ट एक डिवाइस से दूसरे डिवाइस पर सीधे, एंड-टू-एंड एन्क्रिप्टेड भेजता है। न खाता, न ईमेल, न फ़ोन नंबर।">
   <meta property="og:url" content="https://totaldrop.app/hi/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">सामग्री पर जाएँ</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="मुख्य" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">ऐप्स</a>
       <a href="#why" data-i18n="nav.why">TotalDrop क्यों</a>
       <a href="#how" data-i18n="nav.how">यह कैसे काम करता है</a>
       <a href="#security" data-i18n="nav.security">सुरक्षा</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">मुफ़्त · ओपन सोर्स · बीटा</p>
-        <h1 id="hero-title" data-i18n="hero.title">फ़ाइल सीधे दूसरे डिवाइस पर भेजें।</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop आपके डिवाइस से फ़ाइलें सीधे उनके डिवाइस तक पहुँचाता है, एंड-टू-एंड एन्क्रिप्टेड। आप एक छोटा कोड साझा करते हैं; बीच में कोई भी नहीं पढ़ सकता कि आप क्या भेज रहे हैं। न खाता, न ईमेल, न फ़ोन नंबर।</p>
+        <h1 id="hero-title" data-i18n="hero.title">फ़ाइलें और टेक्स्ट सीधे दूसरे डिवाइस पर भेजें।</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop फ़ाइलें, पूरे फ़ोल्डर और क्लिपबोर्ड टेक्स्ट आपके डिवाइस से सीधे उनके डिवाइस तक पहुँचाता है, पोस्ट-क्वांटम कुंजियों से एंड-टू-एंड एन्क्रिप्टेड। एक छोटा कोड साझा करें; बीच में कोई भी नहीं पढ़ सकता कि आप क्या भेज रहे हैं। न खाता, न ईमेल, न फ़ोन नंबर।</p>
         <div class="actions">
           <a class="btn btn-primary" href="/hi/download/" data-i18n="hero.cta">बीटा डाउनलोड करें</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">कोड पढ़ें</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">आज Android, Linux और CLI पर</li>
+          <li data-i18n="hero.h2">पोस्ट-क्वांटम ML-KEM-768</li>
+          <li data-i18n="hero.h3">35 भाषाएँ, शून्य ट्रैकर</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">ट्रांसफ़र कोड</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">ट्रांसफ़र कोड</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">एक और उदाहरण</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">सत्यापन के चार शब्द</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">कोड बोलकर बताएँ या किसी मैसेज में चिपकाएँ। जो भी इसे डालेगा, उसे फ़ाइलें मिलेंगी।</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">हर डेस्कटॉप और फ़ोन पर नेटिव</p>
+        <h2 id="apps-title" data-i18n="apps.title">आपके सिस्टम का हिस्सा बनने के लिए निर्मित</h2>
+        <p data-i18n="apps.lede">TotalDrop अपने रंग, टाइपोग्राफ़ी, डार्क मोड और शेयर मेन्यू उसी ऑपरेटिंग सिस्टम से लेता है जिसे आप चलाते हैं। पहले ब्राउज़र टैब खोले बिना अपनी गैलरी, चुने हुए टेक्स्ट, क्लिपबोर्ड या फ़ाइल मैनेजर से भेजें।</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="हल्की और गहरी Material You थीम में Android पर TotalDrop" data-i18n-label="apps.android.alt" aria-label="हल्की और गहरी Material You थीम में Android पर TotalDrop" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Material You के डायनामिक रंग और Material 3 Expressive कंट्रोल। किसी भी ऐप से सीधे फ़ाइलें या चुना हुआ टेक्स्ट साझा करें, या क्लिपबोर्ड भेजने के लिए लॉन्चर आइकन दबाए रखें।</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">सिस्टम शेयर शीट</li>
+              <li data-i18n="apps.tag.text">टेक्स्ट और क्लिपबोर्ड</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="Linux पर TotalDrop का नेटिव Qt 6 Wayland ऐप" data-i18n-label="apps.linux.alt" aria-label="Linux पर TotalDrop का नेटिव Qt 6 Wayland ऐप" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Linux ऐप</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Wayland के लिए नेटिव Qt 6 और QML, जो KDE Plasma, Hyprland, Omarchy और GNOME को लाइव फ़ॉलो करता है। तुरंत भेजने के लिए Dolphin, Files या Nemo में किसी भी फ़ाइल या फ़ोल्डर पर राइट-क्लिक करें।</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, Files, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 और ARM64</li>
+              <li data-i18n="apps.tag.pkg">नेटिव और Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">TotalDrop क्यों</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">कुछ भी अपलोड नहीं होता</h3>
           <p data-i18n="why.r1.d">फ़ाइलें आपके डिवाइस से उनके डिवाइस तक जाती हैं। किसी कंपनी के सर्वर पर कोई कॉपी इंतज़ार नहीं करती, और कोई लिंक एक हफ़्ते में खत्म नहीं होता।</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">आज Android, Linux और कमांड लाइन; Windows, macOS और iOS जल्द। फ़ोन से लैपटॉप तक, किसी भी ब्रांड से किसी भी ब्रांड तक।</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">हमारी ओर से कोई साइज़ सीमा नहीं</h3>
-          <p data-i18n="why.r4.d">पूरे फ़ोल्डर, लंबे वीडियो, ओरिजिनल क्वालिटी की फ़ोटो। सीमा सिर्फ़ आपकी डिस्क और आपका कनेक्शन तय करते हैं।</p>
+          <h3 data-i18n="why.r4.t">फ़ाइलें, फ़ोल्डर और क्लिपबोर्ड टेक्स्ट</h3>
+          <p data-i18n="why.r4.d">ओरिजिनल क्वालिटी की फ़ोटो, बड़े फ़ोल्डर या कॉपी किया हुआ नोट भेजें। टेक्स्ट छिपे अक्षरों के नामों के साथ कॉपी करने को तैयार पहुँचता है, और कभी डिस्क पर नहीं लिखा जाता।</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">भरोसा नहीं, सत्यापन</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">GPL के तहत ओपन सोर्स, दान से चलता है। न विज्ञापन, न ट्रैकिंग, न प्रीमियम प्लान।</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">फ़ाइल भेजने के आम तरीकों से TotalDrop की तुलना</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">फ़ाइल भेजने के आम तरीकों से TotalDrop की तुलना</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">फ़ीचर</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">क्लाउड लिंक</th><th scope="col" data-i18n="why.cmp.nearby">आस-पास शेयरिंग</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">तीन कदम</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">फ़ाइलें चुनें</h3>
-          <p data-i18n="how.s1.d">किसी भी प्रकार की, जितनी चाहें। पाने वाले को सिर्फ़ वही मिलता है जो आपने चुना।</p>
+          <h3 data-i18n="how.s1.t">फ़ाइलें या टेक्स्ट चुनें</h3>
+          <p data-i18n="how.s1.d">फ़ाइलें, पूरे फ़ोल्डर या क्लिपबोर्ड टेक्स्ट चुनें—या सीधे अपने सिस्टम शेयर मेन्यू या फ़ाइल मैनेजर से भेजें।</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">कोड साझा करें</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">इसे सिर्फ़ आप और पाने वाला खोल सकते हैं</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">क्रिप्टोग्राफ़ी और औपचारिक सत्यापन</p>
+        <h2 id="sec-title" data-i18n="sec.title">इसे सिर्फ़ आप और पाने वाला खोल सकते हैं</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">निकलने से पहले एन्क्रिप्टेड</dt>
           <dd data-i18n="sec.f1.d">फ़ाइलें आपके डिवाइस पर एन्क्रिप्ट होती हैं और सिर्फ़ पाने वाले के डिवाइस पर डिक्रिप्ट होती हैं। कुंजियाँ कहीं और मौजूद ही नहीं होतीं।</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">कोड का ऑफ़लाइन अनुमान नहीं लगाया जा सकता</dt>
-          <dd data-i18n="sec.f2.d">कोड PAKE हैंडशेक से एक कुंजी में बदलता है, इसलिए गलत अनुमान तुरंत विफल होता है और वह प्रयास बेकार हो जाता है। कुंजी विनिमय में पोस्ट-क्वांटम ML-KEM शामिल है।</dd>
+          <dt data-i18n="sec.f2.t">पोस्ट-क्वांटम PAKE हैंडशेक</dt>
+          <dd data-i18n="sec.f2.d">कोड CPace हैंडशेक चलाता है जो हाइब्रिड X25519 और ML-KEM-768 कुंजियों के साथ Noise XXpsk3 को सीड करता है। गलत अनुमान तुरंत विफल होता है और प्रयास समाप्त कर देता है।</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">हमारा सर्वर सिर्फ़ परिचय कराता है</dt>
-          <dd data-i18n="sec.f3.d">यह आपका IP पता और कोड की संख्या देखता है, शब्द, फ़ाइलों के नाम या फ़ाइलें कभी नहीं। यह कोई लॉग नहीं रखता।</dd>
+          <dd data-i18n="sec.f3.d">यह आपका IP पता और कोड की संख्या देखता है, शब्द, फ़ाइलों के नाम या फ़ाइलें कभी नहीं। निजता मोड चालू होने पर दूसरा डिवाइस भी आपका IP पता कभी नहीं जान पाता।</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">कोड जिसे कोई भी जाँच सकता है</dt>
-          <dd data-i18n="sec.f4.d">हर पंक्ति सार्वजनिक है। वर्शन 1.0 सिर्फ़ एक स्वतंत्र सुरक्षा ऑडिट के बाद आएगा।</dd>
+          <dt data-i18n="sec.f4.t">Tamarin से सिद्ध, 1.0 से पहले ऑडिट</dt>
+          <dd data-i18n="sec.f4.d">Tamarin प्रूवर में छह प्रतीकात्मक मॉडल, मशीन से जाँचे गए 61 लेम्मा और 27 रिग्रेशन म्यूटेंट आने वाले सर्वर-ब्लाइंड Ghost Ring खाते को सत्यापित करते हैं। वर्शन 1.0 स्वतंत्र ऑडिट की प्रतीक्षा में है।</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/hi" hreflang="hi" data-i18n="sec.privacy">निजता नीति पढ़ें</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">हम कहाँ हैं</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">हो गया</span>
           <h3 data-i18n="road.p0">खुला प्रोटोकॉल, कमांड-लाइन क्लाइंट, Android बीटा और Linux ऐप</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

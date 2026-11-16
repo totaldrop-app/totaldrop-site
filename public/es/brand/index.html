@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Marca TotalDrop</title>
   <meta name="description" content="El símbolo de TotalDrop, su movimiento, colores, tipografía, botones e iconos, cómo usarlos y los archivos del logo para descargar.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/es/brand/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/brand/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/brand/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="brand">
   <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
@@ -76,7 +79,7 @@
     <section class="dl-hero bk-hero" aria-labelledby="bk-title">
       <p class="eyebrow" data-i18n="bk.eyebrow">Guía de marca</p>
       <h1 id="bk-title" data-i18n="bk.title">La marca TotalDrop</h1>
-      <p class="lede" data-i18n="bk.lede">Un símbolo, un color de acento, dos tipografías. Todo lo demás lo pone el sistema en el que funciona TotalDrop. Esta página muestra las piezas, cómo usarlas y dónde descargarlas.</p>
+      <p class="lede" data-i18n="bk.lede">Un símbolo, superficies neutras y tranquilas, un acento interactivo, dos tipografías. Todo lo demás lo pone el sistema en el que funciona TotalDrop. Esta página muestra las piezas, cómo usarlas y dónde descargarlas.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#files" data-i18n="bk.cta">Descargar el logo</a>
         <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop/blob/main/docs/tasarim.md" data-i18n="bk.source">Reglas de diseño en el repositorio</a>
@@ -104,14 +107,14 @@
     <section class="block" id="principles" aria-labelledby="principles-title">
       <h2 id="principles-title" data-i18n="bk.p.title">Menos, pero mejor</h2>
       <p data-i18n="bk.p.lede">TotalDrop sigue a Dieter Rams: cada elemento tiene una función, y lo que no la tiene se quita.</p>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.p1.t">Parte del sistema</h3>
           <p data-i18n="bk.p1.d">Las apps toman del sistema sus colores, el tema claro u oscuro, los iconos y las ventanas, y en Linux también las fuentes. Solo el símbolo y sus colores son iguales en todas partes.</p>
         </li>
         <li>
           <h3 data-i18n="bk.p2.t">Un acento por pantalla</h3>
-          <p data-i18n="bk.p2.d">El violeta señala lo único que hay que hacer a continuación, los enlaces y el anillo de foco. Todo lo demás es tinta sobre papel.</p>
+          <p data-i18n="bk.p2.d">El violeta pertenece únicamente al símbolo Köşe. En la web, el Cobalto señala la acción principal, los enlaces y el anillo de foco, mientras que las superficies neutras Mineral mantienen el texto nítido.</p>
         </li>
         <li>
           <h3 data-i18n="bk.p3.t">Sin efectos</h3>
@@ -235,7 +238,7 @@
       <div class="bk-grid bk-grid-2">
         <figure class="bk-fig">
           <div class="bk-stage bk-on-light bk-wide">
-            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.word">Logo</span>
@@ -244,7 +247,7 @@
         </figure>
         <figure class="bk-fig">
           <div class="bk-stage bk-on-dark bk-wide">
-            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97">
+            <img src="/brand/files/totaldrop-logo-dark.svg" alt="TotalDrop" width="456" height="97" loading="lazy" decoding="async">
           </div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.logo.dark">Logo sobre fondo oscuro</span>
@@ -287,7 +290,7 @@
     <section class="block" id="misuse" aria-labelledby="misuse-title">
       <h2 id="misuse-title" data-i18n="bk.no.title">Lo que no hay que hacer</h2>
       <p data-i18n="bk.no.lede">El símbolo es un único color plano y se usa tal cual. Estos son los errores habituales.</p>
-      <ul class="bk-grid bk-grid-4 bk-donts">
+      <ul class="bk-grid bk-grid-4 bk-donts" role="list">
         <li class="bk-fig">
           <div class="bk-stage"><svg viewBox="0 0 112 112" aria-hidden="true"><path class="mk" d="M55 15H83A14 14 0 0 1 97 29V57A42 42 0 1 1 55 15Z"/></svg></div>
           <p class="bk-no" data-i18n="bk.no.label">No</p>
@@ -334,38 +337,40 @@
 
     <section class="block" id="colour" aria-labelledby="colour-title">
       <h2 id="colour-title" data-i18n="bk.col.title">Color</h2>
-      <p data-i18n="bk.col.lede">Las apps usan los colores del sistema en el que funcionan: Material You en Android, el tema del escritorio en Linux. La paleta Aurora de abajo se usa cuando el sistema no da colores, y en este sitio web. El texto sobre el fondo de la página supera 4,5:1 en ambos temas.</p>
+      <p data-i18n="bk.col.lede">Las apps usan los colores del sistema en el que funcionan: Material You en Android y el tema del escritorio en Linux, dejando Aurora solo cuando el sistema no ofrece ninguna paleta. En esta web, la paleta Mineral de abajo combina superficies neutras con controles interactivos en Cobalto para que el símbolo Köşe violeta destaque con limpieza. Cada función de texto e interacción cumple WCAG AA en ambos temas.</p>
       <div class="bk-swatches bk-brand">
-        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">El símbolo y el acento sobre fondo claro.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">El símbolo y el acento sobre fondo oscuro.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-paper"></span><span class="bk-sw-name">Paper</span><code>#F4F2FB</code><span class="bk-sw-use" data-i18n="bk.col.paper">Fondo claro; el símbolo del icono de la app.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-ink"></span><span class="bk-sw-name">Ink</span><code>#22184F</code><span class="bk-sw-use" data-i18n="bk.col.ink">Texto sobre fondo claro.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-night"></span><span class="bk-sw-name">Night</span><code>#140E33</code><span class="bk-sw-use" data-i18n="bk.col.night">Fondo oscuro.</span></div>
-        <div class="bk-sw"><span class="bk-chip bk-c-mist"></span><span class="bk-sw-name">Mist</span><code>#E2DCF6</code><span class="bk-sw-use" data-i18n="bk.col.mist">Superficie elevada y tranquila sobre fondo claro.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-violet"></span><span class="bk-sw-name">Violet</span><code>#6D4AE0</code><span class="bk-sw-use" data-i18n="bk.col.violet">El símbolo Köşe sobre fondos claros y el recuadro del icono de la app.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-glow"></span><span class="bk-sw-name">Glow</span><code>#A68BFF</code><span class="bk-sw-use" data-i18n="bk.col.glow">El símbolo Köşe sobre fondos oscuros.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-cobalt"></span><span class="bk-sw-name">Cobalt</span><code>#1E47B8</code><span class="bk-sw-use" data-i18n="bk.col.cobalt">Acciones principales, enlaces y anillo de foco sobre fondos claros.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-ice"></span><span class="bk-sw-name">Ice Cobalt</span><code>#7DB4FF</code><span class="bk-sw-use" data-i18n="bk.col.ice">Acciones principales, enlaces y anillo de foco sobre fondos oscuros.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-alabaster"></span><span class="bk-sw-name">Alabaster</span><code>#F7F7F5</code><span class="bk-sw-use" data-i18n="bk.col.paper">Fondo de página claro, combinado con tarjetas en blanco puro.</span></div>
+        <div class="bk-sw"><span class="bk-chip bk-c-obsidian"></span><span class="bk-sw-name">Obsidian</span><code>#0F1116</code><span class="bk-sw-use" data-i18n="bk.col.night">Fondo de página oscuro, combinado con tarjetas en grafito.</span></div>
       </div>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="bk-col-tokens">
         <table class="req bk-tokens">
-          <caption data-i18n="bk.col.tokens">Funciones de color, tema claro y oscuro</caption>
+          <caption id="bk-col-tokens" data-i18n="bk.col.tokens">Funciones de color, tema claro y oscuro</caption>
           <thead>
             <tr><th scope="col" data-i18n="bk.col.role">Función</th><th scope="col" data-i18n="bk.col.light">Claro</th><th scope="col" data-i18n="bk.col.dark">Oscuro</th><th scope="col" data-i18n="bk.col.use">Uso</th></tr>
           </thead>
           <tbody>
-            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.bg">Fondo de la página y de la pantalla.</td></tr>
-            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-night2"></span><code>#1E1648</code></td><td data-i18n="bk.col.raised">Segunda superficie tranquila, como la tarjeta Recibir.</td></tr>
-            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-mist"></span><code>#E2DCF6</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-rule"></span><code>#2E2566</code></td><td data-i18n="bk.col.rule">Líneas divisorias; solo decorativas.</td></tr>
-            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.outline">Bordes de campos y de botones con contorno.</td></tr>
-            <tr><th scope="row"><code>ink</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-ink"></span><code>#22184F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-paper"></span><code>#F4F2FB</code></td><td data-i18n="bk.col.text">Texto y títulos.</td></tr>
-            <tr><th scope="row"><code>ink-muted</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-muted"></span><code>#463D72</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-glowmuted"></span><code>#B9B1E0</code></td><td data-i18n="bk.col.muted">Texto secundario: descripciones, notas, unidades.</td></tr>
-            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.accent">La acción principal, los enlaces, el anillo de foco. Una vez por pantalla.</td></tr>
-            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-night"></span><code>#140E33</code></td><td data-i18n="bk.col.onaccent">Texto sobre un relleno de acento; oscuro en el tema oscuro, porque allí el acento es más claro.</td></tr>
-            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-success"></span><code>#0A7357</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-success-d"></span><code>#7ED9B5</code></td><td data-i18n="bk.col.success">Terminado. Siempre con un icono o una palabra, nunca solo el color.</td></tr>
-            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-error"></span><code>#BA1A1A</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FFB4AB</code></td><td data-i18n="bk.col.error">Algo salió mal. Siempre con un icono o una palabra.</td></tr>
+            <tr><th scope="row"><code>mark</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-violet"></span><code>#6D4AE0</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-glow"></span><code>#A68BFF</code></td><td data-i18n="bk.col.mark">Solo el símbolo Köşe; nunca en botones ni en texto corrido.</td></tr>
+            <tr><th scope="row"><code>bg</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-alabaster"></span><code>#F7F7F5</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-obsidian"></span><code>#0F1116</code></td><td data-i18n="bk.col.bg">Fondo de la página y de la pantalla.</td></tr>
+            <tr><th scope="row"><code>surface</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-surface"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-graphite"></span><code>#161922</code></td><td data-i18n="bk.col.surface">Tarjetas, muestras de transferencia, marcos de apps y tablas.</td></tr>
+            <tr><th scope="row"><code>bg-raised</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-stone"></span><code>#EEEEEC</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-elevated"></span><code>#1E222E</code></td><td data-i18n="bk.col.raised">Superficie rebajada y discreta para bloques de código y etiquetas.</td></tr>
+            <tr><th scope="row"><code>rule</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-rule-l"></span><code>#DFDFE2</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-rule-d"></span><code>#282E3D</code></td><td data-i18n="bk.col.rule">Líneas divisorias; solo decorativas.</td></tr>
+            <tr><th scope="row"><code>outline</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-outline-l"></span><code>#646A78</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-outline-d"></span><code>#8790A1</code></td><td data-i18n="bk.col.outline">Bordes de campos y de botones con contorno.</td></tr>
+            <tr><th scope="row"><code>text</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-carbon"></span><code>#14161D</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-chalk"></span><code>#F2F4F8</code></td><td data-i18n="bk.col.text">Texto y títulos.</td></tr>
+            <tr><th scope="row"><code>text-2</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-slate"></span><code>#4A4F5C</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-silver"></span><code>#A3ABB9</code></td><td data-i18n="bk.col.muted">Texto secundario: descripciones, notas, unidades.</td></tr>
+            <tr><th scope="row"><code>accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-cobalt"></span><code>#1E47B8</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-ice"></span><code>#7DB4FF</code></td><td data-i18n="bk.col.accent">La acción principal, los enlaces, el anillo de foco. Una vez por pantalla.</td></tr>
+            <tr><th scope="row"><code>on-accent</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-white"></span><code>#FFFFFF</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-navy"></span><code>#0B1220</code></td><td data-i18n="bk.col.onaccent">Texto sobre un relleno de acento; oscuro en el tema oscuro, porque allí el acento es más claro.</td></tr>
+            <tr><th scope="row"><code>success</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-success"></span><code>#0B6E4F</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-success-d"></span><code>#6EE7B7</code></td><td data-i18n="bk.col.success">Terminado. Siempre con un icono o una palabra, nunca solo el color.</td></tr>
+            <tr><th scope="row"><code>error</code></th><td><span class="bk-mode" data-i18n="bk.col.light">Claro</span><span class="bk-dot-sw bk-c-error"></span><code>#B81D24</code></td><td><span class="bk-mode" data-i18n="bk.col.dark">Oscuro</span><span class="bk-dot-sw bk-c-error-d"></span><code>#FCA5A5</code></td><td data-i18n="bk.col.error">Algo salió mal. Siempre con un icono o una palabra.</td></tr>
           </tbody>
         </table>
       </div>
       <dl class="facts bk-contrast">
-        <div><dt data-i18n="bk.col.c1">Texto sobre el fondo</dt><dd data-i18n="bk.col.c1.d">Tinta sobre papel 14,4:1, papel sobre noche 16,6:1.</dd></div>
-        <div><dt data-i18n="bk.col.c2">El acento como texto</dt><dd data-i18n="bk.col.c2.d">Violeta sobre papel 5,1:1, brillo sobre noche 6,8:1. En la superficie elevada, los colores de acento y de éxito son solo para texto grande e iconos.</dd></div>
+        <div><dt data-i18n="bk.col.c1">Texto sobre el fondo</dt><dd data-i18n="bk.col.c1.d">Tinta carbón sobre alabastro 16,8:1; tinta tiza sobre obsidiana 17,2:1.</dd></div>
+        <div><dt data-i18n="bk.col.c2">El acento como texto y relleno</dt><dd data-i18n="bk.col.c2.d">Cobalto sobre alabastro 7,4:1 (blanco sobre cobalto 7,9:1); cobalto hielo sobre obsidiana 8,9:1 (azul marino sobre cobalto hielo 8,8:1).</dd></div>
       </dl>
     </section>
 
@@ -384,12 +389,12 @@
           <p data-i18n="bk.type.body">Todo lo demás: texto corrido, botones y campos. Creada por el Braille Institute para que letras parecidas como I, l y 1 se distingan.</p>
         </div>
       </div>
-      <ol class="bk-scale">
-        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.6rem, 6.4vw, 4.75rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">De cada dispositivo a cada dispositivo</span></li>
-        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.75rem, 3.6vw, 2.5rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">Cómo funciona</span></li>
-        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.25rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">Comparte el código</span></li>
+      <ol class="bk-scale" role="list">
+        <li><span class="bk-scale-meta"><code>h1</code> <span>Bricolage 800 · clamp(2.15rem, 1.1rem + 4.4vw, 4.4rem) · −0.035em</span></span><span class="bk-t-hero" data-i18n="bk.type.s1">De cada dispositivo a cada dispositivo</span></li>
+        <li><span class="bk-scale-meta"><code>h2</code> <span>Bricolage 800 · clamp(1.65rem, 1.1rem + 2vw, 2.45rem) · −0.025em</span></span><span class="bk-t-section" data-i18n="nav.how">Cómo funciona</span></li>
+        <li><span class="bk-scale-meta"><code>h3</code> <span>Bricolage 700 · 1.225rem</span></span><span class="bk-t-title" data-i18n="how.s2.t">Comparte el código</span></li>
         <li><span class="bk-scale-meta"><code>body</code> <span>Atkinson 400 · 1.0625rem · 1.6</span></span><span class="bk-t-body" data-i18n="why.r1.d">Los archivos van de tu dispositivo al de la otra persona. Ninguna copia espera en el servidor de una empresa y ningún enlace caduca en una semana.</span></li>
-        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.875rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">Gratis · Código abierto · Beta</span></li>
+        <li><span class="bk-scale-meta"><code>small</code> <span>Atkinson 700 · 0.8125rem · +0.06em</span></span><span class="eyebrow" data-i18n="hero.eyebrow">Gratis · Código abierto · Beta</span></li>
       </ol>
       <p class="note" data-i18n="bk.type.rules">Las líneas de texto corrido no pasan de 44rem. Las cifras que se alinean, como tamaños y porcentajes, usan números tabulares. En los idiomas con escritura árabe se quita el espaciado entre letras, que rompería las uniones.</p>
     </section>
@@ -400,7 +405,7 @@
       <h3 data-i18n="bk.btn.kinds">Tres tipos de botón</h3>
       <div class="bk-grid bk-grid-3">
         <figure class="bk-fig">
-          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="how.s1.t">Elige los archivos</span></div>
+          <div class="bk-stage bk-stage-ui"><span class="btn btn-primary" aria-hidden="true" data-i18n="bk.cmp.choose">Elige los archivos</span></div>
           <figcaption>
             <span class="bk-cap-t" data-i18n="bk.btn.main">Acción principal</span>
             <span data-i18n="bk.btn.main.d">Relleno con el color de acento, texto en el color sobre acento. Uno por pantalla, para lo que la mayoría hará a continuación.</span>
@@ -494,7 +499,7 @@
       <div class="bk-grid bk-grid-2">
         <div class="bk-col">
           <h3 data-i18n="bk.sp.scale">Espaciado</h3>
-          <ul class="bk-bars">
+          <ul class="bk-bars" role="list">
             <li><span class="bk-bar bk-w8"></span><code>8</code><span data-i18n="bk.sp.8">Icono y texto, título y párrafo</span></li>
             <li><span class="bk-bar bk-w16"></span><code>16</code><span data-i18n="bk.sp.16">Entre tarjetas, dentro de un bloque</span></li>
             <li><span class="bk-bar bk-w24"></span><code>24</code><span data-i18n="bk.sp.24">Dentro de una tarjeta, borde de la pantalla (16 en móviles)</span></li>
@@ -504,7 +509,7 @@
         </div>
         <div class="bk-col">
           <h3 data-i18n="bk.sp.radius">Esquinas</h3>
-          <ul class="bk-radii">
+          <ul class="bk-radii" role="list">
             <li><span class="bk-rad bk-r8"></span><code>8</code><span data-i18n="bk.sp.r8">Barra de progreso</span></li>
             <li><span class="bk-rad bk-r16"></span><code>16</code><span data-i18n="bk.sp.r16">Campo de texto, caja de código</span></li>
             <li><span class="bk-rad bk-r28"></span><code>28</code><span data-i18n="bk.sp.r28">Tarjetas</span></li>
@@ -536,7 +541,7 @@
 
     <section class="block" id="voice" aria-labelledby="voice-title">
       <h2 id="voice-title" data-i18n="bk.vo.title">Tono</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="bk.vo1.t">Decir lo que pasa</h3>
           <p data-i18n="bk.vo1.d">Un botón nombra su acción: «Elegir archivos», «Aceptar». Un error dice qué salió mal y qué hacer después, sin disculparse.</p>
@@ -559,7 +564,7 @@
     <section class="block" id="use" aria-labelledby="use-title">
       <h2 id="use-title" data-i18n="bk.use.title">Uso del nombre y el símbolo</h2>
       <p data-i18n="bk.use.lede">TotalDrop es de código abierto, pero sus licencias cubren el código, no el nombre ni el símbolo de TotalDrop. Estas reglas existen para que una app llamada TotalDrop venga realmente de este proyecto.</p>
-      <ul class="reasons bk-use-yes">
+      <ul class="reasons bk-use-yes" role="list">
         <li>
           <h3 data-i18n="bk.use1.t">Escribe sobre él</h3>
           <p data-i18n="bk.use1.d">Enlaza a totaldrop.app y menciona TotalDrop en artículos, reseñas, vídeos y clases, con el nombre y el símbolo sin cambios. No hace falta pedir permiso.</p>
@@ -577,7 +582,7 @@
           <p data-i18n="bk.use4.d">Las licencias te permiten cambiar el código. Publica tu versión con su propio nombre y símbolo. Puedes decir que está basada en TotalDrop, pero no dar a entender que TotalDrop la respalda.</p>
         </li>
       </ul>
-      <ul class="reasons bk-use-no">
+      <ul class="reasons bk-use-no" role="list">
         <li>
           <p class="bk-no" data-i18n="bk.no.label">No</p>
           <p data-i18n="bk.use.no1">Presentar algo como versión oficial, socio o producto respaldado por TotalDrop.</p>
@@ -606,34 +611,34 @@
     <section class="block" id="files" aria-labelledby="files-title">
       <h2 id="files-title" data-i18n="bk.files.title">Descargas</h2>
       <p data-i18n="bk.files.lede">Archivos vectoriales (SVG) para imprenta y pantallas, y archivos PNG con fondo transparente. Úselos tal cual.</p>
-      <ul class="platforms bk-files">
+      <ul class="platforms bk-files" role="list">
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-mark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-mark" data-i18n="bk.f.mark">Símbolo para fondo claro</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-mark" href="/brand/files/totaldrop-mark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-mark-dark.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-markdark" data-i18n="bk.f.markdark">Símbolo para fondo oscuro</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-markdark" href="/brand/files/totaldrop-mark-dark.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-light bk-file-prev"><img src="/brand/files/totaldrop-logo.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logo" data-i18n="bk.f.logo">Logo para fondo claro</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logo" href="/brand/files/totaldrop-logo.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48"></div>
+          <div class="bk-stage bk-on-dark bk-file-prev"><img src="/brand/files/totaldrop-logo-dark.svg" alt="" width="226" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-logodark" data-i18n="bk.f.logodark">Logo para fondo oscuro</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-logodark" href="/brand/files/totaldrop-logo-dark.png" download>PNG · 2400</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96"></div>
+          <div class="bk-stage bk-file-prev"><img src="/brand/files/totaldrop-icon.svg" alt="" width="96" height="96" loading="lazy" decoding="async"></div>
           <h3 id="f-icon" data-i18n="bk.f.icon">Icono de la app</h3>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.svg" download>SVG</a><a class="btn btn-quiet" aria-describedby="f-icon" href="/brand/files/totaldrop-icon.png" download>PNG · 1024</a></p>
         </li>
         <li class="platform">
-          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48"></div>
+          <div class="bk-stage bk-mono bk-file-prev"><img src="/brand/files/totaldrop-mark-black.svg" alt="" width="48" height="48" loading="lazy" decoding="async"><img class="bk-on-black" src="/brand/files/totaldrop-mark-white.svg" alt="" width="48" height="48" loading="lazy" decoding="async"></div>
           <h3 id="f-mono" data-i18n="bk.f.mono">Un color, negro o blanco</h3>
           <p data-i18n="bk.f.mono.d">Solo donde no se puede imprimir en color, como sellos o grabados.</p>
           <p class="actions"><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-black.svg" download data-i18n="bk.f.black">SVG negro</a><a class="btn btn-quiet" aria-describedby="f-mono" href="/brand/files/totaldrop-mark-white.svg" download data-i18n="bk.f.white">SVG blanco</a></p>
@@ -664,6 +669,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

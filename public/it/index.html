@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: invia file direttamente, con crittografia end-to-end</title>
-  <meta name="description" content="TotalDrop è un'app gratuita e open source che invia file direttamente da un dispositivo all'altro, con crittografia end-to-end. Nessun account, nessuna email, nessun numero di telefono.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: invia file e testo direttamente, con crittografia end-to-end</title>
+  <meta name="description" content="TotalDrop è un'app gratuita e open source che invia file, cartelle e testo direttamente da un dispositivo all'altro, con crittografia end-to-end. Nessun account, nessuna email, nessun numero di telefono.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/it/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: invia file direttamente, con crittografia end-to-end">
-  <meta property="og:description" content="TotalDrop è un'app gratuita e open source che invia file direttamente da un dispositivo all'altro, con crittografia end-to-end. Nessun account, nessuna email, nessun numero di telefono.">
+  <meta property="og:title" content="TotalDrop: invia file e testo direttamente, con crittografia end-to-end">
+  <meta property="og:description" content="TotalDrop è un'app gratuita e open source che invia file, cartelle e testo direttamente da un dispositivo all'altro, con crittografia end-to-end. Nessun account, nessuna email, nessun numero di telefono.">
   <meta property="og:url" content="https://totaldrop.app/it/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">Vai al contenuto</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="Principale" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">App</a>
       <a href="#why" data-i18n="nav.why">Perché TotalDrop</a>
       <a href="#how" data-i18n="nav.how">Come funziona</a>
       <a href="#security" data-i18n="nav.security">Sicurezza</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">Gratuito · Open source · Beta</p>
-        <h1 id="hero-title" data-i18n="hero.title">Invia un file direttamente a un altro dispositivo.</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop sposta i file direttamente dal tuo dispositivo a quello dell'altra persona, con crittografia end-to-end. Condividi un codice breve; nessuno nel mezzo può leggere ciò che invii. Nessun account, nessuna email, nessun numero di telefono.</p>
+        <h1 id="hero-title" data-i18n="hero.title">Invia file e testo direttamente a un altro dispositivo.</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop trasferisce file, intere cartelle e testo degli appunti direttamente dal tuo dispositivo a quello dell'altra persona, con crittografia end-to-end e chiavi post-quantistiche. Condividi un codice breve; nessuno nel mezzo può leggere ciò che invii. Nessun account, nessuna email, nessun numero di telefono.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/it/download/" data-i18n="hero.cta">Scarica la beta</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">Leggi il codice</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">Oggi su Android, Linux e CLI</li>
+          <li data-i18n="hero.h2">ML-KEM-768 post-quantistico</li>
+          <li data-i18n="hero.h3">35 lingue, zero tracker</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">Codice di trasferimento</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">Codice di trasferimento</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">Un altro esempio</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">Quattro parole di verifica</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">Pronuncia il codice ad alta voce o incollalo in un messaggio. Chi lo inserisce riceve i file.</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">Nativa su ogni computer e telefono</p>
+        <h2 id="apps-title" data-i18n="apps.title">Costruita per appartenere al tuo sistema</h2>
+        <p data-i18n="apps.lede">TotalDrop prende colori, caratteri, modalità scura e menu di condivisione dal sistema operativo che usi. Invia dalla galleria, dal testo selezionato, dagli appunti o dal gestore di file senza aprire prima una scheda del browser.</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="TotalDrop su Android nei temi Material You chiaro e scuro" data-i18n-label="apps.android.alt" aria-label="TotalDrop su Android nei temi Material You chiaro e scuro" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">Colori dinamici Material You e controlli Material 3 Expressive. Condividi file o testo selezionato direttamente da qualsiasi app, oppure tieni premuta l'icona per inviare gli appunti.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">Menu di condivisione di sistema</li>
+              <li data-i18n="apps.tag.text">Testo e appunti</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="App nativa Qt 6 Wayland di TotalDrop su Linux" data-i18n-label="apps.linux.alt" aria-label="App nativa Qt 6 Wayland di TotalDrop su Linux" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">App per Linux</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">Qt 6 e QML nativi per Wayland, seguendo in tempo reale KDE Plasma, Hyprland, Omarchy e GNOME. Fai clic destro su qualsiasi file o cartella in Dolphin, File o Nemo per inviare subito.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin, File, Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 e ARM64</li>
+              <li data-i18n="apps.tag.pkg">Nativo e Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">Perché TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">Non si carica nulla</h3>
           <p data-i18n="why.r1.d">I file vanno dal tuo dispositivo al suo. Nessuna copia aspetta sul server di un'azienda, e nessun link scade dopo una settimana.</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">Oggi Android, Linux e la riga di comando; Windows, macOS e iOS in arrivo. Dal telefono al portatile, da qualsiasi marca a qualsiasi marca.</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">Nessun limite di dimensione da parte nostra</h3>
-          <p data-i18n="why.r4.d">Intere cartelle, video lunghi, foto in qualità originale. Il limite lo fissano solo il tuo disco e la tua connessione.</p>
+          <h3 data-i18n="why.r4.t">File, cartelle e testo degli appunti</h3>
+          <p data-i18n="why.r4.d">Invia foto in qualità originale, cartelle enormi o una nota copiata. Il testo arriva pronto da copiare, con i caratteri nascosti indicati per nome, mai scritto su disco.</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">Verificato, non dato per buono</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">Open source con licenza GPL, sostenuto dalle donazioni. Niente pubblicità, niente tracciamento, niente versione premium.</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">Come si confronta TotalDrop con i soliti modi di inviare un file</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">Come si confronta TotalDrop con i soliti modi di inviare un file</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">Caratteristica</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">Link cloud</th><th scope="col" data-i18n="why.cmp.nearby">Condivisione nelle vicinanze</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">Tre passaggi</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">Scegli i file</h3>
-          <p data-i18n="how.s1.d">Di qualsiasi tipo, quanti ne vuoi. Il destinatario riceve solo ciò che hai scelto.</p>
+          <h3 data-i18n="how.s1.t">Scegli file o testo</h3>
+          <p data-i18n="how.s1.d">Scegli file, intere cartelle o il testo degli appunti, oppure invia direttamente dal menu di condivisione di sistema o dal gestore di file.</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">Condividi il codice</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">Solo tu e il destinatario potete aprirlo</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">Crittografia e verifica formale</p>
+        <h2 id="sec-title" data-i18n="sec.title">Solo tu e il destinatario potete aprirlo</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">Crittografato prima di partire</dt>
           <dd data-i18n="sec.f1.d">I file vengono crittografati sul tuo dispositivo e decrittografati solo su quello del destinatario. Le chiavi non esistono da nessun'altra parte.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">Il codice non si può indovinare offline</dt>
-          <dd data-i18n="sec.f2.d">Il codice diventa una chiave tramite un handshake PAKE, così un tentativo sbagliato fallisce subito e viene bruciato. Lo scambio di chiavi include ML-KEM post-quantistico.</dd>
+          <dt data-i18n="sec.f2.t">Handshake PAKE post-quantistico</dt>
+          <dd data-i18n="sec.f2.d">Il codice guida un handshake CPace che inizializza Noise XXpsk3 con chiavi ibride X25519 e ML-KEM-768. Un tentativo sbagliato fallisce subito e brucia la prova.</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">Il nostro server fa solo le presentazioni</dt>
-          <dd data-i18n="sec.f3.d">Vede il tuo indirizzo IP e il numero del codice, mai le parole, i nomi dei file o i file. Non conserva log.</dd>
+          <dd data-i18n="sec.f3.d">Vede il tuo indirizzo IP e il numero del codice, mai le parole, i nomi dei file o i file. Con la modalità privacy attiva, nemmeno l'altro dispositivo viene mai a sapere il tuo indirizzo IP.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">Codice che chiunque può verificare</dt>
-          <dd data-i18n="sec.f4.d">Ogni riga è pubblica. La versione 1.0 uscirà solo dopo un audit di sicurezza indipendente.</dd>
+          <dt data-i18n="sec.f4.t">Dimostrato con Tamarin, verificato prima della 1.0</dt>
+          <dd data-i18n="sec.f4.d">Sei modelli simbolici, 61 lemmi verificati automaticamente e 27 mutanti di regressione verificano nel dimostratore Tamarin il futuro account Ghost Ring cieco per il server. La versione 1.0 attende un audit indipendente.</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/it" hreflang="it" data-i18n="sec.privacy">Leggi l'informativa sulla privacy</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">A che punto siamo</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">Fatto</span>
           <h3 data-i18n="road.p0">Protocollo aperto, client a riga di comando, beta per Android e app per Linux</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

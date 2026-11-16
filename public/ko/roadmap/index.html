@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TotalDrop 로드맵</title>
   <meta name="description" content="TotalDrop에서 완료된 것, 다음에 올 것, 그 이후에 올 것을 플랫폼별로 소개합니다. 버전 1.0까지의 여정입니다.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/ko/roadmap/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/roadmap/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/roadmap/">
@@ -52,7 +54,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body data-page="roadmap">
   <a class="skip" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
@@ -84,7 +87,7 @@
         <span class="road-state" data-i18n="rm.done.state">완료</span>
         <h2 id="rm-done" data-i18n="rm.done.when">2026년 10월</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.d1.t">개방형 프로토콜</h3>
             <p data-i18n="rm.d1.d">TotalDrop Protocol v0: CPace 기반 전송 코드, 양자 내성 ML-KEM-768을 더한 Noise XXpsk3, 일회용 키를 사용하는 QUIC. 누구나 호환 앱을 만들 수 있도록 문서로 정리했습니다.</p>
@@ -92,8 +95,8 @@
           </li>
           <li>
             <h3 data-i18n="rm.d2.t">명령줄 클라이언트</h3>
-            <p data-i18n="rm.d2.d">Linux, macOS, Windows 터미널에서 보내고 받기.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <p data-i18n="rm.d2.d">Linux 터미널에서 보내고 받거나 Cargo로 소스에서 빌드할 수 있습니다 (macOS 및 Windows 사전 빌드 바이너리 예정).</p>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.d3.t">Android 베타</h3>
@@ -118,7 +121,7 @@
           <li>
             <h3 data-i18n="rm.n2.t">명령줄의 개인정보 보호 모드</h3>
             <p data-i18n="rm.n2.d">릴레이만 사용: 상대방은 내 IP 주소를 알 수 없습니다.</p>
-            <span class="rm-plat">Linux · macOS · Windows</span>
+            <span class="rm-plat">Linux</span>
           </li>
           <li>
             <h3 data-i18n="rm.x7.t">앱의 개인정보 보호 모드</h3>
@@ -142,7 +145,7 @@
         <span class="road-state" data-i18n="rm.now.state">현재</span>
         <h2 id="rm-now" data-i18n="rm.now.when">2026년 11월</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x1.t">카메라로 QR 코드 스캔</h3>
             <p data-i18n="rm.x1.d">코드를 입력하는 대신 휴대전화를 보내는 사람의 화면에 대세요.</p>
@@ -160,7 +163,7 @@
         <span class="road-state" data-i18n="rm.next.state">다음</span>
         <h2 id="rm-next" data-i18n="rm.next.when">2026–27년 겨울</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.x3.t">중단된 전송 이어 받기</h3>
             <p data-i18n="rm.x3.d">연결이 끊겨도 이미 도착한 부분을 다시 보내지 않고 멈춘 곳부터 이어 갑니다.</p>
@@ -188,7 +191,7 @@
         <span class="road-state" data-i18n="rm.later.state">나중에</span>
         <h2 id="rm-later" data-i18n="rm.later.when">2027년</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.l1.t">iPhone, iPad, Mac</h3>
             <p data-i18n="rm.l1.d">후원금으로 Apple 개발자 계정 비용이 마련되면 네이티브 앱을 제공합니다.</p>
@@ -221,7 +224,7 @@
         <span class="road-state" data-i18n="rm.v1.state">버전 1.0</span>
         <h2 id="rm-v1" data-i18n="rm.v1.when">감사 후</h2>
       </header>
-      <ul class="rm-items">
+      <ul class="rm-items" role="list">
           <li>
             <h3 data-i18n="rm.v1.t">독립 보안 감사</h3>
             <p data-i18n="rm.v1.d">외부 업체가 프로토콜, 암호화, 신뢰할 수 없는 입력을 처리하는 코드를 검토합니다. 보고서는 전문을 공개합니다.</p>
@@ -273,6 +276,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

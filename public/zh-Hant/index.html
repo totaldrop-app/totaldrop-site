@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop：直接傳送檔案，端對端加密</title>
-  <meta name="description" content="TotalDrop 是一款免費的開放原始碼 App，可將檔案從一部裝置直接傳送到另一部裝置，全程端對端加密。不需要帳號、電子郵件或手機號碼。">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop：直接傳送檔案和文字，端對端加密</title>
+  <meta name="description" content="TotalDrop 是一款免費的開放原始碼 App，可將檔案、資料夾和文字從一部裝置直接傳送到另一部裝置，全程端對端加密。不需要帳號、電子郵件或手機號碼。">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/zh-Hant/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop：直接傳送檔案，端對端加密">
-  <meta property="og:description" content="TotalDrop 是一款免費的開放原始碼 App，可將檔案從一部裝置直接傳送到另一部裝置，全程端對端加密。不需要帳號、電子郵件或手機號碼。">
+  <meta property="og:title" content="TotalDrop：直接傳送檔案和文字，端對端加密">
+  <meta property="og:description" content="TotalDrop 是一款免費的開放原始碼 App，可將檔案、資料夾和文字從一部裝置直接傳送到另一部裝置，全程端對端加密。不需要帳號、電子郵件或手機號碼。">
   <meta property="og:url" content="https://totaldrop.app/zh-Hant/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">跳到主要內容</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="主選單" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">應用程式</a>
       <a href="#why" data-i18n="nav.why">為什麼選擇 TotalDrop</a>
       <a href="#how" data-i18n="nav.how">運作方式</a>
       <a href="#security" data-i18n="nav.security">安全性</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">免費 · 開放原始碼 · 測試版</p>
-        <h1 id="hero-title" data-i18n="hero.title">把檔案直接傳送到另一部裝置。</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop 將檔案從你的裝置直接傳到對方的裝置，全程端對端加密。你只需分享一組簡短的代碼；中間的任何人都無法讀取你傳送的內容。不需要帳號、電子郵件或手機號碼。</p>
+        <h1 id="hero-title" data-i18n="hero.title">把檔案和文字直接傳送到另一部裝置。</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop 將檔案、整個資料夾和剪貼簿文字從你的裝置直接傳到對方裝置，以抗量子金鑰全程端對端加密。只需分享一組簡短代碼；中間的任何人都無法讀取你傳送的內容。不需要帳號、電子郵件或手機號碼。</p>
         <div class="actions">
           <a class="btn btn-primary" href="/zh-Hant/download/" data-i18n="hero.cta">下載測試版</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">查看程式碼</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">現已支援 Android、Linux 與 CLI</li>
+          <li data-i18n="hero.h2">後量子 ML-KEM-768</li>
+          <li data-i18n="hero.h3">35 種語言，零追蹤器</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">傳輸代碼</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">傳輸代碼</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">換一個範例</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">四個驗證詞</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">把代碼唸給對方聽，或貼到訊息裡。誰輸入代碼，誰就能收到檔案。</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">在每部桌上型電腦與手機上原生執行</p>
+        <h2 id="apps-title" data-i18n="apps.title">為融入你的系統而生</h2>
+        <p data-i18n="apps.lede">TotalDrop 直接沿用你所執行作業系統的配色、字體排版、深色模式與分享選單。不必先開啟瀏覽器分頁，即可從相簿、選取的文字、剪貼簿或檔案管理員直接傳送。</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="淺色和深色 Material You 主題下的 Android 版 TotalDrop" data-i18n-label="apps.android.alt" aria-label="淺色和深色 Material You 主題下的 Android 版 TotalDrop" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">採用 Material You 動態配色與 Material 3 Expressive 控制項。可直接從任何應用程式分享檔案或選取的文字，或長按啟動器圖示傳送剪貼簿。</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">系統分享面板</li>
+              <li data-i18n="apps.tag.text">文字與剪貼簿</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="Linux 上的 TotalDrop 原生 Qt 6 Wayland 應用程式" data-i18n-label="apps.linux.alt" aria-label="Linux 上的 TotalDrop 原生 Qt 6 Wayland 應用程式" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">Linux 應用程式</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">專為 Wayland 打造的原生 Qt 6 與 QML 應用程式，即時跟隨 KDE Plasma、Hyprland、Omarchy 和 GNOME 主題。在 Dolphin、Files 或 Nemo 中對任何檔案或資料夾按右鍵即可立即傳送。</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin、Files、Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 與 ARM64</li>
+              <li data-i18n="apps.tag.pkg">原生套件與 Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">為什麼選擇 TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">不上傳任何內容</h3>
           <p data-i18n="why.r1.d">檔案從你的裝置到對方的裝置。沒有副本留在公司的伺服器上，也沒有一週後就失效的連結。</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">目前支援 Android、Linux 和命令列；Windows、macOS 和 iOS 即將推出。從手機到筆電，任何品牌之間都可以。</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">我們不設大小限制</h3>
-          <p data-i18n="why.r4.d">整個資料夾、長影片、原始畫質的照片都可以。限制只取決於你的磁碟和網路連線。</p>
+          <h3 data-i18n="why.r4.t">檔案、資料夾與剪貼簿文字</h3>
+          <p data-i18n="why.r4.d">傳送原始畫質照片、超大資料夾或複製的筆記。文字送達後即可直接複製，隱藏字元會標出名稱，絕不寫入磁碟。</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">靠驗證，不靠信任</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">以 GPL 開放原始碼，由捐款支持。沒有廣告，沒有追蹤，沒有付費版。</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">TotalDrop 與常見檔案傳送方式的比較</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">TotalDrop 與常見檔案傳送方式的比較</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">功能</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">雲端連結</th><th scope="col" data-i18n="why.cmp.nearby">鄰近分享</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">三個步驟</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">選擇檔案</h3>
-          <p data-i18n="how.s1.d">任何類型，數量不限。接收者只會收到你選擇的內容。</p>
+          <h3 data-i18n="how.s1.t">選擇檔案或文字</h3>
+          <p data-i18n="how.s1.d">選擇檔案、整個資料夾或剪貼簿文字——或者直接從系統分享選單或檔案管理員傳送。</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">分享代碼</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">只有你和接收者能開啟</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">密碼學與形式化驗證</p>
+        <h2 id="sec-title" data-i18n="sec.title">只有你和接收者能開啟</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">離開之前就已加密</dt>
           <dd data-i18n="sec.f1.d">檔案在你的裝置上加密，只在接收者的裝置上解密。金鑰不會存在於其他任何地方。</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">代碼無法被離線猜測</dt>
-          <dd data-i18n="sec.f2.d">代碼透過 PAKE 交握轉換為金鑰，因此猜錯會立刻失敗，這次嘗試也隨之作廢。金鑰交換包含後量子 ML-KEM。</dd>
+          <dt data-i18n="sec.f2.t">後量子 PAKE 交握</dt>
+          <dd data-i18n="sec.f2.d">傳輸碼驅動 CPace 交握，為結合混合 X25519 與 ML-KEM-768 金鑰的 Noise XXpsk3 提供初始金鑰。猜錯一次即刻失敗並作廢本次嘗試。</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">我們的伺服器只負責牽線</dt>
-          <dd data-i18n="sec.f3.d">它能看到你的 IP 位址和代碼中的數字，但絕不會看到單字、檔案名稱或檔案。它不保留記錄。</dd>
+          <dd data-i18n="sec.f3.d">伺服器只能看到你的 IP 位址和代碼中的數字，絕不會看到單字、檔案名稱或檔案內容。開啟隱私模式後，連對方裝置也不會知道你的 IP 位址。</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">任何人都能檢查的程式碼</dt>
-          <dd data-i18n="sec.f4.d">每一行程式碼都是公開的。1.0 版只會在獨立安全稽核之後推出。</dd>
+          <dt data-i18n="sec.f4.t">經 Tamarin 證明，1.0 前完成稽核</dt>
+          <dd data-i18n="sec.f4.d">六個符號模型、61 條機器驗證引理和 27 個迴歸變異體在 Tamarin 證明器中驗證了即將推出的伺服器不可見 Ghost Ring 帳號。1.0 版將在獨立稽核之後推出。</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/zh-Hant" hreflang="zh-Hant" data-i18n="sec.privacy">閱讀隱私權政策</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">目前進度</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">已完成</span>
           <h3 data-i18n="road.p0">開放協定、命令列用戶端、Android 測試版和 Linux 應用程式</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>

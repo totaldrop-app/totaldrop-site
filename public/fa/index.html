@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TotalDrop: فایل‌ها را مستقیم و با رمزگذاری سرتاسری بفرستید</title>
-  <meta name="description" content="TotalDrop برنامه‌ای رایگان و متن‌باز است که فایل‌ها را مستقیما از یک دستگاه به دستگاه دیگر می‌فرستد، با رمزگذاری سرتاسری. بدون حساب، بدون ایمیل، بدون شماره تلفن.">
-  <meta name="theme-color" content="#F4F2FB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140E33" media="(prefers-color-scheme: dark)">
+  <title>TotalDrop: ارسال مستقیم فایل و متن با رمزگذاری سرتاسری</title>
+  <meta name="description" content="TotalDrop برنامه‌ای رایگان و متن‌باز است که فایل‌ها، پوشه‌ها و متن را مستقیم و با رمزگذاری سرتاسری از یک دستگاه به دستگاه دیگر می‌فرستد. بدون حساب، بدون ایمیل، بدون شماره تلفن.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="text-scale" content="scale">
+  <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1116" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://totaldrop.app/fa/">
   <link rel="alternate" hreflang="x-default" href="https://totaldrop.app/">
   <link rel="alternate" hreflang="ar" href="https://totaldrop.app/ar/">
@@ -44,8 +46,8 @@
   <link rel="alternate" hreflang="vi" href="https://totaldrop.app/vi/">
   <link rel="alternate" hreflang="zh-Hans" href="https://totaldrop.app/zh-Hans/">
   <link rel="alternate" hreflang="zh-Hant" href="https://totaldrop.app/zh-Hant/">
-  <meta property="og:title" content="TotalDrop: فایل‌ها را مستقیم و با رمزگذاری سرتاسری بفرستید">
-  <meta property="og:description" content="TotalDrop برنامه‌ای رایگان و متن‌باز است که فایل‌ها را مستقیما از یک دستگاه به دستگاه دیگر می‌فرستد، با رمزگذاری سرتاسری. بدون حساب، بدون ایمیل، بدون شماره تلفن.">
+  <meta property="og:title" content="TotalDrop: ارسال مستقیم فایل و متن با رمزگذاری سرتاسری">
+  <meta property="og:description" content="TotalDrop برنامه‌ای رایگان و متن‌باز است که فایل‌ها، پوشه‌ها و متن را مستقیم و با رمزگذاری سرتاسری از یک دستگاه به دستگاه دیگر می‌فرستد. بدون حساب، بدون ایمیل، بدون شماره تلفن.">
   <meta property="og:url" content="https://totaldrop.app/fa/">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -53,7 +55,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="alternate" type="application/atom+xml" title="TotalDrop releases" href="https://github.com/totaldrop-app/totaldrop/releases.atom">
   <link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=d075185718">
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" fetchpriority="low" crossorigin>
+  <link rel="stylesheet" href="/styles.css?v=979ab1a55d">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">رفتن به محتوا</a>
@@ -64,6 +67,7 @@
       <span>TotalDrop</span>
     </a>
     <nav class="top-nav" aria-label="اصلی" data-i18n-label="nav.label">
+      <a href="#apps" data-i18n="nav.apps">برنامه‌ها</a>
       <a href="#why" data-i18n="nav.why">چرا TotalDrop</a>
       <a href="#how" data-i18n="nav.how">چگونه کار می‌کند</a>
       <a href="#security" data-i18n="nav.security">امنیت</a>
@@ -77,12 +81,17 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="hero.eyebrow">رایگان · متن‌باز · بتا</p>
-        <h1 id="hero-title" data-i18n="hero.title">فایل را مستقیم به دستگاه دیگر بفرستید.</h1>
-        <p class="lede" data-i18n="hero.lede">TotalDrop فایل‌ها را مستقیما از دستگاه شما به دستگاه طرف مقابل می‌برد، با رمزگذاری سرتاسری. یک کد کوتاه هم‌رسانی می‌کنید؛ هیچ کس در میانه راه نمی‌تواند آنچه را می‌فرستید بخواند. بدون حساب، بدون ایمیل، بدون شماره تلفن.</p>
+        <h1 id="hero-title" data-i18n="hero.title">فایل‌ها و متن را مستقیم به دستگاهی دیگر بفرستید.</h1>
+        <p class="lede" data-i18n="hero.lede">TotalDrop فایل‌ها، پوشه‌های کامل و متن کلیپ‌بورد را مستقیم از دستگاه شما به دستگاه طرف مقابل می‌برد، با رمزگذاری سرتاسری و کلیدهای پساکوانتومی. یک کد کوتاه هم‌رسانی کنید؛ هیچ‌کس در میانهٔ راه نمی‌تواند آنچه را می‌فرستید بخواند. بدون حساب، بدون ایمیل، بدون شماره تلفن.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/fa/download/" data-i18n="hero.cta">دانلود نسخه بتا</a>
           <a class="btn btn-quiet" href="https://github.com/totaldrop-app/totaldrop" data-i18n="hero.source">خواندن کد</a>
         </div>
+        <ul class="hero-highlights" role="list">
+          <li data-i18n="hero.h1">امروز برای Android، Linux و CLI</li>
+          <li data-i18n="hero.h2">رمزنگاری پساکوانتومی ML-KEM-768</li>
+          <li data-i18n="hero.h3">35 زبان، بدون هیچ ردیاب</li>
+        </ul>
       </div>
 
       <figure class="hero-figure" aria-labelledby="hero-caption">
@@ -94,17 +103,74 @@
           <g class="dv dv-nw" transform="translate(-32 -30)"><rect x="3.5" y="2" width="17" height="20" rx="2.5"/><path d="M11 18h2"/></g>
         </svg>
         <div class="code-card">
-          <p class="code-label" data-i18n="code.label">کد انتقال</p>
-          <p class="code" lang="en">7-harbor-rocket</p>
+          <div class="code-row">
+            <p class="code-label" data-i18n="code.label">کد انتقال</p>
+            <button class="code-cycle" id="code-cycle" type="button" aria-controls="hero-specimen" hidden data-i18n="code.try">نمونهٔ دیگر</button>
+          </div>
+          <div class="specimen-live" id="hero-specimen" aria-live="polite" aria-atomic="true">
+            <p class="code" id="hero-code" lang="en">7-harbor-rocket</p>
+            <div class="verify-block">
+              <p class="code-label" data-i18n="code.verify">چهار واژهٔ تأیید</p>
+              <ul class="verify-words" id="hero-words" lang="en" role="list">
+                <li>north</li>
+                <li>valley</li>
+                <li>river</li>
+                <li>forest</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <figcaption id="hero-caption" data-i18n="code.caption">کد را بلند بگویید یا در یک پیام بچسبانید. هر کس آن را وارد کند، فایل‌ها را دریافت می‌کند.</figcaption>
       </figure>
     </section>
 
+    <section class="block" id="apps" aria-labelledby="apps-title">
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="apps.eyebrow">بومی روی هر میزکار و گوشی</p>
+        <h2 id="apps-title" data-i18n="apps.title">ساخته‌شده تا بخشی از سیستم شما باشد</h2>
+        <p data-i18n="apps.lede">TotalDrop رنگ‌ها، تایپوگرافی، حالت تیره و منوهای هم‌رسانی خود را از سیستم‌عاملی می‌گیرد که اجرا می‌کنید. از گالری، متن انتخاب‌شده، کلیپ‌بورد یا مدیر فایل بفرستید، بی‌آنکه اول زبانهٔ مرورگری باز کنید.</p>
+      </div>
+      <ul class="showcase-grid" role="list">
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/android.png" alt="TotalDrop در اندروید با پوسته‌های روشن و تیرهٔ Material You" data-i18n-label="apps.android.alt" aria-label="TotalDrop در اندروید با پوسته‌های روشن و تیرهٔ Material You" width="1600" height="849" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.android">Android</h3>
+              <span class="pill is-beta">0.3.0-beta.7</span>
+            </header>
+            <p data-i18n="apps.android.d">رنگ‌های پویای Material You و کنترل‌های Material 3 Expressive. فایل‌ها یا متن انتخاب‌شده را مستقیم از هر برنامه‌ای هم‌رسانی کنید، یا نماد اجراگر را نگه دارید تا کلیپ‌بورد ارسال شود.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.share">منوی هم‌رسانی سیستم</li>
+              <li data-i18n="apps.tag.text">متن و کلیپ‌بورد</li>
+              <li data-i18n="apps.tag.m3">Material You</li>
+            </ul>
+          </div>
+        </li>
+        <li class="app-card">
+          <div class="app-shot">
+            <img src="/assets/linux.png" alt="برنامهٔ بومی Qt 6 و Wayland برای TotalDrop در لینوکس" data-i18n-label="apps.linux.alt" aria-label="برنامهٔ بومی Qt 6 و Wayland برای TotalDrop در لینوکس" width="1228" height="824" loading="lazy" decoding="async">
+          </div>
+          <div class="app-body">
+            <header>
+              <h3 data-i18n="dl.linux">برنامه Linux</h3>
+              <span class="pill is-beta">0.3.0-beta.6</span>
+            </header>
+            <p data-i18n="apps.linux.d">برنامهٔ بومی Qt 6 و QML برای Wayland که KDE Plasma، Hyprland، Omarchy و GNOME را زنده دنبال می‌کند. روی هر فایل یا پوشه در Dolphin، Files یا Nemo کلیک راست کنید تا بی‌درنگ ارسال شود.</p>
+            <ul class="app-tags" role="list">
+              <li data-i18n="apps.tag.fm">Dolphin، Files، Nemo</li>
+              <li data-i18n="apps.tag.arch">x86-64 و ARM64</li>
+              <li data-i18n="apps.tag.pkg">بستهٔ بومی و Flatpak</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <section class="block" id="why" aria-labelledby="why-title">
       <h2 id="why-title" data-i18n="why.title">چرا TotalDrop</h2>
-      <ul class="reasons">
+      <ul class="reasons" role="list">
         <li>
           <h3 data-i18n="why.r1.t">هیچ چیز بارگذاری نمی‌شود</h3>
           <p data-i18n="why.r1.d">فایل‌ها از دستگاه شما به دستگاه طرف مقابل می‌روند. هیچ نسخه‌ای روی سرور یک شرکت منتظر نمی‌ماند و هیچ پیوندی پس از یک هفته منقضی نمی‌شود.</p>
@@ -118,8 +184,8 @@
           <p data-i18n="why.r3.d">امروز Android، Linux و خط فرمان؛ Windows، macOS و iOS در راه. از گوشی به لپ‌تاپ، از هر برندی به هر برندی.</p>
         </li>
         <li>
-          <h3 data-i18n="why.r4.t">از طرف ما محدودیت اندازه‌ای نیست</h3>
-          <p data-i18n="why.r4.d">پوشه‌های کامل، ویدیوهای طولانی، عکس‌ها با کیفیت اصلی. فقط دیسک و اتصال شما حد را تعیین می‌کنند.</p>
+          <h3 data-i18n="why.r4.t">فایل‌ها، پوشه‌ها و متن کلیپ‌بورد</h3>
+          <p data-i18n="why.r4.d">عکس‌ها با کیفیت اصلی، پوشه‌های عظیم یا یادداشتی کپی‌شده را بفرستید. متن آمادهٔ کپی و با نام‌گذاری نویسه‌های پنهان می‌رسد و هرگز روی دیسک نوشته نمی‌شود.</p>
         </li>
         <li>
           <h3 data-i18n="why.r5.t">تأییدشده، نه مبتنی بر اعتماد</h3>
@@ -130,9 +196,9 @@
           <p data-i18n="why.r6.d">متن‌باز با مجوز GPL، با پشتوانه کمک‌های مالی. بدون تبلیغات، بدون ردیابی، بدون نسخه ویژه پولی.</p>
         </li>
       </ul>
-      <div class="compare-wrap">
+      <div class="compare-wrap" tabindex="0" role="region" aria-labelledby="why-cmp-caption">
         <table class="compare cards">
-          <caption data-i18n="why.cmp.caption">مقایسه TotalDrop با راه‌های معمول فرستادن فایل</caption>
+          <caption id="why-cmp-caption" data-i18n="why.cmp.caption">مقایسه TotalDrop با راه‌های معمول فرستادن فایل</caption>
           <thead>
             <tr><th scope="col"><span class="visually-hidden" data-i18n="why.cmp.feature">ویژگی</span></th><th scope="col" class="is-us">TotalDrop</th><th scope="col" data-i18n="why.cmp.cloud">پیوندهای ابری</th><th scope="col" data-i18n="why.cmp.nearby">اشتراک‌گذاری نزدیک</th></tr>
           </thead>
@@ -149,10 +215,10 @@
 
     <section class="block" id="how" aria-labelledby="how-title">
       <h2 id="how-title" data-i18n="how.title">سه گام</h2>
-      <ol class="steps">
+      <ol class="steps" role="list">
         <li>
-          <h3 data-i18n="how.s1.t">فایل‌ها را انتخاب کنید</h3>
-          <p data-i18n="how.s1.d">هر نوعی، هر تعداد که بخواهید. گیرنده فقط آنچه را شما انتخاب کرده‌اید می‌گیرد.</p>
+          <h3 data-i18n="how.s1.t">فایل یا متن را انتخاب کنید</h3>
+          <p data-i18n="how.s1.d">فایل‌ها، پوشه‌های کامل یا متن کلیپ‌بورد را برگزینید — یا مستقیم از منوی هم‌رسانی سیستم یا مدیر فایل بفرستید.</p>
         </li>
         <li>
           <h3 data-i18n="how.s2.t">کد را هم‌رسانی کنید</h3>
@@ -167,23 +233,26 @@
     </section>
 
     <section class="block" id="security" aria-labelledby="sec-title">
-      <h2 id="sec-title" data-i18n="sec.title">فقط شما و گیرنده می‌توانید آن را باز کنید</h2>
+      <div class="block-head">
+        <p class="eyebrow" data-i18n="sec.eyebrow">رمزنگاری و وارسی صوری</p>
+        <h2 id="sec-title" data-i18n="sec.title">فقط شما و گیرنده می‌توانید آن را باز کنید</h2>
+      </div>
       <dl class="facts">
         <div>
           <dt data-i18n="sec.f1.t">پیش از خروج رمزگذاری می‌شود</dt>
           <dd data-i18n="sec.f1.d">فایل‌ها در دستگاه شما رمزگذاری می‌شوند و فقط در دستگاه گیرنده رمزگشایی می‌شوند. کلیدها هیچ جای دیگری وجود ندارند.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f2.t">کد را نمی‌توان آفلاین حدس زد</dt>
-          <dd data-i18n="sec.f2.d">کد با یک دست‌دهی PAKE به کلید تبدیل می‌شود، بنابراین حدس اشتباه بی‌درنگ شکست می‌خورد و آن تلاش از دست می‌رود. تبادل کلید شامل ML-KEM پساکوانتومی است.</dd>
+          <dt data-i18n="sec.f2.t">دست‌دهی PAKE پساکوانتومی</dt>
+          <dd data-i18n="sec.f2.d">کد یک دست‌دهی CPace را پیش می‌برد که کلید اولیهٔ Noise XXpsk3 را با کلیدهای ترکیبی X25519 و ML-KEM-768 تأمین می‌کند. حدس نادرست درجا رد می‌شود و تلاش را می‌سوزاند.</dd>
         </div>
         <div>
           <dt data-i18n="sec.f3.t">سرور ما فقط معرفی می‌کند</dt>
-          <dd data-i18n="sec.f3.d">نشانی IP شما و عدد کد را می‌بیند، هرگز کلمات، نام فایل‌ها یا خود فایل‌ها را نمی‌بیند. هیچ گزارشی نگه نمی‌دارد.</dd>
+          <dd data-i18n="sec.f3.d">نشانی IP شما و عدد کد را می‌بیند، هرگز واژه‌ها، نام فایل‌ها یا خود فایل‌ها را نمی‌بیند. با روشن بودن حالت حریم خصوصی، حتی دستگاه دیگر هم هرگز نشانی IP شما را نمی‌فهمد.</dd>
         </div>
         <div>
-          <dt data-i18n="sec.f4.t">کدی که هر کسی می‌تواند بررسی کند</dt>
-          <dd data-i18n="sec.f4.d">تک تک خط‌ها عمومی است. نسخه 1.0 فقط پس از یک ممیزی امنیتی مستقل منتشر می‌شود.</dd>
+          <dt data-i18n="sec.f4.t">اثبات‌شده با Tamarin، ممیزی‌شده پیش از 1.0</dt>
+          <dd data-i18n="sec.f4.d">شش مدل نمادین، 61 لم وارسی‌شده با ماشین و 27 جهش‌یافتهٔ رگرسیون، حساب آیندهٔ Ghost Ring کور نسبت به سرور را در اثبات‌گر Tamarin تأیید می‌کنند. نسخهٔ 1.0 منتظر ممیزی مستقل می‌ماند.</dd>
         </div>
       </dl>
       <p class="note"><a href="/privacy/fa" hreflang="fa" data-i18n="sec.privacy">خواندن سیاست حریم خصوصی</a></p>
@@ -191,7 +260,7 @@
 
     <section class="block" id="roadmap" aria-labelledby="road-title">
       <h2 id="road-title" data-i18n="road.title">کجا هستیم</h2>
-      <ol class="roadmap">
+      <ol class="roadmap" role="list">
         <li class="is-done">
           <span class="road-state" data-i18n="road.done">انجام شد</span>
           <h3 data-i18n="road.p0">پروتکل باز، کلاینت خط فرمان، نسخه بتای Android و برنامه Linux</h3>
@@ -254,6 +323,6 @@
   </footer>
 
   <script src="/lang.js?v=496d43e3b9" defer></script>
-  <script src="/app.js?v=be457484b6" defer></script>
+  <script src="/app.js?v=793703de4d" defer></script>
 </body>
 </html>
